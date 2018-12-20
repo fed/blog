@@ -1,0 +1,60 @@
+.button {
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 15px 8px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.button:active {
+  transform: translate(0, 3px);
+}
+
+.button:hover {
+  border: inherit;
+}
+
+.twitter {
+  background-color: #2ca9e1;
+  box-shadow: 0 6px 0 #2695bc;
+}
+
+.twitter:active {
+  box-shadow: 0 2px 0 #2695bc;
+}
+
+.github {
+  background-color: #353631;
+  box-shadow: 0 6px 0 #141412;
+}
+
+.github:active {
+  box-shadow: 0 2px 0 #141412;
+}
+
+.medium {
+  background-color: #4caf50;
+  box-shadow: 0 6px 0 #388e3c;
+}
+
+.medium:active {
+  box-shadow: 0 2px 0 #388e3c;
+}
+
+.linkedin {
+  background-color: #0073b2;
+  box-shadow: 0 6px 0 #005377;
+
+}
+
+.linkedin:active {
+  box-shadow: 0 2px 0 #005377;
+}
