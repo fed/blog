@@ -1,11 +1,10 @@
 import React from 'react';
-import data from '../../model/social';
 import styles from './Footer.module.css';
 
-export default function Footer() {
+export default function Footer(props) {
   return (
     <footer className={styles.container}>
-      {data.map(item => (
+      {props.links.map(item => (
         <a
           className={styles.link}
           href={item.url}

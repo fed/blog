@@ -1,7 +1,7 @@
-import baconIcon from '../images/bacon.png';
-import rxIcon from '../images/rx.svg';
-import javascriptIcon from '../images/javascript.png';
-import reactIcon from '../images/react.png';
+import baconIcon from '../assets/bacon.png';
+import rxIcon from '../assets/rx.svg';
+import javascriptIcon from '../assets/javascript.png';
+import reactIcon from '../assets/react.png';
 
 export default [
   {
