@@ -23,3 +23,15 @@
   line-height: 1.6;
   margin: 15px 0 0;
 }
+
+.link {
+  border-bottom: 1px solid #e1e1e1;
+  color: #056cc1;
+  padding-bottom: 4px;
+  text-decoration: none;
+  transition: border-bottom 0.5s ease;
+}
+
+.link:hover {
+  border-bottom: 1px solid #056cc1;
+}

@@ -10,7 +10,10 @@ export default function Hero() {
       <p className={styles.content}>
         I'm a software developer with a keen interest in JavaScript and functional programming, and
         I help development teams ship clean and maintainable code. Feel free to hit me up on{' '}
-        <a href={`mailto:${email}`}>{email}</a>.
+        <a className={styles.link} href={`mailto:${email}`}>
+          {email}
+        </a>
+        .
       </p>
     </header>
   );

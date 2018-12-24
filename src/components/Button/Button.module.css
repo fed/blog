@@ -4,7 +4,7 @@
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
   padding: 10px 15px 8px;
@@ -52,7 +52,6 @@
 .linkedin {
   background-color: #0073b2;
   box-shadow: 0 6px 0 #005377;
-
 }
 
 .linkedin:active {
