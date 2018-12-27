@@ -6,7 +6,7 @@ jobs:
   build:
     docker:
       # Set the Node.js version we are working with.
-      - image: circleci/node:8.15.0
+      - image: circleci/node:8.12.0
 
     # Working directory, corresponds to the repository name
     # which gets checked out to the home folder (~).
