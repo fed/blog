@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Topic.module.css';
 
-export default function Topic({ image, title, content, links }) {
+export default function Topic({ image, title, links }) {
   return (
     <div className={styles.container}>
       <figure className={styles.leftColumn}>
@@ -11,7 +11,6 @@ export default function Topic({ image, title, content, links }) {
 
       <div className={styles.rightColumn}>
         <h1 className={styles.title}>{title}</h1>
-        <p className={styles.content}>{content}</p>
 
         {links && links.length > 0 && (
           <ul className={styles.links}>

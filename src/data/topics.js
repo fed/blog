@@ -8,7 +8,7 @@ export const topics = [
     id: 'frp-bacon',
     image: baconIcon,
     title: 'Functional Reactive Programming with Bacon.js',
-    content:
+    description:
       'This is a series of posts on Functional Reactive Programming (FRP) in JavaScript using Bacon.js.',
     links: [
       {
@@ -35,7 +35,7 @@ export const topics = [
     id: 'frp-rx',
     image: rxIcon,
     title: 'Functional Reactive Programming with RxJS',
-    content:
+    description:
       'Some articles on RxJS 5+ touching on some of the internals to how observables and operators work.',
     links: [
       {
@@ -55,7 +55,7 @@ export const topics = [
     id: 'javascript-fundamentals',
     image: javascriptIcon,
     title: 'JavaScript Fundamentals',
-    content: "Let's go back to the basics and review many of the core concepts of the language.",
+    description: "Let's go back to the basics and review many of the core concepts of the language.",
     links: [
       {
         title: 'Making sense out of Context',
@@ -90,7 +90,7 @@ export const topics = [
     id: 'react-redux-and-friends',
     image: reactIcon,
     title: 'React, Redux and Friends',
-    content:
+    description:
       'Just a bunch of thoughts around the React ecosystem, mostly on building declarative UIs and handling state.',
     links: [
       {
