@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Federico Knüssel - @fknussel',
+    title: 'Federico Knüssel',
     author: 'Federico Knüssel',
     description: 'Personal blog by Federico Knüssel',
     siteUrl: 'https://fknussel.com',
@@ -56,7 +56,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Federico Knüssel - @fknussel',
+        name: 'Federico Knüssel',
         short_name: 'Federico Knüssel',
         start_url: '/',
         background_color: '#ffffff',
