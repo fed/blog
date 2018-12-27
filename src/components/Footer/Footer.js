@@ -13,7 +13,7 @@ export default function Footer(props) {
           rel="noopener noreferrer"
         >
           <img className={styles.icon} src={item.icon} alt={item.name} title={item.name} />
-          <span className={styles.srOnly}>{item.name}</span>
+          <span className={styles.screenReaderOnly}>{item.name}</span>
         </a>
       ))}
     </footer>

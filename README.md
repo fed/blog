@@ -14,10 +14,11 @@
 
 ## CI/CD
 
-Continuous integration and deployment is handled by [CircleCI](https://circleci.com/gh/fknussel/smartline-api). A new build will get automatically triggered every time a commit gets merged in or pushed to **any** branch.
+Continuous integration and deployment is handled by [CircleCI](https://circleci.com/gh/fknussel/fknussel.com).
 
-All commits to `master` trigger a deployment to the `production` environment: https://fknussel.com.
+* A new build will get automatically triggered every time a commit gets merged in or pushed to **any** branch.
+* All commits to `master` trigger a deployment to the `production` environment: https://fknussel.com.
 
 # Credits
 
-Forked from [Gatsby blog starter](https://github.com/gatsbyjs/gatsby-starter-blog). Syntax theme based on [Sarah Drasner's Night Owl](https://github.com/sdras/night-owl-vscode-theme/) with small tweaks.
+Forked from [Dan Abramov's personal blog](https://github.com/gaearon/overreacted.io) which is in turn a fork of the [Gatsby blog starter](https://github.com/gatsbyjs/gatsby-starter-blog).

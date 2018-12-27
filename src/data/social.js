@@ -3,7 +3,7 @@ import githubIcon from '../assets/github.svg';
 import mediumIcon from '../assets/medium.svg';
 import linkedinIcon from '../assets/linkedin.svg';
 
-export default [
+export const social = [
   {
     id: 'twitter',
     name: 'Twitter',

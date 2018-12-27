@@ -3,7 +3,7 @@ import rxIcon from '../assets/rx.svg';
 import javascriptIcon from '../assets/javascript.png';
 import reactIcon from '../assets/react.png';
 
-export default [
+export const topics = [
   {
     id: 'frp-bacon',
     image: baconIcon,
