@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO';
 
 export default function BlogIndex(props) {
@@ -10,7 +10,7 @@ export default function BlogIndex(props) {
   const posts = get(props, 'data.allMarkdownRemark.edges');
 
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout>
       <SEO />
 
       {posts.map(({ node }) => {

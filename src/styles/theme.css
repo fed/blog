@@ -1,19 +1,23 @@
 /**
- * Based on copypasta from Remy Bach and Sarah Drasner
+ * Darcula theme
+ *
+ * Adapted from a theme based on:
+ * IntelliJ Darcula Theme (https://github.com/bulenkov/Darcula)
+ *
+ * @author Alexandre Paradis <service.paradis@gmail.com>
+ * @version 1.0
  */
-code[class*="language-"],
-pre[class*="language-"] {
-  color: white;
-  background: none;
-  font-family: Consolas,Menlo,Monaco,source-code-pro,Courier New,monospace;
-  font-feature-settings: normal;
+
+code[class*='language-'],
+pre[class*='language-'] {
+  color: #a9b7c6;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  direction: ltr;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
-  word-wrap: normal;
   line-height: 1.5;
-  margin-bottom: 0;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -25,127 +29,138 @@ pre[class*="language-"] {
   hyphens: none;
 }
 
+pre[class*='language-']::-moz-selection,
+pre[class*='language-'] ::-moz-selection,
+code[class*='language-']::-moz-selection,
+code[class*='language-'] ::-moz-selection {
+  color: inherit;
+  background: rgba(33, 66, 131, 0.85);
+}
+
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection,
+code[class*='language-']::selection,
+code[class*='language-'] ::selection {
+  color: inherit;
+  background: rgba(33, 66, 131, 0.85);
+}
+
 /* Code blocks */
-pre[class*="language-"] {
-  overflow: auto;
+pre[class*='language-'] {
   padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
 }
 
-pre[class*="language-"]::-moz-selection {
-  /* Firefox */
-  background: hsl(207, 4%, 16%);
-}
-
-pre[class*="language-"]::selection {
-  /* Safari */
-  background: hsl(207, 4%, 16%);
-}
-
-/* Text Selection colour */
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection {
-  text-shadow: none;
-  background: hsla(0, 0%, 100%, 0.15);
-}
-
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection {
-  text-shadow: none;
-  background: hsla(0, 0%, 100%, 0.15);
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  background: #2b2b2b;
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
-  border-radius: .3em;
-  background: rgba(255,229,100,0.2);
-  color: #1a1a1a;
-  padding: .15em .2em .05em;
-  white-space: normal;
+:not(pre) > code[class*='language-'] {
+  padding: 0.1em;
+  border-radius: 0.3em;
 }
 
-.token.attr-name {
-  color: rgb(173, 219, 103);
-  font-style: italic;
+.token.comment,
+.token.prolog,
+.token.cdata {
+  color: #808080;
 }
 
-.token.comment {
-  color: rgb(99, 119, 119);
-}
-
-.token.string,
-.token.url {
-  color: rgb(173, 219, 103);
-}
-
-.token.variable {
-  color: rgb(214, 222, 235);
-}
-
-.token.number {
-  color: rgb(247, 140, 108);
-}
-
-.token.builtin,
-.token.char,
-.token.constant,
-.token.function {
-  color: rgb(130, 170, 255);
-}
-
-.token.punctuation {
-  color: rgb(199, 146, 234);
-}
-
+.token.delimiter,
+.token.boolean,
+.token.keyword,
 .token.selector,
-.token.doctype {
-  color: rgb(199, 146, 234);
-  font-style: 'italic';
+.token.important,
+.token.atrule {
+  color: #cc7832;
 }
 
-.token.class-name {
-  color: rgb(255, 203, 139);
+.token.operator,
+.token.punctuation,
+.token.attr-name {
+  color: #a9b7c6;
 }
 
 .token.tag,
-.token.operator,
-.token.keyword {
-  color: #ffa7c4;
+.token.tag .punctuation,
+.token.doctype,
+.token.builtin {
+  color: #e8bf6a;
 }
 
-.token.boolean {
-  color: rgb(255, 88, 116);
+.token.entity,
+.token.number,
+.token.symbol {
+  color: #6897bb;
 }
 
-.token.property {
-  color: rgb(128, 203, 196);
+.token.property,
+.token.constant,
+.token.variable {
+  color: #9876aa;
 }
 
-.token.namespace {
-  color: rgb(178, 204, 214);
+.token.string,
+.token.char {
+  color: #6a8759;
 }
 
-pre[data-line] {
-  padding: 1em 0 1em 3em;
-  position: relative;
+.token.attr-value,
+.token.attr-value .punctuation {
+  color: #a5c261;
+}
+.token.attr-value .punctuation:first-child {
+  color: #a9b7c6;
 }
 
-.gatsby-highlight-code-line {
-  background-color: hsla(207, 95%, 15%, 1);
-  display: block;
-  margin-right: -1em;
-  margin-left: -1em;
-  padding-right: 1em;
-  padding-left: 0.75em;
-  border-left: 0.25em solid #ffa7c4;
+.token.url {
+  color: #287bde;
+  text-decoration: underline;
 }
 
-.gatsby-highlight {
-  margin-bottom: 1.75rem;
-  border-radius: 10px;
-  background: #011627;
-  -webkit-overflow-scrolling: touch;
-  overflow: auto;
+.token.function {
+  color: #ffc66d;
 }
 
-.gatsby-highlight pre[class*="language-"] {
-  float: left;
-  min-width: 100%;
+.token.regex {
+  background: #364135;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.inserted {
+  background: #294436;
+}
+
+.token.deleted {
+  background: #484a4a;
+}
+
+/*code.language-css .token.punctuation {
+   color: #cc7832;
+ }*/
+
+code.language-css .token.property,
+code.language-css .token.property + .token.punctuation {
+  color: #a9b7c6;
+}
+
+code.language-css .token.id {
+  color: #ffc66d;
+}
+
+code.language-css .token.selector > .token.class,
+code.language-css .token.selector > .token.attribute,
+code.language-css .token.selector > .token.pseudo-class,
+code.language-css .token.selector > .token.pseudo-element {
+  color: #ffc66d;
 }

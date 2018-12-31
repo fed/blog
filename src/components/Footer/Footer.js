@@ -19,3 +19,7 @@ export default function Footer(props) {
     </footer>
   );
 }
+
+Footer.defaultProps = {
+  links: []
+};
