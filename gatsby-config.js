@@ -59,7 +59,7 @@ module.exports = {
         name: 'Federico Knüssel',
         short_name: 'F. Knüssel',
         start_url: '/',
-        background_color: '#ffffff',
+        background_color: '#1b1b1b',
         theme_color: '#f3c868',
         display: 'minimal-ui',
         icon: 'src/assets/icon.png'
