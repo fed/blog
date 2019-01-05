@@ -57,10 +57,10 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Federico Knüssel',
-        short_name: 'Federico Knüssel',
+        short_name: 'F. Knüssel',
         start_url: '/',
         background_color: '#ffffff',
-        theme_color: '#ffa7c4',
+        theme_color: '#f3c868',
         display: 'minimal-ui',
         icon: 'src/assets/icon.png'
       }
