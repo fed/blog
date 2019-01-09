@@ -1,82 +1,82 @@
 .container {
-  align-items: flex-start;
-  composes: container from '../../styles/mixins.css';
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 0 45px;
+    align-items: flex-start;
+    composes: container from '../../styles/mixins.css';
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 45px;
 }
 
 .leftColumn {
-  margin: 0 auto;
-  padding: 0 0 30px;
+    margin: 0 auto;
+    padding: 0 0 30px;
 }
 
 .image {
-  max-width: 150px;
-  width: 100%;
+    max-width: 150px;
+    width: 100%;
 }
 
 .caption {
-  composes: screenReaderOnly from '../../styles/mixins.css';
+    composes: screenReaderOnly from '../../styles/mixins.css';
 }
 
 .title {
-  composes: title from '../../styles/mixins.css';
-  text-align: center;
+    composes: title from '../../styles/mixins.css';
+    text-align: center;
 }
 
 .links {
-  composes: content from '../../styles/mixins.css';
-  list-style-type: none;
-  padding: 0;
-  text-align: left;
+    composes: content from '../../styles/mixins.css';
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
 }
 
 .linkWrapper:not(:last-child) {
-  margin-bottom: 35px;
+    margin-bottom: 35px;
 }
 
 .linkTitle {
-  font-weight: 700;
-  margin: 10px 0 0;
-  line-height: 1.9;
+    font-weight: 700;
+    margin: 10px 0 0;
+    line-height: 1.9;
 }
 
 .linkDescription {
-  text-align: left;
-  margin: 10px 0 0;
+    text-align: left;
+    margin: 10px 0 0;
 }
 
 .link {
-  composes: link from '../../styles/mixins.css';
+    composes: link from '../../styles/mixins.css';
 }
 
 @media (min-width: 768px) {
-  .container {
-    flex-wrap: nowrap;
-    padding: 0 15px;
-  }
+    .container {
+        flex-wrap: nowrap;
+        padding: 0 15px;
+    }
 
-  .leftColumn {
-    flex-basis: 35%;
-    margin-left: auto;
-    padding: 0 75px 0 0;
-  }
+    .leftColumn {
+        flex-basis: 35%;
+        margin-left: auto;
+        padding: 0 75px 0 0;
+    }
 
-  .rightColumn {
-    flex-basis: 65%;
-  }
+    .rightColumn {
+        flex-basis: 65%;
+    }
 
-  .title {
-    text-align: left;
-  }
+    .title {
+        text-align: left;
+    }
 
-  .linkDescription {
-    text-align: justify;
-  }
+    .linkDescription {
+        text-align: justify;
+    }
 
-  .image {
-    max-width: 250px;
-  }
+    .image {
+        max-width: 250px;
+    }
 }

@@ -1,37 +1,37 @@
 .container {
-  align-items: center;
-  background-color: #fff;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 100px;
-  justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100px;
+    justify-content: center;
 }
 
 .link {
-  border-bottom: 0;
-  padding-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
 }
 
 .link:hover {
-  border-bottom: inherit;
+    border-bottom: inherit;
 }
 
 .link:not(:last-child) {
-  margin-right: 30px;
+    margin-right: 30px;
 }
 
 .icon {
-  display: inline-block;
-  fill: currentColor;
-  height: 25px;
-  stroke: currentColor;
-  stroke-width: 0;
-  vertical-align: middle;
-  width: 25px;
+    display: inline-block;
+    fill: currentColor;
+    height: 25px;
+    stroke: currentColor;
+    stroke-width: 0;
+    vertical-align: middle;
+    width: 25px;
 }
 
 .screenReaderOnly {
-  composes: screenReaderOnly from '../../styles/mixins.css';
+    composes: screenReaderOnly from '../../styles/mixins.css';
 }

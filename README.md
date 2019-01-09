@@ -2,22 +2,22 @@
 
 ## Prerequisites
 
-* Node.js (https://nodejs.org/)
-* Yarn (https://yarnpkg.com/)
+-   Node.js (https://nodejs.org/)
+-   Yarn (https://yarnpkg.com/)
 
 ## Development Tasks
 
-| Command | Description |
-|---------|-------------|
+| Command        | Description                                                  |
+| -------------- | ------------------------------------------------------------ |
 | `yarn install` | Fetch dependencies and build binaries for any of the modules |
-| `yarn start` | Start the app on http://localhost:8000 and watch for changes |
+| `yarn start`   | Start the app on http://localhost:8000 and watch for changes |
 
 ## CI/CD
 
 Continuous integration and deployment is handled by [CircleCI](https://circleci.com/gh/fknussel/fknussel.com).
 
-* A new build will get automatically triggered every time a commit gets merged in or pushed to **any** branch.
-* All commits to `master` trigger a deployment to the `production` environment: https://fknussel.com.
+-   A new build will get automatically triggered every time a commit gets merged in or pushed to **any** branch.
+-   All commits to `master` trigger a deployment to the `production` environment: https://fknussel.com.
 
 # Credits
 

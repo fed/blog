@@ -1,53 +1,53 @@
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 850px;
-  text-align: center;
-  width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 850px;
+    text-align: center;
+    width: 100%;
 }
 
 .title {
-  color: #333;
-  font-family: Roboto, sans-serif;
-  font-size: 36px;
-  font-weight: 700;
-  margin: 0;
+    color: #333;
+    font-family: Roboto, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
 }
 
 .subtitle {
-  color: #8f8f8f;
-  font-family: Roboto, sans-serif;
-  font-size: 28px;
-  font-weight: 300;
-  margin: 10px 0 0;
+    color: #8f8f8f;
+    font-family: Roboto, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    margin: 10px 0 0;
 }
 
 .content {
-  color: #333;
-  font-family: Lora, serif;
-  font-size: 21px;
-  line-height: 1.6;
+    color: #333;
+    font-family: Lora, serif;
+    font-size: 21px;
+    line-height: 1.6;
 }
 
 .link {
-  border-bottom: 1px solid #e1e1e1;
-  color: #056cc1;
-  padding-bottom: 4px;
-  text-decoration: none;
-  transition: border-bottom 0.5s ease;
+    border-bottom: 1px solid #e1e1e1;
+    color: #056cc1;
+    padding-bottom: 4px;
+    text-decoration: none;
+    transition: border-bottom 0.5s ease;
 }
 
 .link:hover {
-  border-bottom: 1px solid #056cc1;
+    border-bottom: 1px solid #056cc1;
 }
 
 .screenReaderOnly {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }

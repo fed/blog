@@ -1,36 +1,36 @@
 .layout {
-  background-color: #fafafa;
+    background-color: #fafafa;
 }
 
 .title {
-  composes: title from '../../styles/mixins.css';
-  font-size: 45px;
-  margin: 35px 0;
+    composes: title from '../../styles/mixins.css';
+    font-size: 45px;
+    margin: 35px 0;
 }
 
 .details {
-  color: #1b1b11;
-  font-family: Menlo, Consolas, Monaco, 'Andale Mono', monospace;
-  font-size: 16px;
-  margin: 0;
-  text-align: right;
+    color: #1b1b11;
+    font-family: Menlo, Consolas, Monaco, 'Andale Mono', monospace;
+    font-size: 16px;
+    margin: 0;
+    text-align: right;
 }
 
 .content {
-  composes: content from '../../styles/mixins.css';
+    composes: content from '../../styles/mixins.css';
 }
 
 /* Can't compose `link` here */
 .content a {
-  border-bottom: 1px solid #e1e1e1;
-  color: #056cc1;
-  padding-bottom: 4px;
-  text-decoration: none;
-  transition: border-bottom 0.5s ease;
+    border-bottom: 1px solid #e1e1e1;
+    color: #056cc1;
+    padding-bottom: 4px;
+    text-decoration: none;
+    transition: border-bottom 0.5s ease;
 }
 
 .content a:hover {
-  border-bottom: 1px solid #056cc1;
+    border-bottom: 1px solid #056cc1;
 }
 
 .content h1,
@@ -39,16 +39,16 @@
 .content h4,
 .content h5,
 .content h6 {
-  font-family: Roboto, sans-serif;
-  font-weight: 700;
-  line-height: 1.35;
-  margin: 50px 0 25px;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 50px 0 25px;
 }
 
 .content img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 .content pre {
-  font-size: 16px;
+    font-size: 16px;
 }

@@ -1,29 +1,29 @@
 .container {
-  margin-top: 64px;
-  padding: 0 30px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 850px;
-  text-align: center;
-  width: 100%;
+    margin-top: 64px;
+    padding: 0 30px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 850px;
+    text-align: center;
+    width: 100%;
 }
 
 .title {
-  color: #333;
-  font-family: Roboto, sans-serif;
-  font-size: 36px;
-  font-weight: 700;
-  margin: 0;
+    color: #333;
+    font-family: Roboto, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
 }
 
 .content {
-  color: #333;
-  font-family: Lora, serif;
-  font-size: 21px;
-  line-height: 1.6;
-  margin: 15px 0 0;
+    color: #333;
+    font-family: Lora, serif;
+    font-size: 21px;
+    line-height: 1.6;
+    margin: 15px 0 0;
 }
 
 .link {
-  composes: link from '../../styles/mixins.css';
+    composes: link from '../../styles/mixins.css';
 }
