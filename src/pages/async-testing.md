@@ -15,7 +15,7 @@ describe('A test without assertions', () => {
 });
 ```
 
-Run this and you'll find everything is fine: the test passes and Mocha moves on without warning us no assertion has been run.
+[Run this](https://codepen.io/fede/pen/REJRvg) and you'll find everything is fine: the test passes and Mocha moves on without warning us no assertion has been run.
 
 Now consider the following example:
 
@@ -36,7 +36,7 @@ This is because:
 1. The assertion (the call to `expect`) is delayed until the next tick.
 2. The rest of the code finishes executing and Mocha finds no assertions, making the test pass (as we've seen before).
 
-Since the assertion is delayed until the next tick, we are gonna get the next test case to fail, even though the code is fine and the test should normally pass! Just imagine how hard it is to debug cases like this.
+Since the assertion is delayed until the next tick, [we are gonna get the next test case to fail](https://codepen.io/fede/pen/REJRvg), even though the code is fine and the test should normally pass! Just imagine how hard it is to debug cases like this.
 
 [Mocha](https://mochajs.org/#asynchronous-code), [Jasmine](https://jasmine.github.io/tutorials/async) and [Jest](https://jestjs.io/docs/en/asynchronous#callbacks) automatically pass in a `done` callback we can use to _mark our test as asynchronous_: when this function is present, our test framework knows it has to wait for this callback to be called before completing the test.
 
