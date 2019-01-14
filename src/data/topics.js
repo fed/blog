@@ -2,10 +2,11 @@ import baconIcon from '../assets/bacon.png';
 import rxIcon from '../assets/rx.svg';
 import javascriptIcon from '../assets/javascript.png';
 import reactIcon from '../assets/react.png';
+import testingIcon from '../assets/testing.svg';
 
 export const topics = [
     {
-        id: 'frp-bacon',
+        id: 'baconjs',
         image: baconIcon,
         title: 'Functional Reactive Programming with Bacon.js',
         description:
@@ -32,7 +33,7 @@ export const topics = [
         ]
     },
     {
-        id: 'frp-rx',
+        id: 'rxjs',
         image: rxIcon,
         title: 'Functional Reactive Programming with RxJS',
         description:
@@ -52,7 +53,7 @@ export const topics = [
         ]
     },
     {
-        id: 'javascript-fundamentals',
+        id: 'javascript',
         image: javascriptIcon,
         title: 'JavaScript Fundamentals',
         description:
@@ -91,7 +92,7 @@ export const topics = [
         ]
     },
     {
-        id: 'react-redux-and-friends',
+        id: 'react',
         image: reactIcon,
         title: 'React, Redux and Friends',
         description:
@@ -102,6 +103,20 @@ export const topics = [
                 url: '//medium.com/@fknussel/redux-3cb5aac94a66',
                 description:
                     "Let's try to understand what's really going on under the hood when we use Redux by implementing a simplified version of it from scratch."
+            }
+        ]
+    },
+    {
+        id: 'testing',
+        image: testingIcon,
+        title: 'Testing',
+        description: '',
+        links: [
+            {
+                title: 'Testing Asynchronous Code',
+                url: '/async-testing',
+                description:
+                    'A brief intro to the different ways to set up your asynchronous tests and the reason behind it.'
             }
         ]
     }

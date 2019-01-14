@@ -1,6 +1,8 @@
 ---
 title: Testing Asynchronous Code
 date: 2019-01-09
+spoiler: A brief intro to the different ways to set up your asynchronous tests and the reason behind it.
+category: testing
 ---
 
 To understand what's the deal with asynchronous testing, we first need to grasp what happens when we don't have any assertions in our tests.
