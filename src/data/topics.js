@@ -74,7 +74,7 @@ export const topics = [
             },
             {
                 title: 'Getting clever with Array#reduce',
-                url: '//medium.com/@fknussel/getting-clever-with-array-reduce-d05c0a973113',
+                url: '/getting-clever-with-array-reduce',
                 description:
                     'A handful of rather unconventional yet interesting use cases for reducing arrays.'
             },
