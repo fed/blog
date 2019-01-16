@@ -20,8 +20,8 @@
     composes: content from '../../styles/mixins.css';
 }
 
-/* Can't compose `link` here */
-.content a {
+/* Can't compose `link` here, had to duplicate all rules :( */
+.content a:not(:global(.gatsby-resp-image-link)) {
     border-bottom: 1px solid #e1e1e1;
     color: #056cc1;
     padding-bottom: 4px;
@@ -29,7 +29,7 @@
     transition: border-bottom 0.5s ease;
 }
 
-.content a:hover {
+.content a:not(:global(.gatsby-resp-image-link)):hover {
     border-bottom: 1px solid #056cc1;
 }
 
@@ -51,4 +51,13 @@
 
 .content pre {
     font-size: 16px;
+}
+
+.content blockquote {
+    border-left: 4px solid #ccc;
+    font-style: italic;
+}
+
+.content blockquote p {
+    margin-left: 15px;
 }
