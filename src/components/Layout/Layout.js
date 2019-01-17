@@ -15,6 +15,7 @@ export default function Layout(props) {
                         <img src={avatar} alt="My Avatar" className={styles.avatar} />
                         F. Knüssel
                     </Link>
+                    <div className={styles.details}>{props.details}</div>
                 </div>
             </header>
             <div className={styles.content}>{props.children}</div>

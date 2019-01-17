@@ -8,18 +8,15 @@ import styles from './Post.module.css';
 export default function Post(props) {
     const post = props.data.markdownRemark;
     const { previous, next, slug } = props.pageContext;
+    const postDetails = `${post.frontmatter.date} — ${post.timeToRead} min. read`;
 
     return (
-        <Layout className={styles.layout}>
+        <Layout className={styles.layout} details={postDetails}>
             <SEO
                 title={post.frontmatter.title}
                 description={post.frontmatter.spoiler}
                 slug={post.fields.slug}
             />
-
-            <p className={styles.details}>
-                {post.frontmatter.date} — {post.timeToRead} min. read
-            </p>
 
             <h1 className={styles.title}>{post.frontmatter.title}</h1>
 
