@@ -31,7 +31,3 @@
     vertical-align: middle;
     width: 25px;
 }
-
-.screenReaderOnly {
-    composes: screenReaderOnly from '../../styles/mixins.css';
-}

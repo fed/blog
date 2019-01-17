@@ -11,6 +11,7 @@ export default function Footer(props) {
                     key={item.id}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={item.name}
                 >
                     <img
                         className={styles.icon}
@@ -18,7 +19,6 @@ export default function Footer(props) {
                         alt={item.name}
                         title={item.name}
                     />
-                    <span className={styles.screenReaderOnly}>{item.name}</span>
                 </a>
             ))}
         </footer>

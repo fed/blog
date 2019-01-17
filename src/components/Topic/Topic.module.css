@@ -17,10 +17,6 @@
     width: 100%;
 }
 
-.caption {
-    composes: screenReaderOnly from '../../styles/mixins.css';
-}
-
 .title {
     composes: title from '../../styles/mixins.css';
     text-align: center;

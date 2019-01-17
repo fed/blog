@@ -4,10 +4,9 @@ import styles from './Topic.module.css';
 export default function Topic({ image, title, links }) {
     return (
         <div className={styles.container}>
-            <figure className={styles.leftColumn}>
-                <img className={styles.image} src={image} alt={title} />
-                <figcaption className={styles.caption}>{title}</figcaption>
-            </figure>
+            <div className={styles.leftColumn}>
+                <img className={styles.image} src={image} alt={title} aria-hidden="true" />
+            </div>
 
             <div className={styles.rightColumn}>
                 <h1 className={styles.title}>{title}</h1>
