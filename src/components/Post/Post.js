@@ -7,7 +7,6 @@ import styles from './Post.module.css';
 
 export default function Post(props) {
     const post = props.data.markdownRemark;
-    const siteTitle = get(props, 'data.site.siteMetadata.title');
     const { previous, next, slug } = props.pageContext;
 
     return (
