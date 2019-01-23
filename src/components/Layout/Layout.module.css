@@ -8,8 +8,7 @@
 .headerContent {
     align-items: center;
     display: flex;
-    justify-content: space-between;
-    max-width: 832px;
+    flex-direction: column;
     padding: 18px 25px;
     width: 100%;
 }
@@ -21,6 +20,7 @@
     font-family: Roboto, sans-serif;
     font-size: 22px;
     font-weight: 700;
+    margin-bottom: 20px;
     text-decoration: none;
 }
 
@@ -41,4 +41,16 @@
     margin: 50px auto 75px;
     max-width: 832px;
     padding: 0 25px;
+}
+
+@media (min-width: 768px) {
+    .headerContent {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 832px;
+    }
+
+    .title {
+        margin-bottom: 0;
+    }
 }

@@ -5,7 +5,7 @@ import Layout from '../Layout/Layout';
 import SEO from '../SEO';
 import styles from './Post.module.css';
 import calendarIcon from './calendar.svg';
-import timeIcon from './time.svg';
+import clockIcon from './clock.svg';
 
 export default function Post(props) {
     const post = props.data.markdownRemark;
@@ -23,7 +23,7 @@ export default function Post(props) {
             </li>
             <li className={styles.detailsItem}>
                 <img
-                    src={timeIcon}
+                    src={clockIcon}
                     alt="Time to read"
                     title="Time to read"
                     className={styles.detailsIcon}
@@ -40,29 +40,8 @@ export default function Post(props) {
                 description={post.frontmatter.spoiler}
                 slug={post.fields.slug}
             />
-
             <h1 className={styles.title}>{post.frontmatter.title}</h1>
-
             <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.html }} />
-
-            {/* <footer>
-        <ul>
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </footer> */}
         </Layout>
     );
 }
