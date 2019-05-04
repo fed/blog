@@ -1,8 +1,11 @@
 import baconIcon from '../assets/bacon.png';
 import rxIcon from '../assets/rx.svg';
-import javascriptIcon from '../assets/javascript.png';
+import javascriptIcon from '../assets/javascript.svg';
 import reactIcon from '../assets/react.png';
 import testingIcon from '../assets/testing.svg';
+import accessibilityIcon from '../assets/accessibility.svg';
+import browserIcon from '../assets/safari.svg';
+import miscIcon from '../assets/random.svg';
 
 export const topics = [
     {
@@ -77,17 +80,6 @@ export const topics = [
                 url: '/getting-clever-with-array-reduce',
                 description:
                     'A handful of rather unconventional yet interesting use cases for reducing arrays.'
-            },
-            {
-                title: 'DOM Traversal and Manipulation',
-                url: '//github.com/fknussel/dom#dom-traversal-and-manipulation-with-vanillajs',
-                description: 'Cheatsheet for working with the DOM in Vanilla JS.'
-            },
-            {
-                title: 'DOM & BOM Revisited',
-                url: '//medium.com/@fknussel/dom-bom-revisited-cf6124e2a816',
-                description:
-                    'Reviewing DOM manipulation and talking to the browser with JavaScript.'
             }
         ]
     },
@@ -119,5 +111,52 @@ export const topics = [
                     'A brief intro to the different ways to set up your asynchronous tests and the reason behind it.'
             }
         ]
+    },
+    // {
+    //     id: 'accessibility',
+    //     image: accessibilityIcon,
+    //     title: 'Accessibility',
+    //     description: '',
+    //     links: [
+    //         {
+    //             title: 'Testing Asynchronous Code',
+    //             url: '/async-testing',
+    //             description:
+    //                 'A brief intro to the different ways to set up your asynchronous tests and the reason behind it.'
+    //         }
+    //     ]
+    // },
+    {
+        id: 'browsers',
+        image: browserIcon,
+        title: 'Browsers and Web APIs',
+        description: '',
+        links: [
+            {
+                title: 'DOM Traversal and Manipulation',
+                url: '//github.com/fknussel/dom#dom-traversal-and-manipulation-with-vanillajs',
+                description: 'Cheatsheet for working with the DOM in Vanilla JS.'
+            },
+            {
+                title: 'DOM & BOM Revisited',
+                url: '//medium.com/@fknussel/dom-bom-revisited-cf6124e2a816',
+                description:
+                    'Reviewing DOM manipulation and talking to the browser with JavaScript.'
+            }
+        ]
     }
+    // {
+    //     id: 'misc',
+    //     image: miscIcon,
+    //     title: 'Everything Else',
+    //     description: '',
+    //     links: [
+    //         {
+    //             title: 'Testing Asynchronous Code',
+    //             url: '/async-testing',
+    //             description:
+    //                 'A brief intro to the different ways to set up your asynchronous tests and the reason behind it.'
+    //         }
+    //     ]
+    // }
 ];
