@@ -42,14 +42,12 @@
     "devDependencies": {
         "eslint": "^5.16.0",
         "eslint-plugin-react": "^7.13.0",
-        "prettier": "^1.17.0",
-        "surge": "^0.20.4"
+        "prettier": "^1.17.0"
     },
     "scripts": {
         "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
         "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
         "start": "gatsby develop",
-        "build": "rm -rf public && gatsby build",
-        "deploy": "yarn build && surge --project ./public --domain https://fknussel.com"
+        "build": "rm -rf public && gatsby build"
     }
 }
