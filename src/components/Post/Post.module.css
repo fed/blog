@@ -54,26 +54,3 @@
 .content blockquote p {
     margin-left: 15px;
 }
-
-.detailsList {
-    align-items: center;
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding-left: 0;
-}
-
-.detailsItem {
-    align-items: center;
-    display: inline-flex;
-}
-
-.detailsItem:not(:last-child) {
-    margin-right: 40px;
-}
-
-.detailsIcon {
-    height: 20px;
-    margin-right: 10px;
-    width: 20px;
-}

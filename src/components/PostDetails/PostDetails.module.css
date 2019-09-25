@@ -1,0 +1,22 @@
+.list {
+    align-items: center;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.listItem {
+    align-items: center;
+    display: inline-flex;
+}
+
+.listItem:not(:last-child) {
+    margin-right: 40px;
+}
+
+.icon {
+    height: 20px;
+    margin-right: 10px;
+    width: 20px;
+}

@@ -7,7 +7,14 @@ exports.createPages = ({ graphql, actions }) => {
     const { createPage } = actions;
 
     return new Promise((resolve, reject) => {
-        const blogPost = path.resolve('./src/components/Post/Post.js');
+        const blogPost = path.resolve('./src/templates/blog-post.js');
+
+        // Create index page
+        createPage({
+            path: '/',
+            component: path.resolve('./src/templates/blog-index.js')
+        });
+
         resolve(
             graphql(
                 `

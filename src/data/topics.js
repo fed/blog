@@ -7,7 +7,7 @@ import accessibilityIcon from '../assets/accessibility.svg';
 import browserIcon from '../assets/safari.svg';
 import miscIcon from '../assets/random.svg';
 
-export const topics = [
+export default [
     {
         id: 'baconjs',
         image: baconIcon,
