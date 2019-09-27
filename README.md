@@ -13,12 +13,9 @@
 | `yarn start`   | Start the app on http://localhost:8000 and watch for changes |
 | `yarn build`   | Create a production build in the `public` directory          |
 
-## CI/CD
+## Continuous Deployment
 
-Continuous integration and deployment is handled by [CircleCI](https://circleci.com/gh/fknussel/fknussel.com).
-
--   A new build will get automatically triggered every time a commit gets merged in or pushed to **any** branch.
--   All commits to `master` trigger a deployment to the `production` environment: https://fknussel.com.
+All commits to `master` trigger a deployment to the `production` environment: https://fknussel.com.
 
 ## Credits
 
