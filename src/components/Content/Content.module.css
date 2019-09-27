@@ -44,17 +44,22 @@
 
 .linkTitle {
     font-weight: 700;
-    margin: 10px 0 0;
     line-height: 1.9;
+    margin: 10px 0 0;
 }
 
 .linkDescription {
-    text-align: left;
     margin: 10px 0 0;
+    text-align: left;
 }
 
 .link {
     composes: link from '../../styles/mixins.css';
+}
+
+.external {
+    margin-left: 10px;
+    width: 16px;
 }
 
 @media (min-width: 768px) {

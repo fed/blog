@@ -8,6 +8,7 @@ import Social from '../components/Social/Social';
 import Footer from '../components/Footer/Footer';
 import social from '../data/social';
 import categories from '../data/categories';
+import externalPosts from '../data/external-posts';
 
 export default function BlogIndexTemplate(props) {
     const title = get(props, 'data.site.siteMetadata.title');
@@ -18,7 +19,7 @@ export default function BlogIndexTemplate(props) {
         date: get(post, 'node.frontmatter.date'),
         timeToRead: get(post, 'node.timeToRead'),
         categoryId: get(post, 'node.frontmatter.category')
-    }));
+    })).concat(externalPosts);
     const categoriesWithPosts = categories.map(category => Object.assign({}, category, {
         posts: posts.filter(post => post.categoryId === category.id)
     }));
