@@ -3,7 +3,6 @@ module.exports = {
         title: 'Federico Knüssel',
         author: 'Federico Knüssel',
         description: 'Personal blog by Federico Knüssel',
-        about: `I'm a software engineer with a keen interest in web development and functional programming, and I help software teams ship clean and maintainable code.`,
         siteUrl: 'https://fknussel.com',
         social: {
             twitter: '@fknussel'

@@ -11,12 +11,11 @@ import topics from '../data/topics';
 
 export default function BlogIndexTemplate(props) {
     const title = get(props, 'data.site.siteMetadata.title');
-    const description = get(props, 'data.site.siteMetadata.about');
 
     return (
         <Fragment>
             <SEO />
-            <Hero title={title} description={description} />
+            <Hero title={title} />
             <Social links={social} />
             <Topics topics={topics} />
             <Footer links={social} />
@@ -29,7 +28,6 @@ export const pageQuery = graphql`
         site {
             siteMetadata {
                 title
-                about
             }
         }
     }
