@@ -1,8 +1,0 @@
-.topic {
-    padding: 32px 0 64px;
-}
-
-.topic:not(:last-of-type) {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    margin: 0 0 64px;
-}
