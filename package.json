@@ -45,8 +45,8 @@
         "prettier": "^1.18.2"
     },
     "scripts": {
-        "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-        "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
+        "lint": "eslint --ext .js --ignore-pattern public .",
+        "format": "prettier --write src/**/*.js src/**/*.md",
         "start": "gatsby develop",
         "build": "rm -rf public && gatsby build"
     }
