@@ -2,6 +2,7 @@ import twitterIcon from '../assets/twitter.svg';
 import githubIcon from '../assets/github.svg';
 import mediumIcon from '../assets/medium.svg';
 import linkedinIcon from '../assets/linkedin.svg';
+import codepenIcon from '../assets/codepen.svg';
 
 export default [
     {
@@ -21,6 +22,12 @@ export default [
         name: 'Medium',
         url: '//medium.com/@fknussel',
         icon: mediumIcon
+    },
+    {
+        id: 'codepen',
+        name: 'CodePen',
+        url: '//codepen.io/fede',
+        icon: codepenIcon
     },
     {
         id: 'linkedin',

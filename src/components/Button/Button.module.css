@@ -49,6 +49,15 @@
     box-shadow: 0 2px 0 #388e3c;
 }
 
+.codepen {
+    background-color: #657e91;
+    box-shadow: 0 6px 0 #374957;
+}
+
+.codepen:active {
+    box-shadow: 0 2px 0 #374957;
+}
+
 .linkedin {
     background-color: #0073b2;
     box-shadow: 0 6px 0 #005377;
