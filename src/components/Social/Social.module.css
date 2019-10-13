@@ -1,31 +1,29 @@
+/*
+ * Wanted to give the container a 30px padding all around.
+ * Since the buttons have a vertical drop shadow of 6px, this means the bottom padding is 36px.
+ * But all buttons have a bottom margin of 18px in case they get stacked,
+ * meaning the container's bottom padding is: 30px + 6px - 18px = 18px
+ */
+
 .container {
-    align-items: center;
     background-color: #f5f5f5;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 30px 30px 20px;
+    margin: 48px 0;
+    padding: 30px 30px 18px;
+    text-align: center;
 }
 
 .link {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     text-align: center;
-    width: 100%;
 }
 
-@media (min-width: 768px) {
+.link:not(:last-child) {
+    margin-right: 10px;
+}
+
+@media (min-width: 1024px) {
     .container {
-        flex-wrap: nowrap;
-        justify-content: center;
-        padding: 30px 30px 35px; /* Buttons move down 3px when clicked */
-    }
-
-    .link {
-        margin-bottom: 0;
-        width: auto;
-    }
-
-    .link:not(:last-child) {
-        margin-right: 10px;
+        background-color: transparent;
+        padding: 0;
     }
 }

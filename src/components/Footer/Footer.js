@@ -1,10 +1,11 @@
 import React from 'react';
+import links from '../../data/social';
 import styles from './Footer.module.css';
 
-export default function Footer(props) {
+export default function Footer() {
     return (
         <footer className={styles.container}>
-            {props.links.map(item => (
+            {links.map(item => (
                 <a
                     className={styles.link}
                     href={item.url}
@@ -24,7 +25,3 @@ export default function Footer(props) {
         </footer>
     );
 }
-
-Footer.defaultProps = {
-    links: []
-};

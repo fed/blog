@@ -1,6 +1,5 @@
 .container {
-    composes: smallContainer from '../../styles/mixins.css';
-    margin: 100px auto;
+    padding: 0 50px;
 }
 
 .post:not(:last-child) {
@@ -23,4 +22,11 @@
     text-transform: uppercase;
     font-size: 14px;
     margin: 0 0 10px;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        composes: smallContainer from '../../styles/mixins.css';
+        padding: 0;
+    }
 }

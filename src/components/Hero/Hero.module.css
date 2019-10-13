@@ -1,7 +1,5 @@
 .container {
-    composes: largeContainer from '../../styles/mixins.css';
-    margin: 64px auto;
-    padding: 0 30px;
+    padding: 0 50px;
     text-align: center;
 }
 
@@ -16,4 +14,22 @@
 
 .link {
     composes: link from '../../styles/mixins.css';
+}
+
+.avatar {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        composes: largeContainer from '../../styles/mixins.css';
+        padding: 0;
+    }
+
+    .avatar {
+        border-radius: 100%;
+        display: inline-block;
+        margin-bottom: 30px;
+        width: 120px;
+    }
 }
