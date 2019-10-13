@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import externalLinkIcon from './external-link.svg';
 import styles from './Content.module.css';
 
-function renderLink(post) {
+export function renderLink(post) {
     if (post.isExternal) {
         return (
             <Fragment>

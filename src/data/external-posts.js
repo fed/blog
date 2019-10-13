@@ -42,7 +42,7 @@ export default [
         spoiler: 'Learn how the this keyword works, and the different ways in which contexts are bound on function calls.',
         date: 'December 30, 2016',
         timeToRead: 7,
-        category: 'javascript',
+        categoryId: 'javascript',
         isExternal: true
     },
     {

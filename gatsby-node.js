@@ -15,6 +15,12 @@ exports.createPages = ({ graphql, actions }) => {
             component: path.resolve('./src/templates/blog-index.js')
         });
 
+        // Create archive page
+        createPage({
+            path: '/archive',
+            component: path.resolve('./src/templates/blog-archive.js')
+        });
+
         resolve(
             graphql(
                 `

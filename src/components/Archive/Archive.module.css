@@ -1,0 +1,26 @@
+.container {
+    composes: smallContainer from '../../styles/mixins.css';
+    margin: 100px auto;
+}
+
+.post:not(:last-child) {
+    margin-bottom: 60px;
+}
+
+.title {
+    composes: title from '../../styles/mixins.css';
+    font-size: 28px;
+}
+
+.spoiler {
+    composes: content from '../../styles/mixins.css';
+    margin: 10px 0 0;
+}
+
+.date {
+    color: #a0aec0;
+    composes: sansSerif from '../../styles/mixins.css';
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 0 0 10px;
+}
