@@ -1,19 +1,19 @@
 .category {
-    padding: 32px 0 64px;
+    padding: 96px 0;
 }
 
 .category:not(:last-of-type) {
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    margin: 0 0 64px;
 }
 
 .container {
     align-items: flex-start;
-    composes: container from '../../styles/mixins.css';
+    composes: largeContainer from '../../styles/mixins.css';
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0 45px;
+    margin: 0 auto;
 }
 
 .leftColumn {
