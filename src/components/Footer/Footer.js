@@ -1,10 +1,15 @@
 import React from 'react';
+import classnames from 'classnames';
 import links from '../../data/social';
 import styles from './Footer.module.css';
 
-export default function Footer() {
+export default function Footer(props) {
+    const className = classnames(styles.container, {
+        [styles.inverse]: props.inverse
+    });
+
     return (
-        <footer className={styles.container}>
+        <footer className={className}>
             {links.map(item => (
                 <a
                     className={styles.link}

@@ -1,5 +1,5 @@
 .header {
-    background-color: #fff;
+    background-color: #fafafac9;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@
     align-items: center;
     color: #333;
     display: flex;
-    font-family: Roboto, sans-serif;
+    composes: sansSerif from '../../styles/mixins.css';
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 20px;

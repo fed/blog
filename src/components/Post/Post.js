@@ -12,7 +12,7 @@ export default function Post(props) {
     );
 
     return (
-        <Layout className={styles.layout} details={postDetails}>
+        <Layout details={postDetails}>
             <h1 className={styles.title}>{props.title}</h1>
             <div className={styles.content} dangerouslySetInnerHTML={{ __html: props.body }} />
         </Layout>

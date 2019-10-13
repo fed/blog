@@ -19,7 +19,7 @@ export default function Layout(props) {
                 </div>
             </header>
             <div className={styles.content}>{props.children}</div>
-            <Footer links={social} />
+            <Footer links={social} inverse />
         </div>
     );
 }

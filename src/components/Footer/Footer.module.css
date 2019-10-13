@@ -9,6 +9,10 @@
     justify-content: center;
 }
 
+.inverse {
+    background-color: #fafafac9;
+}
+
 .link {
     border-bottom: 0;
     padding-bottom: 0;
