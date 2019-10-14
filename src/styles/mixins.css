@@ -5,7 +5,7 @@
 @value color-blue: #056cc1;
 
 /* Font families */
-@value font-serif: Lora, serif;
+@value font-serif: 'Lora', serif;
 @value font-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 
 /* Dimensions */
