@@ -8,15 +8,32 @@
 
 .listItem {
     align-items: center;
+    color: #1b1b11;
+    composes: sansSerif from '../../styles/mixins.css';
     display: inline-flex;
+    font-size: 14px;
 }
 
 .listItem:not(:last-child) {
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .icon {
     height: 20px;
-    margin-right: 10px;
+    margin-right: 8px;
     width: 20px;
+}
+
+@media (min-width: 768px) {
+    .listItem {
+        font-size: 16px;
+    }
+
+    .listItem:not(:last-child) {
+        margin-right: 40px;
+    }
+
+    .icon {
+        margin-right: 10px;
+    }
 }

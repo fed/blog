@@ -8,14 +8,14 @@ import styles from './Layout.module.css';
 
 export default function Layout(props) {
     return (
-        <div className={props.className}>
+        <div className={styles.container}>
             <header className={styles.header}>
                 <div className={styles.headerContent}>
-                    <Link to="/" className={styles.title}>
+                    <Link to="/" className={styles.link}>
                         <img src={avatar} alt="My Avatar" className={styles.avatar} />
-                        F. Knüssel
+                        <span className={styles.title}>F. Knüssel</span>
                     </Link>
-                    <div className={styles.details}>{props.details}</div>
+                    {props.details}
                 </div>
             </header>
             <div className={styles.content}>{props.children}</div>
