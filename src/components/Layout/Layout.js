@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'gatsby';
 import get from 'lodash/get';
 import Footer from '../Footer/Footer';
@@ -8,7 +8,7 @@ import styles from './Layout.module.css';
 
 export default function Layout(props) {
     return (
-        <div className={styles.container}>
+        <Fragment>
             <header className={styles.header}>
                 <div className={styles.headerContent}>
                     <Link to="/" className={styles.link}>
@@ -22,8 +22,8 @@ export default function Layout(props) {
                     </ul>
                 </div>
             </header>
-            <div className={styles.content}>{props.children}</div>
+            {props.children}
             <Footer links={social} />
-        </div>
+        </Fragment>
     );
 }

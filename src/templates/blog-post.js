@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import find from 'lodash/find';
 import get from 'lodash/get';
 import Layout from '../components/Layout/Layout';
+import Container from '../components/Container/Container';
 import Post from '../components/Post/Post';
 import SEO from '../components/SEO';
 import categories from '../data/categories';
@@ -20,13 +21,15 @@ export default function BlogPostTemplate(props) {
                 slug={get(post, 'fields.slug')}
             />
             <Layout>
-                <Post
-                    title={get(post, 'frontmatter.title')}
-                    body={get(post, 'html')}
-                    date={get(post, 'frontmatter.date')}
-                    category={categoryName}
-                    timeToRead={get(post, 'timeToRead')}
-                />
+                <Container>
+                    <Post
+                        title={get(post, 'frontmatter.title')}
+                        body={get(post, 'html')}
+                        date={get(post, 'frontmatter.date')}
+                        category={categoryName}
+                        timeToRead={get(post, 'timeToRead')}
+                    />
+                </Container>
             </Layout>
         </Fragment>
     );

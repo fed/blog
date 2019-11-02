@@ -41,6 +41,7 @@
     composes: bareLink from '../../styles/mixins.css';
     composes: sansSerif from '../../styles/mixins.css';
     font-size: 18px;
+    font-weight: 600;
 }
 
 .title {
