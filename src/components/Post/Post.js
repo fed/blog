@@ -8,6 +8,7 @@ export default function Post(props) {
             <header className={styles.header}>
                 <h1 className={styles.title}>{props.title}</h1>
                 <PostDetails
+                    className={styles.details}
                     date={props.date}
                     category={props.category}
                     timeToRead={props.timeToRead}

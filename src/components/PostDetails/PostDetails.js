@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames';
 import styles from './PostDetails.module.css';
 import calendarIcon from './calendar.svg';
 import categoryIcon from './category.svg';
@@ -6,7 +7,7 @@ import clockIcon from './clock.svg';
 
 export default function PostDetails(props) {
     return (
-        <ul className={styles.list}>
+        <ul className={classnames(styles.list, props.className)}>
             <li className={styles.listItem}>
                 <img
                     src={calendarIcon}

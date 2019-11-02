@@ -6,7 +6,7 @@ import Content from '../components/Content/Content';
 import categories from '../data/categories';
 import externalPosts from '../data/external-posts';
 
-export default function BlogIndexTemplate(props) {
+export default function BlogArchiveTemplate(props) {
     const posts = get(props, 'data.allMarkdownRemark.edges').map(post => ({
         title: get(post, 'node.frontmatter.title'),
         slug: get(post, 'node.fields.slug'),

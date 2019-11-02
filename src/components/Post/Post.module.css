@@ -9,6 +9,10 @@
     margin: 35px 0 0;
 }
 
+.details {
+    margin-top: 16px;
+}
+
 .content {
     composes: content from '../../styles/mixins.css';
 }
