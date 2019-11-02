@@ -23,6 +23,26 @@
     text-decoration: none;
 }
 
+.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.navigationItem {
+    display: inline-block;
+}
+
+.navigationItem:not(:last-child) {
+    margin-right: 30px;
+}
+
+.navigationLink {
+    composes: bareLink from '../../styles/mixins.css';
+    composes: sansSerif from '../../styles/mixins.css';
+    font-size: 18px;
+}
+
 .title {
     display: none;
 }

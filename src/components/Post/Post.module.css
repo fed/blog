@@ -1,3 +1,7 @@
+.header {
+    margin-bottom: 50px;
+}
+
 .title {
     composes: title from '../../styles/mixins.css';
     font-size: 45px;

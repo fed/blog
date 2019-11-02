@@ -15,7 +15,11 @@ export default function Layout(props) {
                         <img src={avatar} alt="My Avatar" className={styles.avatar} />
                         <span className={styles.title}>F. Knüssel</span>
                     </Link>
-                    {props.details}
+                    <ul className={styles.navigation}>
+                        <li className={styles.navigationItem}>
+                            <Link to="/" className={styles.navigationLink}>← Back to Home</Link>
+                        </li>
+                    </ul>
                 </div>
             </header>
             <div className={styles.content}>{props.children}</div>

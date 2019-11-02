@@ -1,11 +1,16 @@
 import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
+import find from 'lodash/find';
 import get from 'lodash/get';
+import Layout from '../components/Layout/Layout';
 import Post from '../components/Post/Post';
 import SEO from '../components/SEO';
+import categories from '../data/categories';
 
 export default function BlogPostTemplate(props) {
     const post = get(props, 'data.markdownRemark');
+    const categoryId = get(post, 'frontmatter.category');
+    const categoryName = find(categories, { id: categoryId }).title;
 
     return (
         <Fragment>
@@ -14,12 +19,15 @@ export default function BlogPostTemplate(props) {
                 description={get(post, 'frontmatter.spoiler')}
                 slug={get(post, 'fields.slug')}
             />
-            <Post
-                title={get(post, 'frontmatter.title')}
-                body={get(post, 'html')}
-                date={get(post, 'frontmatter.date')}
-                timeToRead={get(post, 'timeToRead')}
-            />
+            <Layout>
+                <Post
+                    title={get(post, 'frontmatter.title')}
+                    body={get(post, 'html')}
+                    date={get(post, 'frontmatter.date')}
+                    category={categoryName}
+                    timeToRead={get(post, 'timeToRead')}
+                />
+            </Layout>
         </Fragment>
     );
 }

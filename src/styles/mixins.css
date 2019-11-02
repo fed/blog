@@ -22,11 +22,10 @@
 }
 
 .subtitle {
-    color: color-gray-md;
+    color: color-gray-dark;
     font-family: font-sans-serif;
-    font-size: 28px;
+    font-size: 18px;
     font-weight: 300;
-    margin: 10px 0 0;
 }
 
 .content {
@@ -36,12 +35,16 @@
     line-height: 1.6;
 }
 
-.link {
-    border-bottom: 1px solid color-gray-light;
+.bareLink {
     color: color-blue;
-    padding-bottom: 2px;
     text-decoration: none;
     transition: border-bottom 0.5s ease;
+}
+
+.link {
+    border-bottom: 1px solid color-gray-light;
+    composes: bareLink;
+    padding-bottom: 2px;
 }
 
 .link:hover {

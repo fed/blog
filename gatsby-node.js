@@ -9,16 +9,14 @@ exports.createPages = ({ graphql, actions }) => {
     return new Promise((resolve, reject) => {
         const blogPost = path.resolve('./src/templates/blog-post.js');
 
-        // Create archive (index) page
         createPage({
             path: '/',
-            component: path.resolve('./src/templates/blog-archive.js')
+            component: path.resolve('./src/templates/blog-index.js')
         });
 
-        // Create categories page
         createPage({
-            path: '/categories',
-            component: path.resolve('./src/templates/blog-categories.js')
+            path: '/archive',
+            component: path.resolve('./src/templates/blog-archive.js')
         });
 
         resolve(

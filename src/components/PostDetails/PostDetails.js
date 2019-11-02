@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './PostDetails.module.css';
 import calendarIcon from './calendar.svg';
+import categoryIcon from './category.svg';
 import clockIcon from './clock.svg';
 
 export default function PostDetails(props) {
@@ -13,7 +14,7 @@ export default function PostDetails(props) {
                     title="Date published"
                     className={styles.icon}
                 />
-                {props.date}
+                <time pubdate="pubdate">{props.date}</time>
             </li>
             <li className={styles.listItem}>
                 <img
@@ -23,6 +24,15 @@ export default function PostDetails(props) {
                     className={styles.icon}
                 />
                 {props.timeToRead} min.
+            </li>
+            <li className={styles.listItem}>
+                <img
+                    src={categoryIcon}
+                    alt="Category"
+                    title="Category"
+                    className={styles.icon}
+                />
+                {props.category}
             </li>
         </ul>
     );

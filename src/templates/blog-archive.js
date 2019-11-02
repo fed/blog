@@ -1,10 +1,8 @@
 import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
 import get from 'lodash/get';
-import sortBy from 'lodash/sortBy';
 import SEO from '../components/SEO';
-import Grid from '../components/Grid/Grid';
-import Archive from '../components/Archive/Archive';
+import Content from '../components/Content/Content';
 import categories from '../data/categories';
 import externalPosts from '../data/external-posts';
 
@@ -14,16 +12,17 @@ export default function BlogIndexTemplate(props) {
         slug: get(post, 'node.fields.slug'),
         spoiler: get(post, 'node.frontmatter.spoiler'),
         date: get(post, 'node.frontmatter.date'),
-        timeToRead: get(post, 'node.timeToRead')
+        timeToRead: get(post, 'node.timeToRead'),
+        categoryId: get(post, 'node.frontmatter.category')
     })).concat(externalPosts);
-    const sortedPosts = sortBy(posts, post => new Date(post.date)).reverse();
+    const categoriesWithPosts = categories.map(category => Object.assign({}, category, {
+        posts: posts.filter(post => post.categoryId === category.id)
+    }));
 
     return (
         <Fragment>
             <SEO />
-            <Grid>
-                <Archive posts={sortedPosts} />
-            </Grid>
+            <Content categories={categoriesWithPosts} />
         </Fragment>
     );
 }

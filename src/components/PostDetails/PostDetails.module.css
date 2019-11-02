@@ -1,21 +1,13 @@
 .list {
-    align-items: center;
-    display: flex;
     list-style-type: none;
-    margin: 0;
+    margin: 10px 0 0;
     padding-left: 0;
 }
 
 .listItem {
-    align-items: center;
-    color: #1b1b11;
-    composes: sansSerif from '../../styles/mixins.css';
-    display: inline-flex;
-    font-size: 14px;
-}
-
-.listItem:not(:last-child) {
-    margin-right: 20px;
+    composes: subtitle from '../../styles/mixins.css';
+    display: flex;
+    margin-bottom: 16px;
 }
 
 .icon {
@@ -25,8 +17,15 @@
 }
 
 @media (min-width: 768px) {
+    .list {
+        align-items: center;
+        display: flex;
+    }
+
     .listItem {
-        font-size: 16px;
+        align-items: center;
+        display: inline-flex;
+        margin-bottom: 0;
     }
 
     .listItem:not(:last-child) {
