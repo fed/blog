@@ -214,6 +214,4 @@ In this case, we return an object in which keys are distinct countries and value
 }
 ```
 
-<br>
-
 > I've seen some of these ideas on [Mykola Bilokonsky's Egghead course](https://egghead.io/courses/reduce-data-with-javascript).
