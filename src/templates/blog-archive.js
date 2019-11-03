@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import SEO from '../components/SEO';
 import Layout from '../components/Layout/Layout';
-import Content from '../components/Content/Content';
+import Categories from '../components/Categories/Categories';
 import categories from '../data/categories';
 import externalPosts from '../data/external-posts';
 
@@ -24,7 +24,7 @@ export default function BlogArchiveTemplate(props) {
         <Fragment>
             <SEO />
             <Layout>
-                <Content categories={categoriesWithPosts} />
+                <Categories categories={categoriesWithPosts} />
             </Layout>
         </Fragment>
     );

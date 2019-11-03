@@ -11,7 +11,7 @@ import categories from '../data/categories';
 export default function BlogPostTemplate(props) {
     const post = get(props, 'data.markdownRemark');
     const categoryId = get(post, 'frontmatter.category');
-    const categoryName = find(categories, { id: categoryId }).title;
+    const category = find(categories, { id: categoryId })
 
     return (
         <Fragment>
@@ -26,7 +26,7 @@ export default function BlogPostTemplate(props) {
                         title={get(post, 'frontmatter.title')}
                         body={get(post, 'html')}
                         date={get(post, 'frontmatter.date')}
-                        category={categoryName}
+                        category={category}
                         timeToRead={get(post, 'timeToRead')}
                     />
                 </Container>

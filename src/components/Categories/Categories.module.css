@@ -43,6 +43,8 @@
 }
 
 .linkTitle {
+    composes: sansSerif from '../../styles/mixins.css';
+    font-size: 22px;
     font-weight: 700;
     line-height: 1.9;
     margin: 10px 0 0;

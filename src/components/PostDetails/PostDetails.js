@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import classnames from 'classnames';
 import styles from './PostDetails.module.css';
 import calendarIcon from './calendar.svg';
@@ -33,7 +34,9 @@ export default function PostDetails(props) {
                     title="Category"
                     className={styles.icon}
                 />
-                {props.category}
+                <Link className={styles.link} to={`/archive#${props.categoryId}`}>
+                    {props.categoryTitle}
+                </Link>
             </li>
         </ul>
     );

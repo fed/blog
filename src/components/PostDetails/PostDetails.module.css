@@ -10,6 +10,11 @@
     margin-bottom: 16px;
 }
 
+.link {
+    composes: bareLink from '../../styles/mixins.css';
+    font-weight: 600;
+}
+
 .icon {
     height: 20px;
     margin-right: 8px;

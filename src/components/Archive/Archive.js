@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { renderLink } from '../Content/Content';
+import { renderLink } from '../Categories/Categories';
 import styles from './Archive.module.css';
 
 export default function Archive(props) {

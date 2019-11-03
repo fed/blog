@@ -10,7 +10,8 @@ export default function Post(props) {
                 <PostDetails
                     className={styles.details}
                     date={props.date}
-                    category={props.category}
+                    categoryId={props.category.id}
+                    categoryTitle={props.category.title}
                     timeToRead={props.timeToRead}
                 />
             </header>
