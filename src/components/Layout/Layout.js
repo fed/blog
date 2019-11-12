@@ -2,8 +2,8 @@ import React, { Fragment } from 'react';
 import { Link } from 'gatsby';
 import get from 'lodash/get';
 import Footer from '../Footer/Footer';
-import avatar from '../../assets/avatar.jpg';
 import social from '../../data/social';
+import avatarUrl from '../../data/avatar';
 import styles from './Layout.module.css';
 
 export default function Layout(props) {
@@ -12,7 +12,7 @@ export default function Layout(props) {
             <header className={styles.header}>
                 <div className={styles.headerContent}>
                     <Link to="/" className={styles.link}>
-                        <img src={avatar} alt="My Avatar" className={styles.avatar} />
+                        <img src={avatarUrl} alt="My Avatar" className={styles.avatar} />
                         <span className={styles.title}>F. Knüssel</span>
                     </Link>
                     <ul className={styles.navigation}>
