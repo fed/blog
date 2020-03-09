@@ -6,13 +6,12 @@
 
 .listItem {
     composes: subtitle from '../../styles/mixins.css';
-    display: flex;
+    display: inline-flex;
     margin-bottom: 16px;
 }
 
-.link {
-    composes: bareLink from '../../styles/mixins.css';
-    font-weight: 600;
+.listItem:not(:last-child) {
+    margin-right: 24px;
 }
 
 .icon {

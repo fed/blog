@@ -1,16 +1,11 @@
-.header {
-    margin-bottom: 50px;
-}
-
 .title {
     composes: title from '../../styles/mixins.css';
-    font-size: 45px;
+    font-size: 32px;
     font-weight: 900;
-    margin: 35px 0 0;
 }
 
 .details {
-    margin-top: 16px;
+    margin-top: 24px;
 }
 
 .content {
@@ -60,4 +55,14 @@
 
 .content figcaption {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 45px;
+    }
+
+    .header {
+        margin-bottom: 50px;
+    }
 }

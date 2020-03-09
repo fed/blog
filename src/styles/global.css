@@ -7,3 +7,7 @@
 body {
     -webkit-font-smoothing: antialiased;
 }
+
+a {
+    word-break: break-word;
+}
