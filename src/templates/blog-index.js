@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import sortBy from 'lodash/sortBy';
 import SEO from '../components/SEO';
-import Grid from '../components/Grid/Grid';
+import Home from '../components/Home/Home';
 import Archive from '../components/Archive/Archive';
 import categories from '../data/categories';
 import externalPosts from '../data/external-posts';
@@ -21,9 +21,9 @@ export default function BlogIndexTemplate(props) {
     return (
         <Fragment>
             <SEO />
-            <Grid>
+            <Home>
                 <Archive posts={sortedPosts} />
-            </Grid>
+            </Home>
         </Fragment>
     );
 }

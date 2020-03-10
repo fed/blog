@@ -2,6 +2,22 @@
     padding: 32px 0;
 }
 
+.skipToMainContent {
+    background-color: #dc2a5f;
+    border: 1px solid #ccc;
+    color: #fff;
+    composes: sansSerif defaultFocusState from '../../styles/mixins.css';
+    height: 50px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transform: translateY(-50px);
+}
+
+.skipToMainContent:focus {
+    transform: translateY(0);
+}
+
 @media (min-width: 1024px) {
     .container {
         align-content: space-between;
