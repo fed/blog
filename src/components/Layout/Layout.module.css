@@ -11,10 +11,11 @@
     align-items: center;
     color: #333;
     display: flex;
-    composes: sansSerif from '../../styles/mixins.css';
+    composes: sansSerif defaultFocusState from '../../styles/mixins.css';
     font-size: 22px;
     font-weight: 700;
     text-decoration: none;
+    width: max-content;
 }
 
 .avatar {

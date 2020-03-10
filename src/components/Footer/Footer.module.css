@@ -11,11 +11,16 @@
 
 .link {
     border-bottom: 0;
+    composes: defaultFocusState from '../../styles/mixins.css';
     padding-bottom: 0;
 }
 
 .link:hover {
     border-bottom: inherit;
+}
+
+.link:focus {
+    outline-offset: 6px;
 }
 
 .link:not(:last-child) {

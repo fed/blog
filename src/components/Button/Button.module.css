@@ -2,6 +2,7 @@
     border: 0;
     border-radius: 6px;
     color: #fff;
+    composes: defaultFocusState from '../../styles/mixins.css';
     cursor: pointer;
     display: inline-block;
     font-family: Roboto, sans-serif;

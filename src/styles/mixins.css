@@ -3,6 +3,9 @@
 @value color-gray-md: #8f8f8f;
 @value color-gray-light: #e1e1e1;
 @value color-blue: #056cc1;
+@value color-green: #3cca5d;
+@value color-yellow: #f9ca5e;
+@value color-pink: #dc2a5f;
 
 /* Font families */
 @value font-serif: 'Lora', serif;
@@ -41,9 +44,15 @@
     transition: border-bottom 0.5s ease;
 }
 
+.defaultFocusState:focus {
+    border-bottom-style: none;
+    outline: 2px solid color-pink;
+    outline-offset: 2px;
+}
+
 .link {
     border-bottom: 1px solid color-gray-light;
-    composes: bareLink;
+    composes: bareLink defaultFocusState;
     padding-bottom: 2px;
 }
 

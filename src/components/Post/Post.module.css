@@ -24,6 +24,12 @@
     border-bottom: 1px solid #056cc1;
 }
 
+.content a:focus {
+    outline: 2px solid #dc2a5f;
+    outline-offset: 2px;
+}
+/* End of duplicated rules */
+
 .content h1,
 .content h2,
 .content h3,

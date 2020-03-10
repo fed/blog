@@ -12,12 +12,14 @@
     margin: 15px 0 0;
 }
 
-.link {
-    composes: link from '../../styles/mixins.css';
+.avatarLink {
+    composes: defaultFocusState from '../../styles/mixins.css';
+    display: none;
+    margin-bottom: 30px;
 }
 
-.avatar {
-    display: none;
+.emailLink {
+    composes: link from '../../styles/mixins.css';
 }
 
 @media (min-width: 1024px) {
@@ -26,10 +28,12 @@
         padding: 0;
     }
 
+    .avatarLink {
+        display: inline-block;
+    }
+
     .avatar {
         border-radius: 100%;
-        display: inline-block;
-        margin-bottom: 30px;
         width: 120px;
     }
 }
