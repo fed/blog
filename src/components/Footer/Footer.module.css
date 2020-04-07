@@ -25,6 +25,7 @@
 
 .link {
     composes: defaultFocusState from '../../styles/mixins.css';
+    display: inline-block;
 }
 
 .link:focus {

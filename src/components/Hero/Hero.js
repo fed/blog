@@ -11,7 +11,7 @@ export default function Hero(props) {
                 <img src={avatarUrl} className={styles.avatar} aria-hidden="true" />
             </Link>
             <h1 className={styles.title}>Federico Knüssel</h1>
-            <p className={styles.content}>I'm a Software Engineer with a keen interest in web development, and I help teams ship clean and maintainable code. Feel free to hit me up on <Obfuscate email="hey@fknussel.com" className={styles.emailLink} />.</p>
+            <p className={styles.content}>I'm a software engineer with a keen interest in web development, and I help teams ship clean and maintainable code. Feel free to hit me up on <Obfuscate email="hey@fknussel.com" className={styles.emailLink} />.</p>
         </header>
     );
 }

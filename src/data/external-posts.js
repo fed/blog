@@ -18,7 +18,7 @@ export default [
         isExternal: true
     },
     {
-        title: 'Manipulating Event Streams',
+        title: 'Manipulating event streams',
         url: 'https://medium.com/@fknussel/manipulating-bacon-js-event-streams-a1da0632fa10',
         spoiler: `Here we'll explore how applying transformations to source streams produce new observables.`,
         date: 'December 26, 2016',
@@ -64,7 +64,7 @@ export default [
         isExternal: true
     },
     {
-        title: 'DOM Traversal and Manipulation',
+        title: 'DOM traversal and manipulation',
         url: 'https://github.com/fknussel/dom#dom-traversal-and-manipulation-with-vanillajs',
         spoiler: 'Cheatsheet for working with the DOM in Vanilla JS.',
         date: 'September 6, 2017',
@@ -73,7 +73,7 @@ export default [
         isExternal: true
     },
     {
-        title: 'DOM & BOM Revisited',
+        title: 'DOM & BOM revisited',
         url: 'https://medium.com/@fknussel/dom-bom-revisited-cf6124e2a816',
         spoiler: 'Reviewing DOM manipulation and talking to the browser with JavaScript.',
         date: 'August 6, 2017',

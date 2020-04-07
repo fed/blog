@@ -5,7 +5,7 @@ spoiler: Instructions on how to manually enable tabbing through all focusable el
 category: accessibility
 ---
 
-If you've ever used your keyboard to navigate a page in MacOS, you might have notice you cannot tab through all tabbable elements on the page. Some are fine, such as buttons and input fields, but others (e.g. links) are not reachable using your keyboard.
+If you've ever used your keyboard to navigate a page in MacOS, you might have noticed you cannot tab through all tabbable elements on the page. Some are fine, such as buttons and input fields, but others (e.g. links) are not reachable using your keyboard.
 
 The worst part is that this is not obvious, and there's no way for developers to enforce this setting on their sites.
 
