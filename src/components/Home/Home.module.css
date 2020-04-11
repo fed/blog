@@ -6,7 +6,7 @@
     background-color: #dc2a5f;
     border: 1px solid #ccc;
     color: #fff;
-    composes: sansSerif defaultFocusState from '../../styles/mixins.css';
+    composes: sansSerif from '../../styles/mixins.css';
     height: 50px;
     left: 0;
     position: fixed;

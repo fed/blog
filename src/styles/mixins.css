@@ -46,8 +46,9 @@
 
 .defaultFocusState:focus {
     border-bottom-style: none;
-    outline: 2px solid color-pink;
-    outline-offset: 2px;
+    border-radius: 3px;
+    box-shadow: 0 0 0 3px color-pink;
+    outline: none;
 }
 
 .link {

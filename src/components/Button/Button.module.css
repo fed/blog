@@ -2,10 +2,9 @@
     border: 0;
     border-radius: 6px;
     color: #fff;
-    composes: defaultFocusState from '../../styles/mixins.css';
+    composes: defaultFocusState sansSerif from '../../styles/mixins.css';
     cursor: pointer;
     display: inline-block;
-    font-family: Roboto, sans-serif;
     font-size: 14px;
     font-weight: 400;
     padding: 10px 15px 8px;
@@ -21,6 +20,11 @@
 
 .button:hover {
     border: inherit;
+}
+
+.button:focus {
+    border: 1px solid #fff;
+    padding: 10px 15px;
 }
 
 .twitter {
