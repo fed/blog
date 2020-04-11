@@ -1,0 +1,8 @@
+.link {
+    composes: link from '../../styles/mixins.css';
+}
+
+.external {
+    margin-left: 10px;
+    width: 16px;
+}
