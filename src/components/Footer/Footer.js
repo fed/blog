@@ -7,11 +7,10 @@ export default function Footer() {
         <footer role="contentinfo" className={styles.container}>
             <ul aria-label="Social media links" className={styles.list}>
                 {links.map(item => (
-                    <li className={styles.listItem}>
+                    <li className={styles.listItem} key={item.id}>
                         <a
                             className={styles.link}
                             href={item.url}
-                            key={item.id}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
