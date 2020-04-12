@@ -1,11 +1,8 @@
 import React from 'react';
-import Layout from '../components/Layout/Layout';
+import NotFound from '../components/NotFound/NotFound';
 
-export default function NotFoundPage(props) {
+export default function NotFoundPage() {
     return (
-        <Layout>
-            <h1>Not Found</h1>
-            <p>Haven't written this post yet.</p>
-        </Layout>
+        <NotFound />
     );
 }
