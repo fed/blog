@@ -12,12 +12,14 @@ export default function Layout(props) {
             <header className={styles.header}>
                 <div className={styles.headerContent}>
                     <Link to="/" className={styles.link}>
-                        <img src={avatarUrl} alt="My Avatar" className={styles.avatar} />
+                        <img src={avatarUrl} alt="" className={styles.avatar} />
                         <span className={styles.title}>F. Knüssel</span>
                     </Link>
                 </div>
             </header>
-            {props.children}
+            <main>
+                {props.children}
+            </main>
             <Footer links={social} />
         </Fragment>
     );

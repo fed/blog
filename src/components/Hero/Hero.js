@@ -6,12 +6,12 @@ import avatarUrl from '../../data/avatar';
 
 export default function Hero(props) {
     return (
-        <header className={styles.container}>
-            <Link to="/" className={styles.avatarLink}>
-                <img src={avatarUrl} className={styles.avatar} aria-hidden="true" />
+        <div className={styles.container}>
+            <Link to="/" className={styles.avatarLink} aria-hidden="true">
+                <img src={avatarUrl} className={styles.avatar} />
             </Link>
             <h1 className={styles.title}>Federico Knüssel</h1>
             <p className={styles.content}>I'm a software engineer with a keen interest in web development, and I help teams ship clean and maintainable code. Feel free to hit me up on <Obfuscate email="hey@fknussel.com" className={styles.emailLink} />.</p>
-        </header>
+        </div>
     );
 }

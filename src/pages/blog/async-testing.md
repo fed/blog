@@ -1,5 +1,5 @@
 ---
-title: Testing Asynchronous Code
+title: Testing asynchronous code
 date: 2019-01-09
 spoiler: A brief intro to the different ways to set up your asynchronous tests and the reason behind it.
 category: testing

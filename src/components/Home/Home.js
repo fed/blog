@@ -17,14 +17,14 @@ export default function Home(props) {
                 Skip to main content
             </button>
             <div className={styles.container}>
-                <div className={styles.leftColumn}>
+                <header className={styles.leftColumn}>
                     <Hero />
                     <Social links={social} />
-                </div>
+                </header>
 
-                <div ref={mainContent} className={styles.rightColumn}>
+                <main ref={mainContent} className={styles.rightColumn}>
                     {props.children}
-                </div>
+                </main>
             </div>
             <Footer links={social} />
         </Fragment>
