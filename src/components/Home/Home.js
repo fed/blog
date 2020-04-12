@@ -13,7 +13,10 @@ export default function Home(props) {
 
     return (
         <Fragment>
-            <button onClick={handleButtonClick} className={styles.skipToMainContent}>
+            <button
+                type="button"
+                onClick={handleButtonClick}
+                className={styles.skipToMainContent}>
                 Skip to main content
             </button>
             <div className={styles.container}>
@@ -22,7 +25,7 @@ export default function Home(props) {
                     <Social links={social} />
                 </header>
 
-                <main ref={mainContent} className={styles.rightColumn}>
+                <main ref={mainContent} className={styles.rightColumn} aria-label="Blog posts">
                     {props.children}
                 </main>
             </div>

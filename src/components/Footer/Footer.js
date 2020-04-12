@@ -4,8 +4,8 @@ import styles from './Footer.module.css';
 
 export default function Footer() {
     return (
-        <footer role="contentinfo" className={styles.container}>
-            <ul aria-label="Social media links" className={styles.list}>
+        <footer className={styles.container} aria-label="Social media links">
+            <ul className={styles.list}>
                 {links.map(item => (
                     <li className={styles.listItem} key={item.id}>
                         <a
@@ -14,12 +14,7 @@ export default function Footer() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <img
-                                className={styles.icon}
-                                src={item.icon}
-                                alt={item.name}
-                                title={item.name}
-                            />
+                            <img className={styles.icon} src={item.icon} alt={item.name} />
                         </a>
                     </li>
                 ))}

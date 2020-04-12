@@ -8,31 +8,31 @@ export default [
     {
         id: 'twitter',
         name: 'Twitter',
-        url: '//twitter.com/fknussel',
+        url: 'https://twitter.com/fknussel',
         icon: twitterIcon
     },
     {
         id: 'github',
         name: 'GitHub',
-        url: '//github.com/fknussel',
+        url: 'https://github.com/fknussel',
         icon: githubIcon
     },
     {
         id: 'medium',
         name: 'Medium',
-        url: '//medium.com/@fknussel',
+        url: 'https://medium.com/@fknussel',
         icon: mediumIcon
     },
     {
         id: 'codepen',
         name: 'CodePen',
-        url: '//codepen.io/fede',
+        url: 'https://codepen.io/fede',
         icon: codepenIcon
     },
     {
         id: 'linkedin',
         name: 'LinkedIn',
-        url: '//linkedin.com/in/fknussel',
+        url: 'https://linkedin.com/in/fknussel',
         icon: linkedinIcon
     }
 ];

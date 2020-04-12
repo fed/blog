@@ -12,13 +12,14 @@
     margin: 15px 0 0;
 }
 
-.avatarLink {
-    composes: defaultFocusState from '../../styles/mixins.css';
+.avatar {
+    border-radius: 100%;
     display: none;
     margin-bottom: 30px;
+    width: 120px;
 }
 
-.emailLink {
+.email {
     composes: link from '../../styles/mixins.css';
 }
 
@@ -28,12 +29,7 @@
         padding: 0;
     }
 
-    .avatarLink {
-        display: inline-block;
-    }
-
     .avatar {
-        border-radius: 100%;
-        width: 120px;
+        display: inline-block;
     }
 }
