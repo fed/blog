@@ -1,1 +1,1 @@
-export default 'https://github.com/fknussel.png';
+export default 'https://github.com/fed.png';
