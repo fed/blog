@@ -14,7 +14,7 @@ export default [
     {
         id: 'github',
         name: 'GitHub',
-        url: 'https://github.com/fknussel',
+        url: 'https://github.com/fed',
         icon: githubIcon
     },
     {
