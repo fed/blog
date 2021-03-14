@@ -37,9 +37,10 @@
         "styled-components": "^5.2.1"
     },
     "devDependencies": {
-        "eslint": "^6.8.0",
-        "eslint-plugin-react": "^7.19.0",
-        "prettier": "^1.19.1"
+        "eslint": "^7.22.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-react": "^7.22.0",
+        "prettier": "^2.2.1"
     },
     "scripts": {
         "lint": "eslint --ext .js --ignore-pattern public .",
