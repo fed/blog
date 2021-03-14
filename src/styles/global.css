@@ -1,13 +1,11 @@
 @import url('../../node_modules/normalize.css/normalize.css');
 
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
 body {
     -webkit-font-smoothing: antialiased;
-}
-
-a {
-    word-break: break-word;
 }

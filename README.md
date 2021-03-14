@@ -16,7 +16,3 @@
 ## Continuous Deployment
 
 All commits to `master` trigger a deployment to the `production` environment: https://fknussel.com.
-
-## Credits
-
-Forked from [Dan Abramov's personal blog](https://github.com/gaearon/overreacted.io) which is in turn a fork of the [Gatsby blog starter](https://github.com/gatsbyjs/gatsby-starter-blog).
