@@ -1,9 +1,9 @@
-import React from 'react';
 import { Link } from 'gatsby';
+import React from 'react';
 import styled from 'styled-components';
 
-import { baseTitleStyles, baseParagraphStyles,  } from '../styles/mixins';
 import puppiesImage from '../images/puppies.jpg';
+import { baseTitleStyles, baseParagraphStyles,  } from '../styles/mixins';
 
 const Container = styled.main`
     padding: 100px 0;

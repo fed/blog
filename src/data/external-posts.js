@@ -2,20 +2,22 @@ export default [
     {
         title: 'Wrapping things in Bacon',
         url: 'https://medium.com/@fknussel/wrapping-things-in-bacon-27658075ed80',
-        spoiler: 'Learn to create event streams from multiple sources: DOM events, promises, timers and many others.',
+        spoiler:
+            'Learn to create event streams from multiple sources: DOM events, promises, timers and many others.',
         date: 'September 17, 2016',
         timeToRead: 7,
         categoryId: 'baconjs',
-        isExternal: true
+        isExternal: true,
     },
     {
         title: 'Event Streams vs Properties',
         url: 'https://medium.com/@fknussel/event-streams-vs-properties-e55b53be8f42',
-        spoiler: 'Brief overview of what properties are and how they are different from event streams. We also cover how to create them and how to convert event streams into properties and vice versa.',
+        spoiler:
+            'Brief overview of what properties are and how they are different from event streams. We also cover how to create them and how to convert event streams into properties and vice versa.',
         date: 'September 21, 2016',
         timeToRead: 6,
         categoryId: 'baconjs',
-        isExternal: true
+        isExternal: true,
     },
     {
         title: 'Manipulating event streams',
@@ -24,7 +26,7 @@ export default [
         date: 'December 26, 2016',
         timeToRead: 12,
         categoryId: 'baconjs',
-        isExternal: true
+        isExternal: true,
     },
     {
         title: 'A simple Observable implementation',
@@ -33,17 +35,17 @@ export default [
         date: 'August 6, 2017',
         timeToRead: 6,
         categoryId: 'rxjs',
-        isExternal: true
+        isExternal: true,
     },
     {
         title: 'Making sense out of Context',
-        url:
-            'https://medium.com/@fknussel/making-sense-out-of-context-in-javascript-66fffe4054c9',
-        spoiler: 'Learn how the this keyword works, and the different ways in which contexts are bound on function calls.',
+        url: 'https://medium.com/@fknussel/making-sense-out-of-context-in-javascript-66fffe4054c9',
+        spoiler:
+            'Learn how the this keyword works, and the different ways in which contexts are bound on function calls.',
         date: 'December 30, 2016',
         timeToRead: 7,
         categoryId: 'javascript',
-        isExternal: true
+        isExternal: true,
     },
     {
         title: 'Arrays, objects and mutations',
@@ -52,7 +54,7 @@ export default [
         date: 'March 6, 2017',
         timeToRead: 7,
         categoryId: 'javascript',
-        isExternal: true
+        isExternal: true,
     },
     {
         title: 'A look at the inner workings of Redux',
@@ -61,7 +63,7 @@ export default [
         date: 'February 1, 2017',
         timeToRead: 15,
         categoryId: 'react',
-        isExternal: true
+        isExternal: true,
     },
     {
         title: 'DOM traversal and manipulation',
@@ -70,7 +72,7 @@ export default [
         date: 'September 6, 2017',
         timeToRead: null,
         categoryId: 'browsers',
-        isExternal: true
+        isExternal: true,
     },
     {
         title: 'DOM & BOM revisited',
@@ -79,6 +81,6 @@ export default [
         date: 'August 6, 2017',
         timeToRead: 9,
         categoryId: 'browsers',
-        isExternal: true
-    }
-]
+        isExternal: true,
+    },
+];

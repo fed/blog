@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Link from '../Link/Link';
 import { baseTitleStyles, baseParagraphStyles, baseSansSerifStyles, baseSmallContainerStyles } from '../styles/mixins';
+import Link from './link';
 
 const Container = styled.div`
     padding: 0 50px;

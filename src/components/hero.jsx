@@ -2,13 +2,13 @@ import React from 'react';
 import Obfuscate from 'react-obfuscate';
 import styled from 'styled-components';
 
-import avatarUrl from '../../data/avatar';
+import avatarUrl from '../data/avatar';
 import {
     baseLargeContainerStyles,
     baseParagraphStyles,
     baseLinkStyles,
     baseTitleStyles
-} from '../../styles/mixins';
+} from '../styles/mixins';
 
 const Container = styled.div`
     margin: 0 auto;

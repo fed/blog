@@ -1,17 +1,19 @@
-import React, { Fragment } from 'react';
-import { graphql } from 'gatsby';
 import find from 'lodash/find';
 import get from 'lodash/get';
-import Layout from '../components/Layout/Layout';
-import Container from '../components/Container/Container';
-import Post from '../components/Post/Post';
-import SEO from '../components/SEO';
+import React, { Fragment } from 'react';
+
+import Container from '../components/container';
+import Layout from '../components/layout';
+import Post from '../components/post';
+import SEO from '../components/seo';
 import categories from '../data/categories';
+
+export { default as pageQuery } from './blog-post.query.graphql';
 
 export default function BlogPostTemplate(props) {
     const post = get(props, 'data.markdownRemark');
     const categoryId = get(post, 'frontmatter.category');
-    const category = find(categories, { id: categoryId })
+    const category = find(categories, { id: categoryId });
 
     return (
         <Fragment>

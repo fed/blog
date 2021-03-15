@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Button from '../Button/Button';
 import links from '../../data/social';
+import Button from '../Button/Button';
 
 // Wanted to give the container a 30px padding all around.
 // Since the buttons have a vertical drop shadow of 6px, this means the bottom padding is 36px.

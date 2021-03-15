@@ -1,13 +1,13 @@
 import { css } from 'styled-components';
 
 /* Colors */
-const ColorGrayDark = '#333';
-const ColorGrayMedium = '#8f8f8f';
-const ColorGrayLight = '#e1e1e1';
-const ColorBlue = '#056cc1';
-const ColorGreen = '#3cca5d';
-const ColorYellow = '#f9ca5e';
-const ColorPink = '#dc2a5f';
+const colorGrayDark = '#333';
+const colorGrayMedium = '#8f8f8f';
+const colorGrayLight = '#e1e1e1';
+const colorBlue = '#056cc1';
+const colorGreen = '#3cca5d';
+const colorYellow = '#f9ca5e';
+const colorPink = '#dc2a5f';
 
 /* Font families */
 const fontFamilySerif = 'Lora, serif';
