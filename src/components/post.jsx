@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import PostDetails from '../post-details';
 import {
     baseParagraphStyles,
     baseTitleStyles,
     baseLinkStyles,
     baseSansSerifStyles,
 } from '../styles/mixins';
+import PostDetails from './post-details';
 
 const Header = styled.header`
     @media (min-width: 768px) {
@@ -69,7 +69,6 @@ export default function Post(props) {
                 <Title>{props.title}</Title>
                 <PostDetailsWrapper>
                     <PostDetails
-                        className={styles.details}
                         date={props.date}
                         categoryId={props.category.id}
                         categoryTitle={props.category.title}

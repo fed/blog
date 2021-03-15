@@ -1,3 +1,4 @@
+import { graphql } from 'gatsby';
 import find from 'lodash/find';
 import get from 'lodash/get';
 import React, { Fragment } from 'react';
@@ -7,8 +8,6 @@ import Layout from '../components/layout';
 import Post from '../components/post';
 import SEO from '../components/seo';
 import categories from '../data/categories';
-
-export { default as pageQuery } from './blog-post.query.graphql';
 
 export default function BlogPostTemplate(props) {
     const post = get(props, 'data.markdownRemark');

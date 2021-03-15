@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import links from '../data/social';
-import { baseDefaultFocusStateStyles } from '../styles/mixins';
+import { baseFocusStateStyles } from '../styles/mixins';
 
 const Container = styled.footer`
     align-items: center;
@@ -29,7 +29,7 @@ const ListItem = styled.li`
 `;
 
 const Link = styled.a`
-    ${baseDefaultFocusStateStyles};
+    ${baseFocusStateStyles};
     display: inline-block;
     padding: 6px;
 `;

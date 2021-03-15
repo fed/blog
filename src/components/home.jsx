@@ -2,6 +2,7 @@ import React, { Fragment, useRef } from 'react';
 import styled from 'styled-components';
 
 import social from '../data/social';
+import { baseSansSerifStyles } from '../styles/mixins';
 import Footer from './footer';
 import Hero from './hero';
 import Social from './social';

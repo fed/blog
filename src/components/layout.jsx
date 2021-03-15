@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import avatarUrl from '../data/avatar';
 import social from '../data/social';
-import { baseSansSerifStyled, baseDefaultFocusStateStyles } from '../styles/mixins';
+import { baseSansSerifStyles, baseFocusStateStyles } from '../styles/mixins';
 import Footer from './footer';
 
 const Header = styled.header`
@@ -21,8 +21,8 @@ const HeaderContent = styled.div`
 `;
 
 const Link = styled(UnstyledGatsbyLink)`
-    ${baseSansSerifStyled};
-    ${baseDefaultFocusStateStyles};
+    ${baseSansSerifStyles};
+    ${baseFocusStateStyles};
     align-items: center;
     color: #333;
     display: flex;

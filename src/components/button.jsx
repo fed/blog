@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { baseDefaultFocusStateStyles, baseSansSerifStyles } from '../styles/mixins';
+import { baseFocusStateStyles, baseSansSerifStyles } from '../styles/mixins';
 
 const BaseButton = styled.a`
-    ${baseDefaultFocusStateStyles};
+    ${baseFocusStateStyles};
     ${baseSansSerifStyles};
     border: 0;
     border-radius: 6px;

@@ -1,3 +1,4 @@
+import { graphql } from 'gatsby';
 import get from 'lodash/get';
 import sortBy from 'lodash/sortBy';
 import React, { Fragment } from 'react';
@@ -6,8 +7,6 @@ import Archive from '../components/archive';
 import Home from '../components/home';
 import SEO from '../components/seo';
 import externalPosts from '../data/external-posts';
-
-export { default as pageQuery } from './blog-index.query.graphql';
 
 export default function BlogIndexTemplate(props) {
     const posts = get(props, 'data.allMarkdownRemark.edges')
