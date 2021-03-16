@@ -4,9 +4,9 @@ import get from 'lodash/get';
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 
-import Layout from '../components/layout';
-import Post from '../components/post';
-import SEO from '../components/seo';
+import { Layout } from '../components/layout';
+import { Post } from '../components/post';
+import { SEO } from '../components/seo';
 import { categories } from '../data';
 
 const Container = styled.div`
