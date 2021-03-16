@@ -1,11 +1,11 @@
 import React, { Fragment, useRef } from 'react';
 import styled from 'styled-components';
 
-import social from '../data/social';
+import { socialLinks } from '../data';
 import { baseSansSerifStyles } from '../styles/mixins';
-import Footer from './footer';
-import Hero from './hero';
-import Social from './social';
+import { Footer } from './footer';
+import { Hero } from './hero';
+import { Social } from './social';
 
 const Container = styled.div`
     padding: 32px 0;
@@ -59,7 +59,7 @@ const SkipToMainContentButton = styled.button`
     }
 `;
 
-export default function Home(props) {
+export function Home(props) {
     const mainContent = useRef(null);
     const handleButtonClick = () => {
         mainContent.current.querySelector('a').focus();
@@ -73,13 +73,13 @@ export default function Home(props) {
             <Container>
                 <Header>
                     <Hero />
-                    <Social links={social} />
+                    <Social links={socialLinks} />
                 </Header>
                 <Content ref={mainContent} aria-label="Blog posts">
                     {props.children}
                 </Content>
             </Container>
-            <Footer links={social} />
+            <Footer links={socialLinks} />
         </Fragment>
     );
 }

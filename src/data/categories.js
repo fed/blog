@@ -20,7 +20,7 @@ import testingIcon from '../assets/testing.svg';
  * ---
  */
 
-export default [
+export const categories = [
     {
         id: 'baconjs',
         imageSrc: baconIcon,

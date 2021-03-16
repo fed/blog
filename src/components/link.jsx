@@ -18,7 +18,7 @@ const ExternalLinkIcon = styled.img`
     width: 16px;
 `;
 
-export default function Link(props) {
+export function Link(props) {
     if (!props.isExternal) {
         return (
             <GatsbyLink to={props.to} rel="bookmark">

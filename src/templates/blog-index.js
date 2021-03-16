@@ -3,10 +3,10 @@ import get from 'lodash/get';
 import sortBy from 'lodash/sortBy';
 import React, { Fragment } from 'react';
 
-import Archive from '../components/archive';
-import Home from '../components/home';
-import SEO from '../components/seo';
-import externalPosts from '../data/external-posts';
+import { Archive } from '../components/archive';
+import { Home } from '../components/home';
+import { SEO } from '../components/seo';
+import { externalPosts } from '../data';
 
 export default function BlogIndexTemplate(props) {
     const posts = get(props, 'data.allMarkdownRemark.edges')

@@ -41,7 +41,7 @@ const Icon = styled.img`
     }
 `;
 
-export default function PostDetails(props) {
+export function PostDetails(props) {
     return (
         <List className={props.className}>
             <ListItem>

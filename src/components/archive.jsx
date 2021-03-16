@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { baseTitleStyles, baseParagraphStyles, baseSansSerifStyles, baseSmallContainerStyles } from '../styles/mixins';
-import Link from './link';
+import { Link } from './link';
 
 const Container = styled.div`
     padding: 0 50px;
@@ -36,7 +36,7 @@ const Date = styled.p`
     margin: 0 0 10px;
 `;
 
-export default function Archive(props) {
+export function Archive(props) {
     return (
         <Container>
             {props.posts.map((post, index) => (

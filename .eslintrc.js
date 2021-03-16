@@ -22,6 +22,8 @@ module.exports = {
         'no-param-reassign': 1,
         'no-shadow': 1,
         'no-unused-expressions': 1,
+        'object-curly-spacing': ['error', 'always'],
+        'react/prop-types': 'off',
         'import/newline-after-import': 1,
         'import/order': [
             'error',

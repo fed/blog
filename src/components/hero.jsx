@@ -2,7 +2,7 @@ import React from 'react';
 import Obfuscate from 'react-obfuscate';
 import styled from 'styled-components';
 
-import avatarUrl from '../data/avatar';
+import { avatarUrl } from '../data';
 import {
     baseLargeContainerStyles,
     baseParagraphStyles,
@@ -43,7 +43,7 @@ const Email = styled(Obfuscate)`
     ${baseLinkStyles};
 `;
 
-export default function Hero() {
+export function Hero() {
     return (
         <Container>
             <Avatar src={avatarUrl} alt="" />

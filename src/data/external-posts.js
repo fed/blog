@@ -1,4 +1,4 @@
-export default [
+export const externalPosts = [
     {
         title: 'Wrapping things in Bacon',
         url: 'https://medium.com/@fknussel/wrapping-things-in-bacon-27658075ed80',

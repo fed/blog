@@ -70,7 +70,7 @@ const LinkedInButton = styled(BaseButton)`
     }
 `;
 
-export default function Button(props) {
+export function Button(props) {
     let BrandedButton;
 
     switch (props.type) {

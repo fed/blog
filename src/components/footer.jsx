@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import links from '../data/social';
+import { socialLinks } from '../data';
 import { baseFocusStateStyles } from '../styles/mixins';
 
 const Container = styled.footer`
@@ -41,11 +41,11 @@ const Icon = styled.img`
     width: 25px;
 `;
 
-export default function Footer() {
+export function Footer() {
     return (
         <Container aria-label="Social media links">
             <List>
-                {links.map((item) => (
+                {socialLinks.map((item) => (
                     <ListItem key={item.id}>
                         <Link href={item.url} target="_blank" rel="noopener noreferrer">
                             <Icon src={item.icon} alt={item.name} />

@@ -32,12 +32,12 @@ const LinkContainer = styled.nav`
     ${baseParagraphStyles};
 `;
 
-export default function NotFound() {
+export function NotFound() {
     return (
         <Container>
             <Title>Page Not Found</Title>
-            <Paragraph>{`Looks like I haven't written this post yet.`}</Paragraph>
-            <Paragraph>{`In the meantime, here's a picture of two cute little puppies:`}</Paragraph>
+            <Paragraph>Looks like I haven't written this post yet.</Paragraph>
+            <Paragraph>In the meantime, here's a picture of two cute little puppies:</Paragraph>
             <Image alt="Picture of one cute labrador puppy hugging another puppy" src={puppiesImage} />
             <LinkContainer>
                 <Link to="/">Go back to the homepage</Link>

@@ -2,10 +2,9 @@ import { Link as UnstyledGatsbyLink } from 'gatsby';
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 
-import avatarUrl from '../data/avatar';
-import social from '../data/social';
+import { avatarUrl, socialLinks } from '../data';
 import { baseSansSerifStyles, baseFocusStateStyles } from '../styles/mixins';
-import Footer from './footer';
+import { Footer } from './footer';
 
 const Header = styled.header`
     background-color: #fafafac9;
@@ -45,7 +44,7 @@ const Content = styled.main`
     padding: 0 25px;
 `;
 
-export default function Layout(props) {
+export function Layout(props) {
     return (
         <Fragment>
             <Header>
@@ -57,7 +56,7 @@ export default function Layout(props) {
                 </HeaderContent>
             </Header>
             <Content>{props.children}</Content>
-            <Footer links={social} />
+            <Footer links={socialLinks} />
         </Fragment>
     );
 }

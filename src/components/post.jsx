@@ -7,7 +7,7 @@ import {
     baseLinkStyles,
     baseSansSerifStyles,
 } from '../styles/mixins';
-import PostDetails from './post-details';
+import { PostDetails } from './post-details';
 
 const Header = styled.header`
     @media (min-width: 768px) {
@@ -62,7 +62,7 @@ const Content = styled.div`
     }
 `;
 
-export default function Post(props) {
+export function Post(props) {
     return (
         <article>
             <Header>

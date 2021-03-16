@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import links from '../data/social';
-import Button from './button';
+import { socialLinks } from '../data';
+import { Button } from './button';
 
 // Wanted to give the container a 30px padding all around.
 // Since the buttons have a vertical drop shadow of 6px, this means the bottom padding is 36px.
@@ -28,10 +28,10 @@ const Link = styled(Button)`
     }
 `;
 
-export default function Social() {
+export function Social() {
     return (
         <Container aria-label="Social media links">
-            {links.map(item => (
+            {socialLinks.map(item => (
                 <Link key={item.id} type={item.id} url={item.url}>
                     {item.name}
                 </Link>

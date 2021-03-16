@@ -4,7 +4,7 @@ import linkedinIcon from '../assets/linkedin.svg';
 import mediumIcon from '../assets/medium.svg';
 import twitterIcon from '../assets/twitter.svg';
 
-export default [
+export const socialLinks = [
     {
         id: 'twitter',
         name: 'Twitter',

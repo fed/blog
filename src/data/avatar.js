@@ -1,1 +1,1 @@
-export default 'https://github.com/fed.png';
+export const avatarUrl = 'https://github.com/fed.png';
