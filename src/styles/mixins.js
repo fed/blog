@@ -44,26 +44,23 @@ export const baseParagraphStyles = css`
     line-height: 1.6;
 `;
 
-export const baseRawLinkStyles = css`
-    color: ${colorBlue};
-    text-decoration: none;
-    transition: border-bottom 0.5s ease;
-    word-break: break-word;
-`;
-
 export const baseFocusStateStyles = css`
     :focus {
         border-bottom-style: none;
         border-radius: 3px;
-        box-shadow: 0 0 0 3px color-pink;
+        box-shadow: 0 0 0 3px ${colorPink};
         outline: none;
     }
 `;
 
 export const baseLinkStyles = css`
-    ${baseRawLinkStyles};
+    ${baseFocusStateStyles};
     border-bottom: 1px solid ${colorGrayLight};
+    color: ${colorBlue};
     padding-bottom: 2px;
+    text-decoration: none;
+    transition: border-bottom 0.5s ease;
+    word-break: break-word;
     :hover {
         border-bottom: 1px solid ${colorBlue};
     }

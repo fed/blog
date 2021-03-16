@@ -51,7 +51,7 @@ export function Layout(props) {
                 <HeaderContent>
                     <Link to="/">
                         <Avatar src={avatarUrl} alt="" />
-                        <span>F. Knüssel</span>
+                        F. Knüssel
                     </Link>
                 </HeaderContent>
             </Header>
