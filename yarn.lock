@@ -2662,7 +2662,7 @@ babel-plugin-remove-graphql-queries@^3.0.0:
   resolved "https://packages.atlassian.com/api/npm/npm-remote/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-3.0.0.tgz#b5c4e5e29b3bd2110b55a36d5b9076da15b5805e"
   integrity sha1-tcTl4ps70hELVaNtW5B22hW1gF4=
 
-"babel-plugin-styled-components@>= 1":
+"babel-plugin-styled-components@>= 1", babel-plugin-styled-components@^1.12.0:
   version "1.12.0"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/babel-plugin-styled-components/-/babel-plugin-styled-components-1.12.0.tgz#1dec1676512177de6b827211e9eda5a30db4f9b9"
   integrity sha1-HewWdlEhd95rgnIR6e2low20+bk=
@@ -3252,9 +3252,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001125, caniuse-lite@^1.0.30001181, caniuse-lite@^1.0.30001196:
-  version "1.0.30001200"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/caniuse-lite/-/caniuse-lite-1.0.30001200.tgz#25435af6ba907c2a9c86d21ce84950d4824e6620"
-  integrity sha1-JUNa9rqQfCqchtIc6ElQ1IJOZiA=
+  version "1.0.30001202"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/caniuse-lite/-/caniuse-lite-1.0.30001202.tgz#4cb3bd5e8a808e8cd89e4e66c549989bc8137201"
+  integrity sha1-TLO9XoqAjozYnk5mxUmYm8gTcgE=
 
 caw@^2.0.0, caw@^2.0.1:
   version "2.0.1"
@@ -3421,11 +3421,6 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
-
-classnames@^2.2.6:
-  version "2.2.6"
-  resolved "https://packages.atlassian.com/api/npm/npm-remote/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
-  integrity sha1-Q5Nb/90pHzJtrQogUwmzjQD2UM4=
 
 clean-stack@^2.0.0:
   version "2.2.0"
@@ -5970,6 +5965,13 @@ gatsby-plugin-sharp@^3.0.1:
     sharp "^0.27.0"
     svgo "1.3.2"
     uuid "3.4.0"
+
+gatsby-plugin-styled-components@^4.0.0:
+  version "4.0.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-4.0.0.tgz#eea171e85b5b3b7c0554c62178c09714fea29981"
+  integrity sha1-7qFx6FtbO3wFVMYheMCXFP6imYE=
+  dependencies:
+    "@babel/runtime" "^7.12.5"
 
 gatsby-plugin-typescript@^3.0.0:
   version "3.0.0"

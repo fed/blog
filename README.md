@@ -15,4 +15,4 @@
 
 ## Continuous Deployment
 
-All commits to `master` trigger a deployment to the `production` environment: https://fknussel.com.
+All commits to `master` trigger a deployment to the production environment: https://fknussel.com.

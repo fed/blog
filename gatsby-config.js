@@ -5,8 +5,8 @@ module.exports = {
         description: 'Personal blog by Federico Knüssel',
         siteUrl: 'https://fknussel.com',
         social: {
-            twitter: '@fknussel'
-        }
+            twitter: '@fknussel',
+        },
     },
     pathPrefix: '/',
     plugins: [
@@ -14,17 +14,15 @@ module.exports = {
             resolve: 'gatsby-source-filesystem',
             options: {
                 path: `${__dirname}/src/pages`,
-                name: 'pages'
-            }
+                name: 'pages',
+            },
         },
         {
             resolve: 'gatsby-plugin-google-fonts',
             options: {
                 display: 'swap',
-                fonts: [
-                    'Lora:400,400i,700,700i'
-                ]
-            }
+                fonts: ['Lora:400,400i,700,700i'],
+            },
         },
         {
             resolve: 'gatsby-transformer-remark',
@@ -33,33 +31,33 @@ module.exports = {
                     {
                         resolve: 'gatsby-remark-images',
                         options: {
-                            maxWidth: 590
-                        }
+                            maxWidth: 590,
+                        },
                     },
                     {
                         resolve: 'gatsby-remark-responsive-iframe',
                         options: {
-                            wrapperStyle: 'margin-bottom: 1.0725rem'
-                        }
+                            wrapperStyle: 'margin-bottom: 1.0725rem',
+                        },
                     },
                     {
                         resolve: 'gatsby-remark-prismjs',
                         options: {
-                            inlineCodeMarker: '÷'
-                        }
+                            inlineCodeMarker: '÷',
+                        },
                     },
                     'gatsby-remark-copy-linked-files',
-                    'gatsby-remark-smartypants'
-                ]
-            }
+                    'gatsby-remark-smartypants',
+                ],
+            },
         },
         'gatsby-transformer-sharp',
         'gatsby-plugin-sharp',
         {
             resolve: 'gatsby-plugin-google-analytics',
             options: {
-                trackingId: 'UA-103574069-1'
-            }
+                trackingId: 'UA-103574069-1',
+            },
         },
         'gatsby-plugin-feed',
         {
@@ -71,9 +69,10 @@ module.exports = {
                 background_color: '#1b1b1b',
                 theme_color: '#f3c868',
                 display: 'minimal-ui',
-                icon: 'static/favicon.png'
-            }
+                icon: 'static/favicon.png',
+            },
         },
-        'gatsby-plugin-react-helmet'
-    ]
+        'gatsby-plugin-react-helmet',
+        'gatsby-plugin-styled-components',
+    ],
 };
