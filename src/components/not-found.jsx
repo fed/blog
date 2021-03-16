@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 
-import puppiesImage from '../images/puppies.jpg';
+import puppiesImage from '../assets/puppies.jpg';
 import { baseTitleStyles, baseParagraphStyles } from '../styles/mixins';
 
 const Container = styled.main`

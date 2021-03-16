@@ -2,7 +2,7 @@ import { Link as UnstyledGatsbyLink } from 'gatsby';
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 
-import externalLinkIcon from '../images/external-link.svg';
+import externalLinkIcon from '../assets/external-link.svg';
 import { baseLinkStyles } from '../styles/mixins';
 
 const GatsbyLink = styled(UnstyledGatsbyLink)`

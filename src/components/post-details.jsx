@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import calendarIcon from '../images/calendar.svg';
-import categoryIcon from '../images/category.svg';
+import calendarIcon from '../assets/calendar.svg';
+import categoryIcon from '../assets/category.svg';
 import { baseSubtitleStyles } from '../styles/mixins';
 
 const List = styled.ul`
