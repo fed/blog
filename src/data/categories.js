@@ -1,11 +1,11 @@
+import accessibilityIcon from '../assets/accessibility.svg';
 import baconIcon from '../assets/bacon.png';
-import rxIcon from '../assets/rx.svg';
 import javascriptIcon from '../assets/javascript.svg';
 import reactIcon from '../assets/react.png';
-import testingIcon from '../assets/testing.svg';
-import accessibilityIcon from '../assets/accessibility.svg';
+import rxIcon from '../assets/rx.svg';
 import browserIcon from '../assets/safari.svg';
 import generalIcon from '../assets/target.svg';
+import testingIcon from '../assets/testing.svg';
 
 /*
  * When writing a new post, the `category` field in the header has to match
@@ -20,56 +20,56 @@ import generalIcon from '../assets/target.svg';
  * ---
  */
 
-export default [
+export const categories = [
     {
         id: 'baconjs',
         imageSrc: baconIcon,
         title: 'Functional Reactive Programming with Bacon.js',
         description:
-            'This is a series of posts on Functional Reactive Programming (FRP) in JavaScript using Bacon.js.'
+            'This is a series of posts on Functional Reactive Programming (FRP) in JavaScript using Bacon.js.',
     },
     {
         id: 'rxjs',
         imageSrc: rxIcon,
         title: 'Functional Reactive Programming with RxJS',
         description:
-            'Some articles on RxJS 5+ touching on some of the internals to how observables and operators work.'
+            'Some articles on RxJS 5+ touching on some of the internals to how observables and operators work.',
     },
     {
         id: 'javascript',
         imageSrc: javascriptIcon,
         title: 'JavaScript Fundamentals',
-        description: `Let's go back to the basics and review many of the core concepts of the language.`
+        description: `Let's go back to the basics and review many of the core concepts of the language.`,
     },
     {
         id: 'react',
         imageSrc: reactIcon,
         title: 'React, Redux and Friends',
         description:
-            'Just a bunch of thoughts around the React ecosystem, mostly on building declarative UIs and handling state.'
+            'Just a bunch of thoughts around the React ecosystem, mostly on building declarative UIs and handling state.',
     },
     {
         id: 'testing',
         imageSrc: testingIcon,
         title: 'Testing',
-        description: 'Some thoughts on writing automated unit, integration or end-to-end tests.'
+        description: 'Some thoughts on writing automated unit, integration or end-to-end tests.',
     },
     {
         id: 'accessibility',
         imageSrc: accessibilityIcon,
         title: 'Accessibility',
-        description: ''
+        description: '',
     },
     {
         id: 'browsers',
         imageSrc: browserIcon,
         title: 'Browsers and Web APIs',
-        description: ''
+        description: '',
     },
     {
         id: 'general',
         imageSrc: generalIcon,
         title: 'General',
-        description: 'Everything else'
-    }
+        description: 'Everything else',
+    },
 ];

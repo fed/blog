@@ -1,7 +1,7 @@
+import { StaticQuery, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
-import PropTypes from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
 
 const query = graphql`
     query GetSiteMetadata {
@@ -19,7 +19,7 @@ const query = graphql`
     }
 `;
 
-function SEO({ meta, image, title, description, slug }) {
+export function SEO({ meta, image, title, description, slug }) {
     return (
         <StaticQuery
             query={query}
@@ -109,5 +109,3 @@ SEO.propTypes = {
     slug: PropTypes.string,
     title: PropTypes.string.isRequired
 };
-
-export default SEO;
