@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { baseFocusStateStyles, baseSansSerifStyles } from '../styles/mixins';
+import { baseFocusStateStyles, fontFamilySansSerif } from '../styles/mixins';
 
 const BaseButton = styled.a`
     ${baseFocusStateStyles};
-    ${baseSansSerifStyles};
+    font-family: ${fontFamilySansSerif};
     border: 0;
     border-radius: 6px;
     color: #fff;

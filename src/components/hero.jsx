@@ -4,18 +4,19 @@ import styled from 'styled-components';
 
 import { avatarUrl } from '../data';
 import {
-    baseLargeContainerStyles,
+    sizeContainerMedium,
     baseParagraphStyles,
     baseLinkStyles,
-    baseTitleStyles
+    baseTitleStyles,
+    sizeContainerLarge
 } from '../styles/mixins';
 
 const Container = styled.div`
     margin: 0 auto;
     padding: 0 50px;
     text-align: center;
-    @media (min-width: 1024px) {
-        ${baseLargeContainerStyles};
+    @media (min-width: ${sizeContainerLarge}) {
+        max-width: ${sizeContainerMedium};
         padding: 0;
     }
 `;
@@ -34,7 +35,7 @@ const Avatar = styled.img`
     display: none;
     margin-bottom: 30px;
     width: 120px;
-    @media (min-width: 1024px) {
+    @media (min-width: ${sizeContainerLarge}) {
         display: inline-block;
     }
 `;

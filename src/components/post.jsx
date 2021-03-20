@@ -5,7 +5,7 @@ import {
     baseParagraphStyles,
     baseTitleStyles,
     baseLinkStyles,
-    baseSansSerifStyles,
+    fontFamilySansSerif,
 } from '../styles/mixins';
 import { PostDetails } from './post-details';
 
@@ -34,7 +34,7 @@ const Content = styled.div`
         ${baseLinkStyles};
     }
     h1, h2, h3, h4, h5, h6 {
-        ${baseSansSerifStyles};
+        font-family: ${fontFamilySansSerif};
         font-weight: 700;
         line-height: 1.35;
         margin: 50px 0 25px;
@@ -43,7 +43,7 @@ const Content = styled.div`
         max-width: 100%;
     }
     figcaption {
-        ${baseSansSerifStyles};
+        font-family: ${fontFamilySansSerif};
     }
     blockquote {
         border-left: 4px solid #ccc;

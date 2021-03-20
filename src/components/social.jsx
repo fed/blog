@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { socialLinks } from '../data';
+import { sizeContainerLarge } from '../styles/mixins'
 import { Button } from './button';
 
 // Wanted to give the container a 30px padding all around.
@@ -14,7 +15,7 @@ const Container = styled.nav`
     margin: 48px 0;
     padding: 30px 30px 18px;
     text-align: center;
-    @media (min-width: 1024px) {
+    @media (min-width: ${sizeContainerLarge}) {
         background-color: transparent;
         padding: 0;
     }

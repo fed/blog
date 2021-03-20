@@ -18,13 +18,12 @@ export default function BlogIndexTemplate(props) {
             timeToRead: get(post, 'node.timeToRead'),
         }))
         .concat(externalPosts);
-    const sortedPosts = sortBy(posts, (post) => new Date(post.date)).reverse();
 
     return (
         <Fragment>
             <SEO />
             <Home>
-                <Archive posts={sortedPosts} />
+                <Archive posts={sortBy(posts, (post) => new Date(post.date)).reverse()} />
             </Home>
         </Fragment>
     );

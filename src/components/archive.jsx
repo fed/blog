@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { baseTitleStyles, baseParagraphStyles, baseSansSerifStyles, baseSmallContainerStyles } from '../styles/mixins';
+import { baseTitleStyles, baseParagraphStyles, fontFamilySansSerif, sizeContainerSmall, sizeContainerLarge } from '../styles/mixins';
 import { Link } from './link';
 
 const Container = styled.div`
     padding: 0 50px;
-    @media (min-width: 1024px) {
-        ${baseSmallContainerStyles};
+    @media (min-width: ${sizeContainerLarge}) {
+        max-width: ${sizeContainerSmall};
         padding: 0;
     }
 `;
@@ -30,7 +30,7 @@ const Spoiler = styled.p`
 
 const Date = styled.p`
     color: #6a7482;
-    ${baseSansSerifStyles};
+    font-family: ${fontFamilySansSerif};
     text-transform: uppercase;
     font-size: 14px;
     margin: 0 0 10px;

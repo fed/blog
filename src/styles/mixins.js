@@ -1,24 +1,26 @@
 import { css } from 'styled-components';
 
 /* Colors */
-const colorGrayDark = '#333';
-const colorGrayMedium = '#8f8f8f';
-const colorGrayLight = '#e1e1e1';
-const colorBlue = '#056cc1';
-const colorGreen = '#3cca5d';
-const colorYellow = '#f9ca5e';
-const colorPink = '#dc2a5f';
+export const colorGrayDark = '#333';
+export const colorGrayMedium = '#8f8f8f';
+export const colorGrayLight = '#e1e1e1';
+export const colorBlue = '#056cc1';
+export const colorGreen = '#3cca5d';
+export const colorYellow = '#f9ca5e';
+export const colorPink = '#dc2a5f';
 
 /* Font families */
-const fontFamilySerif = 'Lora, serif';
-const fontFamilySansSerif =
+export const fontFamilySerif = 'Lora, serif';
+export const fontFamilySansSerif =
     '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif';
-const fontFamilyMonospace =
+export const fontFamilyMonospace =
     '"SFMono-Medium", "SF Mono", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Consolas, Courier, monospace';
 
 /* Dimensions */
-const sizeContainerSmall = '768px';
-const sizeContainerLarge = '875px';
+export const sizeContainerSmall = '768px';
+export const sizeContainerMedium = '875px';
+export const sizeContainerLarge = '1024px';
+export const sizeContainerExtraLarge = '1290px';
 
 /* Reusable styles */
 export const baseTitleStyles = css`
@@ -39,7 +41,7 @@ export const baseSubtitleStyles = css`
 
 export const baseParagraphStyles = css`
     color: ${colorGrayDark};
-    font-family: ${fontFamilySerif};
+    font-family: ${fontFamilySansSerif};
     font-size: 21px;
     line-height: 1.6;
 `;
@@ -64,16 +66,4 @@ export const baseLinkStyles = css`
     :hover {
         border-bottom: 1px solid ${colorBlue};
     }
-`;
-
-export const baseSansSerifStyles = css`
-    font-family: ${fontFamilySansSerif};
-`;
-
-export const baseSmallContainerStyles = css`
-    max-width: ${sizeContainerSmall};
-`;
-
-export const baseLargeContainerStyles = css`
-    max-width: ${sizeContainerLarge};
 `;

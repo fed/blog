@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import styled from 'styled-components';
 
 import { avatarUrl, socialLinks } from '../data';
-import { baseSansSerifStyles, baseFocusStateStyles } from '../styles/mixins';
+import { fontFamilySansSerif, baseFocusStateStyles } from '../styles/mixins';
 import { Footer } from './footer';
 
 const Header = styled.header`
@@ -20,8 +20,8 @@ const HeaderContent = styled.div`
 `;
 
 const Link = styled(UnstyledGatsbyLink)`
-    ${baseSansSerifStyles};
     ${baseFocusStateStyles};
+    font-family: ${fontFamilySansSerif};
     align-items: center;
     color: #333;
     display: flex;
