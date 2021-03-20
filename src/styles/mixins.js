@@ -10,7 +10,6 @@ export const colorYellow = '#f9ca5e';
 export const colorPink = '#dc2a5f';
 
 /* Font families */
-export const fontFamilySerif = 'Lora, serif';
 export const fontFamilySansSerif =
     '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif';
 export const fontFamilyMonospace =
@@ -42,7 +41,8 @@ export const baseSubtitleStyles = css`
 export const baseParagraphStyles = css`
     color: ${colorGrayDark};
     font-family: ${fontFamilySansSerif};
-    font-size: 21px;
+    font-size: 24px;
+    font-weight: 200;
     line-height: 1.6;
 `;
 

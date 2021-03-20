@@ -7,7 +7,7 @@ import {
     baseLinkStyles,
     fontFamilySansSerif,
 } from '../styles/mixins';
-import { PostDetails } from './post-details';
+import { PostMetadata } from './post-metadata';
 
 const Header = styled.header`
     @media (min-width: 768px) {
@@ -63,7 +63,7 @@ export function Post(props) {
             <Header>
                 <Title>{props.title}</Title>
                 <PostDetailsWrapper>
-                    <PostDetails
+                    <PostMetadata
                         date={props.date}
                         categoryId={props.category.id}
                         categoryTitle={props.category.title}

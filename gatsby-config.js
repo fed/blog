@@ -18,13 +18,6 @@ module.exports = {
             },
         },
         {
-            resolve: 'gatsby-plugin-google-fonts',
-            options: {
-                display: 'swap',
-                fonts: ['Lora:400,400i,700,700i'],
-            },
-        },
-        {
             resolve: 'gatsby-transformer-remark',
             options: {
                 plugins: [

@@ -3,31 +3,38 @@ import styled from 'styled-components';
 
 import calendarIcon from '../assets/calendar.svg';
 import categoryIcon from '../assets/category.svg';
-import { baseSubtitleStyles } from '../styles/mixins';
+import clockIcon from '../assets/clock.svg';
+import { sizeContainerMedium, fontFamilySansSerif, sizeContainerLarge } from '../styles/mixins';
 
 const List = styled.ul`
+    background-color: #deebff;
+    border-radius: 3px;
     list-style-type: none;
     margin: 0;
-    padding-left: 0;
-    @media (min-width: 768px) {
+    padding: 16px;
+    border-left: 6px solid #4c9aff;
+    @media (min-width: ${sizeContainerLarge}) {
         align-items: center;
         display: flex;
     }
 `;
 
 const ListItem = styled.li`
-    ${baseSubtitleStyles};
-    display: inline-flex;
-    margin-bottom: 16px;
+    font-family: ${fontFamilySansSerif};
+    font-size: 16px;
+    font-weight: 200;
+    display: flex;
     :not(:last-child) {
         margin-right: 24px;
+        margin-bottom: 16px;
     }
-    @media (min-width: 768px) {
+    @media (min-width: ${sizeContainerMedium}) {
         align-items: center;
         display: inline-flex;
         margin-bottom: 0;
         :not(:last-child) {
             margin-right: 40px;
+            margin-bottom: 0;
         }
     }
 `;
@@ -36,14 +43,14 @@ const Icon = styled.img`
     height: 20px;
     margin-right: 8px;
     width: 20px;
-    @media (min-width: 768px) {
+    @media (min-width: ${sizeContainerLarge}) {
         margin-right: 10px;
     }
 `;
 
-export function PostDetails(props) {
+export function PostMetadata(props) {
     return (
-        <List className={props.className}>
+        <List>
             <ListItem>
                 <Icon src={calendarIcon} alt="Date published" title="Date published" />
                 <time pubdate="pubdate">{props.date}</time>
@@ -51,6 +58,10 @@ export function PostDetails(props) {
             <ListItem>
                 <Icon src={categoryIcon} alt="Category" title="Category" />
                 {props.categoryTitle}
+            </ListItem>
+            <ListItem>
+                <Icon src={clockIcon} alt="Time to read" title="Time to read" />
+                {props.timeToRead} min. read
             </ListItem>
         </List>
     );
