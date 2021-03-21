@@ -47,7 +47,7 @@ interface Post {
     spoiler: string;
     date: string;
     timeToRead: number;
-    categoryId: string; // @TODO: make sure local posts have a valid category id
+    categoryId: string;
     isExternal: boolean;
     url?: string;
     slug?: string;
