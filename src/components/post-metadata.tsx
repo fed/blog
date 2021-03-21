@@ -48,21 +48,25 @@ const Icon = styled.img`
     }
 `;
 
-export function PostMetadata(props) {
-    return (
-        <List>
-            <ListItem>
-                <Icon src={calendarIcon} alt="Date published" title="Date published" />
-                <time pubdate="pubdate">{props.date}</time>
-            </ListItem>
-            <ListItem>
-                <Icon src={categoryIcon} alt="Category" title="Category" />
-                {props.categoryTitle}
-            </ListItem>
-            <ListItem>
-                <Icon src={clockIcon} alt="Time to read" title="Time to read" />
-                {props.timeToRead} min. read
-            </ListItem>
-        </List>
-    );
+interface Props {
+    date: string;
+    categoryTitle: string;
+    timeToRead: number;
 }
+
+export const PostMetadata: React.FC<Props> = ({ date, categoryTitle, timeToRead }) => (
+    <List>
+        <ListItem>
+            <Icon src={calendarIcon} alt="Date published" title="Date published" />
+            <time pubdate="pubdate">{date}</time>
+        </ListItem>
+        <ListItem>
+            <Icon src={categoryIcon} alt="Category" title="Category" />
+            {categoryTitle}
+        </ListItem>
+        <ListItem>
+            <Icon src={clockIcon} alt="Time to read" title="Time to read" />
+            {timeToRead} min. read
+        </ListItem>
+    </List>
+);

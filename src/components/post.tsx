@@ -33,7 +33,12 @@ const Content = styled.div`
     a:not(.gatsby-resp-image-link) {
         ${baseLinkStyles};
     }
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         font-family: ${fontFamilySansSerif};
         font-weight: 700;
         line-height: 1.35;
@@ -57,21 +62,22 @@ const Content = styled.div`
     }
 `;
 
-export function Post(props) {
-    return (
-        <article>
-            <Header>
-                <Title>{props.title}</Title>
-                <PostDetailsWrapper>
-                    <PostMetadata
-                        date={props.date}
-                        categoryId={props.category.id}
-                        categoryTitle={props.category.title}
-                        timeToRead={props.timeToRead}
-                    />
-                </PostDetailsWrapper>
-            </Header>
-            <Content dangerouslySetInnerHTML={{ __html: props.body }} />
-        </article>
-    );
+interface Props {
+    title: string;
+    date: string;
+    category: string;
+    timeToRead: number;
+    body: string;
 }
+
+export const Post: React.FC<Props> = ({ title, date, category, timeToRead, body }) => (
+    <article>
+        <Header>
+            <Title>{title}</Title>
+            <PostDetailsWrapper>
+                <PostMetadata date={date} categoryTitle={category} timeToRead={timeToRead} />
+            </PostDetailsWrapper>
+        </Header>
+        <Content dangerouslySetInnerHTML={{ __html: body }} />
+    </article>
+);

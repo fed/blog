@@ -63,7 +63,7 @@ export const categories = [
     {
         id: 'browsers',
         imageSrc: browserIcon,
-        title: 'Browsers and Web APIs',
+        title: 'DOM, Browsers and Web APIs',
         description: '',
     },
     {

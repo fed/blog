@@ -1,5 +1,5 @@
 import { Link as UnstyledGatsbyLink } from 'gatsby';
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import externalLinkIcon from '../assets/external-link.svg';
@@ -18,21 +18,27 @@ const ExternalLinkIcon = styled.img`
     width: 16px;
 `;
 
-export function Link(props) {
-    if (!props.isExternal) {
+interface Props {
+    isExternal?: boolean;
+    to?: string;
+    children?: React.ReactNode;
+}
+
+export const Link: React.FC<Props> = ({ isExternal, to, children }) => {
+    if (!isExternal) {
         return (
-            <GatsbyLink to={props.to} rel="bookmark">
-                {props.children}
+            <GatsbyLink to={to} rel="bookmark">
+                {children}
             </GatsbyLink>
         );
     }
 
     return (
-        <Fragment>
-            <ExternalLink href={props.to} target="_blank" rel="noopener noreferrer">
-                {props.children}
+        <>
+            <ExternalLink href={to} target="_blank" rel="noopener noreferrer">
+                {children}
             </ExternalLink>
             <ExternalLinkIcon src={externalLinkIcon} alt="External link" />
-        </Fragment>
+        </>
     );
-}
+};

@@ -1,5 +1,5 @@
 import { Link as UnstyledGatsbyLink } from 'gatsby';
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { avatarUrl, socialLinks } from '../data';
@@ -44,19 +44,21 @@ const Content = styled.main`
     padding: 0 25px;
 `;
 
-export function Layout(props) {
-    return (
-        <Fragment>
-            <Header>
-                <HeaderContent>
-                    <Link to="/">
-                        <Avatar src={avatarUrl} alt="" />
-                        F. Knüssel
-                    </Link>
-                </HeaderContent>
-            </Header>
-            <Content>{props.children}</Content>
-            <Footer links={socialLinks} />
-        </Fragment>
-    );
+interface Props {
+    children?: React.ReactNode;
 }
+
+export const Layout: React.FC = ({ children }) => (
+    <>
+        <Header>
+            <HeaderContent>
+                <Link to="/">
+                    <Avatar src={avatarUrl} alt="" />
+                    F. Knüssel
+                </Link>
+            </HeaderContent>
+        </Header>
+        <Content>{children}</Content>
+        <Footer />
+    </>
+);

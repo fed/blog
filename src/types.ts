@@ -1,4 +1,10 @@
-import { MarkdownRemark } from '../graphql-types';
+export enum Social {
+    TWITTER = 'twitter',
+    GITHUB = 'github',
+    MEDIUM = 'medium',
+    CODEPEN = 'codepen',
+    LINKEDIN = 'linkedin',
+}
 
 export enum Category {
     BACONJS = 'baconjs',
@@ -9,21 +15,4 @@ export enum Category {
     ACCESSIBILITY = 'accessibility',
     BROWSERS = 'browsers',
     GENERAL = 'general',
-}
-
-// export type Post = MarkdownRemark;
-
-export interface Post {
-    id: string;
-    html: string;
-    timeToRead: number;
-    frontmatter: {
-        title: string;
-        date: string;
-        spoiler: string;
-        category: Category;
-    };
-    fields: {
-        slug: string;
-    };
 }

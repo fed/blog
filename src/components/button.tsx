@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { baseFocusStateStyles, fontFamilySansSerif } from '../styles/mixins';
+import { Social } from '../types';
 
 const BaseButton = styled.a`
     ${baseFocusStateStyles};
@@ -70,23 +71,30 @@ const LinkedInButton = styled(BaseButton)`
     }
 `;
 
-export function Button(props) {
+interface Props {
+    url?: string;
+    type?: Social;
+    children?: React.ReactNode;
+    className?: string;
+}
+
+export const Button: React.FC<Props> = ({ type, url, children, className }) => {
     let BrandedButton;
 
-    switch (props.type) {
-        case 'twitter':
+    switch (type) {
+        case Social.TWITTER:
             BrandedButton = TwitterButton;
             break;
-        case 'github':
+        case Social.GITHUB:
             BrandedButton = GitHubButton;
             break;
-        case 'medium':
+        case Social.MEDIUM:
             BrandedButton = MediumButton;
             break;
-        case 'codepen':
+        case Social.CODEPEN:
             BrandedButton = CodePenButton;
             break;
-        case 'linkedin':
+        case Social.LINKEDIN:
             BrandedButton = LinkedInButton;
             break;
     }
@@ -96,13 +104,8 @@ export function Button(props) {
     }
 
     return (
-        <BrandedButton
-            className={props.className}
-            href={props.url}
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            {props.children}
+        <BrandedButton className={className} href={url} target="_blank" rel="noopener noreferrer">
+            {children}
         </BrandedButton>
     );
-}
+};
