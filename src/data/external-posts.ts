@@ -1,3 +1,5 @@
+import { Category } from '../types';
+
 export const externalPosts = [
     {
         title: 'Wrapping things in Bacon',
@@ -6,8 +8,7 @@ export const externalPosts = [
             'Learn to create event streams from multiple sources: DOM events, promises, timers and many others.',
         date: 'September 17, 2016',
         timeToRead: 7,
-        categoryId: 'baconjs',
-        isExternal: true,
+        categoryId: Category.BACONJS,
     },
     {
         title: 'Event Streams vs Properties',
@@ -16,8 +17,7 @@ export const externalPosts = [
             'Brief overview of what properties are and how they are different from event streams. We also cover how to create them and how to convert event streams into properties and vice versa.',
         date: 'September 21, 2016',
         timeToRead: 6,
-        categoryId: 'baconjs',
-        isExternal: true,
+        categoryId: Category.BACONJS,
     },
     {
         title: 'Manipulating event streams',
@@ -25,8 +25,7 @@ export const externalPosts = [
         spoiler: `Here we'll explore how applying transformations to source streams produce new observables.`,
         date: 'December 26, 2016',
         timeToRead: 12,
-        categoryId: 'baconjs',
-        isExternal: true,
+        categoryId: Category.BACONJS,
     },
     {
         title: 'A simple Observable implementation',
@@ -34,8 +33,7 @@ export const externalPosts = [
         spoiler: `Let's write our own Observable interface implementation to understand what's going on under the hood when we work with RxJS.`,
         date: 'August 6, 2017',
         timeToRead: 6,
-        categoryId: 'rxjs',
-        isExternal: true,
+        categoryId: Category.RXJS,
     },
     {
         title: 'Making sense out of Context',
@@ -44,8 +42,7 @@ export const externalPosts = [
             'Learn how the this keyword works, and the different ways in which contexts are bound on function calls.',
         date: 'December 30, 2016',
         timeToRead: 7,
-        categoryId: 'javascript',
-        isExternal: true,
+        categoryId: Category.JAVASCRIPT,
     },
     {
         title: 'Arrays, objects and mutations',
@@ -53,8 +50,7 @@ export const externalPosts = [
         spoiler: 'Some ideas on how to treat arrays and objects as if they were immutable.',
         date: 'March 6, 2017',
         timeToRead: 7,
-        categoryId: 'javascript',
-        isExternal: true,
+        categoryId: Category.JAVASCRIPT,
     },
     {
         title: 'A look at the inner workings of Redux',
@@ -62,8 +58,7 @@ export const externalPosts = [
         spoiler: `Let's try to understand what's really going on under the hood when we use Redux by implementing a simplified version of it from scratch.`,
         date: 'February 1, 2017',
         timeToRead: 15,
-        categoryId: 'react',
-        isExternal: true,
+        categoryId: Category.REACT,
     },
     {
         title: 'DOM traversal and manipulation',
@@ -71,8 +66,7 @@ export const externalPosts = [
         spoiler: 'Cheatsheet for working with the DOM in Vanilla JS.',
         date: 'September 6, 2017',
         timeToRead: null,
-        categoryId: 'browsers',
-        isExternal: true,
+        categoryId: Category.BROWSERS,
     },
     {
         title: 'DOM & BOM revisited',
@@ -80,7 +74,6 @@ export const externalPosts = [
         spoiler: 'Reviewing DOM manipulation and talking to the browser with JavaScript.',
         date: 'August 6, 2017',
         timeToRead: 9,
-        categoryId: 'browsers',
-        isExternal: true,
+        categoryId: Category.BROWSERS,
     },
-];
+].map((post) => ({ ...post, isExternal: true, slug: null }));

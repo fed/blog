@@ -1,17 +1,18 @@
-const _ = require('lodash');
-const Promise = require('bluebird');
 const path = require('path');
+const Promise = require('bluebird');
 const { createFilePath } = require('gatsby-source-filesystem');
+const _ = require('lodash');
 
 exports.createPages = ({ graphql, actions }) => {
     const { createPage } = actions;
 
     return new Promise((resolve, reject) => {
-        const blogPost = path.resolve('./src/templates/blog-post.js');
+        const BlogIndexTemplate = path.resolve('./src/templates/blog-index.tsx');
+        const BlogPostTemplate = path.resolve('./src/templates/blog-post.tsx');
 
         createPage({
             path: '/',
-            component: path.resolve('./src/templates/blog-index.js')
+            component: BlogIndexTemplate,
         });
 
         resolve(
@@ -34,8 +35,8 @@ exports.createPages = ({ graphql, actions }) => {
                             }
                         }
                     }
-                `
-            ).then(result => {
+                `,
+            ).then((result) => {
                 if (result.errors) {
                     console.log(result.errors);
                     reject(result.errors);
@@ -50,15 +51,15 @@ exports.createPages = ({ graphql, actions }) => {
 
                     createPage({
                         path: post.node.fields.slug,
-                        component: blogPost,
+                        component: BlogPostTemplate,
                         context: {
                             slug: post.node.fields.slug,
                             previous,
-                            next
-                        }
+                            next,
+                        },
                     });
                 });
-            })
+            }),
         );
     });
 };
@@ -71,7 +72,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         createNodeField({
             name: `slug`,
             node,
-            value
+            value,
         });
     }
 };

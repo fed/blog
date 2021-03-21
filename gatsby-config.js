@@ -44,15 +44,12 @@ module.exports = {
                 ],
             },
         },
-        'gatsby-transformer-sharp',
-        'gatsby-plugin-sharp',
         {
             resolve: 'gatsby-plugin-google-analytics',
             options: {
                 trackingId: 'UA-103574069-1',
             },
         },
-        'gatsby-plugin-feed',
         {
             resolve: 'gatsby-plugin-manifest',
             options: {
@@ -65,7 +62,11 @@ module.exports = {
                 icon: 'static/favicon.png',
             },
         },
+        'gatsby-transformer-sharp',
+        'gatsby-plugin-sharp',
+        'gatsby-plugin-feed',
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-styled-components',
+        'gatsby-plugin-graphql-codegen',
     ],
 };

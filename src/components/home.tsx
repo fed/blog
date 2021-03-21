@@ -1,7 +1,6 @@
-import React, { Fragment, useRef } from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 
-import { socialLinks } from '../data';
 import { fontFamilySansSerif, sizeContainerLarge, sizeContainerExtraLarge } from '../styles/mixins';
 import { Footer } from './footer';
 import { Hero } from './hero';
@@ -59,27 +58,31 @@ const SkipToMainContentButton = styled.button`
     }
 `;
 
-export function Home(props) {
+interface Props {
+    children?: React.ReactNode;
+}
+
+export const Home: React.FC<Props> = ({ children }) => {
     const mainContent = useRef(null);
     const handleButtonClick = () => {
         mainContent.current.querySelector('a').focus();
     };
 
     return (
-        <Fragment>
+        <>
             <SkipToMainContentButton type="button" onClick={handleButtonClick}>
                 Skip to main content
             </SkipToMainContentButton>
             <Container>
                 <Header>
                     <Hero />
-                    <Social links={socialLinks} />
+                    <Social />
                 </Header>
                 <Content ref={mainContent} aria-label="Blog posts">
-                    {props.children}
+                    {children}
                 </Content>
             </Container>
-            <Footer links={socialLinks} />
-        </Fragment>
+            <Footer />
+        </>
     );
-}
+};

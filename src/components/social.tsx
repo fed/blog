@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { socialLinks } from '../data';
-import { sizeContainerLarge } from '../styles/mixins'
+import { sizeContainerLarge } from '../styles/mixins';
 import { Button } from './button';
 
 // Wanted to give the container a 30px padding all around.
@@ -29,14 +29,12 @@ const Link = styled(Button)`
     }
 `;
 
-export function Social() {
-    return (
-        <Container aria-label="Social media links">
-            {socialLinks.map(item => (
-                <Link key={item.id} type={item.id} url={item.url}>
-                    {item.name}
-                </Link>
-            ))}
-        </Container>
-    );
-}
+export const Social: React.FC = () => (
+    <Container aria-label="Social media links">
+        {socialLinks.map((item) => (
+            <Link key={item.id} type={item.id} url={item.url}>
+                {item.name}
+            </Link>
+        ))}
+    </Container>
+);

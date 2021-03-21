@@ -1,33 +1,40 @@
 import { graphql } from 'gatsby';
-import get from 'lodash/get';
 import sortBy from 'lodash/sortBy';
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import { Archive } from '../components/archive';
 import { Home } from '../components/home';
 import { SEO } from '../components/seo';
 import { externalPosts } from '../data';
+import type { Query } from '../../graphql-types';
 
-export default function BlogIndexTemplate(props) {
-    const posts = get(props, 'data.allMarkdownRemark.edges')
+interface Props {
+    data: Query;
+}
+
+const BlogIndexTemplate: React.FC<Props> = ({ data }) => {
+    const posts = data.allMarkdownRemark.edges
         .map((post) => ({
-            title: get(post, 'node.frontmatter.title'),
-            slug: get(post, 'node.fields.slug'),
-            spoiler: get(post, 'node.frontmatter.spoiler'),
-            date: get(post, 'node.frontmatter.date'),
-            timeToRead: get(post, 'node.timeToRead'),
+            title: post.node.frontmatter.title,
+            slug: post.node.fields.slug,
+            spoiler: post.node.frontmatter.spoiler,
+            date: post.node.frontmatter.date,
+            timeToRead: post.node.timeToRead,
+            categoryId: post.node.frontmatter.category,
+            isExternal: false,
+            url: null,
         }))
         .concat(externalPosts);
 
     return (
-        <Fragment>
+        <>
             <SEO />
             <Home>
                 <Archive posts={sortBy(posts, (post) => new Date(post.date)).reverse()} />
             </Home>
-        </Fragment>
+        </>
     );
-}
+};
 
 export const pageQuery = graphql`
     query {
@@ -49,3 +56,5 @@ export const pageQuery = graphql`
         }
     }
 `;
+
+export default BlogIndexTemplate;

@@ -41,18 +41,16 @@ const Icon = styled.img`
     width: 25px;
 `;
 
-export function Footer() {
-    return (
-        <Container aria-label="Social media links">
-            <List>
-                {socialLinks.map((item) => (
-                    <ListItem key={item.id}>
-                        <Link href={item.url} target="_blank" rel="noopener noreferrer">
-                            <Icon src={item.icon} alt={item.name} />
-                        </Link>
-                    </ListItem>
-                ))}
-            </List>
-        </Container>
-    );
-}
+export const Footer: React.FC = () => (
+    <Container aria-label="Social media links">
+        <List>
+            {socialLinks.map((item) => (
+                <ListItem key={item.id}>
+                    <Link href={item.url} target="_blank" rel="noopener noreferrer">
+                        <Icon src={item.icon} alt={item.name} />
+                    </Link>
+                </ListItem>
+            ))}
+        </List>
+    </Container>
+);

@@ -8,7 +8,7 @@ import {
     baseParagraphStyles,
     baseLinkStyles,
     baseTitleStyles,
-    sizeContainerLarge
+    sizeContainerLarge,
 } from '../styles/mixins';
 
 const Container = styled.div`
@@ -44,16 +44,14 @@ const Email = styled(Obfuscate)`
     ${baseLinkStyles};
 `;
 
-export function Hero() {
-    return (
-        <Container>
-            <Avatar src={avatarUrl} alt="" />
-            <Title>Federico Knüssel</Title>
-            <Paragraph>
-                I'm a software engineer with a keen interest in web development, and I help teams
-                ship clean and maintainable code. Feel free to hit me up on{' '}
-                <Email email="fknussel@gmail.com" />.
-            </Paragraph>
-        </Container>
-    );
-}
+export const Hero: React.FC = () => (
+    <Container>
+        <Avatar src={avatarUrl} alt="" />
+        <Title>Federico Knüssel</Title>
+        <Paragraph>
+            I'm a software engineer with a keen interest in web development, and I help teams ship
+            clean and maintainable code. Feel free to hit me up on{' '}
+            <Email email="fknussel@gmail.com" />.
+        </Paragraph>
+    </Container>
+);
