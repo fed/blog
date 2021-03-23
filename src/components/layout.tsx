@@ -1,10 +1,20 @@
 import { Link as UnstyledGatsbyLink } from 'gatsby';
 import React from 'react';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import { avatarUrl, socialLinks } from '../data';
 import { fontFamilySansSerif, baseFocusStateStyles } from '../styles/mixins';
 import { Footer } from './footer';
+
+const GlobalStyles = createGlobalStyle`
+  body {
+    background-color: #fafafac9;
+  }
+`;
+
+const Container = styled.div`
+    background-color: #fff;
+`;
 
 const Header = styled.header`
     background-color: #fafafac9;
@@ -48,17 +58,20 @@ interface Props {
     children?: React.ReactNode;
 }
 
-export const Layout: React.FC = ({ children }) => (
+export const Layout: React.FC<Props> = ({ children }) => (
     <>
-        <Header>
-            <HeaderContent>
-                <Link to="/">
-                    <Avatar src={avatarUrl} alt="" />
-                    F. Knüssel
-                </Link>
-            </HeaderContent>
-        </Header>
-        <Content>{children}</Content>
-        <Footer />
+        <GlobalStyles />
+        <Container>
+            <Header>
+                <HeaderContent>
+                    <Link to="/">
+                        <Avatar src={avatarUrl} alt="" />
+                        F. Knüssel
+                    </Link>
+                </HeaderContent>
+            </Header>
+            <Content>{children}</Content>
+            <Footer />
+        </Container>
     </>
 );

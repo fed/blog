@@ -2,7 +2,7 @@ import React from 'react';
 import Obfuscate from 'react-obfuscate';
 import styled from 'styled-components';
 
-import { avatarUrl } from '../data';
+import { avatarUrl, bio, email } from '../data';
 import {
     sizeContainerMedium,
     baseParagraphStyles,
@@ -49,9 +49,7 @@ export const Hero: React.FC = () => (
         <Avatar src={avatarUrl} alt="" />
         <Title>Federico Knüssel</Title>
         <Paragraph>
-            I'm a software engineer with a keen interest in web development, and I help teams ship
-            clean and maintainable code. Feel free to hit me up on{' '}
-            <Email email="fknussel@gmail.com" />.
+            {bio} Feel free to hit me up on <Email email={email} />.
         </Paragraph>
     </Container>
 );

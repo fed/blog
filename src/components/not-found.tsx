@@ -6,7 +6,6 @@ import puppiesImage from '../assets/puppies.jpg';
 import { baseTitleStyles, baseParagraphStyles } from '../styles/mixins';
 
 const Container = styled.main`
-    padding: 100px 0;
     text-align: center;
 `;
 
@@ -23,6 +22,7 @@ const Paragraph = styled.div`
 const Image = styled.img`
     border: 1px solid #bbb;
     border-radius: 3px;
+    margin: 32px 0;
     max-width: 400px;
     padding: 3px;
     width: 100%;
@@ -36,7 +36,7 @@ export const NotFound: React.FC = () => (
     <Container>
         <Title>Page Not Found</Title>
         <Paragraph>Looks like I haven't written this post yet.</Paragraph>
-        <Paragraph>In the meantime, here's a picture of two cute little puppies:</Paragraph>
+        <Paragraph>In the meantime, here's a picture of two puppies. You are welcome.</Paragraph>
         <Image alt="Picture of one cute labrador puppy hugging another puppy" src={puppiesImage} />
         <LinkContainer>
             <Link to="/">Go back to the homepage</Link>
