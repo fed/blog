@@ -3,7 +3,7 @@ module.exports = {
         browser: true,
         es6: true,
     },
-    plugins: ['react', 'import'],
+    plugins: ['react', 'simple-import-sort', 'import', 'better-styled-components'],
     globals: {
         graphql: false,
     },
@@ -23,8 +23,11 @@ module.exports = {
         'no-shadow': 1,
         'no-unused-expressions': 1,
         'object-curly-spacing': ['error', 'always'],
-        'react/prop-types': 'off',
-        'import/newline-after-import': 1,
+        'simple-import-sort/imports': 'error',
+        'simple-import-sort/exports': 'error',
+        'import/first': 'error',
+        'import/newline-after-import': 'error',
+        'import/no-duplicates': 'error',
         'import/order': [
             'error',
             {
@@ -35,5 +38,22 @@ module.exports = {
                 groups: ['builtin', 'external', 'internal', ['parent', 'index', 'sibling']],
             },
         ],
+        'better-styled-components/sort-declarations-alphabetically': 2,
+    },
+    overrides: [
+        {
+            files: ['gatsby-node.js', 'gatsby-config.js', '.eslintrc.js'],
+            env: {
+                node: true,
+            },
+            rules: {
+                'no-console': 'off',
+            },
+        },
+    ],
+    settings: {
+        react: {
+            version: 'detect',
+        },
     },
 };

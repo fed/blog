@@ -2093,6 +2093,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-helmet@^6.1.0":
+  version "6.1.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/@types/react-helmet/-/react-helmet-6.1.0.tgz#af586ed685f4905e2adc7462d1d65ace52beee7a"
+  integrity sha1-r1hu1oX0kF4q3HRi0dZazlK+7no=
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*":
   version "17.0.3"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/@types/react/-/react-17.0.3.tgz#ba6e215368501ac3826951eef2904574c262cc79"
@@ -5324,6 +5331,14 @@ eslint-module-utils@^2.6.0:
     debug "^2.6.9"
     pkg-dir "^2.0.0"
 
+eslint-plugin-better-styled-components@^1.1.2:
+  version "1.1.2"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/eslint-plugin-better-styled-components/-/eslint-plugin-better-styled-components-1.1.2.tgz#cc8af5607abfcdabb53160e94f8e342582a46031"
+  integrity sha1-zIr1YHq/zau1MWDpT440JYKkYDE=
+  dependencies:
+    postcss "^7.0.2"
+    requireindex "~1.1.0"
+
 eslint-plugin-flowtype@^5.3.1:
   version "5.4.0"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/eslint-plugin-flowtype/-/eslint-plugin-flowtype-5.4.0.tgz#a559526e56403cb97b470b524957fc526e2485fe"
@@ -5399,6 +5414,11 @@ eslint-plugin-react@^7.22.0:
     prop-types "^15.7.2"
     resolve "^1.18.1"
     string.prototype.matchall "^4.0.2"
+
+eslint-plugin-simple-import-sort@^7.0.0:
+  version "7.0.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/eslint-plugin-simple-import-sort/-/eslint-plugin-simple-import-sort-7.0.0.tgz#a1dad262f46d2184a90095a60c66fef74727f0f8"
+  integrity sha1-odrSYvRtIYSpAJWmDGb+90cn8Pg=
 
 eslint-scope@5.1.0:
   version "5.1.0"
@@ -10998,7 +11018,7 @@ postcss@8.2.6:
     nanoid "^3.1.20"
     source-map "^0.6.1"
 
-postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.27:
+postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.2, postcss@^7.0.27:
   version "7.0.35"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/postcss/-/postcss-7.0.35.tgz#d2be00b998f7f211d8a276974079f2e92b970e24"
   integrity sha1-0r4AuZj38hHYonaXQHny6SuXDiQ=
@@ -11816,6 +11836,11 @@ require-package-name@^2.0.1:
   version "2.0.1"
   resolved "https://packages.atlassian.com/api/npm/npm-remote/require-package-name/-/require-package-name-2.0.1.tgz#c11e97276b65b8e2923f75dabf5fb2ef0c3841b9"
   integrity sha1-wR6XJ2tluOKSP3Xav1+y7ww4Qbk=
+
+requireindex@~1.1.0:
+  version "1.1.0"
+  resolved "https://packages.atlassian.com/api/npm/npm-remote/requireindex/-/requireindex-1.1.0.tgz#e5404b81557ef75db6e49c5a72004893fe03e162"
+  integrity sha1-5UBLgVV+91225JxacgBIk/4D4WI=
 
 requires-port@^1.0.0:
   version "1.0.0"

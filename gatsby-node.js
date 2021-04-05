@@ -1,4 +1,5 @@
 const path = require('path');
+
 const Promise = require('bluebird');
 const { createFilePath } = require('gatsby-source-filesystem');
 const _ = require('lodash');
@@ -35,7 +36,7 @@ exports.createPages = ({ graphql, actions }) => {
                             }
                         }
                     }
-                `,
+                `
             ).then((result) => {
                 if (result.errors) {
                     console.log(result.errors);
@@ -59,7 +60,7 @@ exports.createPages = ({ graphql, actions }) => {
                         },
                     });
                 });
-            }),
+            })
         );
     });
 };
