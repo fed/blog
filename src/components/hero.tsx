@@ -4,11 +4,11 @@ import styled from 'styled-components';
 
 import { avatarUrl, bio, email } from '../data';
 import {
-    sizeContainerMedium,
-    baseParagraphStyles,
     baseLinkStyles,
+    baseParagraphStyles,
     baseTitleStyles,
     sizeContainerLarge,
+    sizeContainerMedium,
 } from '../styles/mixins';
 
 const Container = styled.div`

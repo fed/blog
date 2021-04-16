@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 import {
+    baseLinkStyles,
     baseParagraphStyles,
     baseTitleStyles,
-    baseLinkStyles,
     fontFamilySansSerif,
 } from '../styles/mixins';
 import { PostMetadata } from './post-metadata';

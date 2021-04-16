@@ -1,9 +1,16 @@
 module.exports = {
+    parser: '@typescript-eslint/parser',
     env: {
         browser: true,
         es6: true,
     },
-    plugins: ['react', 'simple-import-sort', 'import', 'better-styled-components'],
+    plugins: [
+        '@typescript-eslint',
+        'react',
+        'simple-import-sort',
+        'import',
+        'better-styled-components',
+    ],
     globals: {
         graphql: false,
     },
@@ -14,7 +21,12 @@ module.exports = {
             jsx: true,
         },
     },
-    extends: ['eslint:recommended', 'plugin:react/recommended'],
+    extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:react/recommended',
+    ],
     rules: {
         'no-console': ['error', { allow: ['warn', 'error'] }],
         'no-else-return': 1,
@@ -39,6 +51,7 @@ module.exports = {
             },
         ],
         'better-styled-components/sort-declarations-alphabetically': 2,
+        'react/prop-types': 'off',
     },
     overrides: [
         {
@@ -48,6 +61,7 @@ module.exports = {
             },
             rules: {
                 'no-console': 'off',
+                '@typescript-eslint/no-var-requires': 'off',
             },
         },
     ],

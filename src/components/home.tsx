@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 
-import { fontFamilySansSerif, sizeContainerLarge, sizeContainerExtraLarge } from '../styles/mixins';
+import { fontFamilySansSerif, sizeContainerExtraLarge, sizeContainerLarge } from '../styles/mixins';
 import { Footer } from './footer';
 import { Hero } from './hero';
 import { Social } from './social';
@@ -44,10 +44,10 @@ const Content = styled.main`
 `;
 
 const SkipToMainContentButton = styled.button`
-    font-family: ${fontFamilySansSerif};
     background-color: #dc2a5f;
     border: 1px solid #ccc;
     color: #fff;
+    font-family: ${fontFamilySansSerif};
     height: 50px;
     left: 0;
     position: fixed;

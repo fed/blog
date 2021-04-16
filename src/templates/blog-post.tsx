@@ -1,11 +1,11 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
+import type { Query } from '../../graphql-types';
 import { Layout } from '../components/layout';
 import { Post } from '../components/post';
 import { SEO } from '../components/seo';
 import { categories } from '../data';
-import type { Query } from '../../graphql-types';
 
 interface Props {
     data: Query;
@@ -14,7 +14,7 @@ interface Props {
 const BlogPostTemplate: React.FC<Props> = ({ data }) => {
     const post = data.markdownRemark;
     const categoryId = post.frontmatter.category;
-    const category = categories.find((category) => category.id === categoryId);
+    const category = categories.find((c) => c.id === categoryId);
 
     return (
         <>

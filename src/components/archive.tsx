@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 import {
-    baseTitleStyles,
     baseParagraphStyles,
+    baseTitleStyles,
     fontFamilySansSerif,
-    sizeContainerSmall,
     sizeContainerLarge,
+    sizeContainerSmall,
 } from '../styles/mixins';
 import { Link } from './link';
 
@@ -37,9 +37,9 @@ const Spoiler = styled.p`
 const Date = styled.p`
     color: #6a7482;
     font-family: ${fontFamilySansSerif};
-    text-transform: uppercase;
     font-size: 14px;
     margin: 0 0 10px;
+    text-transform: uppercase;
 `;
 
 interface Post {

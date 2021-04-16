@@ -4,15 +4,15 @@ import styled from 'styled-components';
 import calendarIcon from '../assets/calendar.svg';
 import categoryIcon from '../assets/category.svg';
 import clockIcon from '../assets/clock.svg';
-import { sizeContainerMedium, fontFamilySansSerif, sizeContainerLarge } from '../styles/mixins';
+import { fontFamilySansSerif, sizeContainerLarge, sizeContainerMedium } from '../styles/mixins';
 
 const List = styled.ul`
     background-color: #deebff;
+    border-left: 6px solid #4c9aff;
     border-radius: 3px;
     list-style-type: none;
     margin: 0;
     padding: 16px;
-    border-left: 6px solid #4c9aff;
     @media (min-width: ${sizeContainerLarge}) {
         align-items: center;
         display: flex;
@@ -20,13 +20,13 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
+    display: flex;
     font-family: ${fontFamilySansSerif};
     font-size: 16px;
     font-weight: 200;
-    display: flex;
     :not(:last-child) {
-        margin-right: 24px;
         margin-bottom: 16px;
+        margin-right: 24px;
     }
     @media (min-width: ${sizeContainerMedium}) {
         align-items: center;

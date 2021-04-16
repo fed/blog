@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import puppiesImage from '../assets/puppies.jpg';
-import { baseTitleStyles, baseParagraphStyles } from '../styles/mixins';
+import { baseParagraphStyles, baseTitleStyles } from '../styles/mixins';
 
 const Container = styled.main`
     text-align: center;
@@ -35,8 +35,8 @@ const LinkContainer = styled.nav`
 export const NotFound: React.FC = () => (
     <Container>
         <Title>Page Not Found</Title>
-        <Paragraph>Looks like I haven't written this post yet.</Paragraph>
-        <Paragraph>In the meantime, here's a picture of two puppies. You are welcome.</Paragraph>
+        <Paragraph>{`Looks like I haven't written this post yet.`}</Paragraph>
+        <Paragraph>{`In the meantime, here's a picture of two puppies. You are welcome.`}</Paragraph>
         <Image alt="Picture of one cute labrador puppy hugging another puppy" src={puppiesImage} />
         <LinkContainer>
             <Link to="/">Go back to the homepage</Link>

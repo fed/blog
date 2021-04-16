@@ -6,12 +6,12 @@ import { Social } from '../types';
 
 const BaseButton = styled.a`
     ${baseFocusStateStyles};
-    font-family: ${fontFamilySansSerif};
     border: 0;
     border-radius: 6px;
     color: #fff;
     cursor: pointer;
     display: inline-block;
+    font-family: ${fontFamilySansSerif};
     font-size: 14px;
     font-weight: 400;
     padding: 10px 15px 8px;

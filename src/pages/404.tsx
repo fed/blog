@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { NotFound } from '../components/not-found';
 import { Layout } from '../components/layout';
+import { NotFound } from '../components/not-found';
 
 const NotFoundPage: React.FC = () => (
     <Layout>

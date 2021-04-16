@@ -2,11 +2,11 @@ import { graphql } from 'gatsby';
 import sortBy from 'lodash/sortBy';
 import React from 'react';
 
+import type { Query } from '../../graphql-types';
 import { Archive } from '../components/archive';
 import { Home } from '../components/home';
 import { SEO } from '../components/seo';
 import { externalPosts } from '../data';
-import type { Query } from '../../graphql-types';
 
 interface Props {
     data: Query;

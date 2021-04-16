@@ -1,11 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
 import Obfuscate from 'react-obfuscate';
+import styled from 'styled-components';
 
 import { Layout } from '../components/layout';
-import { baseTitleStyles, baseParagraphStyles, baseLinkStyles } from '../styles/mixins';
-import { bio, email } from '../data';
 import { Link } from '../components/link';
+import { bio, email } from '../data';
+import { baseLinkStyles, baseParagraphStyles, baseTitleStyles } from '../styles/mixins';
 
 const Title = styled.h1`
     ${baseTitleStyles};
