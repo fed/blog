@@ -1,13 +1,13 @@
 {
     "private": true,
-    "name": "fknussel.com",
+    "name": "blog",
     "description": "Federico Knüssel's Personal Blog",
     "version": "0.0.0",
     "author": "Federico Knüssel <fknussel@gmail.com>",
     "homepage": "https://fknussel.com",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/fknussel/fknussel.com/issues"
+        "url": "https://github.com/fknussel/blog/issues"
     },
     "dependencies": {
         "@types/react-helmet": "^6.1.0",

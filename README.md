@@ -1,4 +1,4 @@
-# fknussel.com [![Netlify Status](https://api.netlify.com/api/v1/badges/779ca632-50c8-4539-8863-230cf7c7cdbc/deploy-status)](https://app.netlify.com/sites/epic-mccarthy-4985de/deploys)
+# blog [![Netlify Status](https://api.netlify.com/api/v1/badges/779ca632-50c8-4539-8863-230cf7c7cdbc/deploy-status)](https://app.netlify.com/sites/epic-mccarthy-4985de/deploys)
 
 ## Prerequisites
 
