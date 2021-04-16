@@ -36,7 +36,10 @@ const BlogPostTemplate: React.FC<Props> = ({ data }) => {
     );
 };
 
-export const pageQuery = graphql`
+// The name of the exported constant isn't important,
+// as Gatsby looks for an exported graphql string from the file rather than a specific variable.
+// Note that you can only have one page query per file.
+export const query = graphql`
     query BlogPostBySlug($slug: String!) {
         markdownRemark(fields: { slug: { eq: $slug } }) {
             id

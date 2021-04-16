@@ -36,7 +36,10 @@ const BlogIndexTemplate: React.FC<Props> = ({ data }) => {
     );
 };
 
-export const pageQuery = graphql`
+// The name of the exported constant isn't important,
+// as Gatsby looks for an exported graphql string from the file rather than a specific variable.
+// Note that you can only have one page query per file.
+export const query = graphql`
     query {
         allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
             edges {

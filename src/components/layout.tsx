@@ -2,7 +2,7 @@ import { Link as UnstyledGatsbyLink } from 'gatsby';
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 
-import { avatarUrl, socialLinks } from '../data';
+import { avatarUrl } from '../data';
 import { fontFamilySansSerif, baseFocusStateStyles } from '../styles/mixins';
 import { Footer } from './footer';
 
