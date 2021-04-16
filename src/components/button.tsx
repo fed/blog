@@ -91,16 +91,13 @@ export const Button: React.FC<Props> = ({ type, url, children, className }) => {
         case Social.MEDIUM:
             BrandedButton = MediumButton;
             break;
-        case Social.CODEPEN:
-            BrandedButton = CodePenButton;
-            break;
         case Social.LINKEDIN:
             BrandedButton = LinkedInButton;
             break;
-    }
-
-    if (!BrandedButton) {
-        return null;
+        case Social.CODEPEN:
+        default:
+            BrandedButton = CodePenButton;
+            break;
     }
 
     return (

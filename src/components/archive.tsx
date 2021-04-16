@@ -59,8 +59,8 @@ interface Props {
 
 export const Archive: React.FC<Props> = ({ posts }) => (
     <Container>
-        {posts.map((post, index) => (
-            <Article key={index}>
+        {posts.map((post) => (
+            <Article key={post.url || post.slug}>
                 <Date>{post.date}</Date>
                 <Title>
                     <Link to={post.url || post.slug} isExternal={post.isExternal}>

@@ -21,7 +21,7 @@ const Container = styled.nav`
     }
 `;
 
-const Link = styled(Button)`
+const SocialLink = styled(Button)`
     margin-bottom: 18px;
     text-align: center;
     :not(:last-child) {
@@ -32,9 +32,9 @@ const Link = styled(Button)`
 export const Social: React.FC = () => (
     <Container aria-label="Social media links">
         {socialLinks.map((item) => (
-            <Link key={item.id} type={item.id} url={item.url}>
+            <SocialLink key={item.id} type={item.id} url={item.url}>
                 {item.name}
-            </Link>
+            </SocialLink>
         ))}
     </Container>
 );
