@@ -33,10 +33,7 @@ const half = value => 0.5 * value;
 const square = value => value * value;
 const pipeline = [square, double, triple, half];
 const initialValue = 5;
-const finalValue = pipeline.reduce(
-    (accumulator, fn) => fn(accumulator),
-    initialValue
-);
+const finalValue = pipeline.reduce((accumulator, fn) => fn(accumulator), initialValue);
 ```
 
 In this example, our pipeline determines the order of application for the functions because we are iterating over the pipeline array:
@@ -48,7 +45,7 @@ half(triple(double(square(x))));
 which for the initial value of `5` results in:
 
 ```js
-half(triple(double(square(5)))) = 75
+half(triple(double(square(5)))) = 75;
 ```
 
 This is similar to Bash's pipes:
@@ -159,9 +156,7 @@ It's a common practice to chain multiple `map`, `filter` and `reduce` calls to t
 
 ```js
 const numbers = [10, 5, 11, 20, 14, 15, 2, 3];
-const result = numbers
-    .filter(current => current % 2 === 0)
-    .map(current => 3 * current);
+const result = numbers.filter(current => current % 2 === 0).map(current => 3 * current);
 ```
 
 This is great in terms of readability as the intent of our code is super clear and easy to follow. However, bear in mind each time we chain one of these functions, not only we are creating a new array in memory on the process but we are also iterating again over the resulting list. This can have significant performance implications if we are dealing with massive collections.
@@ -186,9 +181,21 @@ For any list of recurring values, we can use `Array.prototype.reduce` to count h
 
 ```js
 const countries = [
-    'AU', 'NZ', 'AU', 'UK', 'IE',
-    'IT', 'IE', 'NZ', 'CH', 'UK',
-    'IT', 'AU', 'NZ', 'AU', 'IT'
+    'AU',
+    'NZ',
+    'AU',
+    'UK',
+    'IE',
+    'IT',
+    'IE',
+    'NZ',
+    'CH',
+    'UK',
+    'IT',
+    'AU',
+    'NZ',
+    'AU',
+    'IT'
 ];
 const count = countries.reduce((acc, val) => {
     if (acc[val]) {
@@ -214,4 +221,23 @@ In this case, we return an object in which keys are distinct countries and value
 }
 ```
 
-> I've seen some of these ideas on [Mykola Bilokonsky's Egghead course](https://egghead.io/courses/reduce-data-with-javascript).
+## Adding multiple new nodes to the DOM
+
+Consider the following code:
+
+```js
+nodes.forEach(node => document.body.append(node));
+```
+
+DOM injections and modifications are expensive, so it's important to keep these interactions to a minimum. Using fragments keeps recalculation of styles, painting and layout to a minimum. In this case, we could make use of `DocumentFragment` which acts as a pseudo DOM node and allows us to do exactly the same thing but in a more performant way:
+
+```js
+const nodesInFragment = nodes.reduce((fragment, node) => {
+    fragment.append(node);
+    return fragment;
+}, document.createDocumentFragment());
+
+document.body.append(nodesInFragment);
+```
+
+> I've seen some of these ideas on [Mykola Bilokonsky's Egghead course](https://egghead.io/courses/reduce-data-with-javascript) and also on [Twitter](https://twitter.com/argyleink/status/1169833100483809280).
