@@ -10,6 +10,8 @@
         "url": "https://github.com/fknussel/blog/issues"
     },
     "dependencies": {
+        "@testing-library/jest-dom": "^5.11.10",
+        "@testing-library/react": "^11.2.6",
         "@types/jest": "^26.0.22",
         "@types/react-helmet": "^6.1.0",
         "@types/react-test-renderer": "^17.0.1",
@@ -61,12 +63,12 @@
         "typescript": "^4.2.3"
     },
     "scripts": {
-        "lint": "eslint --ext .js,.ts,.tsx --ignore-pattern public .",
-        "format": "prettier --write src/**/*.js src/**/*.md",
         "start": "gatsby develop",
         "build": "rm -rf public && gatsby build",
         "postbuild": "cp _redirects public/_redirects",
         "clean": "gatsby clean",
+        "lint": "eslint --ext .js,.ts,.tsx --ignore-pattern public .",
+        "format": "prettier --write src/**/*.js src/**/*.md",
         "test:unit": "jest",
         "test:unit:watch": "jest --watch"
     }
