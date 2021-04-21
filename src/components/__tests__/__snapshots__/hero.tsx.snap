@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero renders correctly 1`] = `
+<div
+  className="sc-bdvvaa fWDawN"
+>
+  <img
+    alt=""
+    className="sc-hKwCoD fphZVz"
+    src="https://github.com/fed.png"
+  />
+  <h1
+    className="sc-gsDJrp dKgUSV"
+  >
+    Federico Knüssel
+  </h1>
+  <p
+    className="sc-dkPtyc bWPOts"
+  >
+    I'm a software engineer with a keen interest in web development, and I help teams ship clean and maintainable code.
+     Feel free to hit me up on 
+    <a
+      className="sc-eCImvq gxUbkE"
+      href="obfuscated"
+      onClick={[Function]}
+      onContextMenu={[Function]}
+      onFocus={[Function]}
+      onMouseOver={[Function]}
+      style={
+        Object {
+          "direction": "rtl",
+          "unicodeBidi": "bidi-override",
+        }
+      }
+    >
+      moc.liamg@lessunkf
+    </a>
+    .
+  </p>
+</div>
+`;
