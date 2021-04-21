@@ -74,7 +74,7 @@ const LinkedInButton = styled(BaseButton)`
 interface Props {
     url?: string;
     type?: Social;
-    children?: React.ReactNode;
+    children?: string;
     className?: string;
 }
 

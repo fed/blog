@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Social renders correctly 1`] = `
+<nav
+  aria-label="Social media links"
+  className="sc-gKckTs cELkVU"
+>
+  <a
+    className="sc-bdvvaa sc-gsDJrp bhLkGr gycrnD sc-iCfLBT ccnKaf"
+    href="https://twitter.com/fknussel"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    Twitter
+  </a>
+  <a
+    className="sc-bdvvaa sc-dkPtyc bhLkGr eqBuJi sc-iCfLBT ccnKaf"
+    href="https://github.com/fed"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    GitHub
+  </a>
+  <a
+    className="sc-bdvvaa sc-hKwCoD bhLkGr eQkTzz sc-iCfLBT ccnKaf"
+    href="https://medium.com/@fknussel"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    Medium
+  </a>
+  <a
+    className="sc-bdvvaa sc-eCImvq bhLkGr dXtlEa sc-iCfLBT ccnKaf"
+    href="https://codepen.io/fede"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    CodePen
+  </a>
+  <a
+    className="sc-bdvvaa sc-jRQAMF bhLkGr erPyZN sc-iCfLBT ccnKaf"
+    href="https://linkedin.com/in/fknussel"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    LinkedIn
+  </a>
+</nav>
+`;
