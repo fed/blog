@@ -57,6 +57,7 @@ module.exports = {
         'better-styled-components/sort-declarations-alphabetically': 'error',
         'react/prop-types': 'off',
         'react/jsx-filename-extension': 'off',
+        'react/jsx-props-no-spreading': 'off',
         // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-shadow.md
         'no-shadow': 'off',
         '@typescript-eslint/no-shadow': 'error',
