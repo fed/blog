@@ -2,6 +2,7 @@ import { Category } from '../types';
 
 export const externalPosts = [
     {
+        id: 'external-wrapping-things-in-bacon',
         title: 'Wrapping things in Bacon',
         url: 'https://medium.com/@fknussel/wrapping-things-in-bacon-27658075ed80',
         spoiler:
@@ -11,6 +12,7 @@ export const externalPosts = [
         categoryId: Category.BACONJS,
     },
     {
+        id: 'external-event-streams-vs-properties',
         title: 'Event Streams vs Properties',
         url: 'https://medium.com/@fknussel/event-streams-vs-properties-e55b53be8f42',
         spoiler:
@@ -20,6 +22,7 @@ export const externalPosts = [
         categoryId: Category.BACONJS,
     },
     {
+        id: 'external-manipulating-event-streams',
         title: 'Manipulating event streams',
         url: 'https://medium.com/@fknussel/manipulating-bacon-js-event-streams-a1da0632fa10',
         spoiler: `Here we'll explore how applying transformations to source streams produce new observables.`,
@@ -28,6 +31,7 @@ export const externalPosts = [
         categoryId: Category.BACONJS,
     },
     {
+        id: 'external-simple-observable-implementation',
         title: 'A simple Observable implementation',
         url: 'https://medium.com/@fknussel/a-simple-observable-implementation-c9c809c89c69',
         spoiler: `Let's write our own Observable interface implementation to understand what's going on under the hood when we work with RxJS.`,
@@ -36,6 +40,7 @@ export const externalPosts = [
         categoryId: Category.RXJS,
     },
     {
+        id: 'external-making-sense-context',
         title: 'Making sense out of Context',
         url: 'https://medium.com/@fknussel/making-sense-out-of-context-in-javascript-66fffe4054c9',
         spoiler:
@@ -45,6 +50,7 @@ export const externalPosts = [
         categoryId: Category.JAVASCRIPT,
     },
     {
+        id: 'external-arrays-objects-mutations',
         title: 'Arrays, objects and mutations',
         url: 'https://medium.com/@fknussel/arrays-objects-and-mutations-6b23348b54aa',
         spoiler: 'Some ideas on how to treat arrays and objects as if they were immutable.',
@@ -53,6 +59,7 @@ export const externalPosts = [
         categoryId: Category.JAVASCRIPT,
     },
     {
+        id: 'external-look-inner-workings-redux',
         title: 'A look at the inner workings of Redux',
         url: 'https://medium.com/@fknussel/redux-3cb5aac94a66',
         spoiler: `Let's try to understand what's really going on under the hood when we use Redux by implementing a simplified version of it from scratch.`,
@@ -61,6 +68,7 @@ export const externalPosts = [
         categoryId: Category.REACT,
     },
     {
+        id: 'external-dom-traversal-manipulation',
         title: 'DOM traversal and manipulation',
         url: 'https://github.com/fknussel/dom#dom-traversal-and-manipulation-with-vanillajs',
         spoiler: 'Cheatsheet for working with the DOM in Vanilla JS.',
@@ -69,6 +77,7 @@ export const externalPosts = [
         categoryId: Category.BROWSERS,
     },
     {
+        id: 'external-dom-bom-revisited',
         title: 'DOM & BOM revisited',
         url: 'https://medium.com/@fknussel/dom-bom-revisited-cf6124e2a816',
         spoiler: 'Reviewing DOM manipulation and talking to the browser with JavaScript.',

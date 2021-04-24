@@ -3238,7 +3238,7 @@ export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type Unnamed_1_Query = { allMarkdownRemark: { edges: Array<{ node: (
-        Pick<MarkdownRemark, 'timeToRead'>
+        Pick<MarkdownRemark, 'id' | 'timeToRead'>
         & { fields?: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'spoiler' | 'category'>> }
       ) }> } };
 

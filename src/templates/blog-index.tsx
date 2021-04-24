@@ -15,6 +15,7 @@ interface Props {
 const BlogIndexTemplate: React.FC<Props> = ({ data }) => {
     const posts = data.allMarkdownRemark.edges
         .map((post) => ({
+            id: post.node.id,
             title: post.node.frontmatter.title,
             slug: post.node.fields.slug,
             spoiler: post.node.frontmatter.spoiler,
@@ -44,6 +45,7 @@ export const query = graphql`
         allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
             edges {
                 node {
+                    id
                     fields {
                         slug
                     }

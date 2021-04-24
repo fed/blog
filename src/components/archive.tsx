@@ -43,6 +43,7 @@ const Date = styled.p`
 `;
 
 interface Post {
+    id: string;
     title: string;
     spoiler: string;
     date: string;
@@ -60,9 +61,9 @@ interface Props {
 export const Archive: React.FC<Props> = ({ posts }) => (
     <Container>
         {posts.map((post) => (
-            <Article key={post.url || post.slug}>
-                <Date>{post.date}</Date>
-                <Title>
+            <Article key={post.id} data-postid={post.id} data-testid="archive-post">
+                <Date data-testid="archive-post-date">{post.date}</Date>
+                <Title data-testid="archive-post-title">
                     <Link to={post.url || post.slug} isExternal={post.isExternal}>
                         {post.title}
                     </Link>
