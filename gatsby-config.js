@@ -51,6 +51,13 @@ module.exports = {
             },
         },
         {
+            resolve: `gatsby-plugin-goatcounter`,
+            options: {
+                code: 'fknussel', // https://<code>.goatcounter.com
+                pixel: true, // Set to true to include a gif to count non-JS users
+            },
+        },
+        {
             resolve: 'gatsby-plugin-manifest',
             options: {
                 name: 'Federico Knüssel',
