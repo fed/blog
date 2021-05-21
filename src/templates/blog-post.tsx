@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
-import type { Query } from '../../graphql-types';
+import { Query } from '../../graphql-types'; // Should be `import type { Query }` instead but ESLint complains
 import { Layout } from '../components/layout';
 import { Post } from '../components/post';
 import { SEO } from '../components/seo';

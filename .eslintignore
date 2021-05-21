@@ -1,1 +1,4 @@
+__mocks__/**/*
 graphql-types.ts
+jest-preprocess.js
+loadershim.js
