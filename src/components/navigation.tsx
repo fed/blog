@@ -29,6 +29,7 @@ const Container = styled.header`
 const Content = styled.div`
     align-items: center;
     display: flex;
+    overflow-y: scroll;
     padding: 14px 25px;
 
     @media (min-width: 768px) {
@@ -40,11 +41,7 @@ const Content = styled.div`
 const LogoLink = styled(UnstyledGatsbyLink)`
     ${baseFocusStateStyles};
     align-items: center;
-    color: #344563;
     display: flex;
-    font-family: ${fontFamilySansSerif};
-    font-size: 17px;
-    font-weight: 550;
     margin-right: 20px;
     text-decoration: none;
     width: max-content;
@@ -56,7 +53,17 @@ const Avatar = styled.img`
     width: 24px;
 `;
 
+const SiteName = styled.span`
+    align-items: center;
+    color: #344563;
+    font-family: ${fontFamilySansSerif};
+    font-size: 17px;
+    font-weight: 550;
+    white-space: nowrap;
+`;
+
 const List = styled.ul`
+    display: flex;
     margin: 0;
     padding-left: 0;
 `;
@@ -103,7 +110,7 @@ export const Navigation: React.FC = () => (
         <Content>
             <LogoLink to="/">
                 <Avatar src={avatarSrc} alt="" />
-                Federico Knüssel
+                <SiteName>Federico Knüssel</SiteName>
             </LogoLink>
             <List>
                 <ListItem>
