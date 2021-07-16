@@ -1,6 +1,6 @@
 import { Link as UnstyledGatsbyLink } from 'gatsby';
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import avatarSrc from '../assets/1f468-200d-1f4bb.svg';
 import { baseFocusStateStyles, fontFamilySansSerif } from '../styles/mixins';
@@ -73,7 +73,7 @@ const ListItem = styled.li`
     }
 `;
 
-const ListItemLink = styled(UnstyledGatsbyLink)`
+const baseLinkStyles = css`
     ${baseFocusStateStyles};
     border-radius: 3px;
     color: #344563;
@@ -83,12 +83,19 @@ const ListItemLink = styled(UnstyledGatsbyLink)`
     text-decoration: none;
     transition: background-color 0.1s ease-out,
         box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
-
     &:hover {
         background-color: rgba(222, 235, 255, 0.9);
         color: #0052cc;
         text-decoration: none;
     }
+`;
+
+const ListItemExternalLink = styled.a`
+    ${baseLinkStyles};
+`;
+
+const ListItemInternalLink = styled(UnstyledGatsbyLink)`
+    ${baseLinkStyles};
 `;
 
 export const Navigation: React.FC = () => (
@@ -100,16 +107,28 @@ export const Navigation: React.FC = () => (
             </LogoLink>
             <List>
                 <ListItem>
-                    <ListItemLink to="/">Archive</ListItemLink>
+                    <ListItemInternalLink to="/">Archive</ListItemInternalLink>
                 </ListItem>
                 <ListItem>
-                    <ListItemLink to="/about">About</ListItemLink>
+                    <ListItemInternalLink to="/about">About</ListItemInternalLink>
                 </ListItem>
                 <ListItem>
-                    <ListItemLink to="https://github.com/fed">GitHub</ListItemLink>
+                    <ListItemExternalLink
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://github.com/fed"
+                    >
+                        GitHub
+                    </ListItemExternalLink>
                 </ListItem>
                 <ListItem>
-                    <ListItemLink to="https://twitter.com/fknussel">Twitter</ListItemLink>
+                    <ListItemExternalLink
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://twitter.com/fknussel"
+                    >
+                        Twitter
+                    </ListItemExternalLink>
                 </ListItem>
             </List>
         </Content>
