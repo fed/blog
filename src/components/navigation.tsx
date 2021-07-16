@@ -2,7 +2,7 @@ import { Link as UnstyledGatsbyLink } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 
-import { avatarUrl } from '../data';
+import avatarSrc from '../assets/1f468-200d-1f4bb.svg';
 import { baseFocusStateStyles, fontFamilySansSerif } from '../styles/mixins';
 
 const Container = styled.header`
@@ -43,18 +43,17 @@ const LogoLink = styled(UnstyledGatsbyLink)`
     color: #344563;
     display: flex;
     font-family: ${fontFamilySansSerif};
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 17px;
+    font-weight: 550;
     margin-right: 20px;
     text-decoration: none;
     width: max-content;
 `;
 
 const Avatar = styled.img`
-    border-radius: 50%;
-    height: 25px;
-    margin-right: 15px;
-    width: 25px;
+    height: 24px;
+    margin-right: 10px;
+    width: 24px;
 `;
 
 const List = styled.ul`
@@ -65,7 +64,8 @@ const List = styled.ul`
 const ListItem = styled.li`
     color: #344563;
     display: inline-block;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 450;
     list-style: none;
 
     &:not(:last-child) {
@@ -91,11 +91,11 @@ const ListItemLink = styled(UnstyledGatsbyLink)`
     }
 `;
 
-export const Header: React.FC = () => (
+export const Navigation: React.FC = () => (
     <Container>
         <Content>
             <LogoLink to="/">
-                <Avatar src={avatarUrl} alt="" />
+                <Avatar src={avatarSrc} alt="" />
                 Federico Knüssel
             </LogoLink>
             <List>

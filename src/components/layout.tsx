@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 
 import { Footer } from './footer';
-import { Header } from './header';
+import { Navigation } from './navigation';
 
 const GlobalStyles = createGlobalStyle`
   body {
@@ -24,7 +24,7 @@ export const Layout: React.FC = ({ children }) => (
     <>
         <GlobalStyles />
         <Container>
-            <Header />
+            <Navigation />
             <Content>{children}</Content>
             <Footer />
         </Container>

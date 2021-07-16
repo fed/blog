@@ -58,11 +58,7 @@ const SkipToMainContentButton = styled.button`
     }
 `;
 
-interface Props {
-    children?: React.ReactNode;
-}
-
-export const Home: React.FC<Props> = ({ children }) => {
+export const Home: React.FC = ({ children }) => {
     const mainContent = useRef(null);
     const handleButtonClick = () => {
         mainContent.current.querySelector('a').focus();
