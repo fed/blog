@@ -3,19 +3,15 @@ import styled from 'styled-components';
 
 import { Navigation } from './navigation';
 
-const Container = styled.div`
-    background-color: #fff;
-`;
-
 const Content = styled.main`
-    margin: 50px auto 60px;
+    margin: 0 auto;
     max-width: 832px;
-    padding: 0 25px;
+    padding: 36px 25px 48px;
 `;
 
 export const Layout: React.FC = ({ children }) => (
-    <Container>
+    <>
         <Navigation />
         <Content>{children}</Content>
-    </Container>
+    </>
 );

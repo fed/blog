@@ -1,21 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import {
-    baseParagraphStyles,
-    baseTitleStyles,
-    sizeContainerLarge,
-    sizeContainerSmall,
-} from '../styles/mixins';
+import { baseParagraphStyles, baseTitleStyles } from '../styles/mixins';
 import { Link } from './link';
-
-const Container = styled.div`
-    padding: 0 50px;
-    @media (min-width: ${sizeContainerLarge}) {
-        max-width: ${sizeContainerSmall};
-        padding: 0;
-    }
-`;
 
 const Article = styled.article`
     :not(:last-child) {
@@ -50,7 +37,7 @@ interface Props {
 }
 
 export const Archive: React.FC<Props> = ({ posts }) => (
-    <Container>
+    <>
         {posts.map((post) => (
             <Article key={post.id} data-postid={post.id} data-testid="archive-post">
                 <Title data-testid="archive-post-title">
@@ -61,5 +48,5 @@ export const Archive: React.FC<Props> = ({ posts }) => (
                 <Spoiler dangerouslySetInnerHTML={{ __html: post.spoiler }} />
             </Article>
         ))}
-    </Container>
+    </>
 );
