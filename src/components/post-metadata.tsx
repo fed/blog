@@ -7,12 +7,9 @@ import clockIcon from '../assets/clock.svg';
 import { fontFamilySansSerif, sizeContainerLarge, sizeContainerMedium } from '../styles/mixins';
 
 const List = styled.ul`
-    background-color: #deebff;
-    border-left: 6px solid #4c9aff;
-    border-radius: 3px;
     list-style-type: none;
     margin: 0;
-    padding: 16px;
+    padding: 0;
     @media (min-width: ${sizeContainerLarge}) {
         align-items: center;
         display: flex;
@@ -21,9 +18,6 @@ const List = styled.ul`
 
 const ListItem = styled.li`
     display: flex;
-    font-family: ${fontFamilySansSerif};
-    font-size: 16px;
-    font-weight: 200;
     :not(:last-child) {
         margin-bottom: 16px;
         margin-right: 24px;
@@ -33,19 +27,26 @@ const ListItem = styled.li`
         display: inline-flex;
         margin-bottom: 0;
         :not(:last-child) {
-            margin-right: 40px;
+            margin-right: 26px;
             margin-bottom: 0;
         }
     }
 `;
 
 const Icon = styled.img`
-    height: 20px;
+    height: 16px;
     margin-right: 8px;
-    width: 20px;
+    width: 16px;
     @media (min-width: ${sizeContainerLarge}) {
         margin-right: 10px;
     }
+`;
+
+const Text = styled.span`
+    color: #6a7482;
+    font-family: ${fontFamilySansSerif};
+    font-size: 12px;
+    text-transform: uppercase;
 `;
 
 interface Props {
@@ -58,15 +59,17 @@ export const PostMetadata: React.FC<Props> = ({ date, categoryTitle, timeToRead 
     <List>
         <ListItem>
             <Icon src={calendarIcon} alt="Date published" title="Date published" />
-            <time pubdate="pubdate">{date}</time>
+            <Text>
+                <time pubdate="pubdate">{date}</time>
+            </Text>
         </ListItem>
         <ListItem>
             <Icon src={categoryIcon} alt="Category" title="Category" />
-            {categoryTitle}
+            <Text>{categoryTitle}</Text>
         </ListItem>
         <ListItem>
             <Icon src={clockIcon} alt="Time to read" title="Time to read" />
-            {timeToRead} min. read
+            <Text>{timeToRead} min. read</Text>
         </ListItem>
     </List>
 );

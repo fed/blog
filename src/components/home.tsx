@@ -1,47 +1,8 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 
-import { fontFamilySansSerif, sizeContainerExtraLarge, sizeContainerLarge } from '../styles/mixins';
-import { Footer } from './footer';
-import { Hero } from './hero';
-import { Social } from './social';
-
-const Container = styled.div`
-    padding: 32px 0;
-    @media (min-width: ${sizeContainerLarge}) {
-        align-content: space-between;
-        display: flex;
-        padding: 64px;
-    }
-    @media (min-width: ${sizeContainerExtraLarge}) {
-        margin: 0 auto;
-        max-width: 1500px;
-        padding: 64px 92px;
-    }
-`;
-
-const Header = styled.header`
-    @media (min-width: ${sizeContainerLarge}) {
-        padding: 0 30px 0 0;
-        width: 40%;
-    }
-    @media (min-width: ${sizeContainerExtraLarge}) {
-        width: 30%;
-    }
-`;
-
-const Content = styled.main`
-    @media (min-width: ${sizeContainerLarge}) {
-        display: flex;
-        justify-content: flex-end;
-        padding: 0 0 0 30px;
-        width: 60%;
-    }
-
-    @media (min-width: ${sizeContainerExtraLarge}) {
-        width: 70%;
-    }
-`;
+import { fontFamilySansSerif } from '../styles/mixins';
+import { Layout } from './layout';
 
 const SkipToMainContentButton = styled.button`
     background-color: #dc2a5f;
@@ -69,16 +30,11 @@ export const Home: React.FC = ({ children }) => {
             <SkipToMainContentButton type="button" onClick={handleButtonClick}>
                 Skip to main content
             </SkipToMainContentButton>
-            <Container>
-                <Header>
-                    <Hero />
-                    <Social />
-                </Header>
-                <Content ref={mainContent} aria-label="Blog posts">
+            <Layout>
+                <div ref={mainContent} aria-label="Blog posts">
                     {children}
-                </Content>
-            </Container>
-            <Footer />
+                </div>
+            </Layout>
         </>
     );
 };

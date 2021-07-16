@@ -11,21 +11,21 @@ import { PostMetadata } from './post-metadata';
 
 const Header = styled.header`
     @media (min-width: 768px) {
-        margin-bottom: 50px;
+        margin-bottom: 36px;
     }
 `;
 
 const Title = styled.h1`
     ${baseTitleStyles};
     font-size: 32px;
-    font-weight: 900;
+    font-weight: 750;
     @media (min-width: 768px) {
-        font-size: 45px;
+        font-size: 36px;
     }
 `;
 
 const PostDetailsWrapper = styled.div`
-    margin-top: 16px;
+    margin-top: 12px;
 `;
 
 const Content = styled.div`

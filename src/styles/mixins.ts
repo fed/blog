@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
 
 /* Colors */
-export const colorGrayDark = '#333';
+export const colorGrayDark = '#1f2937';
 export const colorGrayMedium = '#8f8f8f';
 export const colorGrayLight = '#e1e1e1';
 export const colorBlue = '#056cc1';
@@ -41,8 +41,8 @@ export const baseSubtitleStyles = css`
 export const baseParagraphStyles = css`
     color: ${colorGrayDark};
     font-family: ${fontFamilySansSerif};
-    font-size: 24px;
-    font-weight: 200;
+    font-size: 19px;
+    font-weight: 250;
     line-height: 1.6;
 `;
 
