@@ -14,6 +14,7 @@ const SkipToMainContentButton = styled.button`
     position: fixed;
     top: 0;
     transform: translateY(-50px);
+    z-index: 10;
     :focus {
         transform: translateY(0);
     }
