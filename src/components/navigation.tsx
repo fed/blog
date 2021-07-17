@@ -111,13 +111,12 @@ const ListItemInternalLink = styled(UnstyledGatsbyLink)`
 `;
 
 const HorizontalScrollGradient = styled.span`
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(250, 250, 250, 1) 100%);
+    background: linear-gradient(to right, #fafafa00, #fafafa);
     bottom: 0;
     position: absolute;
     right: 0;
     top: 0;
-    width: 80px;
+    width: 100px;
 
     @media (min-width: ${sizeContainerExtraSmall}) {
         display: none;
