@@ -30,7 +30,7 @@ const Content = styled.div`
     align-items: center;
     display: flex;
     overflow-y: scroll;
-    padding: 14px 25px;
+    padding: 14px 0 14px 25px;
 
     @media (min-width: ${sizeContainerSmall}) {
         margin: 0 auto;
@@ -77,6 +77,11 @@ const ListItem = styled.li`
 
     &:not(:last-child) {
         margin-right: 4px;
+    }
+
+    // Can't rely on the padding in Content as it's not working in iOS
+    &:last-child {
+        margin-right: 25px;
     }
 `;
 
