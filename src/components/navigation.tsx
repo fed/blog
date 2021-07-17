@@ -95,6 +95,7 @@ const baseNavigationLinkStyles = css`
     text-decoration: none;
     transition: background-color 0.1s ease-out,
         box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
+
     &:hover {
         background-color: rgba(222, 235, 255, 0.9);
         color: #0052cc;

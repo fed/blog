@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 
 /* Colors */
 export const colorGrayDark = '#1f2937';
-export const colorGrayMedium = '#8f8f8f';
+export const colorGrayMedium = '#6a7482';
 export const colorGrayLight = '#e1e1e1';
 export const colorBlue = '#056cc1';
 export const colorGreen = '#3cca5d';
@@ -23,26 +23,23 @@ export const sizeContainerLarge = '1024px';
 export const sizeContainerExtraLarge = '1290px';
 
 /* Reusable styles */
-export const baseTitleStyles = css`
+export const baseHeadingStyles = css`
     color: ${colorGrayDark};
     font-family: ${fontFamilySansSerif};
-    font-size: 36px;
-    font-weight: 700;
     line-height: 1.4;
-    margin: 0;
 `;
 
-export const baseSubtitleStyles = css`
-    color: ${colorGrayDark};
-    font-family: ${fontFamilySansSerif};
-    font-size: 18px;
-    font-weight: 300;
+export const baseTitleStyles = css`
+    ${baseHeadingStyles};
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
 `;
 
 export const baseParagraphStyles = css`
     color: ${colorGrayDark};
     font-family: ${fontFamilySansSerif};
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 250;
     line-height: 1.6;
 `;

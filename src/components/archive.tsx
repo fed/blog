@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { baseParagraphStyles, baseTitleStyles } from '../styles/mixins';
+import { baseHeadingStyles, baseParagraphStyles } from '../styles/mixins';
 import { Link } from './link';
 
 const Article = styled.article`
@@ -11,8 +11,10 @@ const Article = styled.article`
 `;
 
 const Title = styled.h2`
-    ${baseTitleStyles};
-    font-size: 24px;
+    ${baseHeadingStyles};
+    font-size: 23px;
+    font-weight: 600;
+    margin: 0;
 `;
 
 const Spoiler = styled.p`

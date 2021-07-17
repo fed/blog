@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import {
+    baseHeadingStyles,
     baseLinkStyles,
     baseParagraphStyles,
     baseTitleStyles,
@@ -10,55 +11,57 @@ import {
 import { PostMetadata } from './post-metadata';
 
 const Header = styled.header`
-    @media (min-width: 768px) {
-        margin-bottom: 36px;
-    }
+    margin-bottom: 36px;
 `;
 
 const Title = styled.h1`
     ${baseTitleStyles};
-    font-size: 26px;
-    font-weight: 750;
-    @media (min-width: 768px) {
-        font-size: 36px;
-    }
 `;
 
-const PostDetailsWrapper = styled.div`
-    margin-top: 12px;
+const PostMetadataWrapper = styled.div`
+    margin-top: 14px;
 `;
 
 const Content = styled.div`
-    ${baseParagraphStyles};
+    p {
+        ${baseParagraphStyles};
+    }
+
     a:not(.gatsby-resp-image-link) {
         ${baseLinkStyles};
     }
+
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-        font-family: ${fontFamilySansSerif};
-        font-weight: 700;
-        line-height: 1.35;
-        margin: 50px 0 25px;
+        ${baseHeadingStyles};
+        margin: 50px 0 0;
+        font-weight: 600;
     }
+
     img {
         max-width: 100%;
     }
+
     figcaption {
         font-family: ${fontFamilySansSerif};
     }
+
     blockquote {
         border-left: 4px solid #ccc;
         font-style: italic;
+
         p {
-            margin: 45px 15px;
+            margin: 25px 15px;
         }
     }
+
+    // Code blocks
     .gatsby-highlight {
-        margin: 40px 0;
+        margin: 25px 0;
     }
 `;
 
@@ -74,9 +77,9 @@ export const Post: React.FC<Props> = ({ title, date, category, timeToRead, body 
     <article>
         <Header>
             <Title>{title}</Title>
-            <PostDetailsWrapper>
+            <PostMetadataWrapper>
                 <PostMetadata date={date} categoryTitle={category} timeToRead={timeToRead} />
-            </PostDetailsWrapper>
+            </PostMetadataWrapper>
         </Header>
         <Content dangerouslySetInnerHTML={{ __html: body }} />
     </article>
