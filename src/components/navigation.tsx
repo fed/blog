@@ -69,8 +69,12 @@ const SiteName = styled.span`
 
 const List = styled.ul`
     display: flex;
-    margin: 0;
+    margin: 0 75px 0 0; /* This number matches the horizontal scroll gradient width minus the container's right padding */
     padding-left: 0;
+
+    @media (min-width: ${sizeContainerExtraSmall}) {
+        margin: 0;
+    }
 `;
 
 const ListItem = styled.li`
