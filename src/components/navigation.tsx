@@ -3,7 +3,12 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 import avatarSrc from '../assets/1f468-200d-1f4bb.svg';
-import { baseFocusStateStyles, fontFamilySansSerif } from '../styles/mixins';
+import {
+    baseFocusStateStyles,
+    fontFamilySansSerif,
+    sizeContainerExtraSmall,
+    sizeContainerSmall,
+} from '../styles/mixins';
 
 const Container = styled.header`
     background-color: #fafafac9;
@@ -32,7 +37,7 @@ const Content = styled.div`
     overflow-y: scroll;
     padding: 14px 25px;
 
-    @media (min-width: 768px) {
+    @media (min-width: ${sizeContainerSmall}) {
         margin: 0 auto;
         max-width: 832px;
     }
@@ -105,9 +110,24 @@ const ListItemInternalLink = styled(UnstyledGatsbyLink)`
     ${baseLinkStyles};
 `;
 
+const HorizontalScrollGradient = styled.span`
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(250, 250, 250, 1) 100%);
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+
+    @media (min-width: ${sizeContainerExtraSmall}) {
+        display: none;
+    }
+`;
+
 export const Navigation: React.FC = () => (
     <Container>
         <Content>
+            <HorizontalScrollGradient />
             <LogoLink to="/">
                 <Avatar src={avatarSrc} alt="" />
                 <SiteName>Federico Knüssel</SiteName>

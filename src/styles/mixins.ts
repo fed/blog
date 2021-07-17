@@ -16,7 +16,7 @@ export const fontFamilyMonospace =
     '"SFMono-Medium", "SF Mono", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Consolas, Courier, monospace';
 
 /* Dimensions */
-export const sizeContainerExtraSmall = '460px';
+export const sizeContainerExtraSmall = '480px';
 export const sizeContainerSmall = '768px';
 export const sizeContainerMedium = '875px';
 export const sizeContainerLarge = '1024px';
