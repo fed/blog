@@ -17,7 +17,7 @@ const Header = styled.header`
 
 const Title = styled.h1`
     ${baseTitleStyles};
-    font-size: 32px;
+    font-size: 26px;
     font-weight: 750;
     @media (min-width: 768px) {
         font-size: 36px;

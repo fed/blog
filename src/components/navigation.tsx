@@ -3,12 +3,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 import avatarSrc from '../assets/1f468-200d-1f4bb.svg';
-import {
-    baseFocusStateStyles,
-    fontFamilySansSerif,
-    sizeContainerExtraSmall,
-    sizeContainerSmall,
-} from '../styles/mixins';
+import { baseFocusStateStyles, fontFamilySansSerif, sizeContainerSmall } from '../styles/mixins';
 
 const Container = styled.header`
     background-color: #fafafac9;
@@ -69,12 +64,8 @@ const SiteName = styled.span`
 
 const List = styled.ul`
     display: flex;
-    margin: 0 75px 0 0; /* This number matches the horizontal scroll gradient width minus the container's right padding */
+    margin: 0;
     padding-left: 0;
-
-    @media (min-width: ${sizeContainerExtraSmall}) {
-        margin: 0;
-    }
 `;
 
 const ListItem = styled.li`
@@ -89,7 +80,7 @@ const ListItem = styled.li`
     }
 `;
 
-const baseLinkStyles = css`
+const baseNavigationLinkStyles = css`
     ${baseFocusStateStyles};
     border-radius: 3px;
     color: #344563;
@@ -107,30 +98,16 @@ const baseLinkStyles = css`
 `;
 
 const ListItemExternalLink = styled.a`
-    ${baseLinkStyles};
+    ${baseNavigationLinkStyles};
 `;
 
 const ListItemInternalLink = styled(UnstyledGatsbyLink)`
-    ${baseLinkStyles};
-`;
-
-const HorizontalScrollGradient = styled.span`
-    background: linear-gradient(to right, #fafafa00, #fafafa);
-    bottom: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100px;
-
-    @media (min-width: ${sizeContainerExtraSmall}) {
-        display: none;
-    }
+    ${baseNavigationLinkStyles};
 `;
 
 export const Navigation: React.FC = () => (
     <Container>
         <Content>
-            <HorizontalScrollGradient />
             <LogoLink to="/">
                 <Avatar src={avatarSrc} alt="" />
                 <SiteName>Federico Knüssel</SiteName>

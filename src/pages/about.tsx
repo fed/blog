@@ -4,13 +4,18 @@ import styled from 'styled-components';
 
 import waveEmoji from '../assets/1f44b.svg';
 import { Layout } from '../components/layout';
-import { Link } from '../components/link';
 import { baseLinkStyles, baseParagraphStyles, baseTitleStyles } from '../styles/mixins';
 
 const Title = styled.h1`
     ${baseTitleStyles};
     align-items: center;
     display: flex;
+`;
+
+const Image = styled.img`
+    height: 34px;
+    margin-left: 10px;
+    width: 34px;
 `;
 
 const Paragraph = styled.p`
@@ -21,10 +26,8 @@ const Email = styled(Obfuscate)`
     ${baseLinkStyles};
 `;
 
-const Image = styled.img`
-    height: 34px;
-    margin-left: 10px;
-    width: 34px;
+const Link = styled.a`
+    ${baseLinkStyles};
 `;
 
 const AboutPage: React.FC = () => (
@@ -40,16 +43,17 @@ const AboutPage: React.FC = () => (
         </Paragraph>
         <Paragraph>
             I currently work as a Front End Developer at{' '}
-            <Link to="https://atlassian.com" isExternal>
+            <Link href="https://atlassian.com" target="_blank" rel="noopener noreferrer">
                 Atlassian
             </Link>
+            .
         </Paragraph>
         <Paragraph>
             Feel free to reach out on{' '}
-            <Link to="https://twitter.com/fknussel" isExternal>
+            <Link href="https://twitter.com/fknussel" target="_blank" rel="noopener noreferrer">
                 Twitter
             </Link>{' '}
-            or flick me an email at <Email email="hey@fedknu.com" />
+            or flick me an email at <Email email="hey@fedknu.com" />.
         </Paragraph>
     </Layout>
 );
