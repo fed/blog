@@ -4,7 +4,7 @@ import React from 'react';
 
 import type { Query } from '../../graphql-types';
 import { Archive } from '../components/archive';
-import { Home } from '../components/home';
+import { Layout } from '../components/layout';
 import { SEO } from '../components/seo';
 import { externalPosts } from '../data';
 
@@ -30,9 +30,9 @@ const BlogIndexTemplate: React.FC<Props> = ({ data }) => {
     return (
         <>
             <SEO />
-            <Home>
+            <Layout>
                 <Archive posts={sortBy(posts, (post) => new Date(post.date)).reverse()} />
-            </Home>
+            </Layout>
         </>
     );
 };
