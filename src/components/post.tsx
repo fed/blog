@@ -6,7 +6,8 @@ import {
     baseLinkStyles,
     baseParagraphStyles,
     baseTitleStyles,
-    fontFamilySansSerif,
+    colorGrayLight,
+    colorGrayMedium,
 } from '../styles/mixins';
 import { PostMetadata } from './post-metadata';
 
@@ -23,7 +24,9 @@ const PostMetadataWrapper = styled.div`
 `;
 
 const Content = styled.div`
-    p {
+    p,
+    ul,
+    ol {
         ${baseParagraphStyles};
     }
 
@@ -46,15 +49,12 @@ const Content = styled.div`
         max-width: 100%;
     }
 
-    figcaption {
-        font-family: ${fontFamilySansSerif};
-    }
-
     blockquote {
-        border-left: 4px solid #ccc;
-        font-style: italic;
+        border-left: 6px solid ${colorGrayLight};
 
         p {
+            color: ${colorGrayMedium};
+            font-weight: 400;
             margin: 25px 15px;
         }
     }

@@ -57,7 +57,7 @@ export const baseLinkStyles = css`
     ${baseFocusStateStyles};
     border-bottom: 1px solid ${colorGrayLight};
     color: ${colorBlue};
-    padding-bottom: 2px;
+    padding-bottom: 1px;
     text-decoration: none;
     transition: border-bottom 0.5s ease;
     word-break: break-word;
