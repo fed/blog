@@ -38,8 +38,8 @@ export const categories = [
     {
         id: 'javascript',
         imageSrc: javascriptIcon,
-        title: 'JavaScript Fundamentals',
-        description: `Let's go back to the basics and review many of the core concepts of the language.`,
+        title: 'JavaScript',
+        description: `Let's go back to the basics and review some of the core concepts of the language.`,
     },
     {
         id: 'react',
