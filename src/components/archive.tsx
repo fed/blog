@@ -6,7 +6,7 @@ import { Link } from './link';
 
 const Article = styled.article`
     :not(:last-child) {
-        margin-bottom: 60px;
+        margin-bottom: 45px;
     }
 `;
 
