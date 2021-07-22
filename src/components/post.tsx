@@ -6,8 +6,6 @@ import {
     baseLinkStyles,
     baseParagraphStyles,
     baseTitleStyles,
-    colorGrayLight,
-    colorGrayMedium,
 } from '../styles/mixins';
 import { PostMetadata } from './post-metadata';
 
@@ -41,8 +39,8 @@ const Content = styled.div`
     h5,
     h6 {
         ${baseHeadingStyles};
-        margin: 50px 0 0;
         font-weight: 600;
+        margin: 50px 0 0;
     }
 
     img {
@@ -50,12 +48,15 @@ const Content = styled.div`
     }
 
     blockquote {
-        border-left: 6px solid ${colorGrayLight};
+        background-color: rgb(222, 235, 255);
+        border-radius: 3px;
+        padding: 8px 16px;
+        margin: 0;
 
         p {
-            color: ${colorGrayMedium};
+            font-size: 16px;
             font-weight: 400;
-            margin: 25px 15px;
+            margin: 0;
         }
     }
 
