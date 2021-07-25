@@ -6,7 +6,7 @@ spoiler:
 category: general
 ---
 
-Just found out how to add the ability to search and directly access JIRA tickets within your
+Just found out how to add the ability to search and directly access Jira tickets from within your
 browser's URL bar, and it's really handy 🎉
 
 To enable it go to **Settings > Search Engines > Manage Search Engines** and add a new engine with
