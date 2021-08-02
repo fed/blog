@@ -1,7 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { baseHeadingStyles, baseParagraphStyles } from '../styles/mixins';
+import {
+    baseHeadingStyles,
+    baseParagraphStyles,
+    colorGrayMedium,
+    fontFamilySansSerif,
+} from '../styles/mixins';
+import { Category } from './category';
 import { Link } from './link';
 
 const Article = styled.article`
@@ -22,6 +28,17 @@ const Spoiler = styled.p`
     margin: 10px 0 0;
 `;
 
+const Metadata = styled.div`
+    margin: 0 0 5px;
+`;
+
+const PublicationDate = styled.span`
+    color: ${colorGrayMedium};
+    font-family: ${fontFamilySansSerif};
+    font-size: 12px;
+    text-transform: uppercase;
+`;
+
 interface Post {
     id: string;
     title: string;
@@ -38,17 +55,20 @@ interface Props {
     posts: Post[];
 }
 
-export const Archive: React.FC<Props> = ({ posts }) => (
-    <>
-        {posts.map((post) => (
-            <Article key={post.id} data-postid={post.id} data-testid="archive-post">
-                <Title data-testid="archive-post-title">
-                    <Link to={post.url || post.slug} isExternal={post.isExternal}>
-                        {post.title}
-                    </Link>
-                </Title>
-                <Spoiler dangerouslySetInnerHTML={{ __html: post.spoiler }} />
-            </Article>
-        ))}
-    </>
-);
+export const Archive: React.FC<Props> = ({ posts }) =>
+    posts.map((post) => (
+        <Article key={post.id} data-postid={post.id} data-testid="archive-post">
+            <Metadata>
+                <PublicationDate>{post.date}</PublicationDate>
+            </Metadata>
+
+            <Title data-testid="archive-post-title">
+                <Category id={post.categoryId} />
+                <Link to={post.url || post.slug} isExternal={post.isExternal}>
+                    {post.title}
+                </Link>
+            </Title>
+
+            <Spoiler dangerouslySetInnerHTML={{ __html: post.spoiler }} />
+        </Article>
+    ));

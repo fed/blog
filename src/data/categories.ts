@@ -6,10 +6,10 @@ import rxIcon from '../assets/rx.svg';
 import browserIcon from '../assets/safari.svg';
 import generalIcon from '../assets/target.svg';
 import testingIcon from '../assets/testing.svg';
+import { CategoryId } from '../types';
 
 /*
- * When writing a new post, the `category` field in the header has to match
- * the ID of one of the following objects.
+ * When writing a new post, the `category` field in the header has to match one of the following IDs.
  * This is how we link blog posts to their parent category, e.g.
  *
  * ---
@@ -22,52 +22,50 @@ import testingIcon from '../assets/testing.svg';
 
 export const categories = [
     {
-        id: 'baconjs',
+        id: CategoryId.BACONJS,
         imageSrc: baconIcon,
-        title: 'Functional Reactive Programming with Bacon.js',
-        description:
-            'This is a series of posts on Functional Reactive Programming (FRP) in JavaScript using Bacon.js.',
+        title: 'Bacon.js',
+        description: 'Functional Reactive Programming with Bacon.js.',
     },
     {
-        id: 'rxjs',
+        id: CategoryId.RXJS,
         imageSrc: rxIcon,
-        title: 'Functional Reactive Programming with RxJS',
-        description:
-            'Some articles on RxJS 5+ touching on some of the internals to how observables and operators work.',
+        title: 'RxJS',
+        description: 'Functional Reactive Programming with RxJS.',
     },
     {
-        id: 'javascript',
+        id: CategoryId.JAVASCRIPT,
         imageSrc: javascriptIcon,
         title: 'JavaScript',
-        description: `Let's go back to the basics and review some of the core concepts of the language.`,
+        description: '',
     },
     {
-        id: 'react',
+        id: CategoryId.REACT,
         imageSrc: reactIcon,
-        title: 'React, Redux and Friends',
+        title: 'React ecosystem',
         description:
-            'Just a bunch of thoughts around the React ecosystem, mostly on building declarative UIs and handling state.',
+            'Thoughts about React, Redux and friends, mostly on building declarative UIs and handling state.',
     },
     {
-        id: 'testing',
+        id: CategoryId.TESTING,
         imageSrc: testingIcon,
         title: 'Testing',
-        description: 'Some thoughts on writing automated unit, integration or end-to-end tests.',
+        description: 'Some notes on writing automated unit, integration and end-to-end tests.',
     },
     {
-        id: 'accessibility',
+        id: CategoryId.ACCESSIBILITY,
         imageSrc: accessibilityIcon,
         title: 'Accessibility',
         description: '',
     },
     {
-        id: 'browsers',
+        id: CategoryId.BROWSERS,
         imageSrc: browserIcon,
-        title: 'DOM, Browsers and Web APIs',
+        title: 'Browsers & Web APIs',
         description: '',
     },
     {
-        id: 'general',
+        id: CategoryId.GENERAL,
         imageSrc: generalIcon,
         title: 'General',
         description: 'Everything else',

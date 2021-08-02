@@ -1,4 +1,4 @@
-import { Category } from '../types';
+import { CategoryId } from '../types';
 
 export const externalPosts = [
     {
@@ -9,7 +9,7 @@ export const externalPosts = [
             'Learn to create event streams from multiple sources: DOM events, promises, timers and many others.',
         date: 'September 17, 2016',
         timeToRead: 7,
-        categoryId: Category.BACONJS,
+        categoryId: CategoryId.BACONJS,
     },
     {
         id: 'external-event-streams-vs-properties',
@@ -19,7 +19,7 @@ export const externalPosts = [
             'Brief overview of what properties are and how they are different from event streams. We also cover how to create them and how to convert event streams into properties and vice versa.',
         date: 'September 21, 2016',
         timeToRead: 6,
-        categoryId: Category.BACONJS,
+        categoryId: CategoryId.BACONJS,
     },
     {
         id: 'external-manipulating-event-streams',
@@ -28,7 +28,7 @@ export const externalPosts = [
         spoiler: `Here we'll explore how applying transformations to source streams produce new observables.`,
         date: 'December 26, 2016',
         timeToRead: 12,
-        categoryId: Category.BACONJS,
+        categoryId: CategoryId.BACONJS,
     },
     {
         id: 'external-simple-observable-implementation',
@@ -37,7 +37,7 @@ export const externalPosts = [
         spoiler: `Let's write our own Observable interface implementation to understand what's going on under the hood when we work with RxJS.`,
         date: 'August 6, 2017',
         timeToRead: 6,
-        categoryId: Category.RXJS,
+        categoryId: CategoryId.RXJS,
     },
     {
         id: 'external-making-sense-context',
@@ -47,7 +47,7 @@ export const externalPosts = [
             'Learn how the this keyword works, and the different ways in which contexts are bound on function calls.',
         date: 'December 30, 2016',
         timeToRead: 7,
-        categoryId: Category.JAVASCRIPT,
+        categoryId: CategoryId.JAVASCRIPT,
     },
     {
         id: 'external-arrays-objects-mutations',
@@ -56,7 +56,7 @@ export const externalPosts = [
         spoiler: 'Some ideas on how to treat arrays and objects as if they were immutable.',
         date: 'March 6, 2017',
         timeToRead: 7,
-        categoryId: Category.JAVASCRIPT,
+        categoryId: CategoryId.JAVASCRIPT,
     },
     {
         id: 'external-look-inner-workings-redux',
@@ -65,7 +65,7 @@ export const externalPosts = [
         spoiler: `Let's try to understand what's really going on under the hood when we use Redux by implementing a simplified version of it from scratch.`,
         date: 'February 1, 2017',
         timeToRead: 15,
-        categoryId: Category.REACT,
+        categoryId: CategoryId.REACT,
     },
     {
         id: 'external-dom-traversal-manipulation',
@@ -74,7 +74,7 @@ export const externalPosts = [
         spoiler: 'Cheatsheet for working with the DOM in Vanilla JS.',
         date: 'September 6, 2017',
         timeToRead: null,
-        categoryId: Category.BROWSERS,
+        categoryId: CategoryId.BROWSERS,
     },
     {
         id: 'external-dom-bom-revisited',
@@ -83,6 +83,6 @@ export const externalPosts = [
         spoiler: 'Reviewing DOM manipulation and talking to the browser with JavaScript.',
         date: 'August 6, 2017',
         timeToRead: 9,
-        categoryId: Category.BROWSERS,
+        categoryId: CategoryId.BROWSERS,
     },
 ].map((post) => ({ ...post, isExternal: true, slug: null }));

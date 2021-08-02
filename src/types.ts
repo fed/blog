@@ -1,12 +1,4 @@
-export enum Social {
-    TWITTER = 'twitter',
-    GITHUB = 'github',
-    MEDIUM = 'medium',
-    CODEPEN = 'codepen',
-    LINKEDIN = 'linkedin',
-}
-
-export enum Category {
+export enum CategoryId {
     BACONJS = 'baconjs',
     RXJS = 'rxjs',
     JAVASCRIPT = 'javascript',
@@ -15,4 +7,5 @@ export enum Category {
     ACCESSIBILITY = 'accessibility',
     BROWSERS = 'browsers',
     GENERAL = 'general',
+    CSS = 'css',
 }
