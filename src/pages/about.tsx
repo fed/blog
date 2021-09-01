@@ -53,7 +53,7 @@ const AboutPage: React.FC = () => (
             <Link href="https://twitter.com/fknussel" target="_blank" rel="noopener noreferrer">
                 Twitter
             </Link>{' '}
-            or flick me an email at <Email email="fknussel@gmail.com" />.
+            or flick me an email at <Email email="fed@duck.com" />.
         </Paragraph>
     </Layout>
 );
