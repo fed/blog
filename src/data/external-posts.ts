@@ -74,7 +74,7 @@ export const externalPosts = [
         spoiler: 'Cheatsheet for working with the DOM in Vanilla JS.',
         date: 'September 6, 2017',
         timeToRead: null,
-        categoryId: CategoryId.BROWSERS,
+        categoryId: CategoryId.DOM,
     },
     {
         id: 'external-dom-bom-revisited',
@@ -83,6 +83,6 @@ export const externalPosts = [
         spoiler: 'Reviewing DOM manipulation and talking to the browser with JavaScript.',
         date: 'August 6, 2017',
         timeToRead: 9,
-        categoryId: CategoryId.BROWSERS,
+        categoryId: CategoryId.DOM,
     },
 ].map((post) => ({ ...post, isExternal: true, slug: null }));

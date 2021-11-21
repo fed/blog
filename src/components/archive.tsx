@@ -36,6 +36,7 @@ const PublicationDate = styled.span`
     color: ${colorGrayMedium};
     font-family: ${fontFamilySansSerif};
     font-size: 12px;
+    margin-right: 10px;
     text-transform: uppercase;
 `;
 
@@ -60,10 +61,10 @@ export const Archive: React.FC<Props> = ({ posts }) =>
         <Article key={post.id} data-postid={post.id} data-testid="archive-post">
             <Metadata>
                 <PublicationDate>{post.date}</PublicationDate>
+                <Category id={post.categoryId} />
             </Metadata>
 
             <Title data-testid="archive-post-title">
-                <Category id={post.categoryId} />
                 <Link to={post.url || post.slug} isExternal={post.isExternal}>
                     {post.title}
                 </Link>

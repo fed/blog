@@ -42,9 +42,9 @@ export const categories = [
     {
         id: CategoryId.REACT,
         imageSrc: reactIcon,
-        title: 'React ecosystem',
+        title: 'React',
         description:
-            'Thoughts about React, Redux and friends, mostly on building declarative UIs and handling state.',
+            'Thoughts about the React ecosystem, mostly on building declarative UIs and handling state.',
     },
     {
         id: CategoryId.TESTING,
@@ -59,9 +59,9 @@ export const categories = [
         description: '',
     },
     {
-        id: CategoryId.BROWSERS,
+        id: CategoryId.DOM,
         imageSrc: browserIcon,
-        title: 'Browsers & Web APIs',
+        title: 'DOM & Web APIs',
         description: '',
     },
     {

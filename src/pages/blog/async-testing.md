@@ -6,8 +6,7 @@ spoiler:
 category: testing
 ---
 
-> Link to the CodeSandbox with examples:
-> https://codesandbox.io/s/elegant-feynman-zdy2k?file=/test.js
+> CodeSandbox example: https://codesandbox.io/s/elegant-feynman-zdy2k?file=/test.js
 
 To understand what's the deal with asynchronous testing, we first need to look into what happens
 when we don't have any assertions in our tests.

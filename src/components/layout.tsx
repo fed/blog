@@ -1,12 +1,12 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 
-import { fontFamilySansSerif } from '../styles/mixins';
+import { fontFamilySansSerif, sizeContainerLarge } from '../styles/mixins';
 import { Navigation } from './navigation';
 
 const Content = styled.main`
     margin: 0 auto;
-    max-width: 832px;
+    max-width: ${sizeContainerLarge};
     padding: 36px 25px 48px;
 `;
 

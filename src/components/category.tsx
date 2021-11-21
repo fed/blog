@@ -2,14 +2,20 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 import { categories } from '../data';
+import { fontFamilySansSerif } from '../styles/mixins';
 import { CategoryId } from '../types';
 
 const Container = styled.span`
-    border-radius: 100%;
+    border-radius: 3px;
+    color: #fff;
     display: inline-block;
-    height: 16px;
-    margin-right: 10px;
-    width: 16px;
+    font-family: ${fontFamilySansSerif};
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 3px 4px;
+    text-transform: uppercase;
+    white-space: nowrap;
 
     ${(props) =>
         props.id === CategoryId.REACT &&
@@ -27,6 +33,7 @@ const Container = styled.span`
         props.id === CategoryId.JAVASCRIPT &&
         css`
             background-color: #f9ca5e;
+            color: #172b4d;
         `}
 
     ${(props) =>
@@ -36,7 +43,7 @@ const Container = styled.span`
         `}
 
     ${(props) =>
-        props.id === CategoryId.BROWSERS &&
+        props.id === CategoryId.DOM &&
         css`
             background-color: #6554c0;
         `}
@@ -65,5 +72,5 @@ export const Category: React.FC<Props> = ({ id }) => {
         return null;
     }
 
-    return <Container id={id} title={category.title} />;
+    return <Container id={id}>{category.title}</Container>;
 };

@@ -3,7 +3,12 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 import avatarSrc from '../assets/1f468-200d-1f4bb.svg';
-import { baseFocusStateStyles, fontFamilySansSerif, sizeContainerSmall } from '../styles/mixins';
+import {
+    baseFocusStateStyles,
+    fontFamilySansSerif,
+    sizeContainerLarge,
+    sizeContainerSmall,
+} from '../styles/mixins';
 
 const Container = styled.header`
     background-color: #fafafac9;
@@ -34,7 +39,7 @@ const Content = styled.div`
 
     @media (min-width: ${sizeContainerSmall}) {
         margin: 0 auto;
-        max-width: 832px;
+        max-width: ${sizeContainerLarge};
     }
 `;
 
@@ -97,7 +102,6 @@ const baseNavigationLinkStyles = css`
         box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
 
     &:hover {
-        background-color: rgba(222, 235, 255, 0.9);
         color: #0052cc;
         text-decoration: none;
     }

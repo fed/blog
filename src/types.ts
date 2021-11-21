@@ -5,7 +5,7 @@ export enum CategoryId {
     REACT = 'react',
     TESTING = 'testing',
     ACCESSIBILITY = 'accessibility',
-    BROWSERS = 'browsers',
+    DOM = 'dom',
     GENERAL = 'general',
     CSS = 'css',
 }
