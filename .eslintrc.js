@@ -10,6 +10,7 @@ module.exports = {
         'simple-import-sort',
         'import',
         'better-styled-components',
+        'prettier',
     ],
     globals: {
         graphql: false,
@@ -31,6 +32,7 @@ module.exports = {
         'plugin:import/typescript',
     ],
     rules: {
+        'prettier/prettier': 'warn',
         'no-console': ['error', { allow: ['warn', 'error'] }],
         'no-else-return': 'warn',
         'no-multiple-empty-lines': ['error', { max: 1 }],
