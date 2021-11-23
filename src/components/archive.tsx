@@ -1,12 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import {
-    baseHeadingStyles,
-    baseParagraphStyles,
-    colorGrayMedium,
-    fontFamilySansSerif,
-} from '../styles/mixins';
+import { colors, fontFamilies } from '../styles/constants';
+import { baseHeadingStyles, baseParagraphStyles } from '../styles/mixins';
 import { Category } from './category';
 import { Link } from './link';
 
@@ -33,8 +29,8 @@ const Metadata = styled.div`
 `;
 
 const PublicationDate = styled.span`
-    color: ${colorGrayMedium};
-    font-family: ${fontFamilySansSerif};
+    color: ${colors.grayMedium};
+    font-family: ${fontFamilies.sansSerif};
     font-size: 12px;
     margin-right: 10px;
     text-transform: uppercase;

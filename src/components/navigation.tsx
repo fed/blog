@@ -3,12 +3,8 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 import avatarSrc from '../assets/1f468-200d-1f4bb.svg';
-import {
-    baseFocusStateStyles,
-    fontFamilySansSerif,
-    sizeContainerLarge,
-    sizeContainerSmall,
-} from '../styles/mixins';
+import { colors, containerDimensions, fontFamilies } from '../styles/constants';
+import { baseFocusStateStyles } from '../styles/mixins';
 
 const Container = styled.header`
     background-color: #fafafac9;
@@ -37,9 +33,9 @@ const Content = styled.div`
     overflow-y: scroll;
     padding: 14px 0 14px 25px;
 
-    @media (min-width: ${sizeContainerSmall}) {
+    @media (min-width: ${containerDimensions.sm}) {
         margin: 0 auto;
-        max-width: ${sizeContainerLarge};
+        max-width: ${containerDimensions.lg};
     }
 `;
 
@@ -60,8 +56,8 @@ const Avatar = styled.img`
 
 const SiteName = styled.span`
     align-items: center;
-    color: #344563;
-    font-family: ${fontFamilySansSerif};
+    color: ${colors.navy};
+    font-family: ${fontFamilies.sansSerif};
     font-size: 17px;
     font-weight: 550;
     white-space: nowrap;
@@ -74,7 +70,7 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-    color: #344563;
+    color: ${colors.navy};
     display: inline-block;
     font-size: 14px;
     font-weight: 450;
@@ -93,16 +89,16 @@ const ListItem = styled.li`
 const baseNavigationLinkStyles = css`
     ${baseFocusStateStyles};
     border-radius: 3px;
-    color: #344563;
+    color: ${colors.navy};
     display: inline-block;
-    font-family: ${fontFamilySansSerif};
+    font-family: ${fontFamilies.sansSerif};
     padding: 4px 6px;
     text-decoration: none;
     transition: background-color 0.1s ease-out,
         box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
 
     &:hover {
-        color: #0052cc;
+        color: ${colors.blue};
         text-decoration: none;
     }
 `;

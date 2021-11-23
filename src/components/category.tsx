@@ -2,14 +2,14 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 import { categories } from '../data';
-import { fontFamilySansSerif } from '../styles/mixins';
+import { colors, fontFamilies } from '../styles/constants';
 import { CategoryId } from '../types';
 
-const Container = styled.span`
+const Container = styled.span<{ id: CategoryId }>`
     border-radius: 3px;
-    color: #fff;
+    color: ${colors.white};
     display: inline-block;
-    font-family: ${fontFamilySansSerif};
+    font-family: ${fontFamilies.sansSerif};
     font-size: 11px;
     font-weight: 600;
     line-height: 1;
@@ -20,44 +20,44 @@ const Container = styled.span`
     ${(props) =>
         props.id === CategoryId.REACT &&
         css`
-            background-color: #056cc1;
+            background-color: ${colors.blue};
         `}
 
     ${(props) =>
         props.id === CategoryId.TESTING &&
         css`
-            background-color: #36b37d;
+            background-color: ${colors.green};
         `}
 
     ${(props) =>
         props.id === CategoryId.JAVASCRIPT &&
         css`
-            background-color: #f9ca5e;
-            color: #172b4d;
+            background-color: ${colors.yellow};
+            color: ${colors.brown};
         `}
 
     ${(props) =>
         [CategoryId.RXJS, CategoryId.BACONJS].includes(props.id) &&
         css`
-            background-color: #ff7453;
+            background-color: ${colors.red};
         `}
 
     ${(props) =>
         props.id === CategoryId.DOM &&
         css`
-            background-color: #6554c0;
+            background-color: ${colors.purple};
         `}
 
     ${(props) =>
         props.id === CategoryId.ACCESSIBILITY &&
         css`
-            background-color: #00b8d9;
+            background-color: ${colors.teal};
         `}
 
     ${(props) =>
         props.id === CategoryId.GENERAL &&
         css`
-            background-color: #243857;
+            background-color: ${colors.navy};
         `}
 `;
 
