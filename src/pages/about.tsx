@@ -2,7 +2,7 @@ import React from 'react';
 import Obfuscate from 'react-obfuscate';
 import styled from 'styled-components';
 
-import waveEmoji from '../assets/1f44b.svg';
+import waveEmoji from '../assets/wave.svg';
 import { gridSize } from '../styles/constants';
 import { baseLinkStyles, baseParagraphStyles, baseTitleStyles } from '../styles/mixins';
 import { Layout } from '../ui/layout';

@@ -1,11 +1,3 @@
-import accessibilityIcon from '../assets/accessibility.svg';
-import baconIcon from '../assets/bacon.png';
-import javascriptIcon from '../assets/javascript.svg';
-import reactIcon from '../assets/react.png';
-import rxIcon from '../assets/rx.svg';
-import browserIcon from '../assets/safari.svg';
-import generalIcon from '../assets/target.svg';
-import testingIcon from '../assets/testing.svg';
 import { CategoryId } from '../ui/types';
 
 /*
@@ -23,50 +15,42 @@ import { CategoryId } from '../ui/types';
 export const categories = [
     {
         id: CategoryId.BACONJS,
-        imageSrc: baconIcon,
         title: 'Bacon.js',
         description: 'Functional Reactive Programming with Bacon.js.',
     },
     {
         id: CategoryId.RXJS,
-        imageSrc: rxIcon,
         title: 'RxJS',
         description: 'Functional Reactive Programming with RxJS.',
     },
     {
         id: CategoryId.JAVASCRIPT,
-        imageSrc: javascriptIcon,
         title: 'JavaScript',
         description: '',
     },
     {
         id: CategoryId.REACT,
-        imageSrc: reactIcon,
         title: 'React',
         description:
             'Thoughts about the React ecosystem, mostly on building declarative UIs and handling state.',
     },
     {
         id: CategoryId.TESTING,
-        imageSrc: testingIcon,
         title: 'Testing',
         description: 'Some notes on writing automated unit, integration and end-to-end tests.',
     },
     {
         id: CategoryId.ACCESSIBILITY,
-        imageSrc: accessibilityIcon,
         title: 'Accessibility',
         description: '',
     },
     {
         id: CategoryId.DOM,
-        imageSrc: browserIcon,
         title: 'DOM & Web APIs',
         description: '',
     },
     {
         id: CategoryId.GENERAL,
-        imageSrc: generalIcon,
         title: 'General',
         description: 'Everything else',
     },

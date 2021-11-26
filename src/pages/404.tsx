@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import puppiesImage from '../assets/puppies.jpg';
 import { colors, gridSize } from '../styles/constants';
 import { baseParagraphStyles, baseTitleStyles } from '../styles/mixins';
 import { Layout } from '../ui/layout';
@@ -44,7 +43,7 @@ const NotFoundPage: React.FC = () => (
             </Paragraph>
             <Image
                 alt="Picture of one cute labrador puppy hugging another puppy"
-                src={puppiesImage}
+                src="https://files.fedknu.com/puppies.jpg"
             />
             <LinkContainer>
                 <Link to="/">Go back to the homepage</Link>

@@ -3592,22 +3592,6 @@ export type SiteBuildMetadataSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
 
-export type GetSiteMetadataQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type GetSiteMetadataQuery = { site?: Maybe<{ siteMetadata?: Maybe<(
-      Pick<SiteSiteMetadata, 'title' | 'author' | 'description' | 'siteUrl'>
-      & { social?: Maybe<Pick<SiteSiteMetadataSocial, 'twitter'>> }
-    )> }> };
-
-export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type Unnamed_1_Query = { allMarkdownRemark: { edges: Array<{ node: (
-        Pick<MarkdownRemark, 'id' | 'timeToRead'>
-        & { fields?: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'spoiler' | 'category'>> }
-      ) }> } };
-
 export type BlogPostBySlugQueryVariables = Exact<{
   slug: Scalars['String'];
 }>;
@@ -3617,3 +3601,19 @@ export type BlogPostBySlugQuery = { markdownRemark?: Maybe<(
     Pick<MarkdownRemark, 'id' | 'html' | 'timeToRead'>
     & { frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'date' | 'spoiler' | 'category'>>, fields?: Maybe<Pick<MarkdownRemarkFields, 'slug'>> }
   )> };
+
+export type AllBlogPostsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AllBlogPostsQuery = { allMarkdownRemark: { edges: Array<{ node: (
+        Pick<MarkdownRemark, 'id' | 'timeToRead'>
+        & { fields?: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'spoiler' | 'category'>> }
+      ) }> } };
+
+export type GetSiteMetadataQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetSiteMetadataQuery = { site?: Maybe<{ siteMetadata?: Maybe<(
+      Pick<SiteSiteMetadata, 'title' | 'author' | 'description' | 'siteUrl'>
+      & { social?: Maybe<Pick<SiteSiteMetadataSocial, 'twitter'>> }
+    )> }> };
