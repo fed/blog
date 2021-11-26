@@ -3,8 +3,8 @@ import Obfuscate from 'react-obfuscate';
 import styled from 'styled-components';
 
 import waveEmoji from '../assets/1f44b.svg';
-import { Layout } from '../components/layout';
 import { baseLinkStyles, baseParagraphStyles, baseTitleStyles } from '../styles/mixins';
+import { Layout } from '../ui/layout';
 
 const Title = styled.h1`
     ${baseTitleStyles};

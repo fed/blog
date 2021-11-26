@@ -7,7 +7,7 @@ import {
     baseParagraphStyles,
     baseTitleStyles,
 } from '../styles/mixins';
-import { PostMetadata } from './post-metadata';
+import { Metadata } from './metadata';
 
 const Header = styled.header`
     margin-bottom: 36px;
@@ -15,10 +15,7 @@ const Header = styled.header`
 
 const Title = styled.h1`
     ${baseTitleStyles};
-`;
-
-const PostMetadataWrapper = styled.div`
-    margin-top: 14px;
+    margin-bottom: 14px;
 `;
 
 const Content = styled.div`
@@ -78,9 +75,7 @@ export const Post: React.FC<Props> = ({ title, date, category, timeToRead, body 
     <article>
         <Header>
             <Title>{title}</Title>
-            <PostMetadataWrapper>
-                <PostMetadata date={date} categoryTitle={category} timeToRead={timeToRead} />
-            </PostMetadataWrapper>
+            <Metadata date={date} categoryTitle={category} timeToRead={timeToRead} />
         </Header>
         <Content dangerouslySetInnerHTML={{ __html: body }} />
     </article>

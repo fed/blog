@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 
 import { categories } from '../data';
 import { colors, fontFamilies } from '../styles/constants';
-import { CategoryId } from '../types';
+import { CategoryId } from './types';
 
 const Container = styled.span<{ id: CategoryId }>`
     border-radius: 3px;

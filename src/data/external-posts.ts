@@ -1,4 +1,4 @@
-import { CategoryId } from '../types';
+import { CategoryId } from '../ui/types';
 
 export const externalPosts = [
     {

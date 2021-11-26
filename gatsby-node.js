@@ -8,12 +8,12 @@ exports.createPages = ({ graphql, actions }) => {
     const { createPage } = actions;
 
     return new Promise((resolve, reject) => {
-        const BlogIndexTemplate = path.resolve('./src/templates/blog-index.tsx');
-        const BlogPostTemplate = path.resolve('./src/templates/blog-post.tsx');
+        const IndexTemplate = path.resolve('./src/templates/index.tsx');
+        const BlogTemplate = path.resolve('./src/templates/blog.tsx');
 
         createPage({
             path: '/',
-            component: BlogIndexTemplate,
+            component: IndexTemplate,
         });
 
         resolve(
@@ -52,7 +52,7 @@ exports.createPages = ({ graphql, actions }) => {
 
                     createPage({
                         path: post.node.fields.slug,
-                        component: BlogPostTemplate,
+                        component: BlogTemplate,
                         context: {
                             slug: post.node.fields.slug,
                             previous,

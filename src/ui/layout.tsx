@@ -1,14 +1,9 @@
+import type { ReactNode } from 'react';
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 
 import { colors, containerDimensions, fontFamilies } from '../styles/constants';
 import { Navigation } from './navigation';
-
-const Content = styled.main`
-    margin: 0 auto;
-    max-width: ${containerDimensions.lg};
-    padding: 36px 25px 48px;
-`;
 
 const SkipToMainContentButton = styled.button`
     background-color: ${colors.pink};
@@ -27,7 +22,18 @@ const SkipToMainContentButton = styled.button`
     }
 `;
 
-export const Layout: React.FC = ({ children }) => {
+const Content = styled.main`
+    margin: 0 auto;
+    max-width: ${containerDimensions.lg};
+    padding: 36px 25px 48px;
+`;
+
+interface Props {
+    children: ReactNode;
+    header?: ReactNode;
+}
+
+export const Layout: React.FC<Props> = ({ children, header }) => {
     const mainContent = useRef(null);
     const handleButtonClick = () => {
         mainContent.current.querySelector('a').focus();
@@ -39,6 +45,7 @@ export const Layout: React.FC = ({ children }) => {
                 Skip to main content
             </SkipToMainContentButton>
             <Navigation />
+            {header || null}
             <Content ref={mainContent}>{children}</Content>
         </>
     );

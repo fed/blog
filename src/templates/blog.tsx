@@ -2,16 +2,16 @@ import { graphql } from 'gatsby';
 import React from 'react';
 
 import type { Query } from '../../graphql-types';
-import { Layout } from '../components/layout';
-import { Post } from '../components/post';
-import { SEO } from '../components/seo';
 import { categories } from '../data';
+import { Layout } from '../ui/layout';
+import { Post } from '../ui/post';
+import { SEO } from '../ui/seo';
 
 interface Props {
     data: Query;
 }
 
-const BlogPostTemplate: React.FC<Props> = ({ data }) => {
+const BlogTemplate: React.FC<Props> = ({ data }) => {
     const post = data.markdownRemark;
     const categoryId = post.frontmatter.category;
     const category = categories.find((c) => c.id === categoryId);
@@ -58,4 +58,5 @@ export const query = graphql`
     }
 `;
 
-export default BlogPostTemplate;
+// Gatsby requires default exports for pages
+export default BlogTemplate;

@@ -60,7 +60,7 @@ interface Props {
     timeToRead: number;
 }
 
-export const PostMetadata: React.FC<Props> = ({ date, categoryTitle, timeToRead }) => (
+export const Metadata: React.FC<Props> = ({ date, categoryTitle, timeToRead }) => (
     <List>
         <ListItem>
             <Icon src={calendarIcon} alt="Date published" title="Date published" />

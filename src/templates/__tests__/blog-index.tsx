@@ -3,7 +3,7 @@ import { useStaticQuery } from 'gatsby';
 import React from 'react';
 
 import { externalPosts } from '../../data/external-posts';
-import BlogIndexTemplate from '../blog-index';
+import IndexTemplate from '../index';
 
 describe('BlogIndex component', () => {
     beforeEach(() => {
@@ -70,7 +70,7 @@ describe('BlogIndex component', () => {
     };
 
     it('renders the right number of posts', async () => {
-        const { getAllByTestId } = render(<BlogIndexTemplate data={mockData} />);
+        const { getAllByTestId } = render(<IndexTemplate data={mockData} />);
 
         expect(getAllByTestId('archive-post')).toHaveLength(
             mockData.allMarkdownRemark.edges.length + externalPosts.length,

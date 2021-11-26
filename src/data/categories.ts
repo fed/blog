@@ -6,7 +6,7 @@ import rxIcon from '../assets/rx.svg';
 import browserIcon from '../assets/safari.svg';
 import generalIcon from '../assets/target.svg';
 import testingIcon from '../assets/testing.svg';
-import { CategoryId } from '../types';
+import { CategoryId } from '../ui/types';
 
 /*
  * When writing a new post, the `category` field in the header has to match one of the following IDs.

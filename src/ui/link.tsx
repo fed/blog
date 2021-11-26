@@ -25,20 +25,20 @@ interface Props {
 }
 
 export const Link: React.FC<Props> = ({ isExternal, to, children }) => {
-    if (!isExternal) {
+    if (isExternal) {
         return (
-            <GatsbyLink to={to} rel="bookmark">
-                {children}
-            </GatsbyLink>
+            <>
+                <ExternalLink href={to} target="_blank" rel="noopener noreferrer">
+                    {children}
+                </ExternalLink>
+                <ExternalLinkIcon src={externalLinkIcon} alt="External link" />
+            </>
         );
     }
 
     return (
-        <>
-            <ExternalLink href={to} target="_blank" rel="noopener noreferrer">
-                {children}
-            </ExternalLink>
-            <ExternalLinkIcon src={externalLinkIcon} alt="External link" />
-        </>
+        <GatsbyLink to={to} rel="bookmark">
+            {children}
+        </GatsbyLink>
     );
 };
