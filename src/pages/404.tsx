@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import puppiesImage from '../assets/puppies.jpg';
+import { colors, gridSize } from '../styles/constants';
 import { baseParagraphStyles, baseTitleStyles } from '../styles/mixins';
 import { Layout } from '../ui/layout';
 import { Link } from '../ui/link';
@@ -17,15 +18,15 @@ const Title = styled.h1`
 
 const Paragraph = styled.div`
     ${baseParagraphStyles};
-    margin: 10px 0 0;
+    margin: ${1.25 * gridSize}px 0 0;
 `;
 
 const Image = styled.img`
-    border: 1px solid #bbb;
+    border: 1px solid ${colors.grayMedium};
     border-radius: 3px;
-    margin: 32px 0;
-    max-width: 400px;
-    padding: 3px;
+    margin: ${4 * gridSize}px 0;
+    max-width: ${50 * gridSize}px;
+    padding: ${0.375 * gridSize}px;
     width: 100%;
 `;
 

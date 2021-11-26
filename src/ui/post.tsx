@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { gridSize } from '../styles/constants';
 import {
     baseHeadingStyles,
     baseLinkStyles,
@@ -10,12 +11,12 @@ import {
 import { Metadata } from './metadata';
 
 const Header = styled.header`
-    margin-bottom: 36px;
+    margin-bottom: ${4.5 * gridSize}px;
 `;
 
 const Title = styled.h1`
     ${baseTitleStyles};
-    margin-bottom: 14px;
+    margin-bottom: ${1.75 * gridSize}px;
 `;
 
 const Content = styled.div`
@@ -37,7 +38,7 @@ const Content = styled.div`
     h6 {
         ${baseHeadingStyles};
         font-weight: 600;
-        margin: 50px 0 0;
+        margin: ${6.25 * gridSize}px 0 0;
     }
 
     img {
@@ -47,7 +48,7 @@ const Content = styled.div`
     blockquote {
         background-color: rgb(222, 235, 255);
         border-radius: 3px;
-        padding: 8px 16px;
+        padding: ${gridSize}px ${2 * gridSize}px;
         margin: 0;
 
         p {
@@ -59,7 +60,7 @@ const Content = styled.div`
 
     // Code blocks
     .gatsby-highlight {
-        margin: 25px 0;
+        margin: ${3 * gridSize}px 0;
     }
 `;
 

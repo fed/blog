@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 
-import { colors, containerDimensions, fontFamilies } from '../styles/constants';
+import { colors, containerDimensions, fontFamilies, gridSize } from '../styles/constants';
 import { Navigation } from './navigation';
 
 const SkipToMainContentButton = styled.button`
@@ -10,11 +10,11 @@ const SkipToMainContentButton = styled.button`
     border: 1px solid ${colors.grayMedium};
     color: ${colors.white};
     font-family: ${fontFamilies.sansSerif};
-    height: 50px;
+    height: ${6.25 * gridSize}px;
     left: 0;
     position: fixed;
     top: 0;
-    transform: translateY(-50px);
+    transform: translateY(-${6.25 * gridSize}px);
     z-index: 10;
 
     :focus {
@@ -25,7 +25,7 @@ const SkipToMainContentButton = styled.button`
 const Content = styled.main`
     margin: 0 auto;
     max-width: ${containerDimensions.lg};
-    padding: 36px 25px 48px;
+    padding: ${4.5 * gridSize}px ${3 * gridSize}px ${6 * gridSize}px;
 `;
 
 interface Props {

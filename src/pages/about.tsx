@@ -3,6 +3,7 @@ import Obfuscate from 'react-obfuscate';
 import styled from 'styled-components';
 
 import waveEmoji from '../assets/1f44b.svg';
+import { gridSize } from '../styles/constants';
 import { baseLinkStyles, baseParagraphStyles, baseTitleStyles } from '../styles/mixins';
 import { Layout } from '../ui/layout';
 
@@ -13,9 +14,9 @@ const Title = styled.h1`
 `;
 
 const Image = styled.img`
-    height: 34px;
-    margin-left: 10px;
-    width: 34px;
+    height: ${4.25 * gridSize}px;
+    margin-left: ${1.25 * gridSize}px;
+    width: ${4.25 * gridSize}px;
 `;
 
 const Paragraph = styled.p`

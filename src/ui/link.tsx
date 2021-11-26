@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import externalLinkIcon from '../assets/external-link.svg';
+import { gridSize } from '../styles/constants';
 import { baseLinkStyles } from '../styles/mixins';
 
 const GatsbyLink = styled(UnstyledGatsbyLink)`
@@ -14,8 +15,8 @@ const ExternalLink = styled.a`
 `;
 
 const ExternalLinkIcon = styled.img`
-    margin-left: 10px;
-    width: 16px;
+    margin-left: ${1.25 * gridSize}px;
+    width: ${2 * gridSize}px;
 `;
 
 interface Props {

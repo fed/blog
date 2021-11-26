@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 import { categories } from '../data';
-import { colors, fontFamilies } from '../styles/constants';
+import { colors, fontFamilies, gridSize } from '../styles/constants';
 import { CategoryId } from './types';
 
 const Container = styled.span<{ id: CategoryId }>`
@@ -13,7 +13,7 @@ const Container = styled.span<{ id: CategoryId }>`
     font-size: 11px;
     font-weight: 600;
     line-height: 1;
-    padding: 3px 4px;
+    padding: ${0.375 * gridSize}px ${0.5 * gridSize}px;
     text-transform: uppercase;
     white-space: nowrap;
 

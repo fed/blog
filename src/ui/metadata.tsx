@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import calendarIcon from '../assets/calendar.svg';
 import categoryIcon from '../assets/category.svg';
 import clockIcon from '../assets/clock.svg';
-import { colors, containerDimensions, fontFamilies } from '../styles/constants';
+import { colors, containerDimensions, fontFamilies, gridSize } from '../styles/constants';
 
 const List = styled.ul`
     list-style-type: none;
@@ -21,8 +21,8 @@ const ListItem = styled.li`
     display: flex;
 
     :not(:last-child) {
-        margin-bottom: 16px;
-        margin-right: 24px;
+        margin-bottom: ${2 * gridSize}px;
+        margin-right: ${3 * gridSize}px;
     }
 
     @media (min-width: ${containerDimensions.xs}) {
@@ -31,19 +31,19 @@ const ListItem = styled.li`
         margin-bottom: 0;
 
         :not(:last-child) {
-            margin-right: 26px;
+            margin-right: ${3.25 * gridSize}px;
             margin-bottom: 0;
         }
     }
 `;
 
 const Icon = styled.img`
-    height: 16px;
-    margin-right: 8px;
-    width: 16px;
+    height: ${2 * gridSize}px;
+    margin-right: ${gridSize}px;
+    width: ${2 * gridSize}px;
 
     @media (min-width: ${containerDimensions.xs}) {
-        margin-right: 10px;
+        margin-right: ${1.25 * gridSize}px;
     }
 `;
 

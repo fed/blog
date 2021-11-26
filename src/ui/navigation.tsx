@@ -3,7 +3,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 import avatarSrc from '../assets/1f468-200d-1f4bb.svg';
-import { colors, containerDimensions, fontFamilies } from '../styles/constants';
+import { colors, containerDimensions, fontFamilies, gridSize } from '../styles/constants';
 import { baseFocusStateStyles } from '../styles/mixins';
 
 const Container = styled.header`
@@ -19,7 +19,7 @@ const Container = styled.header`
             rgba(9, 30, 66, 0) 4px
         );
         content: '';
-        height: 4px;
+        height: ${0.5 * gridSize}px;
         left: 0;
         position: absolute;
         right: 0;
@@ -31,7 +31,7 @@ const Content = styled.div`
     align-items: center;
     display: flex;
     overflow-y: scroll;
-    padding: 14px 0 14px 25px;
+    padding: ${1.75 * gridSize}px 0 ${1.75 * gridSize}px ${3 * gridSize}px;
 
     @media (min-width: ${containerDimensions.sm}) {
         margin: 0 auto;
@@ -43,15 +43,15 @@ const LogoLink = styled(UnstyledGatsbyLink)`
     ${baseFocusStateStyles};
     align-items: center;
     display: flex;
-    margin-right: 20px;
+    margin-right: ${2.5 * gridSize}px;
     text-decoration: none;
     width: max-content;
 `;
 
 const Avatar = styled.img`
-    height: 24px;
-    margin-right: 10px;
-    width: 24px;
+    height: ${3 * gridSize}px;
+    margin-right: ${1.25 * gridSize}px;
+    width: ${3 * gridSize}px;
 `;
 
 const SiteName = styled.span`
@@ -77,12 +77,12 @@ const ListItem = styled.li`
     list-style: none;
 
     &:not(:last-child) {
-        margin-right: 4px;
+        margin-right: ${0.5 * gridSize}px;
     }
 
     // Can't rely on the padding in Content as it's not working in iOS
     &:last-child {
-        margin-right: 25px;
+        margin-right: ${3 * gridSize}px;
     }
 `;
 

@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { gridSize } from '../styles/constants';
 import { Preview } from './preview';
 import { Post } from './types';
 
 const Article = styled.article`
     :not(:last-child) {
-        margin-bottom: 45px;
+        margin-bottom: ${5.5 * gridSize}px;
     }
 `;
 

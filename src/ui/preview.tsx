@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { colors, fontFamilies } from '../styles/constants';
+import { colors, fontFamilies, gridSize } from '../styles/constants';
 import { baseHeadingStyles, baseParagraphStyles } from '../styles/mixins';
 import { Category } from './category';
 import { Link } from './link';
@@ -16,18 +16,18 @@ const Title = styled.h2`
 
 const Spoiler = styled.p`
     ${baseParagraphStyles};
-    margin: 10px 0 0;
+    margin: ${1.25 * gridSize}px 0 0;
 `;
 
 const Metadata = styled.div`
-    margin: 0 0 5px;
+    margin: 0 0 ${0.625 * gridSize}px;
 `;
 
 const PublicationDate = styled.span`
     color: ${colors.grayMedium};
     font-family: ${fontFamilies.sansSerif};
     font-size: 12px;
-    margin-right: 10px;
+    margin-right: ${1.25 * gridSize}px;
     text-transform: uppercase;
 `;
 
