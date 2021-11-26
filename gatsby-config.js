@@ -2,8 +2,8 @@ module.exports = {
     siteMetadata: {
         title: 'Federico Knüssel',
         author: 'Federico Knüssel',
-        description: 'Personal blog by Federico Knüssel',
-        siteUrl: 'https://fknussel.com',
+        description: "Federico Knüssel's personal blog",
+        siteUrl: 'https://fedknu.com',
         social: {
             twitter: '@fknussel',
         },
@@ -58,7 +58,6 @@ module.exports = {
         },
         'gatsby-transformer-sharp',
         'gatsby-plugin-sharp',
-        'gatsby-plugin-feed',
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-styled-components',
         'gatsby-plugin-graphql-codegen',
