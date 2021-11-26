@@ -45,7 +45,7 @@ export const Preview: React.FC<Props> = ({
     <>
         <Metadata>
             <PublicationDate>{date}</PublicationDate>
-            <Category id={categoryId} />
+            <Category categoryId={categoryId} />
         </Metadata>
 
         <Title data-testid="archive-post-title">

@@ -22,7 +22,7 @@ const IndexTemplate: React.FC<Props> = ({ data }) => {
             spoiler: post.node.frontmatter.spoiler,
             date: post.node.frontmatter.date,
             timeToRead: post.node.timeToRead,
-            categoryId: CategoryId[post.node.frontmatter.category],
+            categoryId: post.node.frontmatter.category as CategoryId,
             isExternal: false,
             url: null,
         }))

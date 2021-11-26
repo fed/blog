@@ -5,7 +5,11 @@ import { categories } from '../data';
 import { colors, fontFamilies, gridSize } from '../styles/constants';
 import { CategoryId } from './types';
 
-const Container = styled.span<{ id: CategoryId }>`
+interface Props {
+    categoryId: CategoryId;
+}
+
+const Container = styled.span<Props>`
     border-radius: 3px;
     color: ${colors.white};
     display: inline-block;
@@ -18,59 +22,55 @@ const Container = styled.span<{ id: CategoryId }>`
     white-space: nowrap;
 
     ${(props) =>
-        props.id === CategoryId.REACT &&
+        props.categoryId === CategoryId.REACT &&
         css`
             background-color: ${colors.blue};
         `}
 
     ${(props) =>
-        props.id === CategoryId.TESTING &&
+        props.categoryId === CategoryId.TESTING &&
         css`
             background-color: ${colors.green};
         `}
 
     ${(props) =>
-        props.id === CategoryId.JAVASCRIPT &&
+        props.categoryId === CategoryId.JAVASCRIPT &&
         css`
             background-color: ${colors.yellow};
             color: ${colors.brown};
         `}
 
     ${(props) =>
-        [CategoryId.RXJS, CategoryId.BACONJS].includes(props.id) &&
+        [CategoryId.RXJS, CategoryId.BACONJS].includes(props.categoryId) &&
         css`
             background-color: ${colors.red};
         `}
 
     ${(props) =>
-        props.id === CategoryId.DOM &&
+        props.categoryId === CategoryId.DOM &&
         css`
             background-color: ${colors.purple};
         `}
 
     ${(props) =>
-        props.id === CategoryId.ACCESSIBILITY &&
+        props.categoryId === CategoryId.ACCESSIBILITY &&
         css`
             background-color: ${colors.teal};
         `}
 
     ${(props) =>
-        props.id === CategoryId.GENERAL &&
+        props.categoryId === CategoryId.GENERAL &&
         css`
             background-color: ${colors.navy};
         `}
 `;
 
-interface Props {
-    id: CategoryId;
-}
-
-export const Category: React.FC<Props> = ({ id }) => {
-    const category = categories.find((c) => c.id === id);
+export const Category: React.FC<Props> = ({ categoryId }) => {
+    const category = categories.find((c) => c.id === categoryId);
 
     if (!category) {
         return null;
     }
 
-    return <Container id={id}>{category.title}</Container>;
+    return <Container categoryId={categoryId}>{category.title}</Container>;
 };
