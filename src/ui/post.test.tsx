@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Post } from '../post';
+import { Post } from './post';
 
 describe('Post', () => {
     it('renders correctly', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Archive } from '../archive';
+import { Archive } from './archive';
 
 describe('Archive', () => {
     it('renders correctly', () => {

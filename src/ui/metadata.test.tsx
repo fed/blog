@@ -1,16 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Link } from '../link';
+import { Metadata } from './metadata';
 
-describe('Link', () => {
+describe('PostMetadata', () => {
     it('renders correctly', () => {
         const tree = renderer
-            .create(
-                <Link isExternal={false} to="/about">
-                    About me
-                </Link>,
-            )
+            .create(<Metadata date="April 21, 2021" categoryTitle="General" timeToRead={2} />)
             .toJSON();
 
         expect(tree).toMatchSnapshot();

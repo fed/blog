@@ -3,7 +3,7 @@ import { useStaticQuery } from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
 
-import { SEO } from '../seo';
+import { SEO } from './seo';
 
 describe('SEO', () => {
     beforeAll(() => {
