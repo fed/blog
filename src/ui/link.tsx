@@ -21,11 +21,11 @@ const ExternalLinkIcon = styled.img`
 
 interface Props {
     isExternal?: boolean;
-    to?: string;
-    children?: string;
+    to: string;
+    children: string;
 }
 
-export const Link: React.FC<Props> = ({ isExternal, to, children }) => {
+export const Link: React.FC<Props> = ({ isExternal = false, to, children }) => {
     if (isExternal) {
         return (
             <>
