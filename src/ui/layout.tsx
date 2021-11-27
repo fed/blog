@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react';
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 
@@ -28,12 +27,7 @@ const Content = styled.main`
     padding: ${4.5 * gridSize}px ${3 * gridSize}px ${6 * gridSize}px;
 `;
 
-interface Props {
-    children: ReactNode;
-    header?: ReactNode;
-}
-
-export const Layout: React.FC<Props> = ({ children, header }) => {
+export const Layout: React.FC = ({ children }) => {
     const mainContent = useRef(null);
     const handleButtonClick = () => {
         mainContent.current.querySelector('a').focus();
@@ -45,7 +39,6 @@ export const Layout: React.FC<Props> = ({ children, header }) => {
                 Skip to main content
             </SkipToMainContentButton>
             <Navigation />
-            {header || null}
             <Content ref={mainContent}>{children}</Content>
         </>
     );

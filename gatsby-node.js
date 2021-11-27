@@ -10,6 +10,7 @@ exports.createPages = ({ graphql, actions }) => {
     return new Promise((resolve, reject) => {
         const IndexTemplate = path.resolve('./src/templates/index.tsx');
         const BlogTemplate = path.resolve('./src/templates/blog.tsx');
+        const PageTemplate = path.resolve('./src/templates/page.tsx');
 
         createPage({
             path: '/',
@@ -43,15 +44,17 @@ exports.createPages = ({ graphql, actions }) => {
                     reject(result.errors);
                 }
 
-                // Create blog posts pages.
-                const posts = result.data.allMarkdownRemark.edges;
+                const markdownFiles = result.data.allMarkdownRemark.edges;
 
-                _.each(posts, (post) => {
+                _.each(markdownFiles, (file) => {
+                    const { slug } = file.node.fields;
+                    const isBlog = slug.includes('/blog');
+
                     createPage({
-                        path: post.node.fields.slug,
-                        component: BlogTemplate,
+                        path: slug,
+                        component: isBlog ? BlogTemplate : PageTemplate,
                         context: {
-                            slug: post.node.fields.slug,
+                            slug,
                         },
                     });
                 });
