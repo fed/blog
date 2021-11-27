@@ -1,10 +1,9 @@
 ---
-title: Accessibility tools
-date: 2020-04-12
-spoiler:
-    Links to a handful of tools you might find useful when working on and testing web accessibility.
-category: accessibility
+title: Accessibility tools ❤️
 ---
+
+Here are some links to a handful of tools you might find useful when working on and testing web
+accessibility.
 
 ## Screen readers
 
@@ -46,7 +45,10 @@ in handy as it provides a way to get a visual indication of the focused item whe
 ## Useful webapps/websites
 
 -   [HTML5 Accessibility](https://www.html5accessibility.com/)
+-   [HTML5 Please](https://html5please.com/)
 -   [Color Review](https://color.review/)
+-   [Color Checker](https://webaim.org/resources/contrastchecker/)
+-   [Main rich interface components accessibility guidelines](https://www.accede-web.com/en/guidelines/rich-interface-components/)
 
 # Browser based DevTools
 
