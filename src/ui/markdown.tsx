@@ -34,7 +34,8 @@ const Container = styled.div`
         background-color: rgb(222, 235, 255);
         border-radius: 3px;
         padding: ${gridSize}px ${2 * gridSize}px;
-        margin: 0;
+        margin-left: 0;
+        margin-right: 0;
 
         p {
             font-size: 16px;
