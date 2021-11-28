@@ -36,9 +36,7 @@ export const SEO: React.FC<Props> = ({ meta = [], image, title, description, slu
     return (
         <Helmet
             htmlAttributes={{ lang: 'en' }}
-            {...(title
-                ? { titleTemplate: `%s - ${siteMetadata.title}`, title }
-                : { title: siteMetadata.title })}
+            {...(title ? { titleTemplate: `%s - ${siteMetadata.title}`, title } : { title: siteMetadata.title })}
             meta={[
                 { name: 'description', content: metaDescription },
                 { property: 'og:url', content: url },

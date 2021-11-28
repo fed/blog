@@ -5,9 +5,7 @@ import { Metadata } from './metadata';
 
 describe('PostMetadata', () => {
     it('renders correctly', () => {
-        const tree = renderer
-            .create(<Metadata date="April 21, 2021" categoryTitle="General" timeToRead={2} />)
-            .toJSON();
+        const tree = renderer.create(<Metadata date="April 21, 2021" categoryTitle="General" timeToRead={2} />).toJSON();
 
         expect(tree).toMatchSnapshot();
     });

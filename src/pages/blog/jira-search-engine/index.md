@@ -1,21 +1,18 @@
 ---
 title: Jira search engine in your browser
 date: 2020-04-21
-spoiler:
-    Instructions on how to configure Chrome to allow searching for Jira tickets from the URL bar.
+spoiler: Instructions on how to configure Chrome to allow searching for Jira tickets from the URL bar.
 category: general
 ---
 
-Just found out how to add the ability to search and directly access Jira tickets from within your
-browser's URL bar, and it's really handy 🎉
+Just found out how to add the ability to search and directly access Jira tickets from within your browser's URL bar, and it's really handy
+🎉
 
-To enable it go to **Settings > Search Engines > Manage Search Engines** and add a new engine with
-the details below:
+To enable it go to **Settings > Search Engines > Manage Search Engines** and add a new engine with the details below:
 
 ![JIRA search engine details in Chrome](chrome-search-engine-details.jpg)
 
-Save the changes and in your omnibox, type in `jira` and press tab, then enter a ticket name and
-after hitting enter you should be redirected there.
+Save the changes and in your omnibox, type in `jira` and press tab, then enter a ticket name and after hitting enter you should be
+redirected there.
 
-Also, since we are using Jira's search URL, we can search for tickets via keywords if you don't
-remember the ticket number.
+Also, since we are using Jira's search URL, we can search for tickets via keywords if you don't remember the ticket number.

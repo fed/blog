@@ -31,8 +31,7 @@ export const categories = [
     {
         id: CategoryId.REACT,
         title: 'React',
-        description:
-            'Thoughts about the React ecosystem, mostly on building declarative UIs and handling state.',
+        description: 'Thoughts about the React ecosystem, mostly on building declarative UIs and handling state.',
     },
     {
         id: CategoryId.TESTING,

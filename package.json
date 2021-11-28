@@ -70,7 +70,7 @@
         "clean": "gatsby clean",
         "prepare": "husky install",
         "lint": "eslint --ext .js,.ts,.tsx --ignore-pattern public .",
-        "format": "prettier --write src/**/*.js src/**/*.md",
+        "format": "prettier --write \"**/*.{js,ts,tsx,json,md}\"",
         "test:unit": "jest",
         "test:unit:watch": "jest --watch"
     }

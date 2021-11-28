@@ -21,15 +21,7 @@ const Spoiler = styled.p`
 
 type Props = Post;
 
-export const Preview: React.FC<Props> = ({
-    title,
-    date,
-    categoryId,
-    url,
-    slug,
-    spoiler,
-    isExternal,
-}) => (
+export const Preview: React.FC<Props> = ({ title, date, categoryId, url, slug, spoiler, isExternal }) => (
     <>
         <Metadata date={date} categoryId={categoryId} />
 

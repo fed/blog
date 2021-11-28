@@ -94,8 +94,7 @@ const baseNavigationLinkStyles = css`
     font-family: ${fontFamilies.sansSerif};
     padding: 4px 6px;
     text-decoration: none;
-    transition: background-color 0.1s ease-out,
-        box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
+    transition: background-color 0.1s ease-out, box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
 
     &:hover {
         color: ${colors.blue};
@@ -126,20 +125,12 @@ export const Navigation: React.FC = () => (
                     <ListItemInternalLink to="/about">About</ListItemInternalLink>
                 </ListItem>
                 <ListItem>
-                    <ListItemExternalLink
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://github.com/fed"
-                    >
+                    <ListItemExternalLink target="_blank" rel="noopener noreferrer" href="https://github.com/fed">
                         GitHub
                     </ListItemExternalLink>
                 </ListItem>
                 <ListItem>
-                    <ListItemExternalLink
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://twitter.com/fknussel"
-                    >
+                    <ListItemExternalLink target="_blank" rel="noopener noreferrer" href="https://twitter.com/fknussel">
                         Twitter
                     </ListItemExternalLink>
                 </ListItem>

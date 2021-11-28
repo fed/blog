@@ -38,13 +38,8 @@ const NotFoundPage: React.FC = () => (
         <Container>
             <Title>Page Not Found</Title>
             <Paragraph>Looks like I haven&apos;t written this post yet.</Paragraph>
-            <Paragraph>
-                In the meantime, here&apos;s a picture of two puppies. You are welcome.
-            </Paragraph>
-            <Image
-                alt="Picture of one cute labrador puppy hugging another puppy"
-                src="https://files.fedknu.com/puppies.jpg"
-            />
+            <Paragraph>In the meantime, here&apos;s a picture of two puppies. You are welcome.</Paragraph>
+            <Image alt="Picture of one cute labrador puppy hugging another puppy" src="https://files.fedknu.com/puppies.jpg" />
             <LinkContainer>
                 <Link to="/">Go back to the homepage</Link>
             </LinkContainer>

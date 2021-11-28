@@ -18,11 +18,7 @@ const BlogTemplate: React.FC<Props> = ({ data }) => {
         <>
             <SEO title={frontmatter.title} description={frontmatter.spoiler} slug={fields.slug} />
             <Layout>
-                <Article
-                    title={frontmatter.title}
-                    date={frontmatter.date}
-                    categoryId={frontmatter.category as CategoryId}
-                >
+                <Article title={frontmatter.title} date={frontmatter.date} categoryId={frontmatter.category as CategoryId}>
                     {html}
                 </Article>
             </Layout>

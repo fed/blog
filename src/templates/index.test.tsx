@@ -31,8 +31,7 @@ describe('BlogIndex component', () => {
                         frontmatter: {
                             date: 'September 06, 2017',
                             title: 'Getting clever with Array#reduce',
-                            spoiler:
-                                'A handful of rather unconventional yet interesting use cases for reducing arrays.',
+                            spoiler: 'A handful of rather unconventional yet interesting use cases for reducing arrays.',
                             category: 'javascript',
                         },
                     },
@@ -45,8 +44,7 @@ describe('BlogIndex component', () => {
                         frontmatter: {
                             date: 'January 09, 2019',
                             title: 'Testing asynchronous code',
-                            spoiler:
-                                'A brief intro to the different ways to set up your asynchronous tests and the reason behind it.',
+                            spoiler: 'A brief intro to the different ways to set up your asynchronous tests and the reason behind it.',
                             category: 'testing',
                         },
                     },
@@ -72,8 +70,6 @@ describe('BlogIndex component', () => {
     it('renders the right number of posts', async () => {
         const { getAllByTestId } = render(<IndexTemplate data={mockData} />);
 
-        expect(getAllByTestId('archive-post')).toHaveLength(
-            mockData.allMarkdownRemark.edges.length + externalPosts.length,
-        );
+        expect(getAllByTestId('archive-post')).toHaveLength(mockData.allMarkdownRemark.edges.length + externalPosts.length);
     });
 });

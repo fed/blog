@@ -50,6 +50,4 @@ const Container = styled.div`
     }
 `;
 
-export const Markdown: React.FC = ({ children }) => (
-    <Container dangerouslySetInnerHTML={{ __html: children }} />
-);
+export const Markdown: React.FC = ({ children }) => <Container dangerouslySetInnerHTML={{ __html: children }} />;

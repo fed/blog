@@ -2,24 +2,20 @@
 title: Accessibility tools and resources ❤️
 ---
 
-Here are some links to a handful of tools you might find useful when working on and testing web
-accessibility.
+Here are some links to a handful of tools you might find useful when working on and testing web accessibility.
 
 ## Screen readers
 
--   [VoiceOver](https://support.apple.com/en-au/guide/voiceover-guide/welcome/web) (already shipped
-    with MacOS): use with [Safari](https://www.apple.com/safari/)
--   [NVDA](https://www.nvaccess.org/): use with [Firefox](https://www.mozilla.org/en-GB/firefox/) on
-    Windows
--   [ChromeVox](https://www.chromevox.com/) (built-in on Chromebooks): use with
-    [Chrome](https://www.google.com/chrome/)
+-   [VoiceOver](https://support.apple.com/en-au/guide/voiceover-guide/welcome/web) (already shipped with MacOS): use with
+    [Safari](https://www.apple.com/safari/)
+-   [NVDA](https://www.nvaccess.org/): use with [Firefox](https://www.mozilla.org/en-GB/firefox/) on Windows
+-   [ChromeVox](https://www.chromevox.com/) (built-in on Chromebooks): use with [Chrome](https://www.google.com/chrome/)
 -   [JAWS](https://www.freedomscientific.com/products/software/jaws/): use with IE11 on Windows
 
 ## Screen reader plugins
 
-If you are working with NVDA, the
-[Focus Highlight Plugin](https://addons.nvda-project.org/addons/focusHighlight.en.html) might come
-in handy as it provides a way to get a visual indication of the focused item when NVDA is on.
+If you are working with NVDA, the [Focus Highlight Plugin](https://addons.nvda-project.org/addons/focusHighlight.en.html) might come in
+handy as it provides a way to get a visual indication of the focused item when NVDA is on.
 
 ## Chrome extensions
 
@@ -54,7 +50,5 @@ in handy as it provides a way to get a visual indication of the focused item whe
 
 -   [chrome://accessibility/](chrome://accessibility/) (Chrome)
 -   [edge://accessibility/](edge://accessibility/) (Edge)
--   [Accessibility Inspector](https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector)
-    (Firefox)
--   [Accessibility Node Inspection in WebKit Web Inspector](https://webkit.org/blog/3302/aria-and-accessibility-inspector/)
-    (Safari)
+-   [Accessibility Inspector](https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector) (Firefox)
+-   [Accessibility Node Inspection in WebKit Web Inspector](https://webkit.org/blog/3302/aria-and-accessibility-inspector/) (Safari)

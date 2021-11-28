@@ -5,8 +5,7 @@ export const externalPosts = [
         id: 'external-wrapping-things-in-bacon',
         title: 'Wrapping things in Bacon',
         url: 'https://medium.com/@fknussel/wrapping-things-in-bacon-27658075ed80',
-        spoiler:
-            'Learn to create event streams from multiple sources: DOM events, promises, timers and many others.',
+        spoiler: 'Learn to create event streams from multiple sources: DOM events, promises, timers and many others.',
         date: 'September 17, 2016',
         timeToRead: 7,
         categoryId: CategoryId.BACONJS,
@@ -43,8 +42,7 @@ export const externalPosts = [
         id: 'external-making-sense-context',
         title: 'Making sense out of Context',
         url: 'https://medium.com/@fknussel/making-sense-out-of-context-in-javascript-66fffe4054c9',
-        spoiler:
-            'Learn how the this keyword works, and the different ways in which contexts are bound on function calls.',
+        spoiler: 'Learn how the this keyword works, and the different ways in which contexts are bound on function calls.',
         date: 'December 30, 2016',
         timeToRead: 7,
         categoryId: CategoryId.JAVASCRIPT,
