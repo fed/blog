@@ -11,13 +11,13 @@ interface Props {
 }
 
 const PageTemplate: React.FC<Props> = ({ data }) => {
-    const page = data.markdownRemark;
+    const { frontmatter, html } = data.markdownRemark;
 
     return (
         <>
-            <SEO title={page.frontmatter.title} />
+            <SEO title={frontmatter.title} />
             <Layout>
-                <Page title={page.frontmatter.title}>{page.html}</Page>
+                <Page title={frontmatter.title}>{html}</Page>
             </Layout>
         </>
     );

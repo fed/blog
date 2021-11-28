@@ -12,21 +12,17 @@ interface Props {
 }
 
 const BlogTemplate: React.FC<Props> = ({ data }) => {
-    const post = data.markdownRemark;
+    const { frontmatter, fields, html } = data.markdownRemark;
 
     return (
         <>
-            <SEO
-                title={post.frontmatter.title}
-                description={post.frontmatter.spoiler}
-                slug={post.fields.slug}
-            />
+            <SEO title={frontmatter.title} description={frontmatter.spoiler} slug={fields.slug} />
             <Layout>
                 <Post
-                    title={post.frontmatter.title}
-                    body={post.html}
-                    date={post.frontmatter.date}
-                    categoryId={post.frontmatter.category as CategoryId}
+                    title={frontmatter.title}
+                    date={frontmatter.date}
+                    categoryId={frontmatter.category as CategoryId}
+                    body={html}
                 />
             </Layout>
         </>
