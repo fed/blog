@@ -1,4 +1,5 @@
 import React from 'react';
+import { Twemoji } from 'react-emoji-render';
 import styled from 'styled-components';
 
 import { gridSize } from '../styles/constants';
@@ -27,7 +28,7 @@ export const Preview: React.FC<Props> = ({ title, date, categoryId, url, slug, s
 
         <Title data-testid="archive-post-title">
             <Link to={url || slug} isExternal={isExternal}>
-                {title}
+                <Twemoji svg text={title} />
             </Link>
         </Title>
 

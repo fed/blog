@@ -2,9 +2,9 @@ import { Link as UnstyledGatsbyLink } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 
-import externalLinkIcon from '../assets/external-link.svg';
 import { gridSize } from '../styles/constants';
 import { baseLinkStyles } from '../styles/mixins';
+import externalLinkIcon from './link-icon.svg';
 
 const GatsbyLink = styled(UnstyledGatsbyLink)`
     ${baseLinkStyles};
@@ -22,7 +22,7 @@ const ExternalLinkIcon = styled.img`
 interface Props {
     isExternal?: boolean;
     to: string;
-    children: string;
+    children: string | React.ReactNode;
 }
 
 export const Link: React.FC<Props> = ({ isExternal = false, to, children }) => {
