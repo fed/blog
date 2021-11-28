@@ -10,18 +10,19 @@
         "url": "https://github.com/fed/blog/issues"
     },
     "dependencies": {
-        "@testing-library/jest-dom": "^5.15.1",
-        "@testing-library/react": "^12.1.2",
+        "@types/enzyme": "^3.10.10",
         "@types/jest": "^27.0.3",
         "@types/react-helmet": "^6.1.4",
         "@types/react-test-renderer": "^17.0.1",
         "@types/styled-components": "^5.1.15",
         "@typescript-eslint/eslint-plugin": "^5.4.0",
         "@typescript-eslint/parser": "^5.4.0",
+        "@wojtekmaj/enzyme-adapter-react-17": "^0.6.5",
         "babel-jest": "^27.3.1",
         "babel-plugin-styled-components": "^2.0.1",
         "babel-preset-gatsby": "^2.2.0",
         "bluebird": "^3.7.2",
+        "enzyme": "^3.11.0",
         "eslint": "^8.3.0",
         "eslint-config-airbnb": "^19.0.1",
         "eslint-config-prettier": "^8.3.0",
@@ -59,7 +60,6 @@
         "react-emoji-render": "^1.2.4",
         "react-helmet": "^6.1.0",
         "react-obfuscate": "^3.6.8",
-        "react-test-renderer": "^17.0.2",
         "styled-components": "^5.3.3",
         "typescript": "^4.5.2"
     },
@@ -72,6 +72,7 @@
         "lint": "eslint --ext .js,.ts,.tsx --ignore-pattern public .",
         "format": "prettier --write \"**/*.{js,ts,tsx,json,md}\"",
         "test:unit": "jest",
-        "test:unit:watch": "jest --watch"
+        "test:unit:watch": "jest --watch",
+        "test:unit:debug": "node --inspect node_modules/.bin/jest --runInBand"
     }
 }

@@ -15,7 +15,6 @@ export interface Post {
     title: string;
     spoiler: string;
     date: string;
-    timeToRead: number;
     categoryId: CategoryId;
     isExternal: boolean;
     url?: string;

@@ -247,6 +247,8 @@ export type DirectoryCtimeArgs = {
 export type Site = Node & {
   buildTime?: Maybe<Scalars['Date']>;
   siteMetadata?: Maybe<SiteSiteMetadata>;
+  port?: Maybe<Scalars['Int']>;
+  host?: Maybe<Scalars['String']>;
   pathPrefix?: Maybe<Scalars['String']>;
   polyfill?: Maybe<Scalars['Boolean']>;
   jsxRuntime?: Maybe<Scalars['String']>;
@@ -800,6 +802,8 @@ export type QueryAllDirectoryArgs = {
 export type QuerySiteArgs = {
   buildTime?: InputMaybe<DateQueryOperatorInput>;
   siteMetadata?: InputMaybe<SiteSiteMetadataFilterInput>;
+  port?: InputMaybe<IntQueryOperatorInput>;
+  host?: InputMaybe<StringQueryOperatorInput>;
   pathPrefix?: InputMaybe<StringQueryOperatorInput>;
   polyfill?: InputMaybe<BooleanQueryOperatorInput>;
   jsxRuntime?: InputMaybe<StringQueryOperatorInput>;
@@ -1985,6 +1989,8 @@ export type SiteFieldsEnum =
   | 'siteMetadata___author'
   | 'siteMetadata___siteUrl'
   | 'siteMetadata___social___twitter'
+  | 'port'
+  | 'host'
   | 'pathPrefix'
   | 'polyfill'
   | 'jsxRuntime'
@@ -2119,6 +2125,8 @@ export type SiteGroupConnectionGroupArgs = {
 export type SiteFilterInput = {
   buildTime?: InputMaybe<DateQueryOperatorInput>;
   siteMetadata?: InputMaybe<SiteSiteMetadataFilterInput>;
+  port?: InputMaybe<IntQueryOperatorInput>;
+  host?: InputMaybe<StringQueryOperatorInput>;
   pathPrefix?: InputMaybe<StringQueryOperatorInput>;
   polyfill?: InputMaybe<BooleanQueryOperatorInput>;
   jsxRuntime?: InputMaybe<StringQueryOperatorInput>;
@@ -3391,7 +3399,7 @@ export type Unnamed_1_Query = { markdownRemark?: { id: string, html?: string | n
 export type AllBlogPostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type AllBlogPostsQuery = { allMarkdownRemark: { edges: Array<{ node: { id: string, timeToRead?: number | null | undefined, fields?: { slug?: string | null | undefined } | null | undefined, frontmatter?: { date?: any | null | undefined, title?: string | null | undefined, spoiler?: string | null | undefined, category?: string | null | undefined } | null | undefined } }> } };
+export type AllBlogPostsQuery = { allMarkdownRemark: { edges: Array<{ node: { id: string, fields?: { slug?: string | null | undefined } | null | undefined, frontmatter?: { date?: any | null | undefined, title?: string | null | undefined, spoiler?: string | null | undefined, category?: string | null | undefined } | null | undefined } }> } };
 
 export type GetSiteMetadataQueryVariables = Exact<{ [key: string]: never; }>;
 

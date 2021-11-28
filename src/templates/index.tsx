@@ -21,7 +21,6 @@ const IndexTemplate: React.FC<Props> = ({ data }) => {
             slug: post.node.fields.slug,
             spoiler: post.node.frontmatter.spoiler,
             date: post.node.frontmatter.date,
-            timeToRead: post.node.timeToRead,
             categoryId: post.node.frontmatter.category as CategoryId,
             isExternal: false,
             url: null,
@@ -50,7 +49,6 @@ export const query = graphql`
                     fields {
                         slug
                     }
-                    timeToRead
                     frontmatter {
                         date(formatString: "MMMM DD, YYYY")
                         title
