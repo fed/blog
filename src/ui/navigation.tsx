@@ -2,7 +2,7 @@ import { Link as UnstyledGatsbyLink } from 'gatsby';
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import avatarSrc from '../assets/1f468-200d-1f4bb.svg';
+import avatarSrc from '../assets/engineer.svg';
 import { colors, containerDimensions, fontFamilies, gridSize } from '../styles/constants';
 import { baseFocusStateStyles } from '../styles/mixins';
 

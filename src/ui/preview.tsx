@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { colors, fontFamilies, gridSize } from '../styles/constants';
+import { gridSize } from '../styles/constants';
 import { baseHeadingStyles, baseParagraphStyles } from '../styles/mixins';
-import { Category } from './category';
 import { Link } from './link';
+import { Metadata } from './metadata';
 import type { Post } from './types';
 
 const Title = styled.h2`
@@ -19,18 +19,6 @@ const Spoiler = styled.p`
     margin: ${1.25 * gridSize}px 0 0;
 `;
 
-const Metadata = styled.div`
-    margin: 0 0 ${0.625 * gridSize}px;
-`;
-
-const PublicationDate = styled.span`
-    color: ${colors.grayMedium};
-    font-family: ${fontFamilies.sansSerif};
-    font-size: 12px;
-    margin-right: ${1.25 * gridSize}px;
-    text-transform: uppercase;
-`;
-
 type Props = Post;
 
 export const Preview: React.FC<Props> = ({
@@ -43,10 +31,7 @@ export const Preview: React.FC<Props> = ({
     isExternal,
 }) => (
     <>
-        <Metadata>
-            <PublicationDate>{date}</PublicationDate>
-            <Category categoryId={categoryId} />
-        </Metadata>
+        <Metadata date={date} categoryId={categoryId} />
 
         <Title data-testid="archive-post-title">
             <Link to={url || slug} isExternal={isExternal}>
