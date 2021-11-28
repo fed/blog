@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import { useStaticQuery } from 'gatsby';
 import React from 'react';
 
-import { externalPosts } from '../data/external-posts';
+import { externalPosts } from '../model';
 import IndexTemplate from './index';
 
 describe('BlogIndex component', () => {

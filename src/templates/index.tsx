@@ -3,7 +3,7 @@ import sortBy from 'lodash/sortBy';
 import React from 'react';
 
 import type { Query } from '../../graphql-types';
-import { externalPosts } from '../data';
+import { externalPosts } from '../model';
 import { Archive } from '../ui/archive';
 import { Layout } from '../ui/layout';
 import { SEO } from '../ui/seo';

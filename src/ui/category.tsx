@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { categories } from '../data';
+import { categories } from '../model';
 import { colors, fontFamilies, gridSize } from '../styles/constants';
 import { CategoryId } from './types';
 
