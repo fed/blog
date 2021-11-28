@@ -3389,24 +3389,17 @@ export type ImageSharpSortInput = {
   order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
-export type BlogPostBySlugQueryVariables = Exact<{
+export type Unnamed_1_QueryVariables = Exact<{
   slug: Scalars['String'];
 }>;
 
 
-export type BlogPostBySlugQuery = { markdownRemark?: { id: string, html?: string | null | undefined, timeToRead?: number | null | undefined, frontmatter?: { title?: string | null | undefined, date?: any | null | undefined, spoiler?: string | null | undefined, category?: string | null | undefined } | null | undefined, fields?: { slug?: string | null | undefined } | null | undefined } | null | undefined };
+export type Unnamed_1_Query = { markdownRemark?: { id: string, html?: string | null | undefined, frontmatter?: { title?: string | null | undefined, date?: any | null | undefined, category?: string | null | undefined } | null | undefined, fields?: { slug?: string | null | undefined } | null | undefined } | null | undefined };
 
 export type AllBlogPostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type AllBlogPostsQuery = { allMarkdownRemark: { edges: Array<{ node: { id: string, timeToRead?: number | null | undefined, fields?: { slug?: string | null | undefined } | null | undefined, frontmatter?: { date?: any | null | undefined, title?: string | null | undefined, spoiler?: string | null | undefined, category?: string | null | undefined } | null | undefined } }> } };
-
-export type PageBySlugQueryVariables = Exact<{
-  slug: Scalars['String'];
-}>;
-
-
-export type PageBySlugQuery = { markdownRemark?: { id: string, html?: string | null | undefined, frontmatter?: { title?: string | null | undefined } | null | undefined, fields?: { slug?: string | null | undefined } | null | undefined } | null | undefined };
 
 export type GetSiteMetadataQueryVariables = Exact<{ [key: string]: never; }>;
 

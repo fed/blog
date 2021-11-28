@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 import { baseTitleStyles } from '../styles/mixins';
 import { Markdown } from './markdown';
+import { Metadata } from './metadata';
+import { CategoryId } from './types';
 
 const Title = styled.h1`
     ${baseTitleStyles};
@@ -11,14 +13,17 @@ const Title = styled.h1`
 
 interface Props {
     title: string;
-    children: React.ReactNode;
+    date?: string;
+    categoryId?: CategoryId;
+    children: string;
 }
 
-export const Page: React.FC<Props> = ({ title, children }) => (
-    <>
+export const Article: React.FC<Props> = ({ title, date, categoryId, children }) => (
+    <article>
+        {date && categoryId && <Metadata date={date} categoryId={categoryId} />}
         <Title>
             <Twemoji svg text={title} />
         </Title>
         <Markdown>{children}</Markdown>
-    </>
+    </article>
 );

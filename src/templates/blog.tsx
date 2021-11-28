@@ -2,8 +2,8 @@ import { graphql } from 'gatsby';
 import React from 'react';
 
 import type { Query } from '../../graphql-types';
+import { Article } from '../ui/article';
 import { Layout } from '../ui/layout';
-import { Post } from '../ui/post';
 import { SEO } from '../ui/seo';
 import { CategoryId } from '../ui/types';
 
@@ -18,12 +18,13 @@ const BlogTemplate: React.FC<Props> = ({ data }) => {
         <>
             <SEO title={frontmatter.title} description={frontmatter.spoiler} slug={fields.slug} />
             <Layout>
-                <Post
+                <Article
                     title={frontmatter.title}
                     date={frontmatter.date}
                     categoryId={frontmatter.category as CategoryId}
-                    body={html}
-                />
+                >
+                    {html}
+                </Article>
             </Layout>
         </>
     );
@@ -33,15 +34,13 @@ const BlogTemplate: React.FC<Props> = ({ data }) => {
 // as Gatsby looks for an exported graphql string from the file rather than a specific variable.
 // Note that you can only have one page query per file.
 export const query = graphql`
-    query BlogPostBySlug($slug: String!) {
+    query ($slug: String!) {
         markdownRemark(fields: { slug: { eq: $slug } }) {
             id
             html
-            timeToRead
             frontmatter {
                 title
                 date(formatString: "MMMM DD, YYYY")
-                spoiler
                 category
             }
             fields {

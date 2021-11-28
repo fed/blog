@@ -10,7 +10,6 @@ exports.createPages = ({ graphql, actions }) => {
     return new Promise((resolve, reject) => {
         const IndexTemplate = path.resolve('./src/templates/index.tsx');
         const BlogTemplate = path.resolve('./src/templates/blog.tsx');
-        const PageTemplate = path.resolve('./src/templates/page.tsx');
 
         createPage({
             path: '/',
@@ -48,11 +47,10 @@ exports.createPages = ({ graphql, actions }) => {
 
                 _.each(markdownFiles, (file) => {
                     const { slug } = file.node.fields;
-                    const isBlog = slug.includes('/blog');
 
                     createPage({
                         path: slug,
-                        component: isBlog ? BlogTemplate : PageTemplate,
+                        component: BlogTemplate,
                         context: {
                             slug,
                         },
