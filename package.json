@@ -37,6 +37,7 @@
         "gatsby-plugin-react-helmet": "^5.2.0",
         "gatsby-plugin-sharp": "^4.2.0",
         "gatsby-plugin-styled-components": "^5.2.0",
+        "gatsby-remark-embedder": "^5.0.0",
         "gatsby-remark-images": "^6.2.0",
         "gatsby-remark-prismjs": "^6.2.0",
         "gatsby-source-filesystem": "^4.2.0",

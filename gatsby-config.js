@@ -45,6 +45,9 @@ module.exports = {
                             inlineCodeMarker: '÷',
                         },
                     },
+                    {
+                        resolve: `gatsby-remark-embedder`,
+                    },
                 ],
             },
         },
