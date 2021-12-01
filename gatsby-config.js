@@ -11,6 +11,18 @@ module.exports = {
     pathPrefix: '/',
     plugins: [
         {
+            resolve: 'gatsby-plugin-manifest',
+            options: {
+                name: 'Federico Knüssel',
+                short_name: 'F. Knüssel',
+                start_url: '/',
+                background_color: '#1b1b1b',
+                theme_color: '#f3c868',
+                display: 'minimal-ui',
+                icon: 'static/favicon.png',
+            },
+        },
+        {
             resolve: 'gatsby-source-filesystem',
             options: {
                 path: `${__dirname}/src/pages`,
@@ -34,18 +46,6 @@ module.exports = {
                         },
                     },
                 ],
-            },
-        },
-        {
-            resolve: 'gatsby-plugin-manifest',
-            options: {
-                name: 'Federico Knüssel',
-                short_name: 'F. Knüssel',
-                start_url: '/',
-                background_color: '#1b1b1b',
-                theme_color: '#f3c868',
-                display: 'minimal-ui',
-                icon: 'static/favicon.png',
             },
         },
         'gatsby-transformer-sharp',
