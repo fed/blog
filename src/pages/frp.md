@@ -1,4 +1,6 @@
-# Functional reactive programming tools and resources ⚡️
+---
+title: Functional reactive programming tools and resources ⚡️
+---
 
 ## Visualisation tools
 
