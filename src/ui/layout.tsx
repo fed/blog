@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { colors, containerDimensions, fontFamilies, gridSize } from '../styles/constants';
@@ -28,7 +28,7 @@ const Content = styled.main`
 `;
 
 export const Layout: React.FC = ({ children }) => {
-    const mainContent = useRef(null);
+    const mainContent = React.useRef(null);
     const handleButtonClick = () => {
         mainContent.current.querySelector('a').focus();
     };

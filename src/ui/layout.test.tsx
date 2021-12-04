@@ -30,7 +30,33 @@ describe('Layout', () => {
         expect(wrapper.find('[data-testid="layout-skip-to-main-content-button"]').exists()).toBe(true);
     });
 
-    // @TODO:
-    // describe('when clicking on the skip to main content button', () => {});
-    // it('shifts the focus to the main content', () => {});
+    describe('when clicking on the skip to main content button', () => {
+        let useRefSpy;
+        let focus;
+
+        beforeEach(() => {
+            focus = jest.fn();
+            useRefSpy = jest.spyOn(React, 'useRef').mockReturnValueOnce({ current: { querySelector: () => ({ focus }) } });
+        });
+
+        afterEach(() => {
+            jest.resetAllMocks();
+        });
+
+        it('shifts the focus to the main content', () => {
+            const wrapper = shallow(
+                <Layout>
+                    <a href="/rawr">This is some test content</a>
+                </Layout>,
+            );
+
+            expect(useRefSpy).toBeCalledTimes(1);
+            expect(useRefSpy).toHaveBeenCalledWith(null);
+            expect(focus).not.toHaveBeenCalled();
+
+            wrapper.find('[data-testid="layout-skip-to-main-content-button"]').simulate('click');
+
+            expect(focus).toBeCalledTimes(1);
+        });
+    });
 });
