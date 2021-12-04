@@ -36,6 +36,7 @@ export const query = graphql`
             html
             frontmatter {
                 title
+                spoiler
                 date(formatString: "MMMM DD, YYYY")
                 category
             }
