@@ -40,13 +40,10 @@ module.exports = {
                         },
                     },
                     {
-                        resolve: 'gatsby-remark-prismjs',
-                        options: {
-                            inlineCodeMarker: '÷',
-                        },
+                        resolve: 'gatsby-remark-vscode',
                     },
                     {
-                        resolve: `gatsby-remark-embedder`,
+                        resolve: 'gatsby-remark-embedder',
                     },
                 ],
             },

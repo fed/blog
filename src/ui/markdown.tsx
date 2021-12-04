@@ -33,9 +33,9 @@ const Container = styled.div`
     blockquote {
         background-color: rgb(222, 235, 255);
         border-radius: 3px;
-        padding: ${gridSize}px ${2 * gridSize}px;
         margin-left: 0;
         margin-right: 0;
+        padding: ${gridSize}px ${2 * gridSize}px;
 
         p {
             font-size: 16px;
@@ -44,9 +44,14 @@ const Container = styled.div`
         }
     }
 
-    // Code blocks
-    .gatsby-highlight {
-        margin: ${3 * gridSize}px 0;
+    /* Inline code */
+    code:not([class='grvsc-code']) {
+        background-color: rgba(27, 31, 35, 0.05);
+        border-radius: 3px;
+        font-size: 80%;
+        margin: 0;
+        padding: ${0.375 * gridSize}px ${0.75 * gridSize}px;
+        white-space: normal;
     }
 `;
 
