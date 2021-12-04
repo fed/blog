@@ -29,10 +29,10 @@ export const Link: React.FC<Props> = ({ isExternal = false, to, children }) => {
     if (isExternal) {
         return (
             <>
-                <ExternalLink href={to} target="_blank" rel="noopener noreferrer">
+                <ExternalLink href={to} target="_blank" rel="noopener noreferrer" data-testid="link-external-anchor">
                     {children}
                 </ExternalLink>
-                <ExternalLinkIcon src={externalLinkIcon} alt="External link" />
+                <ExternalLinkIcon src={externalLinkIcon} alt="External link" data-testid="link-external-icon" />
             </>
         );
     }
