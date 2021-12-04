@@ -26,12 +26,12 @@ export const Preview: React.FC<Props> = ({ title, date, categoryId, url, slug, s
     <>
         <Metadata date={date} categoryId={categoryId} />
 
-        <Title data-testid="archive-post-title">
+        <Title data-testid="preview-title">
             <Link to={url || slug} isExternal={isExternal}>
                 <Twemoji svg text={title} />
             </Link>
         </Title>
 
-        <Spoiler dangerouslySetInnerHTML={{ __html: spoiler }} />
+        <Spoiler data-testid="preview-spoiler">{spoiler}</Spoiler>
     </>
 );

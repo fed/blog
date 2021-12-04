@@ -22,9 +22,15 @@ interface Props {
     categoryId: CategoryId;
 }
 
-export const Metadata: React.FC<Props> = ({ date, categoryId }) => (
-    <Container>
-        <PublicationDate>{date}</PublicationDate>
-        <Category categoryId={categoryId} />
-    </Container>
-);
+export const Metadata: React.FC<Props> = ({ date, categoryId }) => {
+    if (!date && !categoryId) {
+        return null;
+    }
+
+    return (
+        <Container>
+            {date ? <PublicationDate data-testid="metadata-publication-date">{date}</PublicationDate> : null}
+            {categoryId ? <Category categoryId={categoryId} /> : null}
+        </Container>
+    );
+};

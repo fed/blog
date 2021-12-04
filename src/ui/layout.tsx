@@ -35,11 +35,13 @@ export const Layout: React.FC = ({ children }) => {
 
     return (
         <>
-            <SkipToMainContentButton type="button" onClick={handleButtonClick}>
+            <SkipToMainContentButton type="button" onClick={handleButtonClick} data-testid="layout-skip-to-main-content-button">
                 Skip to main content
             </SkipToMainContentButton>
             <Navigation />
-            <Content ref={mainContent}>{children}</Content>
+            <Content ref={mainContent} data-testid="layout-content">
+                {children}
+            </Content>
         </>
     );
 };

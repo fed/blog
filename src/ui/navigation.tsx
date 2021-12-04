@@ -113,24 +113,38 @@ const ListItemInternalLink = styled(UnstyledGatsbyLink)`
 export const Navigation: React.FC = () => (
     <Container>
         <Content>
-            <LogoLink to="/">
-                <Avatar src={avatarSrc} alt="" />
-                <SiteName>Federico Knüssel</SiteName>
+            <LogoLink to="/" data-testid="navigation-logo">
+                <Avatar src={avatarSrc} alt="" data-testid="navigation-logo-image" />
+                <SiteName data-testid="navigation-logo-title">Federico Knüssel</SiteName>
             </LogoLink>
             <List>
                 <ListItem>
-                    <ListItemInternalLink to="/">Archive</ListItemInternalLink>
+                    <ListItemInternalLink to="/" data-testid="navigation-link">
+                        Archive
+                    </ListItemInternalLink>
                 </ListItem>
                 <ListItem>
-                    <ListItemInternalLink to="/about">About</ListItemInternalLink>
+                    <ListItemInternalLink to="/about" data-testid="navigation-link">
+                        About
+                    </ListItemInternalLink>
                 </ListItem>
                 <ListItem>
-                    <ListItemExternalLink target="_blank" rel="noopener noreferrer" href="https://github.com/fed">
+                    <ListItemExternalLink
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://github.com/fed"
+                        data-testid="navigation-link"
+                    >
                         GitHub
                     </ListItemExternalLink>
                 </ListItem>
                 <ListItem>
-                    <ListItemExternalLink target="_blank" rel="noopener noreferrer" href="https://twitter.com/fknussel">
+                    <ListItemExternalLink
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://twitter.com/fknussel"
+                        data-testid="navigation-link"
+                    >
                         Twitter
                     </ListItemExternalLink>
                 </ListItem>

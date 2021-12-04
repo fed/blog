@@ -2,17 +2,14 @@ import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
 
-type Meta = { name: string; content: string } | { property: string; content: string };
-
 interface Props {
-    description?: string;
-    image?: string;
-    meta?: Meta[];
-    slug?: string;
     title?: string;
+    description?: string;
+    slug?: string;
+    imageUrl?: string;
 }
 
-export const SEO: React.FC<Props> = ({ meta = [], image, title, description, slug }) => {
+export const SEO: React.FC<Props> = ({ title, description, slug = '', imageUrl }) => {
     const data = useStaticQuery(graphql`
         query GetSiteMetadata {
             site {
@@ -29,9 +26,8 @@ export const SEO: React.FC<Props> = ({ meta = [], image, title, description, slu
         }
     `);
     const { siteMetadata } = data.site;
+    const metaTitle = title || siteMetadata.title;
     const metaDescription = description || siteMetadata.description;
-    const metaImage = image ? `${siteMetadata.siteUrl}/${image}` : null;
-    const url = `${siteMetadata.siteUrl}${slug}`;
 
     return (
         <Helmet
@@ -39,20 +35,19 @@ export const SEO: React.FC<Props> = ({ meta = [], image, title, description, slu
             {...(title ? { titleTemplate: `%s - ${siteMetadata.title}`, title } : { title: siteMetadata.title })}
             meta={[
                 { name: 'description', content: metaDescription },
-                { property: 'og:url', content: url },
-                { property: 'og:title', content: title || siteMetadata.title },
+                { property: 'og:url', content: `${siteMetadata.siteUrl}${slug}` },
+                { property: 'og:title', content: metaTitle },
                 { name: 'og:description', content: metaDescription },
                 { name: 'twitter:card', content: 'summary' },
                 { name: 'twitter:creator', content: siteMetadata.social.twitter },
-                { name: 'twitter:title', content: title || siteMetadata.title },
+                { name: 'twitter:title', content: metaTitle },
                 { name: 'twitter:description', content: metaDescription },
-                ...(metaImage
+                ...(imageUrl
                     ? [
-                          { property: 'og:image', content: metaImage },
-                          { name: 'twitter:image', content: metaImage },
+                          { property: 'og:image', content: imageUrl },
+                          { name: 'twitter:image', content: imageUrl },
                       ]
                     : []),
-                ...meta,
             ]}
         />
     );
