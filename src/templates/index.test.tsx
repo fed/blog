@@ -55,7 +55,12 @@ describe('IndexTemplate', () => {
         const wrapper = shallow(<IndexTemplate data={MARKDOWN_REMARK_MOCK_DATA} />);
 
         expect(wrapper.find(Layout).find(Archive).exists()).toBe(true);
-        expect(wrapper.find(Layout).find(Archive).props()).toEqual({
+    });
+
+    it('renders both local and external posts sorted by date DESC', () => {
+        const wrapper = shallow(<IndexTemplate data={MARKDOWN_REMARK_MOCK_DATA} />);
+
+        expect(wrapper.find(Archive).props()).toEqual({
             posts: [
                 {
                     categoryId: 'testing',
