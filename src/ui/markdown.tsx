@@ -26,6 +26,11 @@ const Container = styled.div`
         margin: ${6.25 * gridSize}px 0 0;
     }
 
+    b,
+    strong {
+        font-weight: 700;
+    }
+
     img {
         max-width: 100%;
     }
@@ -58,6 +63,11 @@ const Container = styled.div`
     .gatsby-resp-image-wrapper {
         margin-bottom: ${6 * gridSize}px;
         margin-top: ${6 * gridSize}px;
+    }
+
+    .markdown-image {
+        display: block;
+        margin: ${6 * gridSize}px auto;
     }
 `;
 

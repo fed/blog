@@ -15,7 +15,7 @@ represent sequences of any event occurring asynchronously at unknown points in t
 
 There are many implementations of the core concepts of FRP, but today I'll be using [Bacon.js](https://github.com/baconjs/bacon.js).
 
-![Bacon.js logo](https://files.fedknu.com/blog/wrapping-things-in-bacon/baconjs.png)
+<img src="https://files.fedknu.com/blog/wrapping-things-in-bacon/baconjs.png" alt="Bacon.js logo" class="markdown-image" />
 
 In _Baconland_ we have two different abstractions for reactive data: **Properties** and **EventStreams**. Properties are continuous values
 whereas event streams are discrete values. More on this later.
