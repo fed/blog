@@ -53,6 +53,12 @@ const Container = styled.div`
         padding: ${0.375 * gridSize}px ${0.75 * gridSize}px;
         white-space: normal;
     }
+
+    /* Add some vertical spacing to all images */
+    .gatsby-resp-image-wrapper {
+        margin-bottom: ${6 * gridSize}px;
+        margin-top: ${6 * gridSize}px;
+    }
 `;
 
 export const Markdown: React.FC = ({ children }) => <Container dangerouslySetInnerHTML={{ __html: children }} />;

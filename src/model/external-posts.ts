@@ -2,14 +2,6 @@ import { CategoryId } from '../ui/types';
 
 export const externalPosts = [
     {
-        id: 'external-wrapping-things-in-bacon',
-        title: 'Wrapping things in Bacon',
-        url: 'https://medium.com/@fknussel/wrapping-things-in-bacon-27658075ed80',
-        spoiler: 'Learn to create event streams from multiple sources: DOM events, promises, timers and many others.',
-        date: 'September 17, 2016',
-        categoryId: CategoryId.BACONJS,
-    },
-    {
         id: 'external-event-streams-vs-properties',
         title: 'Event Streams vs Properties',
         url: 'https://medium.com/@fknussel/event-streams-vs-properties-e55b53be8f42',

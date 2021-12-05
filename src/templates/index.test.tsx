@@ -160,16 +160,6 @@ describe('IndexTemplate', () => {
                     title: 'Event Streams vs Properties',
                     url: 'https://medium.com/@fknussel/event-streams-vs-properties-e55b53be8f42',
                 },
-                {
-                    categoryId: 'baconjs',
-                    date: 'September 17, 2016',
-                    id: 'external-wrapping-things-in-bacon',
-                    isExternal: true,
-                    slug: null,
-                    spoiler: 'Learn to create event streams from multiple sources: DOM events, promises, timers and many others.',
-                    title: 'Wrapping things in Bacon',
-                    url: 'https://medium.com/@fknussel/wrapping-things-in-bacon-27658075ed80',
-                },
             ],
         });
     });
