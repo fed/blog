@@ -154,17 +154,6 @@ describe('IndexTemplate', () => {
                     title: 'Manipulating event streams',
                     url: 'https://medium.com/@fknussel/manipulating-bacon-js-event-streams-a1da0632fa10',
                 },
-                {
-                    categoryId: 'baconjs',
-                    date: 'September 21, 2016',
-                    id: 'external-event-streams-vs-properties',
-                    isExternal: true,
-                    slug: null,
-                    spoiler:
-                        'Brief overview of what properties are and how they are different from event streams. We also cover how to create them and how to convert event streams into properties and vice versa.',
-                    title: 'Event Streams vs Properties',
-                    url: 'https://medium.com/@fknussel/event-streams-vs-properties-e55b53be8f42',
-                },
             ],
         });
     });

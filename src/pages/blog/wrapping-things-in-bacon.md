@@ -38,7 +38,7 @@ for an event stream.
 
 Finally, check out the [official docs](https://github.com/baconjs/bacon.js#creating-streams) for a more thorough reference of wrapper
 methods and further examples on how to create reactive datatypes from other sources. You can also play around with
-[this bin](http://jsbin.com/madizav/edit?js,console,output) as you follow along these examples.
+[this CodeSandbox](https://codesandbox.io/s/wrapping-things-in-bacon-zw6hn) as you follow along these examples.
 
 ## From a DOM event using `Bacon.fromEvent`
 

@@ -2,15 +2,6 @@ import { CategoryId } from '../ui/types';
 
 export const externalPosts = [
     {
-        id: 'external-event-streams-vs-properties',
-        title: 'Event Streams vs Properties',
-        url: 'https://medium.com/@fknussel/event-streams-vs-properties-e55b53be8f42',
-        spoiler:
-            'Brief overview of what properties are and how they are different from event streams. We also cover how to create them and how to convert event streams into properties and vice versa.',
-        date: 'September 21, 2016',
-        categoryId: CategoryId.BACONJS,
-    },
-    {
         id: 'external-manipulating-event-streams',
         title: 'Manipulating event streams',
         url: 'https://medium.com/@fknussel/manipulating-bacon-js-event-streams-a1da0632fa10',
