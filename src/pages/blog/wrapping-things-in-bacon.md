@@ -15,9 +15,9 @@ represent sequences of any event occurring asynchronously at unknown points in t
 
 There are many implementations of the core concepts of FRP, but today I'll be using [Bacon.js](https://github.com/baconjs/bacon.js).
 
-![Bacon.js logo](./baconjs.png)
+![Bacon.js logo](https://files.fedknu.com/blog/wrapping-things-in-bacon/baconjs.png)
 
-In Baconland we have two different abstractions for reactive data: **Properties** and **EventStreams**. Properties are continuous values
+In _Baconland_ we have two different abstractions for reactive data: **Properties** and **EventStreams**. Properties are continuous values
 whereas event streams are discrete values. More on this later.
 
 ## Creating Observables
@@ -92,7 +92,7 @@ A stream from a promise will resolve the promise only when subscribed to, and th
 contain a single value or an error, followed immediately by stream end.
 
 ```js
-const ajaxCall = fetch('//api.myjson.com/bins/2jlih')
+const ajaxCall = fetch('https://files.fedknu.com/blog/wrapping-things-in-bacon/cities.json')
     .then((response) => response.json())
     .catch((error) => {
         console.error('parsing failed', error);
@@ -132,11 +132,11 @@ Bacon.repeatedly(1000, ['spring', 'summer', 'autumn', 'winter']).onValue((value)
 
 `Bacon.interval(interval, value)` repeats the (single) value indefinitely with the given interval in milliseconds.
 
-In this example, the stream will return "beer time!" every second (convenient, huh?). It's important to note this stream never ends once you
-subscribed to it unless you specifically unsubscribe.
+In this example, the stream will emit "beep!" every second. It's important to note this stream never ends once you subscribed to it unless
+you specifically unsubscribe.
 
 ```js
-Bacon.interval(1000, 'beer time!').onValue((value) => {
+Bacon.interval(1000, 'beep!').onValue((value) => {
     console.log(value);
 });
 ```
@@ -223,7 +223,7 @@ const subscribe = (sink) => sink(event);
     indicate the stream has been terminated).
 -   array of instances of the `Event` object (e.g. multiple `Bacon.Error`).
 
-Here we'll be recreating the beer example from `Bacon.interval` (see above):
+Here we'll be recreating the `Bacon.interval` example above:
 
 ```js
 const interval$ = (interval, value) =>
@@ -233,7 +233,7 @@ const interval$ = (interval, value) =>
         return () => clearInterval(id);
     });
 
-interval$(1000, 'beer time!').onValue((value) => {
+interval$(1000, 'beep!').onValue((value) => {
     console.log(value);
 });
 ```
@@ -273,8 +273,8 @@ In Bacon.js we usually use the `onValue()` method to subscribe to an observable.
     subscription.
 
 There is also a special subscriber that behaves a bit differently: `log()`, which we can use for logging all of the values in an observable.
-This logger method **will initiate the data flow**, but it won't return an unsubscribe function, but rather return the observable itself
-(ie: we can keep on chaining methods).
+This logger method **will initiate the data flow**, but it won't return an unsubscribe function, rather the observable itself which means we
+can keep on chaining methods.
 
 ## Unsubscribing from an Observable
 
