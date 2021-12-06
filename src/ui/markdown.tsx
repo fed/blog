@@ -60,14 +60,17 @@ const Container = styled.div`
     }
 
     /* Add some vertical spacing to all images */
-    .gatsby-resp-image-wrapper {
+    .gatsby-resp-image-figure,
+    p > .gatsby-resp-image-wrapper {
         margin-bottom: ${6 * gridSize}px;
         margin-top: ${6 * gridSize}px;
     }
 
-    .markdown-image {
-        display: block;
-        margin: ${6 * gridSize}px auto;
+    .gatsby-resp-image-figcaption {
+        ${baseParagraphStyles};
+        font-size: 12px;
+        margin-top: ${gridSize}px;
+        text-align: center;
     }
 `;
 

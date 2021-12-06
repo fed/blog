@@ -108,16 +108,6 @@ const NODES_MOCK = [
         slug: null,
     },
     {
-        id: 'external-manipulating-event-streams',
-        title: 'Manipulating event streams',
-        url: 'https://medium.com/@fknussel/manipulating-bacon-js-event-streams-a1da0632fa10',
-        spoiler: "Here we'll explore how applying transformations to source streams produce new observables.",
-        date: 'December 26, 2016',
-        categoryId: CategoryId.BACONJS,
-        isExternal: true,
-        slug: null,
-    },
-    {
         id: 'external-event-streams-vs-properties',
         title: 'Event Streams vs Properties',
         url: 'https://medium.com/@fknussel/event-streams-vs-properties-e55b53be8f42',
@@ -201,7 +191,7 @@ describe('Archive', () => {
         it('renders the right number of children', () => {
             const wrapper = shallow(<Archive posts={NODES_MOCK} />);
 
-            expect(wrapper.prop('children')).toHaveLength(13);
+            expect(wrapper.prop('children')).toHaveLength(12);
         });
     });
 });

@@ -2,14 +2,6 @@ import { CategoryId } from '../ui/types';
 
 export const externalPosts = [
     {
-        id: 'external-manipulating-event-streams',
-        title: 'Manipulating event streams',
-        url: 'https://medium.com/@fknussel/manipulating-bacon-js-event-streams-a1da0632fa10',
-        spoiler: `Here we'll explore how applying transformations to source streams produce new observables.`,
-        date: 'December 26, 2016',
-        categoryId: CategoryId.BACONJS,
-    },
-    {
         id: 'external-simple-observable-implementation',
         title: 'A simple Observable implementation',
         url: 'https://medium.com/@fknussel/a-simple-observable-implementation-c9c809c89c69',

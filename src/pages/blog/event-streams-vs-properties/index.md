@@ -18,7 +18,7 @@ You can think of event streams as lists of events happening over time.
 [(t1, v1), (t2, v2), ..., (tn, vn), ...]
 ```
 
-![Event streams are discrete values emitted over time](./discrete-values.png)
+![An event stream is a collection of discrete values emitted over time](./discrete-values.png)
 
 Examples of event streams are:
 
@@ -50,7 +50,7 @@ the API. Remember that clicking on the button means pushing that click event ont
 Properties represent values that change over time. The value of a property changes in response to events, which means that any stream may be
 easily converted into a property.
 
-![Properties are continuous signals over time](./continuous-values.png)
+![A property is a continuous signal whose value updates over time](./continuous-values.png)
 
 In most ways properties behave very much like event streams. The main differences between the two are:
 

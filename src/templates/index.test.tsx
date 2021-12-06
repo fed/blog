@@ -134,16 +134,6 @@ describe('IndexTemplate', () => {
                     title: 'Making sense out of Context',
                     url: 'https://medium.com/@fknussel/making-sense-out-of-context-in-javascript-66fffe4054c9',
                 },
-                {
-                    categoryId: 'baconjs',
-                    date: 'December 26, 2016',
-                    id: 'external-manipulating-event-streams',
-                    isExternal: true,
-                    slug: null,
-                    spoiler: "Here we'll explore how applying transformations to source streams produce new observables.",
-                    title: 'Manipulating event streams',
-                    url: 'https://medium.com/@fknussel/manipulating-bacon-js-event-streams-a1da0632fa10',
-                },
             ],
         });
     });
