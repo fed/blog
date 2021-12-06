@@ -93,16 +93,6 @@ describe('IndexTemplate', () => {
                     url: null,
                 },
                 {
-                    categoryId: 'dom',
-                    date: 'August 6, 2017',
-                    id: 'external-dom-bom-revisited',
-                    isExternal: true,
-                    slug: null,
-                    spoiler: 'Reviewing DOM manipulation and talking to the browser with JavaScript.',
-                    title: 'DOM & BOM revisited',
-                    url: 'https://medium.com/@fknussel/dom-bom-revisited-cf6124e2a816',
-                },
-                {
                     categoryId: 'rxjs',
                     date: 'August 6, 2017',
                     id: 'external-simple-observable-implementation',

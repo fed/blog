@@ -13,11 +13,9 @@ point if you are interested in functional reactive programming.
 Functional Reactive Programming (FRP) is **functional programming with first class representation for values that change over time**. We can
 represent sequences of any event occurring asynchronously at unknown points in time as a **stream**.
 
-There are many implementations of the core concepts of FRP, but today I'll be using [Bacon.js](https://github.com/baconjs/bacon.js).
+There are many implementations of the core concepts of FRP, but today we'll be using [Bacon.js](https://github.com/baconjs/bacon.js).
 
-<img src="https://files.fedknu.com/blog/wrapping-things-in-bacon/baconjs.png" alt="Bacon.js logo" class="markdown-image" />
-
-In _Baconland_ we have two different abstractions for reactive data: **Properties** and **EventStreams**. Properties are continuous values
+In _Baconland_ we have two different abstractions for reactive data: **Properties** and **Event Streams**. Properties are continuous values
 whereas event streams are discrete values. More on this later.
 
 ## Creating Observables

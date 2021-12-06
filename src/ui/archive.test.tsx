@@ -66,16 +66,6 @@ const NODES_MOCK = [
         url: null,
     },
     {
-        id: 'external-dom-bom-revisited',
-        title: 'DOM & BOM revisited',
-        url: 'https://medium.com/@fknussel/dom-bom-revisited-cf6124e2a816',
-        spoiler: 'Reviewing DOM manipulation and talking to the browser with JavaScript.',
-        date: 'August 6, 2017',
-        categoryId: CategoryId.DOM,
-        isExternal: true,
-        slug: null,
-    },
-    {
         id: 'external-simple-observable-implementation',
         title: 'A simple Observable implementation',
         url: 'https://medium.com/@fknussel/a-simple-observable-implementation-c9c809c89c69',
@@ -211,7 +201,7 @@ describe('Archive', () => {
         it('renders the right number of children', () => {
             const wrapper = shallow(<Archive posts={NODES_MOCK} />);
 
-            expect(wrapper.prop('children')).toHaveLength(14);
+            expect(wrapper.prop('children')).toHaveLength(13);
         });
     });
 });

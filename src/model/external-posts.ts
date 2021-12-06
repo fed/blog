@@ -49,12 +49,4 @@ export const externalPosts = [
         date: 'September 6, 2017',
         categoryId: CategoryId.DOM,
     },
-    {
-        id: 'external-dom-bom-revisited',
-        title: 'DOM & BOM revisited',
-        url: 'https://medium.com/@fknussel/dom-bom-revisited-cf6124e2a816',
-        spoiler: 'Reviewing DOM manipulation and talking to the browser with JavaScript.',
-        date: 'August 6, 2017',
-        categoryId: CategoryId.DOM,
-    },
 ].map((post) => ({ ...post, isExternal: true, slug: null }));

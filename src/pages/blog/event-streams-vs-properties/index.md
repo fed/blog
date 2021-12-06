@@ -10,8 +10,6 @@ category: baconjs
 In Bacon.js we operate with two different types of observable data types: **Event Streams** and **Properties**. Here's a brief explanation
 of what these concepts are along with some concrete examples to illustrate when to choose one over the other.
 
-<img src="https://files.fedknu.com/blog/wrapping-things-in-bacon/baconjs.png" alt="Bacon.js logo" class="markdown-image" />
-
 ## Event streams represent discrete values over time
 
 You can think of event streams as lists of events happening over time.
