@@ -66,6 +66,16 @@ const NODES_MOCK = [
         url: null,
     },
     {
+        id: 'external-dom-bom-revisited',
+        title: 'DOM & BOM revisited',
+        url: 'https://medium.com/@fknussel/dom-bom-revisited-cf6124e2a816',
+        spoiler: 'Reviewing DOM manipulation and talking to the browser with JavaScript.',
+        date: 'August 6, 2017',
+        categoryId: CategoryId.DOM,
+        isExternal: true,
+        slug: null,
+    },
+    {
         id: 'external-simple-observable-implementation',
         title: 'A simple Observable implementation',
         url: 'https://medium.com/@fknussel/a-simple-observable-implementation-c9c809c89c69',
@@ -104,6 +114,16 @@ const NODES_MOCK = [
         spoiler: 'Learn how the this keyword works, and the different ways in which contexts are bound on function calls.',
         date: 'December 30, 2016',
         categoryId: CategoryId.JAVASCRIPT,
+        isExternal: true,
+        slug: null,
+    },
+    {
+        id: 'external-manipulating-event-streams',
+        title: 'Manipulating event streams',
+        url: 'https://medium.com/@fknussel/manipulating-bacon-js-event-streams-a1da0632fa10',
+        spoiler: "Here we'll explore how applying transformations to source streams produce new observables.",
+        date: 'December 26, 2016',
+        categoryId: CategoryId.BACONJS,
         isExternal: true,
         slug: null,
     },
@@ -191,7 +211,7 @@ describe('Archive', () => {
         it('renders the right number of children', () => {
             const wrapper = shallow(<Archive posts={NODES_MOCK} />);
 
-            expect(wrapper.prop('children')).toHaveLength(12);
+            expect(wrapper.prop('children')).toHaveLength(14);
         });
     });
 });
