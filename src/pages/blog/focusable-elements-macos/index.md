@@ -16,7 +16,7 @@ By default, there's a global system setting to modify this behaviour that you ca
 Shortcuts_ and then clicking on the **All Controls** radio button, which is at the bottom of the screen in the _Full Keyboard Access_
 section.
 
-![Keyboard Settings](./keyboard-settings.jpg)
+![](./keyboard-settings.jpg)
 
 Doing this should automatically fix Firefox, which is true to the system settings.
 
@@ -35,11 +35,11 @@ Note that this works for both [Safari](https://www.apple.com/safari/) and
 [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/) and needs to be done separately on both versions of the
 browser.
 
-![Safari Preferences](./safari-preferences.jpg)
+![](./safari-preferences.jpg)
 
 ## Chrome should work fine out of the box
 
 Chrome also has a setting for this under [chrome://settings/appearance](chrome://settings/appearance). This setting is enabled by default,
 though. So there's no need to configure anything to make Chrome work.
 
-![Chrome Preferences](./chrome-settings.jpg)
+![](./chrome-settings.jpg)

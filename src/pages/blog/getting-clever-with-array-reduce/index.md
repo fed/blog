@@ -21,7 +21,7 @@ _Heads up: Note that this post is not JavaScript specific as these concepts appl
 
 We can use `Array#reduce` to compose functions. Just to recap, here's what composing functions means in Maths:
 
-![Function Composition](./function-composition.png)
+![](./function-composition.png)
 
 The same concept applies to programming: we can apply different functions to a value one after the other and get a result out of that
 composition.
@@ -104,7 +104,7 @@ const address = person.address.street;
 
 This is obviously gonna throw a `TypeError` exception as we are trying to access a property of undefined, which is not an object.
 
-![Uncaught TypeError](./uncaught-type-error.png)
+![](./uncaught-type-error.png)
 
 We use [Lodash's get helper](https://lodash.com/docs/#get) when querying an object for properties we are not sure exist. We can easily
 re-implement this helper using `Array#reduce`:

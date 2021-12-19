@@ -1,5 +1,5 @@
 ---
-title: Event Streams vs Properties
+title: Event streams vs Properties
 date: 2016-09-21
 spoiler:
     Brief overview of what properties are and how they are different from event streams. We also cover how to create them and how to convert

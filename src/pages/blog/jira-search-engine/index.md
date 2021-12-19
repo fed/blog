@@ -10,7 +10,7 @@ Just found out how to add the ability to search and directly access Jira tickets
 
 To enable it go to **Settings > Search Engines > Manage Search Engines** and add a new engine with the details below:
 
-![JIRA search engine details in Chrome](chrome-search-engine-details.jpg)
+![](chrome-search-engine-details.jpg)
 
 Save the changes and in your omnibox, type in `jira` and press tab, then enter a ticket name and after hitting enter you should be
 redirected there.
