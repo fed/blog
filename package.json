@@ -4,7 +4,6 @@
     "description": "Personal Blog",
     "version": "0.0.0",
     "author": "Federico Knüssel <fed@duck.com>",
-    "homepage": "https://fedknu.com",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/fed/blog/issues"
