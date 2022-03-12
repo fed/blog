@@ -1,5 +1,6 @@
 ---
 title: Accessibility tools and resources ❤️
+metaTitle: Accessibility tools and resources
 ---
 
 Here are some links to a handful of tools you might find useful when working on and testing web accessibility.

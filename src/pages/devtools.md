@@ -1,5 +1,6 @@
 ---
 title: Devtools 👨‍💻
+metaTitle: Developer tools
 ---
 
 A collection of frontend web development tools and resources.

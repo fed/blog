@@ -11,12 +11,13 @@ interface Props {
     data: Query;
 }
 
+// The Blog template is used by both blog posts and static pages since we share the same UI.
 const BlogTemplate: React.FC<Props> = ({ data }) => {
     const { frontmatter, fields, html } = data.markdownRemark;
 
     return (
         <>
-            <SEO title={frontmatter.title} description={frontmatter.spoiler} slug={fields.slug} />
+            <SEO title={frontmatter.metaTitle || frontmatter.title} description={frontmatter.spoiler} slug={fields.slug} />
             <Layout>
                 <Article title={frontmatter.title} date={frontmatter.date} categoryId={frontmatter.category as CategoryId}>
                     {html}
@@ -36,6 +37,7 @@ export const query = graphql`
             html
             frontmatter {
                 title
+                metaTitle
                 spoiler
                 date(formatString: "MMMM DD, YYYY")
                 category
