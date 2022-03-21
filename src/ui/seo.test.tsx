@@ -15,7 +15,7 @@ describe('SEO', () => {
                     description: 'This is a test site description',
                     siteUrl: 'fedknu.com',
                     social: {
-                        twitter: 'fknussel',
+                        twitter: 'fedknu',
                     },
                 },
             },
@@ -39,7 +39,7 @@ describe('SEO', () => {
                     { property: 'og:title', content: 'Gatsby Site Title' },
                     { name: 'og:description', content: 'This is a test site description' },
                     { name: 'twitter:card', content: 'summary' },
-                    { name: 'twitter:creator', content: 'fknussel' },
+                    { name: 'twitter:creator', content: 'fedknu' },
                     { name: 'twitter:title', content: 'Gatsby Site Title' },
                     { name: 'twitter:description', content: 'This is a test site description' },
                 ],

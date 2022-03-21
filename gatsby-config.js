@@ -5,7 +5,7 @@ module.exports = {
         description: "Federico Knüssel's personal blog",
         siteUrl: 'https://fedknu.com',
         social: {
-            twitter: '@fknussel',
+            twitter: '@fedknu',
         },
     },
     pathPrefix: '/',

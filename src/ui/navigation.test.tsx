@@ -26,7 +26,7 @@ describe('Navigation', () => {
         });
         expect(wrapper.find('[data-testid="navigation-link"]').at(3).props()).toMatchObject({
             children: 'Twitter',
-            href: 'https://twitter.com/fknussel',
+            href: 'https://twitter.com/fedknu',
             rel: 'noopener noreferrer',
             target: '_blank',
         });

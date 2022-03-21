@@ -142,7 +142,7 @@ export const Navigation: React.FC = () => (
                     <ListItemExternalLink
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://twitter.com/fknussel"
+                        href="https://twitter.com/fedknu"
                         data-testid="navigation-link"
                     >
                         Twitter
