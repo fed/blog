@@ -55,7 +55,7 @@ const Container = styled.span<Props>`
     ${(props) =>
         props.categoryId === CategoryId.ACCESSIBILITY &&
         css`
-            background-color: ${colors.teal};
+            background-color: ${colors.pink};
         `}
 
     ${(props) =>
