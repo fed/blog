@@ -43,5 +43,15 @@ You'll also need to update your `SublimeLinter.sublime-settings` config file to 
 
 ## Install [ESLint-Formatter](https://github.com/TheSavior/ESLint-Formatter)
 
-We'll need to install this package if we want to automatically fix any errors on file save. This one should work out of the box, there
-should be no need to tweak any config files here.
+We'll need to install this package if we want to automatically fix any errors on file save. Once again we'll have to edit the config file
+for this package, in this case `ESLint-Formatter.sublime-settings`, and point it to the right location of our Node install:
+
+```json
+{
+    "node_path": {
+        "osx": "~/.nvm/versions/node/v16.14.0/bin/node"
+    },
+    "format_on_save": true,
+    "format_on_save_extensions": ["js", "jsx", "ts", "tsx"]
+}
+```
