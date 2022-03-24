@@ -1,8 +1,8 @@
 ---
-title: Manipulating event streams
+title: Manipulating event streams in Bacon.js
 date: 2016-12-27
 spoiler: Here we'll explore how applying transformations to source streams produces new observables.
-category: baconjs
+category: frp
 ---
 
 Being able to easily transform the values in observables is what makes functional reactive programming such a powerful tool. At the same

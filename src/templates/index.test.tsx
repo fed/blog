@@ -93,7 +93,7 @@ describe('IndexTemplate', () => {
                     url: null,
                 },
                 {
-                    categoryId: 'rxjs',
+                    categoryId: 'frp',
                     date: 'August 6, 2017',
                     id: 'external-simple-observable-implementation',
                     isExternal: true,

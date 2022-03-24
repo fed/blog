@@ -10,7 +10,7 @@ import { CategoryId } from './types';
 describe('Article', () => {
     describe('when no date is passed in', () => {
         const wrapper = shallow(
-            <Article title="Test title" categoryId={CategoryId.RXJS}>
+            <Article title="Test title" categoryId={CategoryId.FRP}>
                 Test content
             </Article>,
         );
@@ -99,7 +99,7 @@ describe('Article', () => {
 
     describe('when both a category and a date are passed in', () => {
         const wrapper = shallow(
-            <Article title="Test title" categoryId={CategoryId.RXJS} date="June 1, 2020">
+            <Article title="Test title" categoryId={CategoryId.FRP} date="June 1, 2020">
                 Test content
             </Article>,
         );
@@ -110,7 +110,7 @@ describe('Article', () => {
             expect(metadata.exists()).toBe(true);
             expect(metadata.props()).toEqual({
                 date: 'June 1, 2020',
-                categoryId: 'rxjs',
+                categoryId: 'frp',
             });
         });
 

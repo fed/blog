@@ -7,7 +7,7 @@ export const externalPosts = [
         url: 'https://medium.com/@fknussel/a-simple-observable-implementation-c9c809c89c69',
         spoiler: `Let's write our own Observable interface implementation to understand what's going on under the hood when we work with RxJS.`,
         date: 'August 6, 2017',
-        categoryId: CategoryId.RXJS,
+        categoryId: CategoryId.FRP,
     },
     {
         id: 'external-making-sense-context',

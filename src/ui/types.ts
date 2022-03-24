@@ -1,13 +1,11 @@
 export enum CategoryId {
-    BACONJS = 'baconjs',
-    RXJS = 'rxjs',
+    GENERAL = 'general',
+    DOM = 'dom',
     JAVASCRIPT = 'javascript',
-    REACT = 'react',
     TESTING = 'testing',
     ACCESSIBILITY = 'accessibility',
-    DOM = 'dom',
-    GENERAL = 'general',
-    CSS = 'css',
+    REACT = 'react',
+    FRP = 'frp',
 }
 
 export interface Post {

@@ -2,11 +2,11 @@
 title: Wrapping things in Bacon
 date: 2016-09-17
 spoiler: Learn to create event streams from multiple sources, including DOM events, promises, timers and many others.
-category: baconjs
+category: frp
 ---
 
-And by _wrapping things in Bacon_ I mean creating observables by wrapping values as reactive data types. I believe this is a good starting
-point if you are interested in functional reactive programming.
+And by _wrapping things in Bacon_ I mean creating observables by wrapping values as reactive data types in Bacon.js. I believe this is a
+good starting point if you are interested in functional reactive programming.
 
 ## A little bit of context
 

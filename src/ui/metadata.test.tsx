@@ -16,12 +16,12 @@ describe('Metadata', () => {
 
     describe('when no date is passed in', () => {
         it("doesn't render the publication date component", () => {
-            const wrapper = shallow(<Metadata date={undefined} categoryId={CategoryId.RXJS} />);
+            const wrapper = shallow(<Metadata date={undefined} categoryId={CategoryId.FRP} />);
 
             expect(wrapper.isEmptyRender()).toBe(false);
             expect(wrapper.find('[data-testid="metadata-publication-date"]').exists()).toBe(false);
             expect(wrapper.find(Category).exists()).toBe(true);
-            expect(wrapper.find(Category).prop('categoryId')).toBe(CategoryId.RXJS);
+            expect(wrapper.find(Category).prop('categoryId')).toBe(CategoryId.FRP);
         });
     });
 
@@ -38,13 +38,13 @@ describe('Metadata', () => {
 
     describe('when both a date and a categoryId are passed in', () => {
         it('renders both the publication date and the category component', () => {
-            const wrapper = shallow(<Metadata date="January 1, 2021" categoryId={CategoryId.RXJS} />);
+            const wrapper = shallow(<Metadata date="January 1, 2021" categoryId={CategoryId.FRP} />);
 
             expect(wrapper.isEmptyRender()).toBe(false);
             expect(wrapper.find('[data-testid="metadata-publication-date"]').exists()).toBe(true);
             expect(wrapper.find('[data-testid="metadata-publication-date"]').text()).toBe('January 1, 2021');
             expect(wrapper.find(Category).exists()).toBe(true);
-            expect(wrapper.find(Category).prop('categoryId')).toBe(CategoryId.RXJS);
+            expect(wrapper.find(Category).prop('categoryId')).toBe(CategoryId.FRP);
         });
     });
 });

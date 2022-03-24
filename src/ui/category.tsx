@@ -41,7 +41,7 @@ const Container = styled.span<Props>`
         `}
 
     ${(props) =>
-        [CategoryId.RXJS, CategoryId.BACONJS].includes(props.categoryId) &&
+        props.categoryId === CategoryId.FRP &&
         css`
             background-color: ${colors.red};
         `}

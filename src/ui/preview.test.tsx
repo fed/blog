@@ -13,7 +13,7 @@ describe('Preview', () => {
         title: 'Test title',
         spoiler: 'This is some test content',
         date: 'January 1, 2020',
-        categoryId: CategoryId.RXJS,
+        categoryId: CategoryId.FRP,
         isExternal: false,
     };
 
@@ -21,7 +21,7 @@ describe('Preview', () => {
         const wrapper = shallow(<Preview {...defaultProps} />);
 
         expect(wrapper.find(Metadata).exists()).toBe(true);
-        expect(wrapper.find(Metadata).props()).toEqual({ date: 'January 1, 2020', categoryId: CategoryId.RXJS });
+        expect(wrapper.find(Metadata).props()).toEqual({ date: 'January 1, 2020', categoryId: 'frp' });
     });
 
     it('renders the right title including emojis', () => {
