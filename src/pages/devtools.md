@@ -12,6 +12,7 @@ A collection of frontend web development tools and resources.
 -   https://httpstatuses.com/
 -   https://keycode.info/
 -   https://bundlephobia.com/
+-   https://bundle-buddy.com/
 -   https://www.diffchecker.com/
 -   https://jsonformatter.curiousconcept.com/
 -   https://icomoon.io/app/#/select
