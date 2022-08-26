@@ -3,6 +3,7 @@ title: CSS Specificity
 date: 2020-04-27
 spoiler: rawr
 category: css
+draft: true
 ---
 
 When multiple selectors are targeting the same element, the browser needs to know which one to
