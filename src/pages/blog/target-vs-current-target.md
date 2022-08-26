@@ -3,6 +3,7 @@ title: CSS Specificity
 date: 2020-04-27
 spoiler: rawr
 category: css
+draft: true
 ---
 
 https://codepen.io/fede/pen/qoYaPG?editors=1111
