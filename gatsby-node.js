@@ -41,7 +41,8 @@ exports.createPages = ({ graphql, actions }) => {
                     reject(result.errors);
                 }
 
-                const markdownFiles = result.data.allMarkdownRemark.edges;
+                // We don't want to build pages for the drafts until they are ready to be published
+                const markdownFiles = _.filter(result.data.allMarkdownRemark.edges, (file) => !file.node.frontmatter.draft);
 
                 _.each(markdownFiles, (file) => {
                     const { slug } = file.node.fields;

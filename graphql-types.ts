@@ -417,10 +417,10 @@ export type MarkdownRemarkTableOfContentsArgs = {
 export type MarkdownRemarkFrontmatter = {
   title?: Maybe<Scalars['String']>;
   date?: Maybe<Scalars['Date']>;
-  spoiler?: Maybe<Scalars['String']>;
   category?: Maybe<Scalars['String']>;
-  metaTitle?: Maybe<Scalars['String']>;
   draft?: Maybe<Scalars['Boolean']>;
+  spoiler?: Maybe<Scalars['String']>;
+  metaTitle?: Maybe<Scalars['String']>;
 };
 
 
@@ -1221,10 +1221,10 @@ export type MarkdownRemarkFilterInput = {
 export type MarkdownRemarkFrontmatterFilterInput = {
   title?: InputMaybe<StringQueryOperatorInput>;
   date?: InputMaybe<DateQueryOperatorInput>;
-  spoiler?: InputMaybe<StringQueryOperatorInput>;
   category?: InputMaybe<StringQueryOperatorInput>;
-  metaTitle?: InputMaybe<StringQueryOperatorInput>;
   draft?: InputMaybe<BooleanQueryOperatorInput>;
+  spoiler?: InputMaybe<StringQueryOperatorInput>;
+  metaTitle?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type BooleanQueryOperatorInput = {
@@ -1446,10 +1446,10 @@ export type FileFieldsEnum =
   | 'childrenMarkdownRemark___id'
   | 'childrenMarkdownRemark___frontmatter___title'
   | 'childrenMarkdownRemark___frontmatter___date'
-  | 'childrenMarkdownRemark___frontmatter___spoiler'
   | 'childrenMarkdownRemark___frontmatter___category'
-  | 'childrenMarkdownRemark___frontmatter___metaTitle'
   | 'childrenMarkdownRemark___frontmatter___draft'
+  | 'childrenMarkdownRemark___frontmatter___spoiler'
+  | 'childrenMarkdownRemark___frontmatter___metaTitle'
   | 'childrenMarkdownRemark___excerpt'
   | 'childrenMarkdownRemark___rawMarkdownBody'
   | 'childrenMarkdownRemark___fileAbsolutePath'
@@ -1509,10 +1509,10 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___id'
   | 'childMarkdownRemark___frontmatter___title'
   | 'childMarkdownRemark___frontmatter___date'
-  | 'childMarkdownRemark___frontmatter___spoiler'
   | 'childMarkdownRemark___frontmatter___category'
-  | 'childMarkdownRemark___frontmatter___metaTitle'
   | 'childMarkdownRemark___frontmatter___draft'
+  | 'childMarkdownRemark___frontmatter___spoiler'
+  | 'childMarkdownRemark___frontmatter___metaTitle'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
   | 'childMarkdownRemark___fileAbsolutePath'
@@ -3305,10 +3305,10 @@ export type MarkdownRemarkFieldsEnum =
   | 'id'
   | 'frontmatter___title'
   | 'frontmatter___date'
-  | 'frontmatter___spoiler'
   | 'frontmatter___category'
-  | 'frontmatter___metaTitle'
   | 'frontmatter___draft'
+  | 'frontmatter___spoiler'
+  | 'frontmatter___metaTitle'
   | 'excerpt'
   | 'rawMarkdownBody'
   | 'fileAbsolutePath'
