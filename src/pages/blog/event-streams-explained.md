@@ -4,7 +4,8 @@ date: 2019-10-24
 spoiler:
     An attempt at explaining what an Observable or Event Stream is in the context of functional
     reactive programming.
-category: rxjs
+category: frp
+draft: true
 ---
 
 https://codepen.io/fede/post/baconjs
