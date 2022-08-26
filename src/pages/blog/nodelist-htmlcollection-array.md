@@ -3,6 +3,7 @@ title: On NodeLists, HTMLCollections and Arrays
 date: 2020-03-09
 spoiler: Treating
 category: browsers
+draft: true
 ---
 
 `NodeList`, `HTMLCollection` and `Array` are all different things.
