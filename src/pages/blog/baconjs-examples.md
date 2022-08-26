@@ -66,4 +66,4 @@ https://codesandbox.io/s/strange-https-cuq21
 -   combineTemplate
 -   Bacon.Bus
 
-https://talks.fknussel.com/frp-examples/#7
+https://talks.fedknu.com/frp-examples/#7

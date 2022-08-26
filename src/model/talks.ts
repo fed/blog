@@ -4,6 +4,6 @@ export const talks = [
         title: 'A tasty 🥓 15-min intro to Functional Reactive Programming',
         description: '',
         image: null,
-        url: 'https://talks.fknussel.com/frp-intro',
+        url: 'https://talks.fedknu.com/frp-intro',
     },
 ];
