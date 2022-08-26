@@ -1,5 +1,5 @@
 ---
-title: CSS Specificity
+title: event.target vs event.currentTarget
 date: 2020-04-27
 spoiler: rawr
 category: css
