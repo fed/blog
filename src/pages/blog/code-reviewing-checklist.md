@@ -3,6 +3,7 @@ title: Code reviewing checklist
 date: 2020-03-12
 spoiler: Thoughts on what I usually look out for when doing code reviews.
 category: general
+draft: true
 ---
 
 Here's a brief and high-level description of the things that I usually try to look out for when reviewing someone else's frontend code. Just a disclaimer that by no means this is supposed to be an exhaustive checklist, rather a compendium of aspects I consider worth focusing on while checking someone else's pull request.
