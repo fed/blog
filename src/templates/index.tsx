@@ -15,6 +15,8 @@ interface Props {
 
 const IndexTemplate: React.FC<Props> = ({ data }) => {
     const posts = data.allMarkdownRemark.edges
+        // Make sure to filter out static pages and drafts from this list
+        .filter((post) => post.node.frontmatter.draft !== true && post.node.fields.slug.includes('blog/'))
         .map((post) => ({
             id: post.node.id,
             title: post.node.frontmatter.title,
@@ -54,6 +56,7 @@ export const query = graphql`
                         title
                         spoiler
                         category
+                        draft
                     }
                 }
             }

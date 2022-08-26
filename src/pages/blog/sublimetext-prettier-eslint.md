@@ -3,6 +3,7 @@ title: Configuring SublimeText to work with Prettier and ESLint
 date: 2022-03-12
 spoiler: Instructions on how to configure SublimeText to automatically fix errors and format files on save using ESLint and Prettier.
 category: general
+draft: true
 ---
 
 Here are some instructions on how to configure SublimeText to automatically fix errors and format files on save using ESLint and Prettier.

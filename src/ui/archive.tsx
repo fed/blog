@@ -17,13 +17,10 @@ interface Props {
 
 export const Archive: React.FC<Props> = ({ posts }) => (
     <>
-        {posts
-            // Make sure to filter out static pages from this list
-            .filter((node) => node.isExternal || node.slug.includes('blog/'))
-            .map((post) => (
-                <Article key={post.id} data-postid={post.id} data-testid="archive-post">
-                    <Preview {...post} />
-                </Article>
-            ))}
+        {posts.map((post) => (
+            <Article key={post.id} data-postid={post.id} data-testid="archive-post">
+                <Preview {...post} />
+            </Article>
+        ))}
     </>
 );
