@@ -1,7 +1,8 @@
 ---
 title: Public Speaking Tips
 date: 2018-12-28
-spoiler: What makes a great API?
+spoiler: 
+draft: true
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-FOCpMAww28" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
