@@ -21,6 +21,14 @@ export const fontFamilies = {
         '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
     monospace: '"SFMono-Medium", "SF Mono", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Consolas, Courier, monospace',
 };
+
+export const fontWeights = {
+    light: 250,
+    normal: 400,
+    semibold: 500,
+    bold: 600,
+};
+
 export const containerDimensions = {
     xs: '480px',
     sm: '768px',

@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 import { categories } from '../model';
-import { colors, fontFamilies, gridSize } from '../styles/constants';
+import { colors, fontFamilies, fontWeights, gridSize } from '../styles/constants';
 import { CategoryId } from './types';
 
 interface Props {
@@ -15,7 +15,7 @@ const Container = styled.span<Props>`
     display: inline-block;
     font-family: ${fontFamilies.sansSerif};
     font-size: 11px;
-    font-weight: 600;
+    font-weight: ${fontWeights.bold};
     line-height: 1;
     padding: ${0.375 * gridSize}px ${0.5 * gridSize}px;
     text-transform: uppercase;

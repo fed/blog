@@ -2,7 +2,7 @@ import React from 'react';
 import { Twemoji } from 'react-emoji-render';
 import styled from 'styled-components';
 
-import { gridSize } from '../styles/constants';
+import { fontWeights, gridSize } from '../styles/constants';
 import { baseHeadingStyles, baseParagraphStyles } from '../styles/mixins';
 import { Link } from './link';
 import { Metadata } from './metadata';
@@ -11,7 +11,7 @@ import type { Post } from './types';
 const Title = styled.h2`
     ${baseHeadingStyles};
     font-size: 23px;
-    font-weight: 600;
+    font-weight: ${fontWeights.bold};
     margin: 0;
 `;
 

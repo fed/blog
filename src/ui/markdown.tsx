@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { gridSize } from '../styles/constants';
+import { fontWeights, gridSize } from '../styles/constants';
 import { baseHeadingStyles, baseLinkStyles, baseParagraphStyles } from '../styles/mixins';
 
 const Container = styled.div`
@@ -22,13 +22,13 @@ const Container = styled.div`
     h5,
     h6 {
         ${baseHeadingStyles};
-        font-weight: 600;
+        font-weight: ${fontWeights.bold};
         margin: ${6.25 * gridSize}px 0 0;
     }
 
     b,
     strong {
-        font-weight: 700;
+        font-weight: ${fontWeights.bold};
     }
 
     img {
@@ -44,7 +44,7 @@ const Container = styled.div`
 
         p {
             font-size: 16px;
-            font-weight: 400;
+            font-weight: ${fontWeights.normal};
             margin: 0;
         }
     }

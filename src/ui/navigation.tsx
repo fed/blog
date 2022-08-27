@@ -2,12 +2,12 @@ import { Link as UnstyledGatsbyLink } from 'gatsby';
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { colors, containerDimensions, fontFamilies, gridSize } from '../styles/constants';
+import { colors, containerDimensions, fontFamilies, fontWeights, gridSize } from '../styles/constants';
 import { baseFocusStateStyles } from '../styles/mixins';
 import avatarSrc from './navigation-icon.svg';
 
 const Container = styled.header`
-    background-color: #fafafac9;
+    background-color: #f6f8fa;
     position: relative;
 
     &::after {
@@ -29,13 +29,14 @@ const Container = styled.header`
 
 const Content = styled.div`
     align-items: center;
-    display: flex;
-    overflow-y: scroll;
+    display: flex; // Enable scrolling to provide access to all navigation menu items on mobile
+    overflow-x: scroll;
     padding: ${1.75 * gridSize}px 0 ${1.75 * gridSize}px ${3 * gridSize}px;
 
     @media (min-width: ${containerDimensions.sm}) {
         margin: 0 auto;
         max-width: ${containerDimensions.lg};
+        overflow-x: hidden; // Hide the scrollbar on Windows (desktop)
     }
 `;
 
@@ -43,7 +44,7 @@ const LogoLink = styled(UnstyledGatsbyLink)`
     ${baseFocusStateStyles};
     align-items: center;
     display: flex;
-    margin-right: ${2.5 * gridSize}px;
+    margin-right: ${3 * gridSize}px;
     text-decoration: none;
     width: max-content;
 `;
@@ -59,7 +60,7 @@ const SiteName = styled.span`
     color: ${colors.navy};
     font-family: ${fontFamilies.sansSerif};
     font-size: 17px;
-    font-weight: 550;
+    font-weight: ${fontWeights.bold};
     white-space: nowrap;
 `;
 
@@ -73,16 +74,11 @@ const ListItem = styled.li`
     color: ${colors.navy};
     display: inline-block;
     font-size: 14px;
-    font-weight: 450;
+    font-weight: ${fontWeights.semibold};
     list-style: none;
 
     &:not(:last-child) {
-        margin-right: ${0.5 * gridSize}px;
-    }
-
-    // Can't rely on the padding in Content as it's not working in iOS
-    &:last-child {
-        margin-right: ${3 * gridSize}px;
+        margin-right: ${1.5 * gridSize}px;
     }
 `;
 
@@ -92,7 +88,7 @@ const baseNavigationLinkStyles = css`
     color: ${colors.navy};
     display: inline-block;
     font-family: ${fontFamilies.sansSerif};
-    padding: 4px 6px;
+    /* padding: 4px 6px; */
     text-decoration: none;
     transition: background-color 0.1s ease-out, box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
 

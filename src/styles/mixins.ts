@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-import { colors, fontFamilies } from './constants';
+import { colors, fontFamilies, fontWeights } from './constants';
 
 export const baseHeadingStyles = css`
     color: ${colors.grayDark};
@@ -11,7 +11,7 @@ export const baseHeadingStyles = css`
 export const baseTitleStyles = css`
     ${baseHeadingStyles};
     font-size: 30px;
-    font-weight: 700;
+    font-weight: ${fontWeights.bold};
     margin: 0;
 `;
 
@@ -19,7 +19,7 @@ export const baseParagraphStyles = css`
     color: ${colors.grayDark};
     font-family: ${fontFamilies.sansSerif};
     font-size: 18px;
-    font-weight: 250;
+    font-weight: ${fontWeights.light};
     line-height: 1.6;
 `;
 
