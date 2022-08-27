@@ -16,3 +16,5 @@ metaTitle: Functional reactive programming tools and resources
 ## Other resources
 
 -   https://github.com/ReactiveX/rxjs/pull/5592/files
+-   https://this-is-learning.github.io/rxjs-fundamentals-course
+-   https://benlesh.com/
