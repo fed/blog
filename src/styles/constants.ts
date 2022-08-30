@@ -1,10 +1,10 @@
 export const colors = {
     grayDark: '#1f2937',
-    grayMedium: '#6a7482',
+    grayMedium: '#526b8d',
     grayLight: '#e1e1e1',
     white: '#ffffff',
     red: '#d43900',
-    blue: '#056cc1',
+    blue: '#0572e6',
     green: '#3d854d',
     yellow: '#f9ca5e',
     pink: '#dc2a5f',

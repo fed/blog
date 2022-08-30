@@ -1,15 +1,17 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import { categories } from '../model';
 import { colors, fontFamilies, fontWeights, gridSize } from '../styles/constants';
 import { CategoryId } from './types';
 
 interface Props {
-    categoryId: CategoryId;
+    categoryId?: CategoryId;
+    isHighlighted?: boolean;
 }
 
-const Container = styled.span<Props>`
+const Container = styled.span<{ isHighlighted: boolean }>`
+    background-color: ${(props) => (props.isHighlighted ? colors.blue : colors.grayMedium)};
     border-radius: 3px;
     color: ${colors.white};
     display: inline-block;
@@ -20,57 +22,14 @@ const Container = styled.span<Props>`
     padding: ${0.375 * gridSize}px ${0.5 * gridSize}px;
     text-transform: uppercase;
     white-space: nowrap;
-
-    ${(props) =>
-        props.categoryId === CategoryId.REACT &&
-        css`
-            background-color: ${colors.blue};
-        `}
-
-    ${(props) =>
-        props.categoryId === CategoryId.TESTING &&
-        css`
-            background-color: ${colors.green};
-        `}
-
-    ${(props) =>
-        props.categoryId === CategoryId.JAVASCRIPT &&
-        css`
-            background-color: ${colors.yellow};
-            color: ${colors.brown};
-        `}
-
-    ${(props) =>
-        props.categoryId === CategoryId.FRP &&
-        css`
-            background-color: ${colors.red};
-        `}
-
-    ${(props) =>
-        props.categoryId === CategoryId.DOM &&
-        css`
-            background-color: ${colors.purple};
-        `}
-
-    ${(props) =>
-        props.categoryId === CategoryId.ACCESSIBILITY &&
-        css`
-            background-color: ${colors.pink};
-        `}
-
-    ${(props) =>
-        props.categoryId === CategoryId.GENERAL &&
-        css`
-            background-color: ${colors.navy};
-        `}
 `;
 
-export const Category: React.FC<Props> = ({ categoryId }) => {
+export const Category: React.FC<Props> = ({ categoryId, isHighlighted = false }) => {
     const category = categories.find((c) => c.id === categoryId);
 
     if (!category) {
         return null;
     }
 
-    return <Container categoryId={categoryId}>{category.title}</Container>;
+    return <Container isHighlighted={isHighlighted}>{category.title}</Container>;
 };

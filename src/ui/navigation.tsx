@@ -88,7 +88,6 @@ const baseNavigationLinkStyles = css`
     color: ${colors.navy};
     display: inline-block;
     font-family: ${fontFamilies.sansSerif};
-    /* padding: 4px 6px; */
     text-decoration: none;
     transition: background-color 0.1s ease-out, box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38);
 

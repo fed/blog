@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { fontWeights, gridSize } from '../styles/constants';
+import { fontFamilies, fontWeights, gridSize } from '../styles/constants';
 import { baseHeadingStyles, baseLinkStyles, baseParagraphStyles } from '../styles/mixins';
 
 const Container = styled.div`
@@ -57,6 +57,15 @@ const Container = styled.div`
         margin: 0;
         padding: ${0.375 * gridSize}px ${0.75 * gridSize}px;
         white-space: normal;
+        font-weight: ${fontWeights.normal};
+    }
+
+    pre,
+    code,
+    code,
+    kbd,
+    samp {
+        font-family: ${fontFamilies.monospace};
     }
 
     /* Add some vertical spacing to all images */

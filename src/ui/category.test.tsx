@@ -22,14 +22,29 @@ describe('Category', () => {
     });
 
     describe('when a valid categoryId gets passed in', () => {
-        it('should render the category component with the right style and content', () => {
+        it('should render the category component with the right content', () => {
             const wrapper = shallow(<Category categoryId={CategoryId.DOM} />);
 
             expect(wrapper.isEmptyRender()).toBe(false);
-            expect(wrapper.props()).toEqual({
-                categoryId: 'dom',
-                children: 'DOM & Web APIs',
-            });
+            expect(wrapper.prop('children')).toBe('DOM & Web APIs');
+        });
+    });
+
+    describe('when the highlighted variant is requested', () => {
+        it('should drill the isHighlighted prop down the styled component', () => {
+            const wrapper = shallow(<Category categoryId={CategoryId.DOM} isHighlighted />);
+
+            expect(wrapper.isEmptyRender()).toBe(false);
+            expect(wrapper.prop('isHighlighted')).toBe(true);
+        });
+    });
+
+    describe('when the dimmed variant is requested', () => {
+        it('should drill the isHighlighted prop down the styled component', () => {
+            const wrapper = shallow(<Category categoryId={CategoryId.DOM} />);
+
+            expect(wrapper.isEmptyRender()).toBe(false);
+            expect(wrapper.prop('isHighlighted')).toBe(false);
         });
     });
 });

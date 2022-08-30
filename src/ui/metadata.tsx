@@ -20,9 +20,10 @@ const PublicationDate = styled.span`
 interface Props {
     date: string;
     categoryId: CategoryId;
+    isHighlighted?: boolean;
 }
 
-export const Metadata: React.FC<Props> = ({ date, categoryId }) => {
+export const Metadata: React.FC<Props> = ({ date, categoryId, isHighlighted = false }) => {
     if (!date && !categoryId) {
         return null;
     }
@@ -30,7 +31,7 @@ export const Metadata: React.FC<Props> = ({ date, categoryId }) => {
     return (
         <Container>
             {date ? <PublicationDate data-testid="metadata-publication-date">{date}</PublicationDate> : null}
-            {categoryId ? <Category categoryId={categoryId} /> : null}
+            {categoryId ? <Category categoryId={categoryId} isHighlighted={isHighlighted} /> : null}
         </Container>
     );
 };
