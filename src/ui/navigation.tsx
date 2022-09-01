@@ -44,23 +44,24 @@ const LogoLink = styled(UnstyledGatsbyLink)`
     ${baseFocusStateStyles};
     align-items: center;
     display: flex;
-    margin-right: ${3 * gridSize}px;
+    margin-right: ${3.5 * gridSize}px;
     text-decoration: none;
     width: max-content;
 `;
 
 const Avatar = styled.img`
-    height: ${3 * gridSize}px;
+    height: ${2.5 * gridSize}px;
     margin-right: ${1.25 * gridSize}px;
-    width: ${3 * gridSize}px;
+    width: ${2.5 * gridSize}px;
 `;
 
 const SiteName = styled.span`
     align-items: center;
     color: ${colors.navy};
     font-family: ${fontFamilies.sansSerif};
-    font-size: 17px;
+    font-size: 16px;
     font-weight: ${fontWeights.bold};
+    line-height: 1;
     white-space: nowrap;
 `;
 
@@ -74,11 +75,13 @@ const ListItem = styled.li`
     color: ${colors.navy};
     display: inline-block;
     font-size: 14px;
-    font-weight: ${fontWeights.semibold};
+    font-weight: ${fontWeights.normal};
+    line-height: 1;
     list-style: none;
+    margin-bottom: -1px;
 
     &:not(:last-child) {
-        margin-right: ${1.5 * gridSize}px;
+        margin-right: ${2 * gridSize}px;
     }
 `;
 
