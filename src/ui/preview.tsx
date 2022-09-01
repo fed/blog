@@ -24,7 +24,7 @@ type Props = Post;
 
 export const Preview: React.FC<Props> = ({ title, date, categoryId, url, slug, spoiler, isExternal }) => (
     <>
-        <Metadata date={date} categoryId={categoryId} />
+        <Metadata date={date} categoryId={categoryId} isPreview />
 
         <Title data-testid="preview-title">
             <Link to={url || slug} isExternal={isExternal}>

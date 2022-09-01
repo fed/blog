@@ -23,7 +23,7 @@ export const fontFamilies = {
 };
 
 export const fontWeights = {
-    light: 250,
+    light: 300,
     normal: 400,
     semibold: 500,
     bold: 600,
