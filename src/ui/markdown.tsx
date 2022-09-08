@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { fontFamilies, fontWeights, gridSize } from '../styles/constants';
+import { colors, fontFamilies, fontWeights, gridSize } from '../styles/constants';
 import { baseHeadingStyles, baseLinkStyles, baseParagraphStyles } from '../styles/mixins';
 
 const Container = styled.div`
@@ -46,6 +46,16 @@ const Container = styled.div`
             font-size: 16px;
             font-weight: ${fontWeights.normal};
             margin: 0;
+        }
+
+        a:not(.gatsby-resp-image-link) {
+            color: ${colors.grayDark};
+            transition: none;
+
+            &,
+            :hover {
+                border-bottom: 2px solid ${colors.blue};
+            }
         }
     }
 
