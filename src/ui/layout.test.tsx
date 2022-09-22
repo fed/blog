@@ -11,7 +11,7 @@ describe('Layout', () => {
         expect(wrapper.find(Navigation).exists()).toBe(true);
     });
 
-    it('renders whatever content it gets passed in', () => {
+    it('renders any content it gets passed in', () => {
         const wrapper = shallow(
             <Layout>
                 <p data-testid="test-content">This is some test content</p>
@@ -24,39 +24,16 @@ describe('Layout', () => {
         expect(content.text()).toBe('This is some test content');
     });
 
-    it('renders the skip to main content button', () => {
+    it('renders the skip link', () => {
         const wrapper = shallow(<Layout />);
 
-        expect(wrapper.find('[data-testid="layout-skip-to-main-content-button"]').exists()).toBe(true);
+        expect(wrapper.find('[data-testid="layout-skip-link"]').exists()).toBe(true);
     });
 
-    describe('when clicking on the skip to main content button', () => {
-        let useRefSpy;
-        let focus;
+    it('assigns the right id to the main content so that the skip link works', () => {
+        const wrapper = shallow(<Layout />);
 
-        beforeEach(() => {
-            focus = jest.fn();
-            useRefSpy = jest.spyOn(React, 'useRef').mockReturnValueOnce({ current: { querySelector: () => ({ focus }) } });
-        });
-
-        afterEach(() => {
-            jest.resetAllMocks();
-        });
-
-        it('shifts the focus to the main content', () => {
-            const wrapper = shallow(
-                <Layout>
-                    <a href="/rawr">This is some test content</a>
-                </Layout>,
-            );
-
-            expect(useRefSpy).toBeCalledTimes(1);
-            expect(useRefSpy).toHaveBeenCalledWith(null);
-            expect(focus).not.toHaveBeenCalled();
-
-            wrapper.find('[data-testid="layout-skip-to-main-content-button"]').simulate('click');
-
-            expect(focus).toBeCalledTimes(1);
-        });
+        expect(wrapper.find('[data-testid="layout-skip-link"]').prop('href')).toBe('#main');
+        expect(wrapper.find('[data-testid="layout-content"]').prop('id')).toBe('main');
     });
 });
