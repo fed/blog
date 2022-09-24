@@ -111,7 +111,6 @@ describe('Article', () => {
             expect(metadata.props()).toEqual({
                 date: 'June 1, 2020',
                 categoryId: 'frp',
-                isActive: true,
             });
         });
 
