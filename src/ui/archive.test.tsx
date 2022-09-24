@@ -36,10 +36,12 @@ const NODES_MOCK = [
 
 describe('Archive', () => {
     describe('when no posts are passed in', () => {
-        it("doesn't render anything", () => {
+        it('renders a message saying there are no blogs published', () => {
             const wrapper = shallow(<Archive posts={[]} />);
 
-            expect(wrapper.prop('children')).toEqual([]);
+            expect(wrapper.find('[data-testid="archive-title"]').exists()).toBe(true);
+            expect(wrapper.find('[data-testid="archive-empty"]').exists()).toBe(true);
+            expect(wrapper.find('[data-testid="archive-post"]')).toHaveLength(0);
         });
     });
 
@@ -47,7 +49,9 @@ describe('Archive', () => {
         it('renders the right number of children', () => {
             const wrapper = shallow(<Archive posts={NODES_MOCK} />);
 
-            expect(wrapper.prop('children')).toHaveLength(3);
+            expect(wrapper.find('[data-testid="archive-title"]').exists()).toBe(true);
+            expect(wrapper.find('[data-testid="archive-empty"]').exists()).toBe(false);
+            expect(wrapper.find('[data-testid="archive-post"]')).toHaveLength(3);
         });
     });
 });
