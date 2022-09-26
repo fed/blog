@@ -20,10 +20,12 @@ interface Props {
 
 export const Article: React.FC<Props> = ({ title, date, categoryId, children }) => (
     <article>
-        {date && categoryId ? <Metadata date={date} categoryId={categoryId} /> : null}
-        <Title>
-            <Twemoji svg text={title} />
-        </Title>
+        <header>
+            <Metadata date={date} categoryId={categoryId} />
+            <Title>
+                <Twemoji svg text={title} />
+            </Title>
+        </header>
         <Markdown>{children}</Markdown>
     </article>
 );

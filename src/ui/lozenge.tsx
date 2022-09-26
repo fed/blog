@@ -1,3 +1,4 @@
+import { type ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 
 import { colors, fontFamilies, fontWeights, gridSize } from '../styles/constants';
@@ -5,7 +6,7 @@ import { colors, fontFamilies, fontWeights, gridSize } from '../styles/constants
 type LozengeType = 'default' | 'primary' | 'success' | 'error' | 'warning' | 'info';
 
 interface Props {
-    children: string;
+    children: ReactNode;
     type?: LozengeType;
 }
 
