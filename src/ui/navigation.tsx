@@ -6,7 +6,7 @@ import { colors, containerDimensions, fontFamilies, fontWeights, gridSize } from
 import { baseFocusStateStyles } from '../styles/mixins';
 import avatarSrc from './navigation-icon.svg';
 
-const Container = styled.header`
+const Header = styled.header`
     background-color: #f6f8fa;
     position: relative;
 
@@ -27,7 +27,7 @@ const Container = styled.header`
     }
 `;
 
-const Content = styled.div`
+const NavigationMenu = styled.nav`
     align-items: center;
     display: flex; // Enable scrolling to provide access to all navigation menu items on mobile
     overflow-x: scroll;
@@ -109,8 +109,8 @@ const ListItemInternalLink = styled(UnstyledGatsbyLink)`
 `;
 
 export const Navigation: React.FC = () => (
-    <Container>
-        <Content>
+    <Header>
+        <NavigationMenu>
             <LogoLink to="/" data-testid="navigation-logo">
                 <Avatar src={avatarSrc} alt="" data-testid="navigation-logo-image" />
                 <SiteName data-testid="navigation-logo-title">Federico Knüssel</SiteName>
@@ -147,6 +147,6 @@ export const Navigation: React.FC = () => (
                     </ListItemExternalLink>
                 </ListItem>
             </List>
-        </Content>
-    </Container>
+        </NavigationMenu>
+    </Header>
 );
