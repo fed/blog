@@ -44,7 +44,7 @@ const IndexTemplate: React.FC<Props> = ({ data }) => {
 // Note that you can only have one page query per file.
 export const query = graphql`
     query AllBlogPosts {
-        allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
+        allMarkdownRemark(sort: { frontmatter: { date: ASC } }) {
             edges {
                 node {
                     id
