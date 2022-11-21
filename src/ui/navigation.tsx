@@ -146,6 +146,16 @@ export const Navigation: React.FC = () => (
                         Twitter
                     </ListItemExternalLink>
                 </ListItem>
+                <ListItem>
+                    <ListItemExternalLink
+                        target="_blank"
+                        rel="me noopener noreferrer"
+                        href="https://mas.to/@fed"
+                        data-testid="navigation-link"
+                    >
+                        Mastodon
+                    </ListItemExternalLink>
+                </ListItem>
             </List>
         </NavigationMenu>
     </Header>
