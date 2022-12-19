@@ -11,12 +11,16 @@ Here are some links to a handful of tools you might find useful when working on 
     [Safari](https://www.apple.com/safari/)
 -   [NVDA](https://www.nvaccess.org/): use with [Firefox](https://www.mozilla.org/en-GB/firefox/) on Windows
 -   [ChromeVox](https://www.chromevox.com/) (built-in on Chromebooks): use with [Chrome](https://www.google.com/chrome/)
--   [JAWS](https://www.freedomscientific.com/products/software/jaws/): use with IE11 on Windows
+-   [JAWS](https://www.freedomscientific.com/products/software/jaws/): use with Chrome on Windows
 
 ## Screen reader plugins
 
 If you are working with NVDA, the [Focus Highlight Plugin](https://addons.nvda-project.org/addons/focusHighlight.en.html) might come in
 handy as it provides a way to get a visual indication of the focused item when NVDA is on.
+
+## VSCode extensions
+
+-   [axe Accessibility Linter](https://marketplace.visualstudio.com/items?itemName=deque-systems.vscode-axe-linter)
 
 ## Chrome extensions
 
