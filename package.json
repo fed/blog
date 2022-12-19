@@ -1,7 +1,7 @@
 {
     "private": true,
     "name": "blog",
-    "description": "Personal Blog",
+    "description": "Personal website and blog",
     "version": "0.0.0",
     "author": "Federico Knüssel <fed@duck.com>",
     "license": "MIT",

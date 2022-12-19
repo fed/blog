@@ -1,17 +1,16 @@
 ---
-title: Accessibility tools and resources ❤️
-metaTitle: Accessibility tools and resources
+title: Accessibility tools and resources
 ---
 
 Here are some links to a handful of tools you might find useful when working on and testing web accessibility.
 
 ## Screen readers
 
--   [VoiceOver](https://support.apple.com/en-au/guide/voiceover-guide/welcome/web) (already shipped with MacOS): use with
+-   [VoiceOver](https://support.apple.com/en-au/guide/voiceover-guide/welcome/web) (already shipped with MacOS): pair with
     [Safari](https://www.apple.com/safari/)
--   [NVDA](https://www.nvaccess.org/): use with [Firefox](https://www.mozilla.org/en-GB/firefox/) on Windows
--   [ChromeVox](https://www.chromevox.com/) (built-in on Chromebooks): use with [Chrome](https://www.google.com/chrome/)
--   [JAWS](https://www.freedomscientific.com/products/software/jaws/): use with Chrome on Windows
+-   [NVDA](https://www.nvaccess.org/): pair with [Firefox](https://www.mozilla.org/en-GB/firefox/) on Windows
+-   [JAWS](https://www.freedomscientific.com/products/software/jaws/): pair with Chrome on Windows
+-   [ChromeVox](https://www.chromevox.com/) (built-in on Chromebooks): pair with [Chrome](https://www.google.com/chrome/)
 
 ## Screen reader plugins
 
@@ -24,7 +23,7 @@ handy as it provides a way to get a visual indication of the focused item when N
 
 ## Chrome extensions
 
--   [axe - Web Accessibility Testing](https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd)
+-   [axe Web Accessibility Testing](https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd)
 -   [ARC Toolkit](https://chrome.google.com/webstore/detail/arc-toolkit/chdkkkccnlfncngelccgbgfmjebmkmce)
 -   [Lighthouse](https://developers.google.com/web/tools/lighthouse)
 -   [Accessibility Insights for Web](https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni)
@@ -34,6 +33,7 @@ handy as it provides a way to get a visual indication of the focused item when N
 -   [Accessible Color Picker](https://chrome.google.com/webstore/detail/accessible-color-picker/bgfhbflmeekopanooidljpnmnljdihld)
 -   [headingsMap](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi)
 -   [Web Developer](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm)
+-   [NerdeRegion](https://chrome.google.com/webstore/detail/nerderegion/lkcampbojgmgobcfinlkgkodlnlpjieb)
 
 ## Bookmarklets
 
