@@ -70,6 +70,11 @@ const Container = styled.div`
         font-weight: ${fontWeights.normal};
     }
 
+    /* Code blocks */
+    pre.grvsc-container {
+        line-height: 1.75;
+    }
+
     pre,
     code,
     code,
