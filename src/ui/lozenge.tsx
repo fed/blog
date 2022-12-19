@@ -5,9 +5,12 @@ import { colors, fontFamilies, fontWeights, gridSize } from '../styles/constants
 
 type LozengeType = 'default' | 'primary' | 'success' | 'error' | 'warning' | 'info';
 
+// If you want to prevent props meant to be consumed by styled components from being passed to the underlying React node
+// or rendered to the DOM element, you can prefix the prop name with a dollar sign ($), turning it into a transient prop.
+// In this case we are using a transient prop to avoid the attribute `type` to be rendered as part of the span element.
 interface Props {
     children: ReactNode;
-    type?: LozengeType;
+    $type?: LozengeType;
 }
 
 export const Lozenge = styled.span<Props>`
@@ -23,7 +26,7 @@ export const Lozenge = styled.span<Props>`
     white-space: nowrap;
 
     ${(props) => {
-        switch (props.type) {
+        switch (props.$type) {
             case 'primary':
                 return css`
                     background-color: ${colors.blue};
