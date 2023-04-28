@@ -4,7 +4,7 @@ module.exports = {
         browser: true,
         es6: true,
     },
-    plugins: ['@typescript-eslint', 'react', 'import', 'better-styled-components', 'prettier'],
+    plugins: ['@typescript-eslint', 'react', 'import', 'prettier'],
     globals: {
         graphql: false,
     },
@@ -47,7 +47,6 @@ module.exports = {
                 groups: ['builtin', 'external', 'internal', ['parent', 'index', 'sibling']],
             },
         ],
-        'better-styled-components/sort-declarations-alphabetically': 'error',
         'react/prop-types': 'off',
         'react/jsx-filename-extension': 'off',
         'react/jsx-props-no-spreading': 'off',

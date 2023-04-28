@@ -1,63 +1,42 @@
-import { type ReactNode } from 'react';
-import styled, { css } from 'styled-components';
+import React, { type ReactNode, type FC } from 'react';
 
-import { colors, fontFamilies, fontWeights, gridSize } from '../styles/constants';
+import {
+    defaultLozengeStyle,
+    errorLozengeStyle,
+    infoLozengeStyle,
+    primaryLozengeStyle,
+    successLozengeStyle,
+    warningLozengeStyle,
+} from './lozenge.css';
 
-type LozengeType = 'default' | 'primary' | 'success' | 'error' | 'warning' | 'info';
-
-// If you want to prevent props meant to be consumed by styled components from being passed to the underlying React node
-// or rendered to the DOM element, you can prefix the prop name with a dollar sign ($), turning it into a transient prop.
-// In this case we are using a transient prop to avoid the attribute `type` to be rendered as part of the span element.
 interface Props {
     children: ReactNode;
-    $type?: LozengeType;
+    type?: 'default' | 'primary' | 'success' | 'error' | 'warning' | 'info';
 }
 
-export const Lozenge = styled.span<Props>`
-    border-radius: 3px;
-    color: ${colors.white};
-    display: inline-block;
-    font-family: ${fontFamilies.sansSerif};
-    font-size: 11px;
-    font-weight: ${fontWeights.bold};
-    line-height: 1;
-    padding: ${0.375 * gridSize}px ${0.5 * gridSize}px;
-    text-transform: uppercase;
-    white-space: nowrap;
-
-    ${(props) => {
-        switch (props.$type) {
+export const Lozenge: FC<Props> = ({ children, type }) => {
+    const className = (() => {
+        switch (type) {
             case 'primary':
-                return css`
-                    background-color: ${colors.blue};
-                `;
+                return primaryLozengeStyle;
 
             case 'success':
-                return css`
-                    background-color: ${colors.green};
-                `;
+                return successLozengeStyle;
 
             case 'error':
-                return css`
-                    background-color: ${colors.red};
-                `;
+                return errorLozengeStyle;
 
             case 'warning':
-                return css`
-                    background-color: ${colors.yellow};
-                    color: ${colors.brown};
-                `;
+                return warningLozengeStyle;
 
             case 'info':
-                return css`
-                    background-color: ${colors.purple};
-                `;
+                return infoLozengeStyle;
 
             case 'default':
             default:
-                return css`
-                    background-color: ${colors.grayMedium};
-                `;
+                return defaultLozengeStyle;
         }
-    }}}
-`;
+    })();
+
+    return <span className={className}>{children}</span>;
+};

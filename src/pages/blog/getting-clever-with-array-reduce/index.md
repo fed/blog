@@ -236,5 +236,5 @@ const nodesInFragment = nodes.reduce((fragment, node) => {
 document.body.append(nodesInFragment);
 ```
 
-> I've seen some of these ideas on [Mykola Bilokonsky's Egghead course](https://egghead.io/courses/reduce-data-with-javascript) and also on
-> [Twitter](https://twitter.com/argyleink/status/1169833100483809280).
+I've seen some of these ideas on [Mykola Bilokonsky's Egghead course](https://egghead.io/courses/reduce-data-with-javascript) and also on
+[Twitter](https://twitter.com/argyleink/status/1169833100483809280).

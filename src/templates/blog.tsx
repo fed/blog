@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
+import '../styles/global.css';
 import type { Query } from '../../graphql-types';
 import { Article } from '../ui/article';
 import { Layout } from '../ui/layout';

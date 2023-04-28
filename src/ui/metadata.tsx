@@ -1,27 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import { categories } from '../model';
-import { colors, fontFamilies, gridSize } from '../styles/constants';
-import { srOnly } from '../styles/mixins';
 import { Lozenge } from './lozenge';
+import { containerStyle, publicationDateStyle, srOnlyStyle } from './metadata.css';
 import { CategoryId } from './types';
-
-const Container = styled.div`
-    margin: 0 0 ${0.625 * gridSize}px;
-`;
-
-const PublicationDate = styled.span`
-    color: ${colors.grayMedium};
-    font-family: ${fontFamilies.sansSerif};
-    font-size: 12px;
-    margin-right: ${1.25 * gridSize}px;
-    text-transform: uppercase;
-`;
-
-const SrOnly = styled.span`
-    ${srOnly};
-`;
 
 interface Props {
     date?: string;
@@ -38,13 +20,17 @@ export const Metadata: React.FC<Props> = ({ date, categoryId, isPreview = false 
 
     return (
         <>
-            <SrOnly>
+            <span className={srOnlyStyle}>
                 Published on {date} under the category {category?.title}
-            </SrOnly>
-            <Container aria-hidden="true">
-                {date ? <PublicationDate data-testid="metadata-publication-date">{date}</PublicationDate> : null}
-                {category?.title ? <Lozenge $type={isPreview ? 'default' : 'primary'}>{category.title}</Lozenge> : null}
-            </Container>
+            </span>
+            <div className={containerStyle} aria-hidden="true">
+                {date ? (
+                    <span className={publicationDateStyle} data-testid="metadata-publication-date">
+                        {date}
+                    </span>
+                ) : null}
+                {category?.title ? <Lozenge type={isPreview ? 'default' : 'primary'}>{category.title}</Lozenge> : null}
+            </div>
         </>
     );
 };

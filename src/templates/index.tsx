@@ -2,6 +2,7 @@ import { graphql } from 'gatsby';
 import sortBy from 'lodash/sortBy';
 import React from 'react';
 
+import '../styles/global.css';
 import type { Query } from '../../graphql-types';
 import { externalPosts } from '../model';
 import { Archive } from '../ui/archive';
