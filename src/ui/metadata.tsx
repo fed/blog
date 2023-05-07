@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { categories } from '../model';
-import { colors, fontFamilies, gridSize } from '../styles/constants';
+import { colors, fontFamilies, fontSizes, gridSize } from '../styles/constants';
 import { srOnly } from '../styles/mixins';
 import { Lozenge } from './lozenge';
 import { CategoryId } from './types';
@@ -14,7 +14,7 @@ const Container = styled.div`
 const PublicationDate = styled.span`
     color: ${colors.grayMedium};
     font-family: ${fontFamilies.sansSerif};
-    font-size: 12px;
+    font-size: ${fontSizes.xxs};
     margin-right: ${1.25 * gridSize}px;
     text-transform: uppercase;
 `;

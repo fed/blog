@@ -381,6 +381,10 @@ export type MarkdownRemark = Node & {
   timeToRead?: Maybe<Scalars['Int']>;
   tableOfContents?: Maybe<Scalars['String']>;
   wordCount?: Maybe<MarkdownWordCount>;
+  /** Returns all children nodes filtered by type GRVSCCodeBlock */
+  childrenGrvscCodeBlock?: Maybe<Array<Maybe<GrvscCodeBlock>>>;
+  /** Returns the first child node of type GRVSCCodeBlock or null if there are no children of given type on this node */
+  childGrvscCodeBlock?: Maybe<GrvscCodeBlock>;
   parent?: Maybe<Node>;
   children: Array<Node>;
   internal: Internal;
@@ -1045,6 +1049,8 @@ export type QueryMarkdownRemarkArgs = {
   timeToRead?: InputMaybe<IntQueryOperatorInput>;
   tableOfContents?: InputMaybe<StringQueryOperatorInput>;
   wordCount?: InputMaybe<MarkdownWordCountFilterInput>;
+  childrenGrvscCodeBlock?: InputMaybe<GrvscCodeBlockFilterListInput>;
+  childGrvscCodeBlock?: InputMaybe<GrvscCodeBlockFilterInput>;
   parent?: InputMaybe<NodeFilterInput>;
   children?: InputMaybe<NodeFilterListInput>;
   internal?: InputMaybe<InternalFilterInput>;
@@ -1213,6 +1219,8 @@ export type MarkdownRemarkFilterInput = {
   timeToRead?: InputMaybe<IntQueryOperatorInput>;
   tableOfContents?: InputMaybe<StringQueryOperatorInput>;
   wordCount?: InputMaybe<MarkdownWordCountFilterInput>;
+  childrenGrvscCodeBlock?: InputMaybe<GrvscCodeBlockFilterListInput>;
+  childGrvscCodeBlock?: InputMaybe<GrvscCodeBlockFilterInput>;
   parent?: InputMaybe<NodeFilterInput>;
   children?: InputMaybe<NodeFilterListInput>;
   internal?: InputMaybe<InternalFilterInput>;
@@ -1261,6 +1269,115 @@ export type MarkdownWordCountFilterInput = {
   paragraphs?: InputMaybe<IntQueryOperatorInput>;
   sentences?: InputMaybe<IntQueryOperatorInput>;
   words?: InputMaybe<IntQueryOperatorInput>;
+};
+
+export type GrvscCodeBlockFilterListInput = {
+  elemMatch?: InputMaybe<GrvscCodeBlockFilterInput>;
+};
+
+export type GrvscCodeBlockFilterInput = {
+  index?: InputMaybe<IntQueryOperatorInput>;
+  html?: InputMaybe<StringQueryOperatorInput>;
+  text?: InputMaybe<StringQueryOperatorInput>;
+  preClassName?: InputMaybe<StringQueryOperatorInput>;
+  codeClassName?: InputMaybe<StringQueryOperatorInput>;
+  language?: InputMaybe<StringQueryOperatorInput>;
+  meta?: InputMaybe<JsonQueryOperatorInput>;
+  defaultTheme?: InputMaybe<GrvscThemeFilterInput>;
+  additionalThemes?: InputMaybe<GrvscThemeFilterListInput>;
+  tokenizedLines?: InputMaybe<GrvscTokenizedLineFilterListInput>;
+  id?: InputMaybe<StringQueryOperatorInput>;
+  parent?: InputMaybe<NodeFilterInput>;
+  children?: InputMaybe<NodeFilterListInput>;
+  internal?: InputMaybe<InternalFilterInput>;
+};
+
+export type GrvscThemeFilterInput = {
+  path?: InputMaybe<StringQueryOperatorInput>;
+  identifier?: InputMaybe<StringQueryOperatorInput>;
+  conditions?: InputMaybe<GrvscThemeConditionFilterListInput>;
+};
+
+export type GrvscThemeConditionFilterListInput = {
+  elemMatch?: InputMaybe<GrvscThemeConditionFilterInput>;
+};
+
+export type GrvscThemeConditionFilterInput = {
+  condition?: InputMaybe<GrvscThemeConditionKindQueryOperatorInput>;
+  value?: InputMaybe<StringQueryOperatorInput>;
+};
+
+export type GrvscThemeConditionKindQueryOperatorInput = {
+  eq?: InputMaybe<GrvscThemeConditionKind>;
+  ne?: InputMaybe<GrvscThemeConditionKind>;
+  in?: InputMaybe<Array<InputMaybe<GrvscThemeConditionKind>>>;
+  nin?: InputMaybe<Array<InputMaybe<GrvscThemeConditionKind>>>;
+};
+
+export type GrvscThemeFilterListInput = {
+  elemMatch?: InputMaybe<GrvscThemeFilterInput>;
+};
+
+export type GrvscTokenizedLineFilterListInput = {
+  elemMatch?: InputMaybe<GrvscTokenizedLineFilterInput>;
+};
+
+export type GrvscTokenizedLineFilterInput = {
+  tokens?: InputMaybe<GrvscTokenFilterListInput>;
+  gutterCells?: InputMaybe<GrvscGutterCellFilterListInput>;
+  text?: InputMaybe<StringQueryOperatorInput>;
+  html?: InputMaybe<StringQueryOperatorInput>;
+  attrs?: InputMaybe<JsonQueryOperatorInput>;
+  className?: InputMaybe<StringQueryOperatorInput>;
+  data?: InputMaybe<JsonQueryOperatorInput>;
+  isHighlighted?: InputMaybe<BooleanQueryOperatorInput>;
+  lineNumber?: InputMaybe<IntQueryOperatorInput>;
+  diff?: InputMaybe<GrvscDiffQueryOperatorInput>;
+};
+
+export type GrvscTokenFilterListInput = {
+  elemMatch?: InputMaybe<GrvscTokenFilterInput>;
+};
+
+export type GrvscTokenFilterInput = {
+  text?: InputMaybe<StringQueryOperatorInput>;
+  startIndex?: InputMaybe<IntQueryOperatorInput>;
+  endIndex?: InputMaybe<IntQueryOperatorInput>;
+  scopes?: InputMaybe<StringQueryOperatorInput>;
+  html?: InputMaybe<StringQueryOperatorInput>;
+  className?: InputMaybe<StringQueryOperatorInput>;
+  defaultThemeTokenData?: InputMaybe<GrvscThemeTokenDataFilterInput>;
+  additionalThemeTokenData?: InputMaybe<GrvscThemeTokenDataFilterListInput>;
+};
+
+export type GrvscThemeTokenDataFilterInput = {
+  themeIdentifier?: InputMaybe<StringQueryOperatorInput>;
+  className?: InputMaybe<StringQueryOperatorInput>;
+  meta?: InputMaybe<IntQueryOperatorInput>;
+  color?: InputMaybe<StringQueryOperatorInput>;
+  bold?: InputMaybe<BooleanQueryOperatorInput>;
+  italic?: InputMaybe<BooleanQueryOperatorInput>;
+  underline?: InputMaybe<BooleanQueryOperatorInput>;
+};
+
+export type GrvscThemeTokenDataFilterListInput = {
+  elemMatch?: InputMaybe<GrvscThemeTokenDataFilterInput>;
+};
+
+export type GrvscGutterCellFilterListInput = {
+  elemMatch?: InputMaybe<GrvscGutterCellFilterInput>;
+};
+
+export type GrvscGutterCellFilterInput = {
+  className?: InputMaybe<StringQueryOperatorInput>;
+  text?: InputMaybe<StringQueryOperatorInput>;
+};
+
+export type GrvscDiffQueryOperatorInput = {
+  eq?: InputMaybe<GrvscDiff>;
+  ne?: InputMaybe<GrvscDiff>;
+  in?: InputMaybe<Array<InputMaybe<GrvscDiff>>>;
+  nin?: InputMaybe<Array<InputMaybe<GrvscDiff>>>;
 };
 
 export type NodeFilterInput = {
@@ -1469,6 +1586,8 @@ export type MarkdownRemarkFieldSelector = {
   timeToRead?: InputMaybe<FieldSelectorEnum>;
   tableOfContents?: InputMaybe<FieldSelectorEnum>;
   wordCount?: InputMaybe<MarkdownWordCountFieldSelector>;
+  childrenGrvscCodeBlock?: InputMaybe<GrvscCodeBlockFieldSelector>;
+  childGrvscCodeBlock?: InputMaybe<GrvscCodeBlockFieldSelector>;
   parent?: InputMaybe<NodeFieldSelector>;
   children?: InputMaybe<NodeFieldSelector>;
   internal?: InputMaybe<InternalFieldSelector>;
@@ -1497,6 +1616,73 @@ export type MarkdownWordCountFieldSelector = {
   paragraphs?: InputMaybe<FieldSelectorEnum>;
   sentences?: InputMaybe<FieldSelectorEnum>;
   words?: InputMaybe<FieldSelectorEnum>;
+};
+
+export type GrvscCodeBlockFieldSelector = {
+  index?: InputMaybe<FieldSelectorEnum>;
+  html?: InputMaybe<FieldSelectorEnum>;
+  text?: InputMaybe<FieldSelectorEnum>;
+  preClassName?: InputMaybe<FieldSelectorEnum>;
+  codeClassName?: InputMaybe<FieldSelectorEnum>;
+  language?: InputMaybe<FieldSelectorEnum>;
+  meta?: InputMaybe<FieldSelectorEnum>;
+  defaultTheme?: InputMaybe<GrvscThemeFieldSelector>;
+  additionalThemes?: InputMaybe<GrvscThemeFieldSelector>;
+  tokenizedLines?: InputMaybe<GrvscTokenizedLineFieldSelector>;
+  id?: InputMaybe<FieldSelectorEnum>;
+  parent?: InputMaybe<NodeFieldSelector>;
+  children?: InputMaybe<NodeFieldSelector>;
+  internal?: InputMaybe<InternalFieldSelector>;
+};
+
+export type GrvscThemeFieldSelector = {
+  path?: InputMaybe<FieldSelectorEnum>;
+  identifier?: InputMaybe<FieldSelectorEnum>;
+  conditions?: InputMaybe<GrvscThemeConditionFieldSelector>;
+};
+
+export type GrvscThemeConditionFieldSelector = {
+  condition?: InputMaybe<FieldSelectorEnum>;
+  value?: InputMaybe<FieldSelectorEnum>;
+};
+
+export type GrvscTokenizedLineFieldSelector = {
+  tokens?: InputMaybe<GrvscTokenFieldSelector>;
+  gutterCells?: InputMaybe<GrvscGutterCellFieldSelector>;
+  text?: InputMaybe<FieldSelectorEnum>;
+  html?: InputMaybe<FieldSelectorEnum>;
+  attrs?: InputMaybe<FieldSelectorEnum>;
+  className?: InputMaybe<FieldSelectorEnum>;
+  data?: InputMaybe<FieldSelectorEnum>;
+  isHighlighted?: InputMaybe<FieldSelectorEnum>;
+  lineNumber?: InputMaybe<FieldSelectorEnum>;
+  diff?: InputMaybe<FieldSelectorEnum>;
+};
+
+export type GrvscTokenFieldSelector = {
+  text?: InputMaybe<FieldSelectorEnum>;
+  startIndex?: InputMaybe<FieldSelectorEnum>;
+  endIndex?: InputMaybe<FieldSelectorEnum>;
+  scopes?: InputMaybe<FieldSelectorEnum>;
+  html?: InputMaybe<FieldSelectorEnum>;
+  className?: InputMaybe<FieldSelectorEnum>;
+  defaultThemeTokenData?: InputMaybe<GrvscThemeTokenDataFieldSelector>;
+  additionalThemeTokenData?: InputMaybe<GrvscThemeTokenDataFieldSelector>;
+};
+
+export type GrvscThemeTokenDataFieldSelector = {
+  themeIdentifier?: InputMaybe<FieldSelectorEnum>;
+  className?: InputMaybe<FieldSelectorEnum>;
+  meta?: InputMaybe<FieldSelectorEnum>;
+  color?: InputMaybe<FieldSelectorEnum>;
+  bold?: InputMaybe<FieldSelectorEnum>;
+  italic?: InputMaybe<FieldSelectorEnum>;
+  underline?: InputMaybe<FieldSelectorEnum>;
+};
+
+export type GrvscGutterCellFieldSelector = {
+  className?: InputMaybe<FieldSelectorEnum>;
+  text?: InputMaybe<FieldSelectorEnum>;
 };
 
 export type NodeFieldSelector = {
@@ -1722,6 +1908,8 @@ export type MarkdownRemarkSortInput = {
   timeToRead?: InputMaybe<SortOrderEnum>;
   tableOfContents?: InputMaybe<SortOrderEnum>;
   wordCount?: InputMaybe<MarkdownWordCountSortInput>;
+  childrenGrvscCodeBlock?: InputMaybe<GrvscCodeBlockSortInput>;
+  childGrvscCodeBlock?: InputMaybe<GrvscCodeBlockSortInput>;
   parent?: InputMaybe<NodeSortInput>;
   children?: InputMaybe<NodeSortInput>;
   internal?: InputMaybe<InternalSortInput>;
@@ -1750,6 +1938,73 @@ export type MarkdownWordCountSortInput = {
   paragraphs?: InputMaybe<SortOrderEnum>;
   sentences?: InputMaybe<SortOrderEnum>;
   words?: InputMaybe<SortOrderEnum>;
+};
+
+export type GrvscCodeBlockSortInput = {
+  index?: InputMaybe<SortOrderEnum>;
+  html?: InputMaybe<SortOrderEnum>;
+  text?: InputMaybe<SortOrderEnum>;
+  preClassName?: InputMaybe<SortOrderEnum>;
+  codeClassName?: InputMaybe<SortOrderEnum>;
+  language?: InputMaybe<SortOrderEnum>;
+  meta?: InputMaybe<SortOrderEnum>;
+  defaultTheme?: InputMaybe<GrvscThemeSortInput>;
+  additionalThemes?: InputMaybe<GrvscThemeSortInput>;
+  tokenizedLines?: InputMaybe<GrvscTokenizedLineSortInput>;
+  id?: InputMaybe<SortOrderEnum>;
+  parent?: InputMaybe<NodeSortInput>;
+  children?: InputMaybe<NodeSortInput>;
+  internal?: InputMaybe<InternalSortInput>;
+};
+
+export type GrvscThemeSortInput = {
+  path?: InputMaybe<SortOrderEnum>;
+  identifier?: InputMaybe<SortOrderEnum>;
+  conditions?: InputMaybe<GrvscThemeConditionSortInput>;
+};
+
+export type GrvscThemeConditionSortInput = {
+  condition?: InputMaybe<SortOrderEnum>;
+  value?: InputMaybe<SortOrderEnum>;
+};
+
+export type GrvscTokenizedLineSortInput = {
+  tokens?: InputMaybe<GrvscTokenSortInput>;
+  gutterCells?: InputMaybe<GrvscGutterCellSortInput>;
+  text?: InputMaybe<SortOrderEnum>;
+  html?: InputMaybe<SortOrderEnum>;
+  attrs?: InputMaybe<SortOrderEnum>;
+  className?: InputMaybe<SortOrderEnum>;
+  data?: InputMaybe<SortOrderEnum>;
+  isHighlighted?: InputMaybe<SortOrderEnum>;
+  lineNumber?: InputMaybe<SortOrderEnum>;
+  diff?: InputMaybe<SortOrderEnum>;
+};
+
+export type GrvscTokenSortInput = {
+  text?: InputMaybe<SortOrderEnum>;
+  startIndex?: InputMaybe<SortOrderEnum>;
+  endIndex?: InputMaybe<SortOrderEnum>;
+  scopes?: InputMaybe<SortOrderEnum>;
+  html?: InputMaybe<SortOrderEnum>;
+  className?: InputMaybe<SortOrderEnum>;
+  defaultThemeTokenData?: InputMaybe<GrvscThemeTokenDataSortInput>;
+  additionalThemeTokenData?: InputMaybe<GrvscThemeTokenDataSortInput>;
+};
+
+export type GrvscThemeTokenDataSortInput = {
+  themeIdentifier?: InputMaybe<SortOrderEnum>;
+  className?: InputMaybe<SortOrderEnum>;
+  meta?: InputMaybe<SortOrderEnum>;
+  color?: InputMaybe<SortOrderEnum>;
+  bold?: InputMaybe<SortOrderEnum>;
+  italic?: InputMaybe<SortOrderEnum>;
+  underline?: InputMaybe<SortOrderEnum>;
+};
+
+export type GrvscGutterCellSortInput = {
+  className?: InputMaybe<SortOrderEnum>;
+  text?: InputMaybe<SortOrderEnum>;
 };
 
 export type NodeSortInput = {
@@ -2782,94 +3037,6 @@ export type MarkdownRemarkGroupConnectionGroupArgs = {
   field: MarkdownRemarkFieldSelector;
 };
 
-export type GrvscThemeFilterInput = {
-  path?: InputMaybe<StringQueryOperatorInput>;
-  identifier?: InputMaybe<StringQueryOperatorInput>;
-  conditions?: InputMaybe<GrvscThemeConditionFilterListInput>;
-};
-
-export type GrvscThemeConditionFilterListInput = {
-  elemMatch?: InputMaybe<GrvscThemeConditionFilterInput>;
-};
-
-export type GrvscThemeConditionFilterInput = {
-  condition?: InputMaybe<GrvscThemeConditionKindQueryOperatorInput>;
-  value?: InputMaybe<StringQueryOperatorInput>;
-};
-
-export type GrvscThemeConditionKindQueryOperatorInput = {
-  eq?: InputMaybe<GrvscThemeConditionKind>;
-  ne?: InputMaybe<GrvscThemeConditionKind>;
-  in?: InputMaybe<Array<InputMaybe<GrvscThemeConditionKind>>>;
-  nin?: InputMaybe<Array<InputMaybe<GrvscThemeConditionKind>>>;
-};
-
-export type GrvscThemeFilterListInput = {
-  elemMatch?: InputMaybe<GrvscThemeFilterInput>;
-};
-
-export type GrvscTokenizedLineFilterListInput = {
-  elemMatch?: InputMaybe<GrvscTokenizedLineFilterInput>;
-};
-
-export type GrvscTokenizedLineFilterInput = {
-  tokens?: InputMaybe<GrvscTokenFilterListInput>;
-  gutterCells?: InputMaybe<GrvscGutterCellFilterListInput>;
-  text?: InputMaybe<StringQueryOperatorInput>;
-  html?: InputMaybe<StringQueryOperatorInput>;
-  attrs?: InputMaybe<JsonQueryOperatorInput>;
-  className?: InputMaybe<StringQueryOperatorInput>;
-  data?: InputMaybe<JsonQueryOperatorInput>;
-  isHighlighted?: InputMaybe<BooleanQueryOperatorInput>;
-  lineNumber?: InputMaybe<IntQueryOperatorInput>;
-  diff?: InputMaybe<GrvscDiffQueryOperatorInput>;
-};
-
-export type GrvscTokenFilterListInput = {
-  elemMatch?: InputMaybe<GrvscTokenFilterInput>;
-};
-
-export type GrvscTokenFilterInput = {
-  text?: InputMaybe<StringQueryOperatorInput>;
-  startIndex?: InputMaybe<IntQueryOperatorInput>;
-  endIndex?: InputMaybe<IntQueryOperatorInput>;
-  scopes?: InputMaybe<StringQueryOperatorInput>;
-  html?: InputMaybe<StringQueryOperatorInput>;
-  className?: InputMaybe<StringQueryOperatorInput>;
-  defaultThemeTokenData?: InputMaybe<GrvscThemeTokenDataFilterInput>;
-  additionalThemeTokenData?: InputMaybe<GrvscThemeTokenDataFilterListInput>;
-};
-
-export type GrvscThemeTokenDataFilterInput = {
-  themeIdentifier?: InputMaybe<StringQueryOperatorInput>;
-  className?: InputMaybe<StringQueryOperatorInput>;
-  meta?: InputMaybe<IntQueryOperatorInput>;
-  color?: InputMaybe<StringQueryOperatorInput>;
-  bold?: InputMaybe<BooleanQueryOperatorInput>;
-  italic?: InputMaybe<BooleanQueryOperatorInput>;
-  underline?: InputMaybe<BooleanQueryOperatorInput>;
-};
-
-export type GrvscThemeTokenDataFilterListInput = {
-  elemMatch?: InputMaybe<GrvscThemeTokenDataFilterInput>;
-};
-
-export type GrvscGutterCellFilterListInput = {
-  elemMatch?: InputMaybe<GrvscGutterCellFilterInput>;
-};
-
-export type GrvscGutterCellFilterInput = {
-  className?: InputMaybe<StringQueryOperatorInput>;
-  text?: InputMaybe<StringQueryOperatorInput>;
-};
-
-export type GrvscDiffQueryOperatorInput = {
-  eq?: InputMaybe<GrvscDiff>;
-  ne?: InputMaybe<GrvscDiff>;
-  in?: InputMaybe<Array<InputMaybe<GrvscDiff>>>;
-  nin?: InputMaybe<Array<InputMaybe<GrvscDiff>>>;
-};
-
 export type GrvscCodeBlockConnection = {
   totalCount: Scalars['Int'];
   edges: Array<GrvscCodeBlockEdge>;
@@ -2915,73 +3082,6 @@ export type GrvscCodeBlockEdge = {
   previous?: Maybe<GrvscCodeBlock>;
 };
 
-export type GrvscCodeBlockFieldSelector = {
-  index?: InputMaybe<FieldSelectorEnum>;
-  html?: InputMaybe<FieldSelectorEnum>;
-  text?: InputMaybe<FieldSelectorEnum>;
-  preClassName?: InputMaybe<FieldSelectorEnum>;
-  codeClassName?: InputMaybe<FieldSelectorEnum>;
-  language?: InputMaybe<FieldSelectorEnum>;
-  meta?: InputMaybe<FieldSelectorEnum>;
-  defaultTheme?: InputMaybe<GrvscThemeFieldSelector>;
-  additionalThemes?: InputMaybe<GrvscThemeFieldSelector>;
-  tokenizedLines?: InputMaybe<GrvscTokenizedLineFieldSelector>;
-  id?: InputMaybe<FieldSelectorEnum>;
-  parent?: InputMaybe<NodeFieldSelector>;
-  children?: InputMaybe<NodeFieldSelector>;
-  internal?: InputMaybe<InternalFieldSelector>;
-};
-
-export type GrvscThemeFieldSelector = {
-  path?: InputMaybe<FieldSelectorEnum>;
-  identifier?: InputMaybe<FieldSelectorEnum>;
-  conditions?: InputMaybe<GrvscThemeConditionFieldSelector>;
-};
-
-export type GrvscThemeConditionFieldSelector = {
-  condition?: InputMaybe<FieldSelectorEnum>;
-  value?: InputMaybe<FieldSelectorEnum>;
-};
-
-export type GrvscTokenizedLineFieldSelector = {
-  tokens?: InputMaybe<GrvscTokenFieldSelector>;
-  gutterCells?: InputMaybe<GrvscGutterCellFieldSelector>;
-  text?: InputMaybe<FieldSelectorEnum>;
-  html?: InputMaybe<FieldSelectorEnum>;
-  attrs?: InputMaybe<FieldSelectorEnum>;
-  className?: InputMaybe<FieldSelectorEnum>;
-  data?: InputMaybe<FieldSelectorEnum>;
-  isHighlighted?: InputMaybe<FieldSelectorEnum>;
-  lineNumber?: InputMaybe<FieldSelectorEnum>;
-  diff?: InputMaybe<FieldSelectorEnum>;
-};
-
-export type GrvscTokenFieldSelector = {
-  text?: InputMaybe<FieldSelectorEnum>;
-  startIndex?: InputMaybe<FieldSelectorEnum>;
-  endIndex?: InputMaybe<FieldSelectorEnum>;
-  scopes?: InputMaybe<FieldSelectorEnum>;
-  html?: InputMaybe<FieldSelectorEnum>;
-  className?: InputMaybe<FieldSelectorEnum>;
-  defaultThemeTokenData?: InputMaybe<GrvscThemeTokenDataFieldSelector>;
-  additionalThemeTokenData?: InputMaybe<GrvscThemeTokenDataFieldSelector>;
-};
-
-export type GrvscThemeTokenDataFieldSelector = {
-  themeIdentifier?: InputMaybe<FieldSelectorEnum>;
-  className?: InputMaybe<FieldSelectorEnum>;
-  meta?: InputMaybe<FieldSelectorEnum>;
-  color?: InputMaybe<FieldSelectorEnum>;
-  bold?: InputMaybe<FieldSelectorEnum>;
-  italic?: InputMaybe<FieldSelectorEnum>;
-  underline?: InputMaybe<FieldSelectorEnum>;
-};
-
-export type GrvscGutterCellFieldSelector = {
-  className?: InputMaybe<FieldSelectorEnum>;
-  text?: InputMaybe<FieldSelectorEnum>;
-};
-
 export type GrvscCodeBlockGroupConnection = {
   totalCount: Scalars['Int'];
   edges: Array<GrvscCodeBlockEdge>;
@@ -3021,90 +3121,6 @@ export type GrvscCodeBlockGroupConnectionGroupArgs = {
   skip?: InputMaybe<Scalars['Int']>;
   limit?: InputMaybe<Scalars['Int']>;
   field: GrvscCodeBlockFieldSelector;
-};
-
-export type GrvscCodeBlockFilterInput = {
-  index?: InputMaybe<IntQueryOperatorInput>;
-  html?: InputMaybe<StringQueryOperatorInput>;
-  text?: InputMaybe<StringQueryOperatorInput>;
-  preClassName?: InputMaybe<StringQueryOperatorInput>;
-  codeClassName?: InputMaybe<StringQueryOperatorInput>;
-  language?: InputMaybe<StringQueryOperatorInput>;
-  meta?: InputMaybe<JsonQueryOperatorInput>;
-  defaultTheme?: InputMaybe<GrvscThemeFilterInput>;
-  additionalThemes?: InputMaybe<GrvscThemeFilterListInput>;
-  tokenizedLines?: InputMaybe<GrvscTokenizedLineFilterListInput>;
-  id?: InputMaybe<StringQueryOperatorInput>;
-  parent?: InputMaybe<NodeFilterInput>;
-  children?: InputMaybe<NodeFilterListInput>;
-  internal?: InputMaybe<InternalFilterInput>;
-};
-
-export type GrvscCodeBlockSortInput = {
-  index?: InputMaybe<SortOrderEnum>;
-  html?: InputMaybe<SortOrderEnum>;
-  text?: InputMaybe<SortOrderEnum>;
-  preClassName?: InputMaybe<SortOrderEnum>;
-  codeClassName?: InputMaybe<SortOrderEnum>;
-  language?: InputMaybe<SortOrderEnum>;
-  meta?: InputMaybe<SortOrderEnum>;
-  defaultTheme?: InputMaybe<GrvscThemeSortInput>;
-  additionalThemes?: InputMaybe<GrvscThemeSortInput>;
-  tokenizedLines?: InputMaybe<GrvscTokenizedLineSortInput>;
-  id?: InputMaybe<SortOrderEnum>;
-  parent?: InputMaybe<NodeSortInput>;
-  children?: InputMaybe<NodeSortInput>;
-  internal?: InputMaybe<InternalSortInput>;
-};
-
-export type GrvscThemeSortInput = {
-  path?: InputMaybe<SortOrderEnum>;
-  identifier?: InputMaybe<SortOrderEnum>;
-  conditions?: InputMaybe<GrvscThemeConditionSortInput>;
-};
-
-export type GrvscThemeConditionSortInput = {
-  condition?: InputMaybe<SortOrderEnum>;
-  value?: InputMaybe<SortOrderEnum>;
-};
-
-export type GrvscTokenizedLineSortInput = {
-  tokens?: InputMaybe<GrvscTokenSortInput>;
-  gutterCells?: InputMaybe<GrvscGutterCellSortInput>;
-  text?: InputMaybe<SortOrderEnum>;
-  html?: InputMaybe<SortOrderEnum>;
-  attrs?: InputMaybe<SortOrderEnum>;
-  className?: InputMaybe<SortOrderEnum>;
-  data?: InputMaybe<SortOrderEnum>;
-  isHighlighted?: InputMaybe<SortOrderEnum>;
-  lineNumber?: InputMaybe<SortOrderEnum>;
-  diff?: InputMaybe<SortOrderEnum>;
-};
-
-export type GrvscTokenSortInput = {
-  text?: InputMaybe<SortOrderEnum>;
-  startIndex?: InputMaybe<SortOrderEnum>;
-  endIndex?: InputMaybe<SortOrderEnum>;
-  scopes?: InputMaybe<SortOrderEnum>;
-  html?: InputMaybe<SortOrderEnum>;
-  className?: InputMaybe<SortOrderEnum>;
-  defaultThemeTokenData?: InputMaybe<GrvscThemeTokenDataSortInput>;
-  additionalThemeTokenData?: InputMaybe<GrvscThemeTokenDataSortInput>;
-};
-
-export type GrvscThemeTokenDataSortInput = {
-  themeIdentifier?: InputMaybe<SortOrderEnum>;
-  className?: InputMaybe<SortOrderEnum>;
-  meta?: InputMaybe<SortOrderEnum>;
-  color?: InputMaybe<SortOrderEnum>;
-  bold?: InputMaybe<SortOrderEnum>;
-  italic?: InputMaybe<SortOrderEnum>;
-  underline?: InputMaybe<SortOrderEnum>;
-};
-
-export type GrvscGutterCellSortInput = {
-  className?: InputMaybe<SortOrderEnum>;
-  text?: InputMaybe<SortOrderEnum>;
 };
 
 export type GrvscCodeSpanConnection = {

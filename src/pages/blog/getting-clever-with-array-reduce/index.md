@@ -50,9 +50,7 @@ which for the initial value of `5` results in:
 half(triple(double(square(5)))) = 75;
 ```
 
-This is similar to Bash's pipes:
-
-> Pipes let you use the output of a program as the input of another one.
+This is similar to Bash's pipes, which let you use the output of a program as the input of another one.
 
 In this sample script, we first list all of the files in the current directory, then filter out anything that is not a json file and finally
 delete the selected files:
@@ -236,5 +234,5 @@ const nodesInFragment = nodes.reduce((fragment, node) => {
 document.body.append(nodesInFragment);
 ```
 
-> I've seen some of these ideas on [Mykola Bilokonsky's Egghead course](https://egghead.io/courses/reduce-data-with-javascript) and also on
-> [Twitter](https://twitter.com/argyleink/status/1169833100483809280).
+I've seen some of these ideas on [Mykola Bilokonsky's Egghead course](https://egghead.io/courses/reduce-data-with-javascript) and also on
+[Twitter](https://twitter.com/argyleink/status/1169833100483809280).

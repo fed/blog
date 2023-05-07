@@ -22,11 +22,26 @@ export const fontFamilies = {
     monospace: '"SFMono-Medium", "SF Mono", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Consolas, Courier, monospace',
 };
 
+export const fontSizes = {
+    xxs: '12px',
+    xs: '14px',
+    sm: '16px',
+    md: '20px',
+    lg: '24px',
+    xl: '32px',
+};
+
 export const fontWeights = {
     light: 300,
     normal: 400,
     semibold: 500,
     bold: 600,
+};
+
+export const lineHeights = {
+    sm: 1,
+    md: 1.4,
+    lg: 1.75,
 };
 
 export const containerDimensions = {
@@ -35,4 +50,8 @@ export const containerDimensions = {
     md: '875px',
     lg: '1024px',
     xl: '1290px',
+};
+
+export const borderRadius = {
+    default: '3px',
 };

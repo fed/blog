@@ -2,7 +2,7 @@ import { Link as UnstyledGatsbyLink } from 'gatsby';
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { colors, containerDimensions, fontFamilies, fontWeights, gridSize } from '../styles/constants';
+import { colors, containerDimensions, fontFamilies, fontSizes, fontWeights, gridSize, lineHeights } from '../styles/constants';
 import { baseFocusStateStyles } from '../styles/mixins';
 import avatarSrc from './navigation-icon.svg';
 
@@ -59,9 +59,9 @@ const SiteName = styled.span`
     align-items: center;
     color: ${colors.navy};
     font-family: ${fontFamilies.sansSerif};
-    font-size: 16px;
+    font-size: ${fontSizes.sm};
     font-weight: ${fontWeights.bold};
-    line-height: 1;
+    line-height: ${lineHeights.sm};
     white-space: nowrap;
 `;
 
@@ -74,9 +74,9 @@ const List = styled.ul`
 const ListItem = styled.li`
     color: ${colors.navy};
     display: inline-block;
-    font-size: 14px;
+    font-size: ${fontSizes.xs};
     font-weight: ${fontWeights.normal};
-    line-height: 1;
+    line-height: ${lineHeights.sm};
     list-style: none;
     margin-bottom: -1px;
 

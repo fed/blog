@@ -5,9 +5,7 @@ spoiler: A brief intro to the different ways to set up your asynchronous tests a
 category: testing
 ---
 
-> CodeSandbox example: https://codesandbox.io/s/elegant-feynman-zdy2k?file=/test.js
-
-To understand what's the deal with asynchronous testing, we first need to look into what happens when we don't have any assertions in our
+To understand what the deal is with asynchronous testing, we first need to look into what happens when we don't have any assertions in our
 tests.
 
 In Mocha (and most JavaScript testing frameworks for that matter), specs with no assertions (i.e. test cases with no `expect`) just pass.
@@ -87,3 +85,6 @@ it('promise with async await, no done', async () => {
     expect(data.capitals[5]).to.equal('Wellington');
 });
 ```
+
+If you want to try this live, here's a
+[CodeSandbox with all the code examples above](https://codesandbox.io/s/elegant-feynman-zdy2k?file=/test.js).

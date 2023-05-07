@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { colors, fontFamilies, fontWeights, gridSize } from '../styles/constants';
+import { colors, fontFamilies, fontSizes, fontWeights, gridSize, lineHeights } from '../styles/constants';
 import { baseHeadingStyles, baseLinkStyles, baseParagraphStyles } from '../styles/mixins';
 
 const Container = styled.div`
@@ -43,7 +43,7 @@ const Container = styled.div`
         padding: ${gridSize}px ${2 * gridSize}px;
 
         p {
-            font-size: 16px;
+            font-size: ${fontSizes.sm};
             font-weight: ${fontWeights.normal};
             margin: 0;
         }
@@ -72,7 +72,7 @@ const Container = styled.div`
 
     /* Code blocks */
     pre.grvsc-container {
-        line-height: 1.75;
+        line-height: ${lineHeights.lg};
     }
 
     pre,
@@ -92,7 +92,7 @@ const Container = styled.div`
 
     .gatsby-resp-image-figcaption {
         ${baseParagraphStyles};
-        font-size: 12px;
+        font-size: ${fontSizes.xxs};
         margin-top: ${gridSize}px;
         text-align: center;
     }

@@ -1,16 +1,15 @@
 import { css } from 'styled-components';
 
-import { colors, fontFamilies, fontWeights } from './constants';
+import { colors, fontFamilies, fontWeights, fontSizes, lineHeights, borderRadius } from './constants';
 
 export const baseHeadingStyles = css`
     color: ${colors.grayDark};
     font-family: ${fontFamilies.sansSerif};
-    line-height: 1.4;
+    line-height: ${lineHeights.md};
 `;
 
 export const baseTitleStyles = css`
     ${baseHeadingStyles};
-    font-size: 30px;
     font-weight: ${fontWeights.bold};
     margin: 0;
 `;
@@ -18,16 +17,16 @@ export const baseTitleStyles = css`
 export const baseParagraphStyles = css`
     color: ${colors.grayDark};
     font-family: ${fontFamilies.sansSerif};
-    font-size: 18px;
+    font-size: ${fontSizes.md};
     font-weight: ${fontWeights.light};
-    line-height: 1.6;
+    line-height: ${lineHeights.lg};
 `;
 
 export const baseFocusStateStyles = css`
     :focus {
         border-bottom-style: none;
-        border-radius: 3px;
-        box-shadow: 0 0 0 3px ${colors.pink};
+        border-radius: ${borderRadius.default};
+        box-shadow: 0 0 0 ${borderRadius.default} ${colors.pink};
         outline: none;
     }
 
