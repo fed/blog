@@ -1,6 +1,6 @@
+import { styled, css } from '@compiled/react';
 import { Link as UnstyledGatsbyLink } from 'gatsby';
 import React from 'react';
-import styled, { css } from 'styled-components';
 
 import { colors, containerDimensions, fontFamilies, fontSizes, fontWeights, gridSize, lineHeights } from '../styles/constants';
 import { baseFocusStateStyles } from '../styles/mixins';
