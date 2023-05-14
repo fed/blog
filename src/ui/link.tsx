@@ -1,6 +1,6 @@
+import { styled } from '@compiled/react';
 import { Link as UnstyledGatsbyLink } from 'gatsby';
 import React from 'react';
-import styled from 'styled-components';
 
 import { gridSize } from '../styles/constants';
 import { baseLinkStyles } from '../styles/mixins';

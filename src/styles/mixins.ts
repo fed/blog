@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from '@compiled/react';
 
 import { colors, fontFamilies, fontWeights, fontSizes, lineHeights, borderRadius } from './constants';
 

@@ -1,6 +1,6 @@
+import { styled } from '@compiled/react';
 import React from 'react';
 import { Twemoji } from 'react-emoji-render';
-import styled from 'styled-components';
 
 import { fontSizes, fontWeights, gridSize } from '../styles/constants';
 import { baseHeadingStyles, baseParagraphStyles } from '../styles/mixins';

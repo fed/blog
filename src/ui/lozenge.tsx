@@ -1,5 +1,5 @@
+import { styled, css } from '@compiled/react';
 import { type ReactNode } from 'react';
-import styled, { css } from 'styled-components';
 
 import { borderRadius, colors, fontFamilies, fontSizes, gridSize, lineHeights } from '../styles/constants';
 

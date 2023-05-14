@@ -1,5 +1,5 @@
+import { styled } from '@compiled/react';
 import React from 'react';
-import styled from 'styled-components';
 
 import { gridSize } from '../styles/constants';
 import { srOnly } from '../styles/mixins';

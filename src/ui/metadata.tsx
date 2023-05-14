@@ -1,5 +1,5 @@
+import { styled } from '@compiled/react';
 import React from 'react';
-import styled from 'styled-components';
 
 import { categories } from '../model';
 import { colors, fontFamilies, fontSizes, gridSize } from '../styles/constants';

@@ -1,5 +1,5 @@
+import { styled } from '@compiled/react';
 import React from 'react';
-import styled from 'styled-components';
 
 import { colors, fontFamilies, fontSizes, fontWeights, gridSize, lineHeights } from '../styles/constants';
 import { baseHeadingStyles, baseLinkStyles, baseParagraphStyles } from '../styles/mixins';
