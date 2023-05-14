@@ -1,7 +1,7 @@
 import { type ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 
-import { borderRadius, colors, fontFamilies, fontSizes, fontWeights, gridSize, lineHeights } from '../styles/constants';
+import { borderRadius, colors, fontFamilies, fontSizes, gridSize, lineHeights } from '../styles/constants';
 
 type LozengeType = 'default' | 'primary' | 'success' | 'error' | 'warning' | 'info';
 
@@ -19,9 +19,8 @@ export const Lozenge = styled.span<Props>`
     display: inline-block;
     font-family: ${fontFamilies.sansSerif};
     font-size: ${fontSizes.xxs};
-    font-weight: ${fontWeights.bold};
     line-height: ${lineHeights.sm};
-    padding: ${0.375 * gridSize}px ${0.5 * gridSize}px;
+    padding: ${0.375 * gridSize}px ${0.625 * gridSize}px;
     text-transform: uppercase;
     white-space: nowrap;
 
