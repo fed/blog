@@ -43,7 +43,7 @@ export const Metadata: React.FC<Props> = ({ date, categoryId, isPreview = false 
             </SrOnly>
             <Container aria-hidden="true">
                 {date ? <PublicationDate data-testid="metadata-publication-date">{date}</PublicationDate> : null}
-                {category?.title ? <Lozenge $type={isPreview ? 'default' : 'primary'}>{category.title}</Lozenge> : null}
+                {category?.title ? <Lozenge type={isPreview ? 'default' : 'primary'}>{category.title}</Lozenge> : null}
             </Container>
         </>
     );
