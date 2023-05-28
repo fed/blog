@@ -23,6 +23,11 @@ Doing this should automatically fix Firefox, which is true to the system setting
 Firefox does not have a separate option for tab key navigation to links and form controls. In Firefox the OS X system preference takes
 precedence.
 
+**Update:** The UI has changed a little bit in the last couple versions of MacOS. For MacOS Ventura, the option we need to enable is under
+_System Preferences > Keyboard_ and is now a toggle element called "Keyboard navigation".
+
+![](./keyboard-settings-macos-ventura.jpg)
+
 ## Fixing Safari
 
 Safari, on the other hand, has its own setting. By default pressing the _Tab_ key would allow you to highlight all focusable elements on the
