@@ -24,12 +24,12 @@ export const baseParagraphStyles = css`
 
 export const baseFocusStateStyles = css`
     :focus {
-        border-bottom-style: none;
-        border-radius: ${borderRadius.default};
-        box-shadow: 0 0 0 ${borderRadius.default} ${colors.pink};
-        outline: none;
+        outline: ${borderRadius.default} solid ${colors.pink};
+        outline-offset: 2px;
+        border-radius: 1px;
     }
 
+    :focus,
     :focus :hover {
         border-bottom-style: none;
     }
