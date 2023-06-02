@@ -2,11 +2,17 @@ import { style } from '@vanilla-extract/css';
 
 import { colors, fontFamilies, fontSizes, fontWeights, lineHeights, borderRadius } from './constants';
 
-export const baseHeadingStyle = style({
+// The style definition (e.g. baseHeadingStyle) and its corresponding CSS declaration (e.g. baseHeadingStyleImpl)
+// are declared separately because unfortunately when declaring global styles (as in the markdown.css.ts file)
+// you need to pass in an object with CSS properties and not a vanilla-extract classname.
+
+export const baseHeadingStyleImpl = {
     color: colors.grayDark,
     fontFamily: fontFamilies.sansSerif,
     lineHeight: lineHeights.md,
-});
+};
+
+export const baseHeadingStyle = style(baseHeadingStyleImpl);
 
 export const baseTitleStyle = style([
     baseHeadingStyle,
@@ -16,13 +22,15 @@ export const baseTitleStyle = style([
     },
 ]);
 
-export const baseParagraphStyle = style({
+export const baseParagraphStyleImpl = {
     color: colors.grayDark,
     fontFamily: fontFamilies.sansSerif,
     fontSize: fontSizes.md,
     fontWeight: fontWeights.light,
     lineHeight: lineHeights.lg,
-});
+};
+
+export const baseParagraphStyle = style(baseParagraphStyleImpl);
 
 export const baseFocusStateStyle = style({
     selectors: {
