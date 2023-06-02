@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
-import { colors, fontFamilies, fontWeights, lineHeights } from './constants';
+import { colors, fontFamilies, fontWeights, lineHeights, borderRadius } from './constants';
 
 export const baseHeadingStyle = style({
     color: colors.grayDark,
@@ -13,6 +13,37 @@ export const baseTitleStyle = style([
     {
         fontWeight: fontWeights.bold,
         margin: 0,
+    },
+]);
+
+export const baseFocusStateStyle = style({
+    selectors: {
+        '&:focus': {
+            outline: `${borderRadius.default} solid ${colors.pink}`,
+            outlineOffset: '2px',
+            borderRadius: '1px',
+            borderBottomStyle: 'none',
+        },
+        '&:focus:hover': {
+            borderBottomStyle: 'none',
+        },
+    },
+});
+
+export const baseLinkStyle = style([
+    baseFocusStateStyle,
+    {
+        borderBottom: `1px solid ${colors.grayLight}`,
+        color: colors.blue,
+        paddingBottom: '1px',
+        textDecoration: 'none',
+        transition: 'border-bottom 0.5s ease',
+        wordBreak: 'break-word',
+        selectors: {
+            '&:hover': {
+                borderBottom: `1px solid ${colors.blue}`,
+            },
+        },
     },
 ]);
 

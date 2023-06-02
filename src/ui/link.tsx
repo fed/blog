@@ -1,23 +1,9 @@
-import { Link as UnstyledGatsbyLink } from 'gatsby';
+import { Link as GatsbyLink } from 'gatsby';
 import React from 'react';
-import styled from 'styled-components';
 
 import externalLinkIcon from './link-icon.svg';
-import { gridSize } from '../styles/constants';
-import { baseLinkStyles } from '../styles/mixins';
-
-const GatsbyLink = styled(UnstyledGatsbyLink)`
-    ${baseLinkStyles};
-`;
-
-const ExternalLink = styled.a`
-    ${baseLinkStyles};
-`;
-
-const ExternalLinkIcon = styled.img`
-    margin-left: ${1.25 * gridSize}px;
-    width: ${2 * gridSize}px;
-`;
+import { externalLinkIconStyle } from './link.css';
+import { baseLinkStyle } from '../styles/base.css';
 
 interface Props {
     isExternal?: boolean;
@@ -29,16 +15,16 @@ export const Link: React.FC<Props> = ({ isExternal = false, to, children }) => {
     if (isExternal) {
         return (
             <>
-                <ExternalLink href={to} target="_blank" rel="noopener noreferrer" data-testid="link-external-anchor">
+                <a className={baseLinkStyle} href={to} target="_blank" rel="noopener noreferrer" data-testid="link-external-anchor">
                     {children}
-                </ExternalLink>
-                <ExternalLinkIcon src={externalLinkIcon} alt="External link" data-testid="link-external-icon" />
+                </a>
+                <img className={externalLinkIconStyle} src={externalLinkIcon} alt="External link" data-testid="link-external-icon" />
             </>
         );
     }
 
     return (
-        <GatsbyLink to={to} rel="bookmark">
+        <GatsbyLink className={baseLinkStyle} to={to} rel="bookmark">
             {children}
         </GatsbyLink>
     );

@@ -1,4 +1,5 @@
 import { shallow } from 'enzyme';
+import omit from 'lodash/omit';
 import React from 'react';
 
 import { Link } from './link';
@@ -9,7 +10,7 @@ describe('Link', () => {
             const wrapper = shallow(<Link to="/about">About page</Link>);
 
             expect(wrapper.isEmptyRender()).toBe(false);
-            expect(wrapper.props()).toEqual({
+            expect(omit(wrapper.props(), ['className'])).toEqual({
                 to: '/about',
                 children: 'About page',
                 rel: 'bookmark',
