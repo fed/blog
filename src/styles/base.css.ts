@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
-import { colors, fontFamilies, fontWeights, lineHeights, borderRadius } from './constants';
+import { colors, fontFamilies, fontSizes, fontWeights, lineHeights, borderRadius } from './constants';
 
 export const baseHeadingStyle = style({
     color: colors.grayDark,
@@ -15,6 +15,14 @@ export const baseTitleStyle = style([
         margin: 0,
     },
 ]);
+
+export const baseParagraphStyle = style({
+    color: colors.grayDark,
+    fontFamily: fontFamilies.sansSerif,
+    fontSize: fontSizes.md,
+    fontWeight: fontWeights.light,
+    lineHeight: lineHeights.lg,
+});
 
 export const baseFocusStateStyle = style({
     selectors: {
