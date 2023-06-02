@@ -32,33 +32,43 @@ export const baseParagraphStyleImpl = {
 
 export const baseParagraphStyle = style(baseParagraphStyleImpl);
 
+export const baseFocusStyleImpl = {
+    outline: `${borderRadius.default} solid ${colors.pink}`,
+    outlineOffset: '2px',
+    borderRadius: '1px',
+    borderBottomStyle: 'none' as const,
+};
+
+export const baseFocusHoverStyleImpl = {
+    borderBottomStyle: 'none' as const,
+};
+
 export const baseFocusStateStyle = style({
     selectors: {
-        '&:focus': {
-            outline: `${borderRadius.default} solid ${colors.pink}`,
-            outlineOffset: '2px',
-            borderRadius: '1px',
-            borderBottomStyle: 'none',
-        },
-        '&:focus:hover': {
-            borderBottomStyle: 'none',
-        },
+        '&:focus': baseFocusStyleImpl,
+        '&:focus:hover': baseFocusHoverStyleImpl,
     },
 });
 
+export const baseLinkStyleImpl = {
+    borderBottom: `1px solid ${colors.grayLight}`,
+    color: colors.blue,
+    paddingBottom: '1px',
+    textDecoration: 'none',
+    transition: 'border-bottom 0.5s ease',
+    wordBreak: 'break-word' as const,
+};
+
+export const baseLinkHoverStyleImpl = {
+    borderBottom: `1px solid ${colors.blue}`,
+};
+
 export const baseLinkStyle = style([
     baseFocusStateStyle,
+    baseLinkStyleImpl,
     {
-        borderBottom: `1px solid ${colors.grayLight}`,
-        color: colors.blue,
-        paddingBottom: '1px',
-        textDecoration: 'none',
-        transition: 'border-bottom 0.5s ease',
-        wordBreak: 'break-word',
         selectors: {
-            '&:hover': {
-                borderBottom: `1px solid ${colors.blue}`,
-            },
+            '&:hover': baseLinkHoverStyleImpl,
         },
     },
 ]);
