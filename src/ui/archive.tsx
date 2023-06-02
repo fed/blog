@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { gridSize } from '../styles/constants';
-import { srOnly } from '../styles/mixins';
 import { Preview } from './preview';
 import { Post } from './types';
+import { gridSize } from '../styles/constants';
+import { srOnly } from '../styles/mixins';
 
 const Title = styled.h1`
     ${srOnly};

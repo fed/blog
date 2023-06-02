@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { colors, containerDimensions, fontFamilies, gridSize } from '../styles/constants';
 import { Navigation } from './navigation';
+import { colors, containerDimensions, fontFamilies, gridSize } from '../styles/constants';
 
 const SkipLink = styled.a`
     align-items: center;

@@ -2,9 +2,9 @@ import { Link as UnstyledGatsbyLink } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 
+import externalLinkIcon from './link-icon.svg';
 import { gridSize } from '../styles/constants';
 import { baseLinkStyles } from '../styles/mixins';
-import externalLinkIcon from './link-icon.svg';
 
 const GatsbyLink = styled(UnstyledGatsbyLink)`
     ${baseLinkStyles};

@@ -2,9 +2,9 @@ import { Link as UnstyledGatsbyLink } from 'gatsby';
 import React from 'react';
 import styled, { css } from 'styled-components';
 
+import avatarSrc from './navigation-icon.svg';
 import { colors, containerDimensions, fontFamilies, fontSizes, fontWeights, gridSize, lineHeights } from '../styles/constants';
 import { baseFocusStateStyles } from '../styles/mixins';
-import avatarSrc from './navigation-icon.svg';
 
 const Header = styled.header`
     background-color: #f6f8fa;

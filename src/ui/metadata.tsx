@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Lozenge } from './lozenge';
+import { CategoryId } from './types';
 import { categories } from '../model';
 import { colors, fontFamilies, fontSizes, gridSize } from '../styles/constants';
 import { srOnly } from '../styles/mixins';
-import { Lozenge } from './lozenge';
-import { CategoryId } from './types';
 
 const Container = styled.div`
     margin: 0 0 ${0.625 * gridSize}px;

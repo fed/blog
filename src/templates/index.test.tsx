@@ -1,10 +1,10 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 
+import IndexTemplate from './index';
 import { Archive } from '../ui/archive';
 import { Layout } from '../ui/layout';
 import { SEO } from '../ui/seo';
-import IndexTemplate from './index';
 
 const MARKDOWN_REMARK_MOCK_DATA = {
     allMarkdownRemark: {

@@ -2,11 +2,11 @@ import React from 'react';
 import { Twemoji } from 'react-emoji-render';
 import styled from 'styled-components';
 
-import { fontSizes, fontWeights, gridSize } from '../styles/constants';
-import { baseHeadingStyles, baseParagraphStyles } from '../styles/mixins';
 import { Link } from './link';
 import { Metadata } from './metadata';
 import type { Post } from './types';
+import { fontSizes, fontWeights, gridSize } from '../styles/constants';
+import { baseHeadingStyles, baseParagraphStyles } from '../styles/mixins';
 
 const Title = styled.h2`
     ${baseHeadingStyles};
