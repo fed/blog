@@ -52,7 +52,6 @@ module.exports = {
         'gatsby-transformer-sharp',
         'gatsby-plugin-sharp',
         'gatsby-plugin-react-helmet',
-        'gatsby-plugin-styled-components',
         'gatsby-plugin-vanilla-extract',
         'gatsby-plugin-graphql-codegen',
     ],
