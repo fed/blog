@@ -3,7 +3,7 @@ import React from 'react';
 import { articleStyle } from './archive.css';
 import { Preview } from './preview';
 import { Post } from './types';
-import { srOnlyStyle } from '../styles/base.css';
+import { srOnlyStyle } from '../styles/common.css';
 
 interface Props {
     posts: Post[];

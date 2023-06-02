@@ -4,7 +4,7 @@ import { Lozenge } from './lozenge';
 import { containerStyle, publicationDateStyle } from './metadata.css';
 import { CategoryId } from './types';
 import { categories } from '../model';
-import { srOnlyStyle } from '../styles/base.css';
+import { srOnlyStyle } from '../styles/common.css';
 
 interface Props {
     date?: string;

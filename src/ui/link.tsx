@@ -3,7 +3,7 @@ import React from 'react';
 
 import externalLinkIcon from './link-icon.svg';
 import { externalLinkIconStyle } from './link.css';
-import { baseLinkStyle } from '../styles/base.css';
+import { baseLinkStyle } from '../styles/common.css';
 
 interface Props {
     isExternal?: boolean;

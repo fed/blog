@@ -7,7 +7,7 @@ import {
     baseLinkHoverStyleImpl,
     baseFocusStyleImpl,
     baseFocusHoverStyleImpl,
-} from '../styles/base.css';
+} from '../styles/common.css';
 import { fontFamilies, fontSizes, lineHeights, fontWeights, gridSize, borderRadius } from '../styles/constants';
 
 export const markdownStyle = style({});

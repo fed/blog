@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
-import { baseFocusStateStyle } from '../styles/base.css';
+import { baseFocusStateStyle } from '../styles/common.css';
 import {
     gridSize,
     colors,

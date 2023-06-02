@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
-import { baseTitleStyle } from '../styles/base.css';
+import { baseTitleStyle } from '../styles/common.css';
 import { gridSize } from '../styles/constants';
 
 export const titleStyle = style([
