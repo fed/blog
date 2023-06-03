@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
-import { baseFocusStateStyle } from '../styles/common.css';
+import { baseFocusStyle } from '../styles/common.css';
 import {
     gridSize,
     colors,
@@ -44,7 +44,7 @@ export const navigationMenuStyle = style({
 });
 
 export const logoLinkStyle = style([
-    baseFocusStateStyle,
+    baseFocusStyle,
     {
         alignItems: 'center',
         display: 'flex',
@@ -92,7 +92,7 @@ export const listItemStyle = style({
 });
 
 export const linkStyle = style([
-    baseFocusStateStyle,
+    baseFocusStyle,
     {
         borderRadius: borderRadius.default,
         color: colors.navy,

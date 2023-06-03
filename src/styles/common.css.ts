@@ -14,14 +14,6 @@ export const baseHeadingStyleImpl = {
 
 export const baseHeadingStyle = style(baseHeadingStyleImpl);
 
-export const baseTitleStyle = style([
-    baseHeadingStyle,
-    {
-        fontWeight: fontWeights.bold,
-        margin: 0,
-    },
-]);
-
 export const baseParagraphStyleImpl = {
     color: colors.grayDark,
     fontFamily: fontFamilies.sansSerif,
@@ -43,7 +35,7 @@ export const baseFocusHoverStyleImpl = {
     borderBottomStyle: 'none' as const,
 };
 
-export const baseFocusStateStyle = style({
+export const baseFocusStyle = style({
     selectors: {
         '&:focus': baseFocusStyleImpl,
         '&:focus:hover': baseFocusHoverStyleImpl,
@@ -64,7 +56,7 @@ export const baseLinkHoverStyleImpl = {
 };
 
 export const baseLinkStyle = style([
-    baseFocusStateStyle,
+    baseFocusStyle,
     baseLinkStyleImpl,
     {
         selectors: {

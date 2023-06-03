@@ -1,11 +1,12 @@
 import { style } from '@vanilla-extract/css';
 
-import { baseTitleStyle } from '../styles/common.css';
-import { gridSize } from '../styles/constants';
+import { baseHeadingStyle } from '../styles/common.css';
+import { fontWeights, gridSize } from '../styles/constants';
 
 export const titleStyle = style([
-    baseTitleStyle,
+    baseHeadingStyle,
     {
         margin: `0 0 ${1.25 * gridSize}px 0`,
+        fontWeight: fontWeights.bold,
     },
 ]);
