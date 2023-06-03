@@ -1,13 +1,6 @@
 import { style, globalStyle } from '@vanilla-extract/css';
 
-import {
-    baseParagraphStyleImpl,
-    baseHeadingStyleImpl,
-    baseLinkStyleImpl,
-    baseLinkHoverStyleImpl,
-    baseFocusStyleImpl,
-    baseFocusHoverStyleImpl,
-} from '../styles/common.css';
+import { baseParagraphStyleImpl, baseHeadingStyleImpl, baseLinkStyleImpl, baseFocusStyleImpl } from '../styles/common.css';
 import { fontFamilies, fontSizes, lineHeights, fontWeights, gridSize, borderRadius } from '../styles/constants';
 
 export const markdownStyle = style({});
@@ -17,9 +10,7 @@ globalStyle(`${markdownStyle} p, ${markdownStyle} ul, ${markdownStyle} ol`, base
 
 // Links
 globalStyle(`${markdownStyle} a`, baseLinkStyleImpl);
-globalStyle(`${markdownStyle} a:hover`, baseLinkHoverStyleImpl);
 globalStyle(`${markdownStyle} a:focus`, baseFocusStyleImpl);
-globalStyle(`${markdownStyle} a:focus:hover`, baseFocusHoverStyleImpl);
 
 // Headings
 globalStyle(
