@@ -4,7 +4,7 @@ export enum CategoryId {
     JAVASCRIPT = 'javascript',
     TESTING = 'testing',
     ACCESSIBILITY = 'accessibility',
-    REACT = 'react',
+    FRONTEND = 'frontend',
     FRP = 'frp',
 }
 
