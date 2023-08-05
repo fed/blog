@@ -6,7 +6,7 @@ import { fontWeights, gridSize } from '../styles/constants';
 export const titleStyle = style([
     baseHeadingStyle,
     {
-        margin: `0 0 ${1.25 * gridSize}px 0`,
+        margin: `0 0 ${0.625 * gridSize}px 0`,
         fontWeight: fontWeights.bold,
     },
 ]);

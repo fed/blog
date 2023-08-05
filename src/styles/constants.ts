@@ -18,12 +18,12 @@ export const gridSize = 8;
 
 export const fontFamilies = {
     sansSerif:
-        '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Noto Sans", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+        '"Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Noto Sans", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
     monospace: '"SFMono-Medium", "SF Mono", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Consolas, Courier, monospace',
 };
 
 export const fontSizes = {
-    xxs: '12px',
+    xxs: '13px',
     xs: '14px',
     sm: '16px',
     md: '20px',

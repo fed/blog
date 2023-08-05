@@ -30,7 +30,7 @@ export const Metadata: React.FC<Props> = ({ date, categoryId, isPreview = false 
                         {date}
                     </span>
                 ) : null}
-                {category?.title ? <Lozenge type={isPreview ? 'default' : 'primary'}>{category.title}</Lozenge> : null}
+                {!isPreview && category?.title ? <Lozenge type={isPreview ? 'default' : 'primary'}>{category.title}</Lozenge> : null}
             </div>
         </>
     );

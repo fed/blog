@@ -14,19 +14,7 @@ import {
 
 export const headerStyle = style({
     backgroundColor: '#f6f8fa',
-    position: 'relative',
-    selectors: {
-        '&::after': {
-            background:
-                'linear-gradient(180deg, rgba(9, 30, 66, 0.13) 0, rgba(9, 30, 66, 0.13) 1px, rgba(9, 30, 66, 0.08) 1px, rgba(9, 30, 66, 0) 4px)',
-            content: '',
-            height: `${0.5 * gridSize}px`,
-            left: 0,
-            position: 'absolute',
-            right: 0,
-            top: '100%',
-        },
-    },
+    borderBottom: `1px solid ${colors.grayLight}`,
 });
 
 export const navigationMenuStyle = style({
@@ -66,7 +54,6 @@ export const siteNameStyle = style({
     fontFamily: fontFamilies.sansSerif,
     fontSize: fontSizes.sm,
     fontWeight: fontWeights.bold,
-    lineHeight: lineHeights.sm,
     whiteSpace: 'nowrap',
 });
 
@@ -79,11 +66,10 @@ export const listStyle = style({
 export const listItemStyle = style({
     color: colors.navy,
     display: 'inline-block',
+    fontFamily: fontFamilies.sansSerif,
     fontSize: fontSizes.xs,
     fontWeight: fontWeights.normal,
-    lineHeight: lineHeights.sm,
-    listStyle: 'none',
-    marginBottom: '-1px',
+    listStyleType: 'none',
     selectors: {
         '&:not(:last-child)': {
             marginRight: `${2 * gridSize}px`,

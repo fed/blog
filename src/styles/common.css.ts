@@ -43,16 +43,15 @@ export const baseFocusStyle = style({
 });
 
 export const baseLinkStyleImpl = {
-    borderBottom: `1px solid ${colors.grayLight}`,
+    borderBottom: `1px solid ${colors.blue}`,
     color: colors.blue,
     paddingBottom: '1px',
     textDecoration: 'none',
-    transition: 'border-bottom 0.5s ease',
     wordBreak: 'break-word' as const,
 };
 
 export const baseLinkHoverStyleImpl = {
-    borderBottom: `1px solid ${colors.blue}`,
+    borderBottom: `3px solid ${colors.blue}`,
 };
 
 export const baseLinkStyle = style([
