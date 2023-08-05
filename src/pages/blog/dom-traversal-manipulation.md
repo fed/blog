@@ -10,16 +10,24 @@ This blog contains some DOM Traversal and Manipulation with [VanillaJS](http://v
 
 ## DOM ready and window load
 
+This event fires when the document is loaded and the DOM tree is constructed:
+
 ```js
 // $(document).ready(callback);
 document.addEventListener('DOMContentLoaded', callback);
+```
 
+This event fires when iframes, images, stylesheets and scripts have been downloaded:
+
+```js
 // $(window).load(callback);
 window.addEventListener('load', callback);
 window.onload = callback;
 ```
 
-## Selectors
+## Selectors and collections
+
+Selectors are methods of the DOM interface.
 
 ```js
 // const divs = $('ul.nav > li');
@@ -35,6 +43,8 @@ const images = document.getElementsByClassName('image');
 // const articles = $('article');
 const articles = document.getElementsByTagName('article');
 ```
+
+jQuery queries return static collections (that is, snapshots of the DOM).
 
 | Selector                 | Returns a collection | Returns a LIVE collection | Return type                                                        | Built-in forEach | Works with any root element |
 | ------------------------ | -------------------- | ------------------------- | ------------------------------------------------------------------ | ---------------- | --------------------------- |
@@ -263,7 +273,8 @@ while (el.firstChild) {
 }
 ```
 
-Alternatively, you could also do:
+Alternatively, you could also do the following (albeit not recommended as it doesn't remove event listeners, which could lead to memory
+leaks in your code):
 
 ```js
 el.innerHTML = '';
