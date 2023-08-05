@@ -5,10 +5,9 @@ spoiler: Instructions on how to configure Chrome to allow searching for Jira tic
 category: general
 ---
 
-Just found out how to add the ability to search and directly access Jira tickets from within your browser's URL bar, and it's really handy
-🎉
+Here's how you can add the ability to search and directly access Jira tickets from within your browser's URL bar.
 
-To enable it go to **Settings > Search Engines > Manage Search Engines** and add a new engine with the details below:
+Go to **Settings > Search Engines > Manage Search Engines** and add a new engine with the details below:
 
 ![](chrome-search-engine-details.jpg)
 
