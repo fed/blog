@@ -6,10 +6,9 @@ category: css
 draft: true
 ---
 
-When multiple selectors are targeting the same element, the browser needs to know which one to
-apply. This is where the cascading aspect of CSS and specificity come into play. It's important to
-understand how specificity is calculated, so that you'll be able to figure out which style will
-actually end being applied in the browser.
+When multiple selectors are targeting the same element, the browser needs to know which one to apply. This is where the cascading aspect of
+CSS and specificity come into play. It's important to understand how specificity is calculated, so that you'll be able to figure out which
+style will actually end being applied in the browser.
 
 ```
 (
@@ -20,12 +19,12 @@ actually end being applied in the browser.
 )
 ```
 
-There's one way for a rule to overwrite all the other rules regardless of specificity, and that's to
-use the keyword `!important` at the end of the declaration before the semicolon. What this is saying
-is: "I don't care about specificity. I just want this rule to be applied this way."
+There's one way for a rule to overwrite all the other rules regardless of specificity, and that's to use the keyword `!important` at the end
+of the declaration before the semicolon. What this is saying is: "I don't care about specificity. I just want this rule to be applied this
+way."
 
-If two selectors have conflicting rules, the selector with the higher specificity will win, but if
-they both have the same specificity, the **last declared rule will win**.
+If two selectors have conflicting rules, the selector with the higher specificity will win, but if they both have the same specificity, the
+**last declared rule will win**.
 
 ## Examples
 
@@ -41,8 +40,8 @@ li {
 }
 ```
 
-Because the `.list-item` specificity value (001) is larger than the `li` specificity value (100),
-the latter class is going to overrule the former and the colour will be red.
+Because the `.list-item` specificity value (001) is larger than the `li` specificity value (100), the latter class is going to overrule the
+former and the colour will be red.
 
 ---
 
