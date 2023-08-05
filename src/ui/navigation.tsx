@@ -24,11 +24,6 @@ export const Navigation: React.FC = () => (
             </GatsbyLink>
             <ul className={listStyle}>
                 <li className={listItemStyle}>
-                    <GatsbyLink className={linkStyle} to="/" data-testid="navigation-link">
-                        Archive
-                    </GatsbyLink>
-                </li>
-                <li className={listItemStyle}>
                     <GatsbyLink className={linkStyle} to="/about" data-testid="navigation-link">
                         About
                     </GatsbyLink>
@@ -42,17 +37,6 @@ export const Navigation: React.FC = () => (
                         data-testid="navigation-link"
                     >
                         GitHub
-                    </a>
-                </li>
-                <li className={listItemStyle}>
-                    <a
-                        className={linkStyle}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://twitter.com/fedknu"
-                        data-testid="navigation-link"
-                    >
-                        Twitter
                     </a>
                 </li>
                 <li className={listItemStyle}>
