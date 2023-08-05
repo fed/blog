@@ -23,7 +23,7 @@ export const fontFamilies = {
 };
 
 export const fontSizes = {
-    xxs: '12px',
+    xxs: '13px',
     xs: '14px',
     sm: '16px',
     md: '20px',

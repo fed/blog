@@ -72,6 +72,7 @@ export const siteNameStyle = style({
 
 export const listStyle = style({
     display: 'flex',
+    alignItems: 'center',
     margin: 0,
     paddingLeft: 0,
 });
@@ -82,8 +83,7 @@ export const listItemStyle = style({
     fontSize: fontSizes.xs,
     fontWeight: fontWeights.normal,
     lineHeight: lineHeights.sm,
-    listStyle: 'none',
-    marginBottom: '-1px',
+    listStyleType: 'none',
     selectors: {
         '&:not(:last-child)': {
             marginRight: `${2 * gridSize}px`,

@@ -51,10 +51,10 @@ describe('Metadata', () => {
     });
 
     describe('when the metadata component is being rendered as part of a preview', () => {
-        it('renders the right lozenge type', () => {
+        it('does not render the lozenge', () => {
             const wrapper = shallow(<Metadata date="January 1, 2021" categoryId={CategoryId.FRP} isPreview />);
 
-            expect(wrapper.find(Lozenge).prop('type')).toBe('default');
+            expect(wrapper.find(Lozenge).exists()).toBe(false);
         });
     });
 

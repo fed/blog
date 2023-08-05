@@ -6,8 +6,8 @@ import { gridSize, fontSizes, fontWeights } from '../styles/constants';
 export const titleStyle = style([
     baseHeadingStyle,
     {
-        fontSize: fontSizes.lg,
-        fontWeight: fontWeights.bold,
+        fontSize: fontSizes.md,
+        fontWeight: fontWeights.normal,
         margin: 0,
     },
 ]);
@@ -15,6 +15,6 @@ export const titleStyle = style([
 export const spoilerStyle = style([
     baseParagraphStyle,
     {
-        margin: `${1.25 * gridSize}px 0 0`,
+        margin: `${0.625 * gridSize}px 0 0`,
     },
 ]);

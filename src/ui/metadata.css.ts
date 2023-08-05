@@ -9,7 +9,7 @@ export const containerStyle = style({
 export const publicationDateStyle = style({
     color: colors.grayMedium,
     fontFamily: fontFamilies.sansSerif,
-    fontSize: fontSizes.xxs,
+    fontSize: fontSizes.xs,
     marginRight: `${1.25 * gridSize}px`,
     textTransform: 'uppercase',
 });
