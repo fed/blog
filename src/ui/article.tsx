@@ -1,7 +1,7 @@
 import React from 'react';
 import { Twemoji } from 'react-emoji-render';
 
-import { titleStyle } from './article.css';
+import { titleStyle, headerStyle } from './article.css';
 import { Markdown } from './markdown';
 import { Metadata } from './metadata';
 import { CategoryId } from './types';
@@ -15,7 +15,7 @@ interface Props {
 
 export const Article: React.FC<Props> = ({ title, date, categoryId, children }) => (
     <article>
-        <header>
+        <header className={headerStyle}>
             <h1 className={titleStyle}>
                 <Twemoji svg text={title} />
             </h1>
