@@ -19,7 +19,12 @@ const BlogTemplate: React.FC<Props> = ({ data }) => {
         <>
             <SEO title={frontmatter.metaTitle || frontmatter.title} description={frontmatter.spoiler} slug={fields.slug} />
             <Layout>
-                <Article title={frontmatter.title} date={frontmatter.date} categoryId={frontmatter.category as CategoryId}>
+                <Article
+                    title={frontmatter.title}
+                    date={frontmatter.date}
+                    categoryId={frontmatter.category as CategoryId}
+                    showContentOnly={Boolean(frontmatter.showContentOnly)}
+                >
                     {html}
                 </Article>
             </Layout>
@@ -41,6 +46,7 @@ export const query = graphql`
                 spoiler
                 date(formatString: "MMMM DD, YYYY")
                 category
+                showContentOnly
             }
             fields {
                 slug

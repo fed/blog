@@ -11,16 +11,19 @@ interface Props {
     date?: string;
     categoryId?: CategoryId;
     children: string;
+    showContentOnly: boolean;
 }
 
-export const Article: React.FC<Props> = ({ title, date, categoryId, children }) => (
+export const Article: React.FC<Props> = ({ title, date, categoryId, children, showContentOnly }) => (
     <article>
-        <header className={headerStyle}>
-            <h1 className={titleStyle}>
-                <Twemoji svg text={title} />
-            </h1>
-            <Metadata date={date} categoryId={categoryId} />
-        </header>
+        {showContentOnly === true ? null : (
+            <header className={headerStyle}>
+                <h1 className={titleStyle}>
+                    <Twemoji svg text={title} />
+                </h1>
+                <Metadata date={date} categoryId={categoryId} />
+            </header>
+        )}
         <Markdown>{children}</Markdown>
     </article>
 );
