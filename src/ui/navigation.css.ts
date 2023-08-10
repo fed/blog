@@ -1,38 +1,20 @@
 import { style } from '@vanilla-extract/css';
 
 import { baseFocusStyle } from '../styles/common.css';
-import {
-    gridSize,
-    colors,
-    fontFamilies,
-    fontSizes,
-    containerDimensions,
-    fontWeights,
-    lineHeights,
-    borderRadius,
-} from '../styles/constants';
+import { gridSize, colors, fontFamilies, fontSizes, containerDimensions, fontWeights, lineHeights } from '../styles/constants';
 
 export const headerStyle = style({
-    backgroundColor: '#f6f8fa',
-    position: 'relative',
-    selectors: {
-        '&::after': {
-            background:
-                'linear-gradient(180deg, rgba(9, 30, 66, 0.13) 0, rgba(9, 30, 66, 0.13) 1px, rgba(9, 30, 66, 0.08) 1px, rgba(9, 30, 66, 0) 4px)',
-            content: '',
-            height: `${0.5 * gridSize}px`,
-            left: 0,
-            position: 'absolute',
-            right: 0,
-            top: '100%',
-        },
-    },
+    backgroundColor: colors.grayExtraLight,
+    borderBottom: `1px solid ${colors.grayLight}`,
 });
 
 export const navigationMenuStyle = style({
     alignItems: 'center',
-    display: 'flex', // Enable scrolling to provide access to all navigation menu items on mobile
-    overflowX: 'scroll',
+    display: 'flex',
+    fontFamily: fontFamilies.sansSerif,
+    fontSize: fontSizes.sm,
+    lineHeight: lineHeights.sm,
+    overflowX: 'scroll', // Enable scrolling to provide access to all navigation menu items on mobile
     padding: `${1.75 * gridSize}px 0 ${1.75 * gridSize}px ${3 * gridSize}px`,
     '@media': {
         [`screen and (min-width: ${containerDimensions.sm})`]: {
@@ -43,14 +25,24 @@ export const navigationMenuStyle = style({
     },
 });
 
-export const logoLinkStyle = style([
+export const baseNavigationLinkStyle = style([
     baseFocusStyle,
+    {
+        color: colors.navy,
+        textDecoration: 'none',
+        selectors: {
+            '&:hover': {
+                textDecoration: 'underline',
+            },
+        },
+    },
+]);
+export const logoLinkStyle = style([
+    baseNavigationLinkStyle,
     {
         alignItems: 'center',
         display: 'flex',
-        marginRight: `${3.5 * gridSize}px`,
-        textDecoration: 'none',
-        width: 'max-content',
+        marginRight: `${6 * gridSize}px`,
     },
 ]);
 
@@ -62,11 +54,7 @@ export const avatarStyle = style({
 
 export const siteNameStyle = style({
     alignItems: 'center',
-    color: colors.navy,
-    fontFamily: fontFamilies.sansSerif,
-    fontSize: fontSizes.sm,
     fontWeight: fontWeights.bold,
-    lineHeight: lineHeights.sm,
     whiteSpace: 'nowrap',
 });
 
@@ -78,11 +66,7 @@ export const listStyle = style({
 });
 
 export const listItemStyle = style({
-    color: colors.navy,
     display: 'inline-block',
-    fontSize: fontSizes.xs,
-    fontWeight: fontWeights.normal,
-    lineHeight: lineHeights.sm,
     listStyleType: 'none',
     selectors: {
         '&:not(:last-child)': {
@@ -90,21 +74,3 @@ export const listItemStyle = style({
         },
     },
 });
-
-export const linkStyle = style([
-    baseFocusStyle,
-    {
-        borderRadius: borderRadius.default,
-        color: colors.navy,
-        display: 'inline-block',
-        fontFamily: fontFamilies.sansSerif,
-        textDecoration: 'none',
-        transition: 'background-color 0.1s ease-out, box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38)',
-        selectors: {
-            '&:hover': {
-                color: colors.blue,
-                textDecoration: 'none',
-            },
-        },
-    },
-]);

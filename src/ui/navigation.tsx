@@ -10,7 +10,7 @@ import {
     siteNameStyle,
     listStyle,
     listItemStyle,
-    linkStyle,
+    baseNavigationLinkStyle,
 } from './navigation.css';
 
 export const Navigation: React.FC = () => (
@@ -24,13 +24,13 @@ export const Navigation: React.FC = () => (
             </GatsbyLink>
             <ul className={listStyle}>
                 <li className={listItemStyle}>
-                    <GatsbyLink className={linkStyle} to="/about" data-testid="navigation-link">
+                    <GatsbyLink className={baseNavigationLinkStyle} to="/about" data-testid="navigation-link">
                         About
                     </GatsbyLink>
                 </li>
                 <li className={listItemStyle}>
                     <a
-                        className={linkStyle}
+                        className={baseNavigationLinkStyle}
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://github.com/fed"
@@ -41,7 +41,7 @@ export const Navigation: React.FC = () => (
                 </li>
                 <li className={listItemStyle}>
                     <a
-                        className={linkStyle}
+                        className={baseNavigationLinkStyle}
                         target="_blank"
                         // The `me` rel is required by Mastodon for verification purposes
                         // eslint-disable-next-line react/no-invalid-html-attribute
