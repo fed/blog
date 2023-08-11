@@ -11,19 +11,17 @@ interface Props {
     date?: string;
     categoryId?: CategoryId;
     children: string;
-    showContentOnly: boolean;
+    inlineHeading: boolean;
 }
 
-export const Article: React.FC<Props> = ({ title, date, categoryId, children, showContentOnly }) => (
+export const Article: React.FC<Props> = ({ title, date, categoryId, children, inlineHeading }) => (
     <article>
-        {showContentOnly === true ? null : (
-            <header className={headerStyle}>
-                <h1 className={titleStyle}>
-                    <Twemoji svg text={title} />
-                </h1>
-                <Metadata date={date} categoryId={categoryId} />
-            </header>
-        )}
+        <header className={inlineHeading ? undefined : headerStyle}>
+            <h1 className={titleStyle}>
+                <Twemoji svg text={title} />
+            </h1>
+            <Metadata date={date} categoryId={categoryId} />
+        </header>
         <Markdown>{children}</Markdown>
     </article>
 );

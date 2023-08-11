@@ -420,8 +420,8 @@ export type MarkdownRemarkFrontmatter = {
   spoiler?: Maybe<Scalars['String']>;
   category?: Maybe<Scalars['String']>;
   draft?: Maybe<Scalars['Boolean']>;
-  showContentOnly?: Maybe<Scalars['Boolean']>;
   metaTitle?: Maybe<Scalars['String']>;
+  inlineHeading?: Maybe<Scalars['Boolean']>;
 };
 
 
@@ -1225,8 +1225,8 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   spoiler?: InputMaybe<StringQueryOperatorInput>;
   category?: InputMaybe<StringQueryOperatorInput>;
   draft?: InputMaybe<BooleanQueryOperatorInput>;
-  showContentOnly?: InputMaybe<BooleanQueryOperatorInput>;
   metaTitle?: InputMaybe<StringQueryOperatorInput>;
+  inlineHeading?: InputMaybe<BooleanQueryOperatorInput>;
 };
 
 export type BooleanQueryOperatorInput = {
@@ -1482,8 +1482,8 @@ export type MarkdownRemarkFrontmatterFieldSelector = {
   spoiler?: InputMaybe<FieldSelectorEnum>;
   category?: InputMaybe<FieldSelectorEnum>;
   draft?: InputMaybe<FieldSelectorEnum>;
-  showContentOnly?: InputMaybe<FieldSelectorEnum>;
   metaTitle?: InputMaybe<FieldSelectorEnum>;
+  inlineHeading?: InputMaybe<FieldSelectorEnum>;
 };
 
 export type MarkdownRemarkFieldsFieldSelector = {
@@ -1736,8 +1736,8 @@ export type MarkdownRemarkFrontmatterSortInput = {
   spoiler?: InputMaybe<SortOrderEnum>;
   category?: InputMaybe<SortOrderEnum>;
   draft?: InputMaybe<SortOrderEnum>;
-  showContentOnly?: InputMaybe<SortOrderEnum>;
   metaTitle?: InputMaybe<SortOrderEnum>;
+  inlineHeading?: InputMaybe<SortOrderEnum>;
 };
 
 export type MarkdownRemarkFieldsSortInput = {
@@ -3443,7 +3443,7 @@ export type Unnamed_1_QueryVariables = Exact<{
 }>;
 
 
-export type Unnamed_1_Query = { markdownRemark?: { id: string, html?: string | null | undefined, frontmatter?: { title?: string | null | undefined, metaTitle?: string | null | undefined, spoiler?: string | null | undefined, date?: any | null | undefined, category?: string | null | undefined, showContentOnly?: boolean | null | undefined } | null | undefined, fields?: { slug?: string | null | undefined } | null | undefined } | null | undefined };
+export type Unnamed_1_Query = { markdownRemark?: { id: string, html?: string | null | undefined, frontmatter?: { title?: string | null | undefined, metaTitle?: string | null | undefined, spoiler?: string | null | undefined, date?: any | null | undefined, category?: string | null | undefined, inlineHeading?: boolean | null | undefined } | null | undefined, fields?: { slug?: string | null | undefined } | null | undefined } | null | undefined };
 
 export type AllBlogPostsQueryVariables = Exact<{ [key: string]: never; }>;
 

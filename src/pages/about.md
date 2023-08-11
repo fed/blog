@@ -1,6 +1,7 @@
 ---
-title: About
-showContentOnly: true
+title: Hi! 👋
+metaTitle: About
+inlineHeading: true
 ---
 
 I'm a software engineer with a keen interest in frontend web development, and I help teams ship clean and maintainable code. I enjoy working

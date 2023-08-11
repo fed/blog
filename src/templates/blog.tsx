@@ -23,7 +23,7 @@ const BlogTemplate: React.FC<Props> = ({ data }) => {
                     title={frontmatter.title}
                     date={frontmatter.date}
                     categoryId={frontmatter.category as CategoryId}
-                    showContentOnly={Boolean(frontmatter.showContentOnly)}
+                    inlineHeading={Boolean(frontmatter.inlineHeading)}
                 >
                     {html}
                 </Article>
@@ -46,7 +46,7 @@ export const query = graphql`
                 spoiler
                 date(formatString: "MMMM DD, YYYY")
                 category
-                showContentOnly
+                inlineHeading
             }
             fields {
                 slug
