@@ -15,7 +15,7 @@ describe('Navigation', () => {
     it('renders the right navigation items', () => {
         const wrapper = shallow(<Navigation />);
 
-        expect(wrapper.find('[data-testid="navigation-link"]')).toHaveLength(3);
+        expect(wrapper.find('[data-testid="navigation-link"]')).toHaveLength(4);
         expect(wrapper.find('[data-testid="navigation-link"]').at(0).props()).toMatchObject({ to: '/about', children: 'About' });
         expect(wrapper.find('[data-testid="navigation-link"]').at(1).props()).toMatchObject({
             target: '_blank',
@@ -28,6 +28,10 @@ describe('Navigation', () => {
             href: 'https://mas.to/@fed',
             rel: 'me noopener noreferrer',
             target: '_blank',
+        });
+        expect(wrapper.find('[data-testid="navigation-link"]').at(3).props()).toMatchObject({
+            children: 'RSS',
+            href: '/rss.xml',
         });
     });
 });

@@ -52,6 +52,11 @@ export const Navigation: React.FC = () => (
                         Mastodon
                     </a>
                 </li>
+                <li className={listItemStyle}>
+                    <a className={baseNavigationLinkStyle} href="/rss.xml" data-testid="navigation-link">
+                        RSS
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>

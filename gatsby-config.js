@@ -1,8 +1,47 @@
+const rssPostQuery = `
+{
+  allMarkdownRemark(
+    sort: { order: DESC, fields: [fileAbsolutePath] },
+    filter: { fields: { slug: { regex: "/blog/" } } }
+  ) {
+    edges {
+      node {
+        html
+        fields { slug }
+        frontmatter {
+          title
+          spoiler
+          date(formatString: "MMMM DD, YYYY")
+          draft
+        }
+      }
+    }
+  }
+}
+`;
+
+const createRssPost = (edge, site) => {
+    const url = site.siteMetadata.siteUrl + edge.node.fields.slug;
+
+    return {
+        ...edge.node.frontmatter,
+        description: edge.node.frontmatter.spoiler,
+        date: edge.node.frontmatter.date,
+        url,
+        guid: url,
+        custom_elements: [{ 'content:encoded': edge.node.html }],
+    };
+};
+
+const SITE_TITLE = 'Federico Knüssel';
+
+const SITE_DESCRIPTION = "Federico Knüssel's personal blog";
+
 module.exports = {
     siteMetadata: {
-        title: 'Federico Knüssel',
-        author: 'Federico Knüssel',
-        description: "Federico Knüssel's personal blog",
+        title: SITE_TITLE,
+        author: SITE_TITLE,
+        description: SITE_DESCRIPTION,
         siteUrl: 'https://fedknu.com',
         social: {
             twitter: '@fedknu',
@@ -13,7 +52,7 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-manifest',
             options: {
-                name: 'Federico Knüssel',
+                name: SITE_TITLE,
                 short_name: 'F. Knüssel',
                 start_url: '/',
                 background_color: '#1b1b1b',
@@ -45,6 +84,22 @@ module.exports = {
                     },
                     {
                         resolve: 'gatsby-remark-embedder',
+                    },
+                ],
+            },
+        },
+        {
+            resolve: 'gatsby-plugin-feed',
+            options: {
+                feeds: [
+                    {
+                        // Make sure to filter out drafts from the feed
+                        serialize: ({ query: { site, allMarkdownRemark } }) =>
+                            allMarkdownRemark.edges.filter((e) => !e.node.frontmatter.draft).map((e) => createRssPost(e, site)),
+                        query: rssPostQuery,
+                        output: '/rss.xml',
+                        title: SITE_TITLE,
+                        description: SITE_DESCRIPTION,
                     },
                 ],
             },
