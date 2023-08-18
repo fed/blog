@@ -4,7 +4,13 @@ metaTitle: About
 inlineHeading: true
 ---
 
-I'm a software engineer with a keen interest in frontend web development, and I help teams ship clean and maintainable code. I enjoy working
-on large scale web applications, and am particularly interested in accessibility, web components and functional reactive programming.
+I'm a software engineer with a keen interest in frontend web development, and I help teams ship clean and maintainable code.
 
-Feel free to reach out on [Mastodon](https://mas.to/@fed) or flick me an email at [fed@duck.com](mailto:fed@duck.com).
+This blog is mostly about HTML, CSS and JavaScript, with a bit of a focus on accessibility, browser APIs, web components and functional
+reactive programming. Instead of documenting my learnings somewhere else, I like publishing them on this blog. I also typically post
+half-baked ideas, thoughts, code snippets and resources that I find interesting and useful. That's why you might come across some content
+that's not really polished or thorough.
+
+I currently work on web accessibility at [Atlassian](https://atlassian.com).
+
+If you'd like to chat, feel free to reach out on [Mastodon](https://mas.to/@fed) or flick me an [email](mailto:fed@duck.com).
