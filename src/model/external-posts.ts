@@ -10,14 +10,6 @@ export const externalPosts = [
         categoryId: CategoryId.FRP,
     },
     {
-        id: 'external-making-sense-context',
-        title: 'Making sense out of Context',
-        url: 'https://medium.com/@fknussel/making-sense-out-of-context-in-javascript-66fffe4054c9',
-        spoiler: 'Learn how the this keyword works, and the different ways in which contexts are bound on function calls.',
-        date: 'December 30, 2016',
-        categoryId: CategoryId.JAVASCRIPT,
-    },
-    {
         id: 'external-arrays-objects-mutations',
         title: 'Arrays, objects and mutations',
         url: 'https://medium.com/@fknussel/arrays-objects-and-mutations-6b23348b54aa',
