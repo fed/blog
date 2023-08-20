@@ -8,12 +8,29 @@ import {
     baseFocusStyleImpl,
     baseFocusHoverStyleImpl,
 } from '../styles/common.css';
-import { fontFamilies, fontSizes, lineHeights, fontWeights, gridSize, borderRadius } from '../styles/constants';
+import { colors, fontFamilies, fontSizes, lineHeights, fontWeights, gridSize, borderRadius } from '../styles/constants';
 
 export const markdownStyle = style({});
 
 // Text content
 globalStyle(`${markdownStyle} p, ${markdownStyle} ul, ${markdownStyle} ol`, baseParagraphStyleImpl);
+
+// Tables
+globalStyle(`${markdownStyle} td, ${markdownStyle} th`, {
+    ...baseParagraphStyleImpl,
+    padding: `${gridSize}px`,
+    textAlign: 'center',
+});
+globalStyle(`${markdownStyle} th`, {
+    backgroundColor: colors.grayLight,
+    fontWeight: fontWeights.bold,
+});
+globalStyle(`${markdownStyle} table`, {
+    borderCollapse: 'collapse',
+});
+globalStyle(`${markdownStyle} table, ${markdownStyle} th, ${markdownStyle} td`, {
+    border: `1px solid ${colors.grayMedium}`,
+});
 
 // Links
 globalStyle(`${markdownStyle} a`, baseLinkStyleImpl);

@@ -25,12 +25,4 @@ export const externalPosts = [
         date: 'February 1, 2017',
         categoryId: CategoryId.REACT,
     },
-    {
-        id: 'external-dom-traversal-manipulation',
-        title: 'DOM traversal and manipulation',
-        url: 'https://github.com/fed/dom#dom-traversal-and-manipulation-with-vanillajs',
-        spoiler: 'Cheatsheet for working with the DOM in Vanilla JS.',
-        date: 'September 6, 2017',
-        categoryId: CategoryId.DOM,
-    },
 ].map((post) => ({ ...post, isExternal: true, slug: null }));

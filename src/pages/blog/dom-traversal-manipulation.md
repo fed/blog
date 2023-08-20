@@ -1,23 +1,23 @@
 ---
 title: DOM traversal and manipulation
-date: 2017-09-07
-spoiler: Cheatsheet for working with the DOM in Vanilla JS.
+date: 2017-09-06
+spoiler: A cheatsheet for working with the DOM in Vanilla JS.
 category: dom
-draft: true
 ---
 
-This blog contains some DOM Traversal and Manipulation with [VanillaJS](http://vanilla-js.com/)
+This blog contains a summary of the main and most common methods to do DOM traversal and manipulation with
+[Vanilla JS](http://vanilla-js.com/).
 
 ## DOM ready and window load
 
-This event fires when the document is loaded and the DOM tree is constructed:
+The `document` object emits a `DOMContentLoaded` event when the document is loaded and the DOM tree is constructed:
 
 ```js
 // $(document).ready(callback);
 document.addEventListener('DOMContentLoaded', callback);
 ```
 
-This event fires when iframes, images, stylesheets and scripts have been downloaded:
+This `window` object fires a `load` event when iframes, images, stylesheets and scripts have been downloaded:
 
 ```js
 // $(window).load(callback);
@@ -54,11 +54,12 @@ jQuery queries return static collections (that is, snapshots of the DOM).
 | `querySelector`          | 🚫                   | N/A                       | `Element` object or `null`                                         | N/A              | ✅                          |
 | `querySelectorAll`       | ✅                   | 🚫                        | Static `NodeList` of `Element` objects                             | ✅               | ✅                          |
 
-(*) *The [latest W3C specification](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) says it returns an `HTMLCollection`; however,
+(\*) The [latest W3C specification](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) says it returns an `HTMLCollection`; however,
 this method returns a [`NodeList`](https://developer.mozilla.org/en-US/docs/Web/API/NodeList) in WebKit browsers. See
-[bug 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) for details.\*
+[bug 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) for details.
 
-Since all of the selectors (except `getElementById`) support querying a node other than `document`, finding results trivial:
+Since all of the selectors (except `getElementById`) support querying any node (and not just `document`), finding nested elements results
+trivial:
 
 ```js
 // $(el).find(selector);
@@ -79,21 +80,23 @@ const button = $('#button');
 
 ## Creating elements
 
-To create a new element just pass in the tag name as the argument:
+To create a new element just pass in the tag name (a string) as an argument to the `createElement` method:
 
 ```js
 // $('<div />');
 const newDiv = document.createElement('div');
 ```
 
-<!--
+You can create a text node by invoking the `createTextNode` method of the `document` object:
+
+```js
 // There is no equivalent in jQuery for createTextNode.
 // You can always use the DOM method, or write a jQuery wrapper around it.
 // The closest thing you may be able to find is when creating new elements,
 // you can specify the text part separately.
 // $('<div>', { text: 'hello world' });
 const newTextNode = document.createTextNode('hello world');
-``` -->
+```
 
 ## Adding elements to the DOM
 
@@ -107,7 +110,7 @@ parent.prepend(el);
 
 // $(parent).prepend(el);
 parent.insertBefore(el, parent.firstChild);
-el.insertBefore(node); // @TODO
+el.insertBefore(node);
 
 // $(el).before(htmlString);
 el.insertAdjacentHTML('beforebegin', htmlString);
@@ -181,6 +184,7 @@ Array.prototype.forEach.call(nodes, noop);
 Find the closest element that matches the target selector:
 
 ```js
+// $("li.item").closest("ul")
 var node = document.getElementById('my-id');
 var isFound = false;
 
@@ -193,7 +197,7 @@ while (node instanceof Element) {
 }
 ```
 
-`Element.prototype.closest` Polyfill:
+You could choose to polyfill the `Element.prototype.closest` method:
 
 ```js
 if (Element && !Element.prototype.closest) {
@@ -237,9 +241,11 @@ For example, you could use the following code to remove all GIF images from the 
 ## Replacing nodes
 
 ```js
-// $(el).replaceWith($('.first')); el.parentNode.replaceChild(newNode, el);
+// $(el).replaceWith($('.first'));
+el.parentNode.replaceChild(newNode, el);
 
-// $(el).replaceWith(string); el.outerHTML = string;
+// $(el).replaceWith(string);
+el.outerHTML = string;
 ```
 
 ## Cloning nodes
@@ -594,7 +600,7 @@ const elements = document.getElementsByClassName(selector);
 });
 ```
 
-Recall that `:even` and `:odd` use 0-based indexing.
+Note that `:even` and `:odd` use 0-based indexing.
 
 Another filtering example:
 

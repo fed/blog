@@ -51,16 +51,6 @@ const PARSED_POSTS = [
         url: null,
     },
     {
-        categoryId: 'dom',
-        date: 'September 6, 2017',
-        id: 'external-dom-traversal-manipulation',
-        isExternal: true,
-        slug: null,
-        spoiler: 'Cheatsheet for working with the DOM in Vanilla JS.',
-        title: 'DOM traversal and manipulation',
-        url: 'https://github.com/fed/dom#dom-traversal-and-manipulation-with-vanillajs',
-    },
-    {
         categoryId: 'javascript',
         date: 'September 06, 2017',
         id: 'ebccf7ed-3627-57af-93f1-37ce17998a1d',
