@@ -81,17 +81,6 @@ const PARSED_POSTS = [
         title: 'Arrays, objects and mutations',
         url: 'https://medium.com/@fknussel/arrays-objects-and-mutations-6b23348b54aa',
     },
-    {
-        categoryId: 'react',
-        date: 'February 1, 2017',
-        id: 'external-look-inner-workings-redux',
-        isExternal: true,
-        slug: null,
-        spoiler:
-            "Let's try to understand what's really going on under the hood when we use Redux by implementing a simplified version of it from scratch.",
-        title: 'A look at the inner workings of Redux',
-        url: 'https://medium.com/@fknussel/redux-3cb5aac94a66',
-    },
 ];
 
 describe('IndexTemplate', () => {

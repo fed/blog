@@ -53,6 +53,19 @@ globalStyle(`${markdownStyle} b, ${markdownStyle} strong`, {
     fontWeight: fontWeights.bold,
 });
 
+// Quotes
+globalStyle(`${markdownStyle} blockquote`, {
+    border: `1px solid ${colors.grayMedium}`,
+    backgroundColor: colors.grayExtraLight,
+    padding: `${2 * gridSize}px ${3 * gridSize}px`,
+    margin: `${6 * gridSize}px ${12 * gridSize}px`,
+    boxShadow: `${gridSize}px ${gridSize}px 0px 1px ${colors.grayLight}`,
+});
+globalStyle(`${markdownStyle} blockquote p`, {
+    margin: 0,
+    color: colors.grayDark,
+});
+
 // Images
 globalStyle(`${markdownStyle} img`, {
     maxWidth: '100%',

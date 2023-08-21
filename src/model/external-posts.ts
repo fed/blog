@@ -17,12 +17,4 @@ export const externalPosts = [
         date: 'March 6, 2017',
         categoryId: CategoryId.JAVASCRIPT,
     },
-    {
-        id: 'external-look-inner-workings-redux',
-        title: 'A look at the inner workings of Redux',
-        url: 'https://medium.com/@fknussel/redux-3cb5aac94a66',
-        spoiler: `Let's try to understand what's really going on under the hood when we use Redux by implementing a simplified version of it from scratch.`,
-        date: 'February 1, 2017',
-        categoryId: CategoryId.REACT,
-    },
 ].map((post) => ({ ...post, isExternal: true, slug: null }));
