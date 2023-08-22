@@ -12,7 +12,7 @@ interface Props {
     data: Query;
 }
 
-const IndexTemplate: React.FC<Props> = ({ data }) => {
+const IndexTemplate: React.FunctionComponent<Props> = ({ data }) => {
     const posts = data.allMarkdownRemark.edges
         // Make sure to filter out static pages and drafts from this list
         .filter((post) => post.node.frontmatter.draft !== true && post.node.fields.slug.includes('blog/'))

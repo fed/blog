@@ -1,8 +1,7 @@
 import React from 'react';
 import { Twemoji } from 'react-emoji-render';
 
-import { titleStyle, headerStyle } from './article.css';
-import { Markdown } from './markdown';
+import { titleStyle, headerStyle, markdownStyle } from './article.css';
 import { Metadata } from './metadata';
 import { CategoryId } from './types';
 
@@ -10,11 +9,11 @@ interface Props {
     title: string;
     date?: string;
     categoryId?: CategoryId;
-    children: string;
-    inlineHeading: boolean;
+    children: TrustedHTML;
+    inlineHeading?: boolean;
 }
 
-export const Article: React.FC<Props> = ({ title, date, categoryId, children, inlineHeading }) => (
+export const Article: React.FunctionComponent<Props> = ({ title, date, categoryId, children, inlineHeading = false }) => (
     <article>
         <header className={inlineHeading ? undefined : headerStyle}>
             <h1 className={titleStyle}>
@@ -22,6 +21,7 @@ export const Article: React.FC<Props> = ({ title, date, categoryId, children, in
             </h1>
             <Metadata date={date} categoryId={categoryId} />
         </header>
-        <Markdown>{children}</Markdown>
+        {/* eslint-disable-next-line react/no-danger */}
+        <div className={markdownStyle} dangerouslySetInnerHTML={{ __html: children }} data-testid="article-body" />
     </article>
 );

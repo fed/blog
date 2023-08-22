@@ -9,7 +9,7 @@ interface Props {
     imageUrl?: string;
 }
 
-export const SEO: React.FC<Props> = ({ title, description, slug = '', imageUrl }) => {
+export const SEO: React.FunctionComponent<Props> = ({ title, description, slug = '', imageUrl }) => {
     const data = useStaticQuery(graphql`
         query GetSiteMetadata {
             site {

@@ -3,14 +3,13 @@ import React from 'react';
 import { Twemoji } from 'react-emoji-render';
 
 import { Article } from './article';
-import { Markdown } from './markdown';
 import { Metadata } from './metadata';
 import { CategoryId } from './types';
 
 describe('Article', () => {
     const wrapper = shallow(
         <Article title="Test title" categoryId={CategoryId.FRP} date="June 1, 2020">
-            Test content
+            <p>Rawr</p>
         </Article>,
     );
 
@@ -34,10 +33,9 @@ describe('Article', () => {
         });
     });
 
-    it('renders the markdown component with the right props', () => {
-        const markdown = wrapper.find(Markdown);
-
-        expect(markdown.exists()).toBe(true);
-        expect(markdown.prop('children')).toBe('Test content');
+    it('renders the body of the blog post as HTML', () => {
+        expect(wrapper.find('[data-testid="article-body"]').prop('dangerouslySetInnerHTML')).toEqual({
+            __html: <p>Rawr</p>,
+        });
     });
 });

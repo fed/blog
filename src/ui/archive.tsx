@@ -11,7 +11,7 @@ interface Props {
     posts: Post[];
 }
 
-export const Archive: React.FC<Props> = ({ posts }) => {
+export const Archive: React.FunctionComponent<Props> = ({ posts }) => {
     const content =
         posts.length > 0 ? (
             posts.map((post) => (

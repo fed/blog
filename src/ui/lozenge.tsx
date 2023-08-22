@@ -9,4 +9,6 @@ interface Props {
     type?: LozengeType;
 }
 
-export const Lozenge: React.FC<Props> = ({ children, type = 'default' }) => <span className={lozenge[type]}>{children}</span>;
+export const Lozenge: React.FunctionComponent<Props> = ({ children, type = 'default' }) => (
+    <span className={lozenge[type]}>{children}</span>
+);

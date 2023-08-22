@@ -12,7 +12,7 @@ interface Props {
     dateOnly?: boolean;
 }
 
-export const Metadata: React.FC<Props> = ({ date, categoryId, dateOnly = false }) => {
+export const Metadata: React.FunctionComponent<Props> = ({ date, categoryId, dateOnly = false }) => {
     if (!date && !categoryId) {
         return null;
     }

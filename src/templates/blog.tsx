@@ -12,7 +12,7 @@ interface Props {
 }
 
 // The Blog template is used by both blog posts and static pages since we share the same UI.
-const BlogTemplate: React.FC<Props> = ({ data }) => {
+const BlogTemplate: React.FunctionComponent<Props> = ({ data }) => {
     const { frontmatter, fields, html } = data.markdownRemark;
 
     return (
