@@ -61,17 +61,6 @@ const PARSED_POSTS = [
         url: null,
     },
     {
-        categoryId: 'frp',
-        date: 'August 6, 2017',
-        id: 'external-simple-observable-implementation',
-        isExternal: true,
-        slug: null,
-        spoiler:
-            "Let's write our own Observable interface implementation to understand what's going on under the hood when we work with RxJS.",
-        title: 'A simple Observable implementation',
-        url: 'https://medium.com/@fknussel/a-simple-observable-implementation-c9c809c89c69',
-    },
-    {
         categoryId: 'javascript',
         date: 'March 6, 2017',
         id: 'external-arrays-objects-mutations',
