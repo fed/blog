@@ -9,10 +9,10 @@ import { srOnlyStyle } from '../styles/common.css';
 interface Props {
     date?: string;
     categoryId?: CategoryId;
-    isPreview?: boolean;
+    dateOnly?: boolean;
 }
 
-export const Metadata: React.FC<Props> = ({ date, categoryId, isPreview = false }) => {
+export const Metadata: React.FC<Props> = ({ date, categoryId, dateOnly = false }) => {
     if (!date && !categoryId) {
         return null;
     }
@@ -30,7 +30,7 @@ export const Metadata: React.FC<Props> = ({ date, categoryId, isPreview = false 
                         {date}
                     </span>
                 ) : null}
-                {!isPreview && category?.title ? <Lozenge type={isPreview ? 'default' : 'primary'}>{category.title}</Lozenge> : null}
+                {!dateOnly && category?.title ? <Lozenge type={dateOnly ? 'default' : 'primary'}>{category.title}</Lozenge> : null}
             </div>
         </>
     );

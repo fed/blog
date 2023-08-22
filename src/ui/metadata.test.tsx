@@ -50,9 +50,9 @@ describe('Metadata', () => {
         });
     });
 
-    describe('when the metadata component is being rendered as part of a preview', () => {
+    describe('when the metadata component is being rendered with just the date', () => {
         it('does not render the lozenge', () => {
-            const wrapper = shallow(<Metadata date="January 1, 2021" categoryId={CategoryId.FRP} isPreview />);
+            const wrapper = shallow(<Metadata date="January 1, 2021" categoryId={CategoryId.FRP} dateOnly />);
 
             expect(wrapper.find(Lozenge).exists()).toBe(false);
         });
@@ -60,7 +60,7 @@ describe('Metadata', () => {
 
     describe('when the metadata component is being rendered as part of a full blog post', () => {
         it('renders the right lozenge type', () => {
-            const wrapper = shallow(<Metadata date="January 1, 2021" categoryId={CategoryId.FRP} isPreview={false} />);
+            const wrapper = shallow(<Metadata date="January 1, 2021" categoryId={CategoryId.FRP} dateOnly={false} />);
 
             expect(wrapper.find(Lozenge).prop('type')).toBe('primary');
         });

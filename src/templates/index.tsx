@@ -3,7 +3,6 @@ import sortBy from 'lodash/sortBy';
 import React from 'react';
 
 import type { Query } from '../../graphql-types';
-import { externalPosts } from '../model';
 import { Archive } from '../ui/archive';
 import { Layout } from '../ui/layout';
 import { SEO } from '../ui/seo';
@@ -24,10 +23,7 @@ const IndexTemplate: React.FC<Props> = ({ data }) => {
             spoiler: post.node.frontmatter.spoiler,
             date: post.node.frontmatter.date,
             categoryId: post.node.frontmatter.category as CategoryId,
-            isExternal: false,
-            url: null,
-        }))
-        .concat(externalPosts);
+        }));
 
     return (
         <>

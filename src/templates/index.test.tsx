@@ -44,21 +44,17 @@ const PARSED_POSTS = [
         categoryId: 'testing',
         date: 'January 09, 2019',
         id: '1a3b4115-31a9-56f2-acef-f2ec7e6f63b7',
-        isExternal: false,
         slug: '/blog/async-testing/',
         spoiler: 'A brief intro to the different ways to set up your asynchronous tests and the reason behind it.',
         title: 'Testing asynchronous code',
-        url: null,
     },
     {
         categoryId: 'javascript',
         date: 'September 06, 2017',
         id: 'ebccf7ed-3627-57af-93f1-37ce17998a1d',
-        isExternal: false,
         slug: '/blog/getting-clever-with-array-reduce/',
         spoiler: 'A handful of rather unconventional yet interesting use cases for reducing arrays.',
         title: 'Getting clever with Array#reduce',
-        url: null,
     },
 ];
 

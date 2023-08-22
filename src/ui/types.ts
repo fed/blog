@@ -14,7 +14,5 @@ export interface Post {
     spoiler: string;
     date: string;
     categoryId: CategoryId;
-    isExternal: boolean;
-    url?: string;
-    slug?: string;
+    slug: string;
 }
