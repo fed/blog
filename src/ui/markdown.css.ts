@@ -97,8 +97,12 @@ globalStyle(`${markdownStyle} code:not([class="grvsc-code"])`, {
     fontSize: '80%',
     margin: 0,
     padding: `${0.375 * gridSize}px ${0.75 * gridSize}px`,
-    whiteSpace: 'normal',
+    whiteSpace: 'nowrap',
+    color: colors.pink,
     fontWeight: fontWeights.normal,
+});
+globalStyle(`${markdownStyle} a code:not([class="grvsc-code"])`, {
+    color: 'inherit',
 });
 
 // Code blocks
