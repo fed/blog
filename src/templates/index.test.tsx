@@ -60,16 +60,6 @@ const PARSED_POSTS = [
         title: 'Getting clever with Array#reduce',
         url: null,
     },
-    {
-        categoryId: 'javascript',
-        date: 'March 6, 2017',
-        id: 'external-arrays-objects-mutations',
-        isExternal: true,
-        slug: null,
-        spoiler: 'Some ideas on how to treat arrays and objects as if they were immutable.',
-        title: 'Arrays, objects and mutations',
-        url: 'https://medium.com/@fknussel/arrays-objects-and-mutations-6b23348b54aa',
-    },
 ];
 
 describe('IndexTemplate', () => {
