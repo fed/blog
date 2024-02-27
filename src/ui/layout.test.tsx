@@ -1,4 +1,4 @@
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import React from 'react';
 
 import { Layout } from './layout';
@@ -29,13 +29,15 @@ describe('Layout', () => {
 
     describe('Navigation', () => {
         it('renders an avatar and the site name linking to the homepage', () => {
-            const logoWrapper = shallow(
+            const logoWrapper = mount(
                 <Layout>
                     <p data-testid="test-content">Rawr</p>
                 </Layout>,
-            ).find('[data-testid="navigation-logo"]');
+            )
+                .find('[data-testid="navigation-logo"]')
+                .hostNodes();
 
-            expect(logoWrapper.prop('to')).toBe('/');
+            expect(logoWrapper.prop('href')).toBe('/');
             expect(logoWrapper.find('[data-testid="navigation-logo-title"]').text()).toBe('fedknu.com');
             expect(logoWrapper.find('[data-testid="navigation-logo-image"]').props()).toMatchObject({ src: 'test-file-stub', alt: '' });
         });

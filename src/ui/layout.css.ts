@@ -76,7 +76,7 @@ export const logoLinkStyle = style([
     },
 ]);
 
-export const avatarStyle = style({
+export const emojiStyle = style({
     height: `${2.5 * gridSize}px`,
     marginRight: `${1.25 * gridSize}px`,
     width: `${2.5 * gridSize}px`,
