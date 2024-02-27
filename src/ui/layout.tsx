@@ -42,6 +42,11 @@ export const Layout: React.FunctionComponent<Props> = ({ children }) => (
                         </Link>
                     </li>
                     <li className={listItemStyle}>
+                        <Link className={baseNavigationLinkStyle} to="/" data-testid="layout-navigation-link">
+                            Blog
+                        </Link>
+                    </li>
+                    <li className={listItemStyle}>
                         <a
                             className={baseNavigationLinkStyle}
                             target="_blank"

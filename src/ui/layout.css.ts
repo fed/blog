@@ -103,5 +103,5 @@ export const listStyle = style({
 export const listItemStyle = style({
     display: 'inline-block',
     listStyleType: 'none',
-    marginRight: `${2 * gridSize}px`, // Make sure all items including the last one have a rght margin to ensure the navbar is scrollable on mobile
+    marginRight: `${2.5 * gridSize}px`, // Make sure all items including the last one have a rght margin to ensure the navbar is scrollable on mobile
 });
