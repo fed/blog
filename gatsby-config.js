@@ -33,9 +33,10 @@ const createRssPost = (edge, site) => {
     };
 };
 
-const SITE_TITLE = 'Federico Knüssel';
+const SITE_TITLE = 'fedknu.com';
 
-const SITE_DESCRIPTION = "Federico Knüssel's personal blog";
+const SITE_DESCRIPTION =
+    'Personal blog about frontend web development, with a focus on accessibility, web components and functional reactive programming.';
 
 module.exports = {
     siteMetadata: {

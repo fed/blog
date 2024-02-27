@@ -36,7 +36,7 @@ describe('Layout', () => {
             ).find('[data-testid="navigation-logo"]');
 
             expect(logoWrapper.prop('to')).toBe('/');
-            expect(logoWrapper.find('[data-testid="navigation-logo-title"]').text()).toBe('Federico Knüssel');
+            expect(logoWrapper.find('[data-testid="navigation-logo-title"]').text()).toBe('fedknu.com');
             expect(logoWrapper.find('[data-testid="navigation-logo-image"]').props()).toMatchObject({ src: 'test-file-stub', alt: '' });
         });
 

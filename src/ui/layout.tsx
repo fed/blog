@@ -12,6 +12,7 @@ import {
     listStyle,
     listItemStyle,
     baseNavigationLinkStyle,
+    dimmedSiteNameStyle,
 } from './layout.css';
 import avatarSrc from './navigation-icon.svg';
 
@@ -30,7 +31,7 @@ export const Layout: React.FunctionComponent<Props> = ({ children }) => (
                 <Link className={logoLinkStyle} to="/" data-testid="navigation-logo">
                     <img className={avatarStyle} src={avatarSrc} alt="" data-testid="navigation-logo-image" />
                     <span className={siteNameStyle} data-testid="navigation-logo-title">
-                        Federico Knüssel
+                        fedknu<span className={dimmedSiteNameStyle}>.com</span>
                     </span>
                 </Link>
 

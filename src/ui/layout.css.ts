@@ -31,6 +31,7 @@ export const contentStyle = style({
     maxWidth: containerDimensions.lg,
     padding: `${4.5 * gridSize}px ${3 * gridSize}px ${6 * gridSize}px`,
 });
+
 export const headerStyle = style({
     backgroundColor: colors.grayExtraLight,
     borderBottom: `1px solid ${colors.grayLight}`,
@@ -65,6 +66,7 @@ export const baseNavigationLinkStyle = style([
         },
     },
 ]);
+
 export const logoLinkStyle = style([
     baseNavigationLinkStyle,
     {
@@ -84,6 +86,11 @@ export const siteNameStyle = style({
     alignItems: 'center',
     fontWeight: fontWeights.bold,
     whiteSpace: 'nowrap',
+});
+
+export const dimmedSiteNameStyle = style({
+    fontWeight: fontWeights.light,
+    color: colors.grayMedium,
 });
 
 export const listStyle = style({
