@@ -18,7 +18,6 @@ import fishEmojiSrc from '../assets/1f420.svg';
 import chickEmojiSrc from '../assets/1f423.svg';
 import penguinEmojiSrc from '../assets/1f427.svg';
 import whaleEmojiSrc from '../assets/1f433.svg';
-import frogEmojiSrc from '../assets/1f438.svg';
 import engineerEmojiSrc from '../assets/1f468-200d-1f4bb.svg';
 import dinosaurEmojiSrc from '../assets/1f995.svg';
 import kangarooEmojiSrc from '../assets/1f998.svg';
@@ -36,7 +35,6 @@ const EMOJIS = [
     chickEmojiSrc,
     penguinEmojiSrc,
     whaleEmojiSrc,
-    frogEmojiSrc,
     dinosaurEmojiSrc,
     kangarooEmojiSrc,
     engineerEmojiSrc,
