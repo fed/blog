@@ -1,6 +1,8 @@
 ---
-title: Devtools 👨‍💻
-metaTitle: Developer tools
+title: Frontend devtools
+date: 2021-11-28
+spoiler: rawr
+category: general
 ---
 
 A collection of frontend web development tools and resources.

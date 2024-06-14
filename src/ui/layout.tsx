@@ -16,29 +16,13 @@ import {
 } from './layout.css';
 import fishEmojiSrc from '../assets/1f420.svg';
 import chickEmojiSrc from '../assets/1f423.svg';
-import penguinEmojiSrc from '../assets/1f427.svg';
-import whaleEmojiSrc from '../assets/1f433.svg';
 import engineerEmojiSrc from '../assets/1f468-200d-1f4bb.svg';
 import dinosaurEmojiSrc from '../assets/1f995.svg';
 import kangarooEmojiSrc from '../assets/1f998.svg';
-import parrotEmojiSrc from '../assets/1f99c.svg';
-import otterEmojiSrc from '../assets/1f9a6.svg';
 import flamingoEmojiSrc from '../assets/1f9a9.svg';
 import dogEmojiSrc from '../assets/1f9ae.svg';
 
-const EMOJIS = [
-    otterEmojiSrc,
-    flamingoEmojiSrc,
-    dogEmojiSrc,
-    parrotEmojiSrc,
-    fishEmojiSrc,
-    chickEmojiSrc,
-    penguinEmojiSrc,
-    whaleEmojiSrc,
-    dinosaurEmojiSrc,
-    kangarooEmojiSrc,
-    engineerEmojiSrc,
-];
+const EMOJIS = [flamingoEmojiSrc, dogEmojiSrc, fishEmojiSrc, chickEmojiSrc, dinosaurEmojiSrc, kangarooEmojiSrc, engineerEmojiSrc];
 
 interface Props {
     children: React.ReactNode;
@@ -75,6 +59,21 @@ export const Layout: React.FunctionComponent<Props> = ({ children }) => {
                         <li className={listItemStyle}>
                             <Link className={baseNavigationLinkStyle} to="/" data-testid="layout-navigation-link">
                                 Blog
+                            </Link>
+                        </li>
+                        <li className={listItemStyle}>
+                            <Link className={baseNavigationLinkStyle} to="/uses" data-testid="layout-navigation-link">
+                                Uses
+                            </Link>
+                        </li>
+                        <li className={listItemStyle}>
+                            <Link className={baseNavigationLinkStyle} to="/now" data-testid="layout-navigation-link">
+                                Now
+                            </Link>
+                        </li>
+                        <li className={listItemStyle}>
+                            <Link className={baseNavigationLinkStyle} to="/colophon" data-testid="layout-navigation-link">
+                                Colophon
                             </Link>
                         </li>
                         <li className={listItemStyle}>

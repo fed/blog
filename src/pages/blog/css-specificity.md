@@ -71,6 +71,10 @@ This example has a specificity of `(0,0,2,2)`:
 -   2: number of classes, attributes, and pseudo-classes
 -   2: number of elements and pseudo-elements
 
+## What do we do with these values?
+
+How do we compare them?
+
 Credits: https://egghead.io/lessons/css-understand-css-selector-specificity
 
 Delete this gist later: https://gist.github.com/fknussel/6512274dc8d80b246379bc87a65483c1

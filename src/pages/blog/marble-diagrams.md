@@ -1,6 +1,8 @@
 ---
-title: Functional reactive programming tools and resources ⚡️
-metaTitle: Functional reactive programming tools and resources
+title: Visualising event streams with marble diagrams
+date: 2021-12-01
+spoiler: rawr
+category: frp
 ---
 
 ## Visualisation tools
@@ -12,6 +14,7 @@ metaTitle: Functional reactive programming tools and resources
 -   http://baconjs-examples.blakehaswell.com/
 -   https://rxjs-debug.github.io/
 -   https://rxjs.ninja/
+-   https://rxjs-fruits.com/
 
 ## Other resources
 
