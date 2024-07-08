@@ -44,7 +44,7 @@ export const navigationMenuStyle = style({
     fontSize: fontSizes.sm,
     lineHeight: lineHeights.sm,
     overflowX: 'scroll', // Enable scrolling to provide access to all navigation menu items on mobile
-    padding: `${1.75 * gridSize}px 0 ${1.75 * gridSize}px ${3 * gridSize}px`,
+    padding: `${1.75 * gridSize}px 0 ${1.5 * gridSize}px ${3 * gridSize}px`,
     '@media': {
         [`screen and (min-width: ${containerDimensions.sm})`]: {
             margin: '0 auto',

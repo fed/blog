@@ -1,3 +1,5 @@
+import { ATKINSON_HYPERLEGIBLE } from './global.css';
+
 export const colors = {
     grayDark: '#1f2937',
     grayMedium: '#526b8d',
@@ -18,8 +20,7 @@ export const colors = {
 export const gridSize = 8;
 
 export const fontFamilies = {
-    sansSerif:
-        '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Noto Sans", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+    sansSerif: `"${ATKINSON_HYPERLEGIBLE}", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Noto Sans", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif`,
     monospace: '"SFMono-Medium", "SF Mono", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Consolas, Courier, monospace',
 };
 
