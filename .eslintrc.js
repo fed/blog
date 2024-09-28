@@ -44,6 +44,7 @@ module.exports = {
                 alphabetize: {
                     order: 'asc',
                 },
+                // https://github.com/emberjs/data/blob/536192b15822c49226b462a905fa39e47a790fea/config/eslint/imports.js
                 groups: ['builtin', 'external', 'internal', ['parent', 'index', 'sibling']],
             },
         ],
