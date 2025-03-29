@@ -58,19 +58,6 @@ export const Layout: React.FunctionComponent<Props> = ({ children }) => (
                         </a>
                     </li>
                     <li className={listItemStyle}>
-                        <a
-                            className={baseNavigationLinkStyle}
-                            target="_blank"
-                            // The `me` rel is required by Mastodon for verification purposes
-                            // eslint-disable-next-line react/no-invalid-html-attribute
-                            rel="me noopener noreferrer"
-                            href="https://mas.to/@fed"
-                            data-testid="layout-navigation-link"
-                        >
-                            Mastodon
-                        </a>
-                    </li>
-                    <li className={listItemStyle}>
                         <a className={baseNavigationLinkStyle} href="/rss.xml" data-testid="layout-navigation-link">
                             RSS
                         </a>

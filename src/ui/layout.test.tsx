@@ -49,7 +49,7 @@ describe('Layout', () => {
                 </Layout>,
             );
 
-            expect(wrapper.find('[data-testid="layout-navigation-link"]')).toHaveLength(5);
+            expect(wrapper.find('[data-testid="layout-navigation-link"]')).toHaveLength(4);
             expect(wrapper.find('[data-testid="layout-navigation-link"]').at(0).props()).toMatchObject({ to: '/about', children: 'About' });
             expect(wrapper.find('[data-testid="layout-navigation-link"]').at(1).props()).toMatchObject({ to: '/', children: 'Blog' });
             expect(wrapper.find('[data-testid="layout-navigation-link"]').at(2).props()).toMatchObject({
@@ -59,12 +59,6 @@ describe('Layout', () => {
                 children: 'GitHub',
             });
             expect(wrapper.find('[data-testid="layout-navigation-link"]').at(3).props()).toMatchObject({
-                children: 'Mastodon',
-                href: 'https://mas.to/@fed',
-                rel: 'me noopener noreferrer',
-                target: '_blank',
-            });
-            expect(wrapper.find('[data-testid="layout-navigation-link"]').at(4).props()).toMatchObject({
                 children: 'RSS',
                 href: '/rss.xml',
             });
