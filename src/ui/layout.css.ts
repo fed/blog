@@ -44,7 +44,7 @@ export const navigationMenuStyle = style({
     fontSize: fontSizes.sm,
     lineHeight: lineHeights.sm,
     overflowX: 'scroll', // Enable scrolling to provide access to all navigation menu items on mobile
-    padding: `${1.75 * gridSize}px 0 ${1.5 * gridSize}px ${3 * gridSize}px`,
+    padding: `${1.5 * gridSize}px 0`,
     '@media': {
         [`screen and (min-width: ${containerDimensions.sm})`]: {
             margin: '0 auto',
@@ -65,14 +65,13 @@ export const baseNavigationLinkStyle = style([
             },
         },
     },
-]);
+});
 
 export const logoLinkStyle = style([
     baseNavigationLinkStyle,
     {
         alignItems: 'center',
         display: 'flex',
-        marginRight: `${6 * gridSize}px`,
     },
 ]);
 
@@ -96,12 +95,16 @@ export const dimmedSiteNameStyle = style({
 export const listStyle = style({
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'flex-end',
     margin: 0,
     paddingLeft: 0,
+    width: '100%',
 });
 
 export const listItemStyle = style({
     display: 'inline-block',
     listStyleType: 'none',
-    marginRight: `${2.5 * gridSize}px`, // Make sure all items including the last one have a rght margin to ensure the navbar is scrollable on mobile
+    // Make sure all items including the last one have a right margin
+    // to ensure the navbar is scrollable on mobile
+    marginRight: `${3.5 * gridSize}px`,
 });

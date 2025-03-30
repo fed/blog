@@ -28,7 +28,7 @@ export const fontSizes = {
     xxs: '13px',
     xs: '14px',
     sm: '16px',
-    md: '20px',
+    md: '22px',
     lg: '24px',
     xl: '32px',
 };
