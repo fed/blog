@@ -47,13 +47,7 @@ export const Layout: React.FunctionComponent<Props> = ({ children }) => (
                         </Link>
                     </li>
                     <li className={listItemStyle}>
-                        <a
-                            className={baseNavigationLinkStyle}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href="https://github.com/fed"
-                            data-testid="layout-navigation-link"
-                        >
+                        <a className={baseNavigationLinkStyle} href="https://github.com/fed" data-testid="layout-navigation-link">
                             GitHub
                         </a>
                     </li>

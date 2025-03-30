@@ -53,8 +53,6 @@ describe('Layout', () => {
             expect(wrapper.find('[data-testid="layout-navigation-link"]').at(0).props()).toMatchObject({ to: '/about', children: 'About' });
             expect(wrapper.find('[data-testid="layout-navigation-link"]').at(1).props()).toMatchObject({ to: '/', children: 'Blog' });
             expect(wrapper.find('[data-testid="layout-navigation-link"]').at(2).props()).toMatchObject({
-                target: '_blank',
-                rel: 'noopener noreferrer',
                 href: 'https://github.com/fed',
                 children: 'GitHub',
             });
