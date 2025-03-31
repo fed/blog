@@ -1,7 +1,7 @@
 ---
 title: CSS Specificity
 date: 2020-04-27
-spoiler: rawr
+spoiler:
 category: css
 draft: true
 ---
@@ -52,10 +52,10 @@ nav#sitenav ul li.nav-item a {
 
 This example has a specificity of `(0,1,1,4)`:
 
--   0: number of inline styles
--   1: number of IDs
--   1: number of classes, attributes, and pseudo-classes
--   4: number of lements and pseudo-elements
+- 0: number of inline styles
+- 1: number of IDs
+- 1: number of classes, attributes, and pseudo-classes
+- 4: number of lements and pseudo-elements
 
 ---
 
@@ -66,10 +66,14 @@ This example has a specificity of `(0,1,1,4)`:
 
 This example has a specificity of `(0,0,2,2)`:
 
--   0: number of inline styles
--   0: number of IDs
--   2: number of classes, attributes, and pseudo-classes
--   2: number of elements and pseudo-elements
+- 0: number of inline styles
+- 0: number of IDs
+- 2: number of classes, attributes, and pseudo-classes
+- 2: number of elements and pseudo-elements
+
+## What do we do with these values?
+
+How do we compare them?
 
 Credits: https://egghead.io/lessons/css-understand-css-selector-specificity
 
