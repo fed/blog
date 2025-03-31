@@ -27,9 +27,9 @@ export const fontFamilies = {
 export const fontSizes = {
     xxs: '13px',
     xs: '14px',
-    sm: '16px',
+    sm: '18px',
     md: '22px',
-    lg: '24px',
+    lg: '26px',
     xl: '32px',
 };
 

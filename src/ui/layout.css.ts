@@ -4,6 +4,7 @@ import { baseFocusStyle } from '../styles/common.css';
 import { gridSize, colors, fontFamilies, fontSizes, containerDimensions, fontWeights, lineHeights } from '../styles/constants';
 
 const skipLinkHeight = 6.25 * gridSize;
+const skipLinkMargin = gridSize;
 
 export const skipLinkStyle = style({
     alignItems: 'center',
@@ -11,14 +12,17 @@ export const skipLinkStyle = style({
     color: colors.white,
     display: 'flex',
     fontFamily: fontFamilies.sansSerif,
+    fontSize: fontSizes.sm,
     height: `${skipLinkHeight}px`,
     left: 0,
     padding: `0 ${2 * gridSize}px`,
     position: 'fixed',
     textDecoration: 'none',
     top: 0,
-    transform: `translateY(-${skipLinkHeight}px)`,
+    transform: `translateY(-${skipLinkHeight + skipLinkMargin}px)`,
     zIndex: 10,
+    margin: `${skipLinkMargin}px`,
+    outlineOffset: `${0.25 * gridSize}px`,
     selectors: {
         '&:focus': {
             transform: 'translateY(0)',
@@ -35,16 +39,26 @@ export const contentStyle = style({
 export const headerStyle = style({
     backgroundColor: colors.grayExtraLight,
     borderBottom: `1px solid ${colors.grayLight}`,
+    selectors: {
+        '&::before': {
+            height: `${0.375 * gridSize}px`,
+            backgroundColor: colors.yellow,
+            content: '""',
+            display: 'block',
+            width: '100%',
+        },
+    },
 });
 
 export const navigationMenuStyle = style({
     alignItems: 'center',
     display: 'flex',
+    justifyContent: 'space-between',
     fontFamily: fontFamilies.sansSerif,
     fontSize: fontSizes.sm,
     lineHeight: lineHeights.sm,
     overflowX: 'scroll', // Enable scrolling to provide access to all navigation menu items on mobile
-    padding: `${1.5 * gridSize}px 0`,
+    padding: `${2 * gridSize}px ${3 * gridSize}px`,
     '@media': {
         [`screen and (min-width: ${containerDimensions.sm})`]: {
             margin: '0 auto',
@@ -65,31 +79,36 @@ export const baseNavigationLinkStyle = style([
             },
         },
     },
-});
+]);
 
 export const logoLinkStyle = style([
     baseNavigationLinkStyle,
     {
-        alignItems: 'center',
+        alignItems: 'flex-start',
         display: 'flex',
+        marginRight: `${5 * gridSize}px`,
     },
 ]);
 
 export const emojiStyle = style({
-    height: `${2.5 * gridSize}px`,
-    marginRight: `${1.25 * gridSize}px`,
-    width: `${2.5 * gridSize}px`,
+    height: '32px',
+    marginRight: `${1.5 * gridSize}px`,
 });
 
-export const siteNameStyle = style({
-    alignItems: 'center',
-    fontWeight: fontWeights.bold,
+export const siteNameContainerStyle = style({
     whiteSpace: 'nowrap',
 });
 
-export const dimmedSiteNameStyle = style({
+export const nameStyle = style({
+    fontWeight: fontWeights.bold,
+    fontSize: fontSizes.sm,
+});
+
+export const taglineStyle = style({
     fontWeight: fontWeights.light,
     color: colors.grayMedium,
+    fontSize: fontSizes.xs,
+    marginTop: `${0.375 * gridSize}px`,
 });
 
 export const listStyle = style({
@@ -98,7 +117,6 @@ export const listStyle = style({
     justifyContent: 'flex-end',
     margin: 0,
     paddingLeft: 0,
-    width: '100%',
 });
 
 export const listItemStyle = style({

@@ -8,13 +8,15 @@ import {
     navigationMenuStyle,
     logoLinkStyle,
     emojiStyle,
-    siteNameStyle,
+    siteNameContainerStyle,
     listStyle,
     listItemStyle,
     baseNavigationLinkStyle,
-    dimmedSiteNameStyle,
+    taglineStyle,
+    nameStyle,
 } from './layout.css';
-import engineerEmojiSrc from '../assets/1f468-200d-1f4bb.svg';
+import engineerEmojiSrc from '../assets/engineer.svg';
+import { srOnlyStyle } from '../styles/common.css';
 
 interface Props {
     children: React.ReactNode;
@@ -30,8 +32,11 @@ export const Layout: React.FunctionComponent<Props> = ({ children }) => (
             <nav className={navigationMenuStyle}>
                 <Link className={logoLinkStyle} to="/" data-testid="navigation-logo">
                     <img className={emojiStyle} src={engineerEmojiSrc} alt="" data-testid="navigation-logo-image" />
-                    <span className={siteNameStyle} data-testid="navigation-logo-title">
-                        fedknu<span className={dimmedSiteNameStyle}>.com</span>
+                    <span className={siteNameContainerStyle} data-testid="navigation-logo-title">
+                        <div className={nameStyle}>
+                            F. Knüssel<span className={srOnlyStyle}>: </span>
+                        </div>
+                        <div className={taglineStyle}>Frontend Developer</div>
                     </span>
                 </Link>
 

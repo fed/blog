@@ -38,7 +38,7 @@ describe('Layout', () => {
                 .hostNodes();
 
             expect(logoWrapper.prop('href')).toBe('/');
-            expect(logoWrapper.find('[data-testid="navigation-logo-title"]').text()).toBe('fedknu.com');
+            expect(logoWrapper.find('[data-testid="navigation-logo-title"]').text()).toBe('F. Knüssel: Frontend Developer');
             expect(logoWrapper.find('[data-testid="navigation-logo-image"]').props()).toMatchObject({ src: 'test-file-stub', alt: '' });
         });
 
