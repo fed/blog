@@ -52,6 +52,16 @@ export const Layout: React.FunctionComponent<Props> = ({ children }) => (
                         </Link>
                     </li>
                     <li className={listItemStyle}>
+                        <Link className={baseNavigationLinkStyle} to="/now" data-testid="layout-navigation-link">
+                            Now
+                        </Link>
+                    </li>
+                    <li className={listItemStyle}>
+                        <Link className={baseNavigationLinkStyle} to="/colophon" data-testid="layout-navigation-link">
+                            Colophon
+                        </Link>
+                    </li>
+                    <li className={listItemStyle}>
                         <a className={baseNavigationLinkStyle} href="https://github.com/fed" data-testid="layout-navigation-link">
                             GitHub
                         </a>

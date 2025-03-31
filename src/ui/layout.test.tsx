@@ -49,14 +49,19 @@ describe('Layout', () => {
                 </Layout>,
             );
 
-            expect(wrapper.find('[data-testid="layout-navigation-link"]')).toHaveLength(4);
+            expect(wrapper.find('[data-testid="layout-navigation-link"]')).toHaveLength(6);
             expect(wrapper.find('[data-testid="layout-navigation-link"]').at(0).props()).toMatchObject({ to: '/about', children: 'About' });
             expect(wrapper.find('[data-testid="layout-navigation-link"]').at(1).props()).toMatchObject({ to: '/', children: 'Blog' });
-            expect(wrapper.find('[data-testid="layout-navigation-link"]').at(2).props()).toMatchObject({
+            expect(wrapper.find('[data-testid="layout-navigation-link"]').at(2).props()).toMatchObject({ to: '/now', children: 'Now' });
+            expect(wrapper.find('[data-testid="layout-navigation-link"]').at(3).props()).toMatchObject({
+                to: '/colophon',
+                children: 'Colophon',
+            });
+            expect(wrapper.find('[data-testid="layout-navigation-link"]').at(4).props()).toMatchObject({
                 href: 'https://github.com/fed',
                 children: 'GitHub',
             });
-            expect(wrapper.find('[data-testid="layout-navigation-link"]').at(3).props()).toMatchObject({
+            expect(wrapper.find('[data-testid="layout-navigation-link"]').at(5).props()).toMatchObject({
                 children: 'RSS',
                 href: '/rss.xml',
             });
