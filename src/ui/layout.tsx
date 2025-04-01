@@ -12,6 +12,7 @@ import {
     listStyle,
     listItemStyle,
     baseNavigationLinkStyle,
+    activeNavigationLinkStyle,
     taglineStyle,
     nameStyle,
 } from './layout.css';
@@ -42,22 +43,42 @@ export const Layout: React.FunctionComponent<Props> = ({ children }) => (
 
                 <ul className={listStyle}>
                     <li className={listItemStyle}>
-                        <Link className={baseNavigationLinkStyle} to="/about" data-testid="layout-navigation-link">
+                        <Link
+                            to="/about"
+                            className={baseNavigationLinkStyle}
+                            activeClassName={activeNavigationLinkStyle}
+                            data-testid="layout-navigation-link"
+                        >
                             About
                         </Link>
                     </li>
                     <li className={listItemStyle}>
-                        <Link className={baseNavigationLinkStyle} to="/" data-testid="layout-navigation-link">
+                        <Link
+                            to="/"
+                            className={baseNavigationLinkStyle}
+                            activeClassName={activeNavigationLinkStyle}
+                            data-testid="layout-navigation-link"
+                        >
                             Blog
                         </Link>
                     </li>
                     <li className={listItemStyle}>
-                        <Link className={baseNavigationLinkStyle} to="/now" data-testid="layout-navigation-link">
+                        <Link
+                            to="/now"
+                            className={baseNavigationLinkStyle}
+                            activeClassName={activeNavigationLinkStyle}
+                            data-testid="layout-navigation-link"
+                        >
                             Now
                         </Link>
                     </li>
                     <li className={listItemStyle}>
-                        <Link className={baseNavigationLinkStyle} to="/colophon" data-testid="layout-navigation-link">
+                        <Link
+                            to="/colophon"
+                            className={baseNavigationLinkStyle}
+                            activeClassName={activeNavigationLinkStyle}
+                            data-testid="layout-navigation-link"
+                        >
                             Colophon
                         </Link>
                     </li>

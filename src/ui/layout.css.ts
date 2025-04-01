@@ -68,6 +68,13 @@ export const navigationMenuStyle = style({
     },
 });
 
+const underlinedLinkStyleImpl = {
+    content: '""',
+    display: 'block',
+    height: `${0.25 * gridSize}px`,
+    background: 'currentColor',
+};
+
 export const baseNavigationLinkStyle = style([
     baseFocusStyle,
     {
@@ -75,12 +82,9 @@ export const baseNavigationLinkStyle = style([
         textDecoration: 'none',
         selectors: {
             '&::after': {
-                content: '""',
-                display: 'block',
-                width: 0,
-                height: `${0.25 * gridSize}px`,
-                background: 'currentColor',
+                ...underlinedLinkStyleImpl,
                 transition: 'width .3s',
+                width: 0,
             },
             '&:hover::after': {
                 width: '100%',
@@ -88,6 +92,15 @@ export const baseNavigationLinkStyle = style([
         },
     },
 ]);
+
+export const activeNavigationLinkStyle = style({
+    selectors: {
+        '&::after': {
+            ...underlinedLinkStyleImpl,
+            width: '100%',
+        },
+    },
+});
 
 export const logoLinkStyle = style([
     baseNavigationLinkStyle,
