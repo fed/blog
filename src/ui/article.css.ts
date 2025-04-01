@@ -61,6 +61,15 @@ globalStyle(
         margin: `${6.25 * gridSize}px 0 0`,
     },
 );
+globalStyle(`${markdownStyle} h1`, {
+    fontSize: fontSizes.xl,
+});
+globalStyle(`${markdownStyle} h2`, {
+    fontSize: fontSizes.lg,
+});
+globalStyle(`${markdownStyle} h3`, {
+    fontSize: fontSizes.md,
+});
 
 // Bold text
 globalStyle(`${markdownStyle} b, ${markdownStyle} strong`, {
