@@ -74,8 +74,16 @@ export const baseNavigationLinkStyle = style([
         color: colors.navy,
         textDecoration: 'none',
         selectors: {
-            '&:hover': {
-                textDecoration: 'underline',
+            '&::after': {
+                content: '""',
+                display: 'block',
+                width: 0,
+                height: `${0.25 * gridSize}px`,
+                background: 'currentColor',
+                transition: 'width .3s',
+            },
+            '&:hover::after': {
+                width: '100%',
             },
         },
     },
