@@ -94,7 +94,7 @@ change over time.
 
 ### Security
 
-- [Bitwarden](https://bitwarden.com) is my password manager of choice. It works well across devices and have never had any problems with it.
+- [Bitwarden](https://bitwarden.com) is my preferred password manager. It works well across devices and have never had any problems with it.
 
 - [Duo](https://duo.com) is my 2FA client, and it runs only on my phone.
 
@@ -105,8 +105,8 @@ change over time.
 - [Goodreads](https://goodreads.com) helps me track books I've already read or those I want to read. The UI is a bit dated and cluttered,
   but it gets the job done.
 
-- [Instapaper](https://instapaper.com) is my "read later" service of choice. Its UI is quite simple and minimal, and it works well for what
-  I need it for.
+- [Instapaper](https://instapaper.com) is my "read later" service, and I use it all the time to keep track of the articles/pages/blog posts
+  I want to get to at some point. Its UI is quite simple and minimal, and it works well for what I need it for.
 
 - [Anki](https://apps.ankiweb.net) for creating and reviewing flashcards. I mainly use this tool for documenting vocabulary and grammar when
   learning a new language.
@@ -138,13 +138,17 @@ change over time.
 
 ## Away from work
 
-I try to stay away from my laptop after working hours or during weekends.
+I try to stay away from my laptop after working hours and during weekends.
 
 I always keep a notepad close for journalling, doodling and brain dumping either when I'm on the go or throughout the day when I'm at home.
 
-I've got a Kindle where I read my books, which is also great for travelling, but lately I've been making use of my local library which is a
-great way to enjoy physical books without the extra clutter.
+I've got an old Kindle I use to read my ebooks, which is also great for travelling, but lately I've been making use of my local library
+which is a great way to enjoy physical books without the extra clutter.
 
 When I'm travelling I usually take my iPad with me. Depending on how much space I've got, I also take my
 [Logitech K380 bluetooth keyboard](https://logitech.com/en-au/shop/p/k380-multi-device.920-011145) as it's much easier to write with than
 the on-screen keyboard.
+
+∎
+
+**Last updated:** April 2025
