@@ -1,33 +1,46 @@
 import { style } from '@vanilla-extract/css';
 
 import { baseFocusStyle } from '../styles/common.css';
-import { gridSize, colors, fontFamilies, fontSizes, containerDimensions, fontWeights, lineHeights } from '../styles/constants';
+import {
+    gridSize,
+    colors,
+    fontFamilies,
+    fontSizes,
+    containerDimensions,
+    fontWeights,
+    lineHeights,
+    borderRadius,
+} from '../styles/constants';
 
 const skipLinkHeight = 6.25 * gridSize;
 const skipLinkMargin = gridSize;
 
-export const skipLinkStyle = style({
+export const skipLinkContainerStyle = style({
     alignItems: 'center',
     backgroundColor: colors.pink,
-    color: colors.white,
-    display: 'flex',
-    fontFamily: fontFamilies.sansSerif,
-    fontSize: fontSizes.sm,
+    display: 'inline-flex',
+    borderRadius: borderRadius.default,
     height: `${skipLinkHeight}px`,
     left: 0,
     padding: `0 ${2 * gridSize}px`,
     position: 'fixed',
-    textDecoration: 'none',
     top: 0,
     transform: `translateY(-${skipLinkHeight + skipLinkMargin}px)`,
     zIndex: 10,
     margin: `${skipLinkMargin}px`,
-    outlineOffset: `${0.25 * gridSize}px`,
     selectors: {
-        '&:focus': {
+        '&:has(> a:focus)': {
             transform: 'translateY(0)',
         },
     },
+});
+
+export const skipLinkStyle = style({
+    color: colors.white,
+    fontFamily: fontFamilies.sansSerif,
+    fontSize: fontSizes.sm,
+    fontWeight: fontWeights.light,
+    outlineOffset: `${0.5 * gridSize}px`,
 });
 
 export const contentStyle = style({

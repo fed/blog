@@ -12,6 +12,7 @@ describe('Layout', () => {
                 </Layout>,
             );
 
+            expect(wrapper.find('[data-testid="layout-skip-link-container"]').exists()).toBe(true);
             expect(wrapper.find('[data-testid="layout-skip-link"]').exists()).toBe(true);
         });
 

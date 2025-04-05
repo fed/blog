@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 import {
+    skipLinkContainerStyle,
     skipLinkStyle,
     contentStyle,
     headerStyle,
@@ -25,9 +26,11 @@ interface Props {
 
 export const Layout: React.FunctionComponent<Props> = ({ children }) => (
     <>
-        <a className={skipLinkStyle} href="#main" data-testid="layout-skip-link">
-            Skip to main content
-        </a>
+        <span className={skipLinkContainerStyle} data-testid="layout-skip-link-container">
+            <a className={skipLinkStyle} href="#main" data-testid="layout-skip-link">
+                Skip to main content
+            </a>
+        </span>
 
         <header className={headerStyle}>
             <nav className={navigationMenuStyle}>
