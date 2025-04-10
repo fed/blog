@@ -1,5 +1,5 @@
 ---
-title: Interacting with links and buttons
+title: Choosing between links and buttons
 date: 2024-03-05
 spoiler:
     A discussion on the purpose, semantics, states and default behaviours of buttons and links, and how choosing the wrong one can impact
