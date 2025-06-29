@@ -15,8 +15,8 @@ import { CategoryId } from '../ui/types';
 export const categories = [
     {
         id: CategoryId.FRP,
-        title: 'Functional Reactive Programming',
-        description: 'Functional Reactive Programming with Bacon.js and RxJS.',
+        title: 'Functional reactive programming',
+        description: 'Functional reactive programming with Bacon.js and RxJS.',
     },
     {
         id: CategoryId.JAVASCRIPT,
@@ -24,13 +24,18 @@ export const categories = [
         description: '',
     },
     {
-        id: CategoryId.DECLARATIVE,
-        title: 'Declarative UIs',
+        id: CategoryId.REACT,
+        title: 'The React ecosystem',
         description: 'Thoughts about the React ecosystem, mostly on building declarative UIs and handling state.',
     },
     {
+        id: CategoryId.ELM,
+        title: 'Elm',
+        description: '',
+    },
+    {
         id: CategoryId.TESTING,
-        title: 'Automated Testing',
+        title: 'Automated testing',
         description: 'Some notes on writing automated unit, integration and end-to-end tests.',
     },
     {
@@ -40,7 +45,17 @@ export const categories = [
     },
     {
         id: CategoryId.DOM,
-        title: 'DOM & Web APIs',
+        title: 'DOM & web APIs',
+        description: '',
+    },
+    {
+        id: CategoryId.SWE,
+        title: 'Software engineering',
+        description: '',
+    },
+    {
+        id: CategoryId.TOOLS,
+        title: 'Tools',
         description: '',
     },
     {

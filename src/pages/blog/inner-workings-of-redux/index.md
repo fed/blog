@@ -3,7 +3,7 @@ title: A look at the inner workings of Redux
 date: 2017-02-01
 spoiler:
     Let's try to understand what's really going on under the hood when we use Redux by implementing a simplified version of it from scratch.
-category: declarative
+category: react
 ---
 
 This article is not about explaining how to bring Redux into your own React application, there are heaps of tutorials touching on that
@@ -42,13 +42,13 @@ This is the rough flow proposed by Redux:
 
 ## State Tree
 
--   Redux is a (predictable) state container for our application, and the state tree is the **minimum representation of our application
-    state** at any given time.
--   There is **only one state tree** that holds the state for the whole application. This means there's a **single source of truth** for our
-    data/state.
--   The state tree lives within the application store. More on this later.
--   The state tree is **read only**, meaning we cannot modify or write to it **directly**. The only way to change it is by dispatching
-    actions.
+- Redux is a (predictable) state container for our application, and the state tree is the **minimum representation of our application
+  state** at any given time.
+- There is **only one state tree** that holds the state for the whole application. This means there's a **single source of truth** for our
+  data/state.
+- The state tree lives within the application store. More on this later.
+- The state tree is **read only**, meaning we cannot modify or write to it **directly**. The only way to change it is by dispatching
+  actions.
 
 ## Actions
 
@@ -185,13 +185,13 @@ function createStore(reducer) {
 
 Let's briefly go through what's going on here:
 
--   **we've got two private variables:** `state` which holds our state tree, and `listeners` which is an array that keeps track of all of
-    the callbacks we need to run when our state tree changes.
--   **we've got three functions which we expose:** first one is `getState()` which returns the current state tree; second one is
-    `dispatch(action)` which allows us to trigger actions in order to update the application state; and finally `subscribe(callback)` which
-    allows us to register observers who will get notified whenever the state tree changes.
--   **we dispatch an `init` action**: when a store is created, an initialisation action is dispatched in order to have the state tree
-    populated with the initial values set on each of our reducers. The `@@redux` prefix indicates system actions triggered by Redux itself.
+- **we've got two private variables:** `state` which holds our state tree, and `listeners` which is an array that keeps track of all of the
+  callbacks we need to run when our state tree changes.
+- **we've got three functions which we expose:** first one is `getState()` which returns the current state tree; second one is
+  `dispatch(action)` which allows us to trigger actions in order to update the application state; and finally `subscribe(callback)` which
+  allows us to register observers who will get notified whenever the state tree changes.
+- **we dispatch an `init` action**: when a store is created, an initialisation action is dispatched in order to have the state tree
+  populated with the initial values set on each of our reducers. The `@@redux` prefix indicates system actions triggered by Redux itself.
 
 ## Reducer composition pattern
 
@@ -310,25 +310,25 @@ We have been talking about presentational and container components. Here's a bri
 
 ### Presentational components:
 
--   Are concerned with how things look.
--   Also referred to as “dumb components” as they only display data.
--   Usually have DOM markup and styles of their own.
--   Have no dependencies on the rest of the app, such as Redux actions or stores.
--   Don't specify how data is loaded or mutated.
--   Receive data and callbacks exclusively via props.
--   Rarely have state of their own, and when they do it's just UI state rather than actual data, for instance something like “the menu is
-    collapsed or expanded” for an accordion component.
--   Can be written as **functional components** unless they need state, lifecycle hooks, access to `ref` or performance optimisations.
--   May contain both presentational and container components that can be rendered via `this.props.children`.
+- Are concerned with how things look.
+- Also referred to as “dumb components” as they only display data.
+- Usually have DOM markup and styles of their own.
+- Have no dependencies on the rest of the app, such as Redux actions or stores.
+- Don't specify how data is loaded or mutated.
+- Receive data and callbacks exclusively via props.
+- Rarely have state of their own, and when they do it's just UI state rather than actual data, for instance something like “the menu is
+  collapsed or expanded” for an accordion component.
+- Can be written as **functional components** unless they need state, lifecycle hooks, access to `ref` or performance optimisations.
+- May contain both presentational and container components that can be rendered via `this.props.children`.
 
 ### Container Components:
 
--   Are mostly concerned with how things work.
--   Also referred to as “smart components” as they can trigger state mutations by dispatching actions.
--   Don't usually have much DOM markup/styles of their own except for a few wrapping divs.
--   Provide data and behaviour (callbacks) to presentational components.
--   Are often stateful, as they tend to serve as data sources.
--   Can contain both presentational and container components.
+- Are mostly concerned with how things work.
+- Also referred to as “smart components” as they can trigger state mutations by dispatching actions.
+- Don't usually have much DOM markup/styles of their own except for a few wrapping divs.
+- Provide data and behaviour (callbacks) to presentational components.
+- Are often stateful, as they tend to serve as data sources.
+- Can contain both presentational and container components.
 
 Now, **when should we introduce new containers?** As a rule of thumb, start building your app exclusively with presentational components.
 Eventually you'll realise that you are passing down too many props through intermediate components. When you notice that there are
@@ -414,8 +414,8 @@ sort of standard solution. They worked on a package called [react-redux](https:/
 React bindings for Redux. This means this library provides all of the tools we need to integrate our React app with Redux, particularly
 these two:
 
--   `<Provider>`, a React component
--   `connect`, a higher-order React component (HOC)
+- `<Provider>`, a React component
+- `connect`, a higher-order React component (HOC)
 
 Just a side note about why we need two different projects, instead of having these live within the Redux package. Even though Redux was
 built with React in mind, it's actually a view-layer agnostic state management solution. People are using Redux with
@@ -523,24 +523,24 @@ export function connect(mapStateToProps, mapDispatchToProps) {
 
 Some notes on this implementation:
 
--   `this.forceUpdate()` makes the component re-render itself whenever the state tree changes. As noted
-    [here on the React docs](https://facebook.github.io/react/docs/react-component.html#forceupdate), `forceUpdate` is a (_discouraged_) way
-    to manually trigger the `render` method on a component.
--   We're well aware that the store's `subscribe` method returns an unsubscribe function. Here we are subscribing to the store changes on
-    `componentDidMount` and unregistering our component from the list of listeners whenever the component gets unmounted (that is, within
-    the `componentWillUnmount` lifecycle method).
--   The HOC renders our component with its own props _plus_ all of the additional props calculated from the Redux store: data and callbacks.
+- `this.forceUpdate()` makes the component re-render itself whenever the state tree changes. As noted
+  [here on the React docs](https://facebook.github.io/react/docs/react-component.html#forceupdate), `forceUpdate` is a (_discouraged_) way
+  to manually trigger the `render` method on a component.
+- We're well aware that the store's `subscribe` method returns an unsubscribe function. Here we are subscribing to the store changes on
+  `componentDidMount` and unregistering our component from the list of listeners whenever the component gets unmounted (that is, within the
+  `componentWillUnmount` lifecycle method).
+- The HOC renders our component with its own props _plus_ all of the additional props calculated from the Redux store: data and callbacks.
 
 ## `mapStateToProps` and `mapDispatchToProps`
 
 `connect` returns a container component whose props will be the result of merging the objects returned from `mapStateToProps` and
 `mapDispatchToProps` together with its own props.
 
--   `mapStateToProps` is a function that receives `store.getState()` (that is, the global state) as a param and returns a configuration
-    object used to map the Redux state tree into props our component will receive. The main idea behind `mapStateToProps` is to **isolate
-    which parts of the overall state this component needs**.
--   `mapDispatchToProps` is also a function that receives `store.dispatch` as an argument and returns a configuration object used to
-    determine which callback prop dispatches which Redux action.
+- `mapStateToProps` is a function that receives `store.getState()` (that is, the global state) as a param and returns a configuration object
+  used to map the Redux state tree into props our component will receive. The main idea behind `mapStateToProps` is to **isolate which parts
+  of the overall state this component needs**.
+- `mapDispatchToProps` is also a function that receives `store.dispatch` as an argument and returns a configuration object used to determine
+  which callback prop dispatches which Redux action.
 
 Here's a simple example to make sense of these two functions:
 
@@ -563,9 +563,9 @@ export connect(mapStateToProps, mapDispatchToProps)(Counter);
 
 This means our container component will have access to:
 
--   `this.props.count`
--   `this.props.increment()`
--   `this.props.decrement()`
+- `this.props.count`
+- `this.props.increment()`
+- `this.props.decrement()`
 
 along with its other own props.
 

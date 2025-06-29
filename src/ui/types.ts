@@ -1,11 +1,14 @@
 export enum CategoryId {
-    GENERAL = 'general',
-    DOM = 'dom',
-    JAVASCRIPT = 'javascript',
-    TESTING = 'testing',
     ACCESSIBILITY = 'accessibility',
-    DECLARATIVE = 'declarative',
+    DOM = 'dom',
+    ELM = 'elm',
     FRP = 'frp',
+    GENERAL = 'general',
+    JAVASCRIPT = 'javascript',
+    REACT = 'react',
+    SWE = 'swe',
+    TESTING = 'testing',
+    TOOLS = 'tools',
 }
 
 export interface Post {

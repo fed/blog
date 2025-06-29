@@ -2,7 +2,7 @@
 title: Frontend devtools
 date: 2021-11-28
 spoiler:
-category: general
+category: tools
 draft: true
 ---
 

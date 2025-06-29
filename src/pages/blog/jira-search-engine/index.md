@@ -2,7 +2,7 @@
 title: Jira search engine in your browser
 date: 2020-04-21
 spoiler: Instructions on how to configure Chrome to allow searching for Jira tickets from the URL bar.
-category: general
+category: tools
 ---
 
 Here's how you can add the ability to search and directly access Jira tickets from within your browser's URL bar.

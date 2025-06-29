@@ -2,7 +2,7 @@
 title: Code reviewing checklist
 date: 2020-03-12
 spoiler: Thoughts on what I consider to be important to look out for when doing code reviews.
-category: general
+category: swe
 ---
 
 Here's a brief and high level description of the things that I usually try to look out for when reviewing someone else's frontend code. Just
