@@ -9,7 +9,7 @@ const base = style({
     fontFamily: fontFamilies.sansSerif,
     fontSize: fontSizes.xxs,
     lineHeight: lineHeights.sm,
-    padding: `${0.5 * gridSize}px ${0.625 * gridSize}px ${0.25 * gridSize}px`,
+    padding: `${0.5 * gridSize}px ${0.75 * gridSize}px ${0.375 * gridSize}px`,
     textTransform: 'uppercase',
     whiteSpace: 'nowrap',
 });

@@ -10,6 +10,6 @@ export const publicationDateStyle = style({
     color: colors.grayMedium,
     fontFamily: fontFamilies.sansSerif,
     fontSize: fontSizes.xs,
-    marginRight: `${1.25 * gridSize}px`,
+    marginRight: `${1.5 * gridSize}px`,
     textTransform: 'uppercase',
 });

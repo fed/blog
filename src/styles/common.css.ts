@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css';
 
-import { colors, fontFamilies, fontSizes, fontWeights, lineHeights, borderRadius } from './constants';
+import { colors, fontFamilies, fontSizes, fontWeights, lineHeights, borderRadius, gridSize } from './constants';
 
 // The style definition (e.g. baseHeadingStyle) and its corresponding CSS declaration (e.g. baseHeadingStyleImpl)
 // are declared separately because unfortunately when declaring global styles (as in the markdown.css.ts file)
@@ -10,9 +10,17 @@ export const baseHeadingStyleImpl = {
     color: colors.grayDark,
     fontFamily: fontFamilies.sansSerif,
     lineHeight: lineHeights.md,
+    fontWeight: fontWeights.bold,
 };
 
 export const baseHeadingStyle = style(baseHeadingStyleImpl);
+
+export const pageMainHeadingStyle = style([
+    baseHeadingStyle,
+    {
+        margin: `0 0 ${1.25 * gridSize}px 0`,
+    },
+]);
 
 export const baseParagraphStyleImpl = {
     color: colors.grayDark,

@@ -1,13 +1,13 @@
 import { style, globalStyle } from '@vanilla-extract/css';
 
 import {
-    baseHeadingStyle,
     baseParagraphStyleImpl,
     baseHeadingStyleImpl,
     baseLinkStyleImpl,
     baseLinkHoverStyleImpl,
     baseFocusStyleImpl,
     baseFocusHoverStyleImpl,
+    pageMainHeadingStyle,
 } from '../styles/common.css';
 import { colors, fontFamilies, fontSizes, lineHeights, fontWeights, gridSize, borderRadius } from '../styles/constants';
 
@@ -16,13 +16,7 @@ export const headerStyle = style({
     margin: `${3 * gridSize}px 0 ${7.5 * gridSize}px`,
 });
 
-export const titleStyle = style([
-    baseHeadingStyle,
-    {
-        margin: `0 0 ${1.25 * gridSize}px 0`,
-        fontWeight: fontWeights.bold,
-    },
-]);
+export const titleStyle = pageMainHeadingStyle;
 
 export const markdownStyle = style({});
 
@@ -57,7 +51,6 @@ globalStyle(
     `${markdownStyle} h1, ${markdownStyle} h2, ${markdownStyle} h3, ${markdownStyle} h4, ${markdownStyle} h5, ${markdownStyle} h6`,
     {
         ...baseHeadingStyleImpl,
-        fontWeight: fontWeights.bold,
         margin: `${6.25 * gridSize}px 0 0`,
     },
 );
