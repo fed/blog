@@ -7,7 +7,7 @@ import {
     baseLinkHoverStyleImpl,
     baseFocusStyleImpl,
     baseFocusHoverStyleImpl,
-    pageMainHeadingStyle,
+    baseHeadingStyle,
 } from '../styles/common.css';
 import { colors, fontFamilies, fontSizes, lineHeights, fontWeights, gridSize, borderRadius } from '../styles/constants';
 
@@ -16,7 +16,13 @@ export const headerStyle = style({
     margin: `${3 * gridSize}px 0 ${7.5 * gridSize}px`,
 });
 
-export const titleStyle = pageMainHeadingStyle;
+export const titleStyle = style([
+    baseHeadingStyle,
+    {
+        fontSize: '2.5rem',
+        margin: `0 0 ${2.5 * gridSize}px 0`,
+    },
+]);
 
 export const markdownStyle = style({});
 

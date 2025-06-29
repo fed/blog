@@ -4,7 +4,6 @@ import React from 'react';
 import { Twemoji } from 'react-emoji-render';
 
 import { Archive } from './archive';
-import { Metadata } from './metadata';
 import { CategoryId } from './types';
 
 const NODES_MOCK = [
@@ -14,7 +13,7 @@ const NODES_MOCK = [
         slug: '/blog/jira-search-engine/',
         spoiler: 'Instructions on how to configure Chrome to allow searching for Jira tickets from the URL bar.',
         date: 'April 21, 2020',
-        categoryId: CategoryId.GENERAL,
+        categoryId: CategoryId.TOOLS,
     },
     {
         id: 'e220a79e-a9e9-57df-b796-43fbe0e8eafc',
@@ -55,32 +54,27 @@ describe('Archive', () => {
         });
 
         describe('for each blog post in the archive', () => {
-            it('renders the Metadata component with the right content', () => {
+            it('renders the publication date', () => {
                 const wrapper = shallow(<Archive posts={NODES_MOCK} />);
 
-                expect(wrapper.find(Metadata).exists()).toBe(true);
-                expect(wrapper.find(Metadata)).toHaveLength(3);
-                expect(wrapper.find(Metadata).at(0).props()).toEqual({ date: 'April 21, 2020', categoryId: 'general', dateOnly: true });
-                expect(wrapper.find(Metadata).at(1).props()).toEqual({ date: 'January 23, 2020', categoryId: 'testing', dateOnly: true });
-                expect(wrapper.find(Metadata).at(2).props()).toEqual({
-                    date: 'October 19, 2019',
-                    categoryId: 'accessibility',
-                    dateOnly: true,
-                });
+                expect(wrapper.find('[data-testid="archive-post-date"]')).toHaveLength(3);
+                expect(wrapper.find('[data-testid="archive-post-date"]').at(0).text()).toBe('(April 21, 2020)');
+                expect(wrapper.find('[data-testid="archive-post-date"]').at(1).text()).toBe('(January 23, 2020)');
+                expect(wrapper.find('[data-testid="archive-post-date"]').at(2).text()).toBe('(October 19, 2019)');
             });
 
             it('renders the right title including emojis', () => {
                 const wrapper = shallow(<Archive posts={NODES_MOCK} />);
 
-                expect(wrapper.find('[data-testid="archive-post-title"]').at(0).find(Twemoji).props()).toEqual({
+                expect(wrapper.find('[data-testid="archive-post"]').at(0).find(Twemoji).props()).toEqual({
                     svg: true,
                     text: 'Jira search engine in your browser',
                 });
-                expect(wrapper.find('[data-testid="archive-post-title"]').at(1).find(Twemoji).props()).toEqual({
+                expect(wrapper.find('[data-testid="archive-post"]').at(1).find(Twemoji).props()).toEqual({
                     svg: true,
                     text: 'Focusing and skipping tests',
                 });
-                expect(wrapper.find('[data-testid="archive-post-title"]').at(2).find(Twemoji).props()).toEqual({
+                expect(wrapper.find('[data-testid="archive-post"]').at(2).find(Twemoji).props()).toEqual({
                     svg: true,
                     text: 'Fixing keyboard navigation for MacOS browsers',
                 });
@@ -89,29 +83,15 @@ describe('Archive', () => {
             it('renders a link pointing to the right URL', () => {
                 const wrapper = shallow(<Archive posts={NODES_MOCK} />);
 
-                expect(wrapper.find('[data-testid="archive-post-title"]').at(0).find(Link).props()).toMatchObject({
+                expect(wrapper.find('[data-testid="archive-post"]').at(0).find(Link).props()).toMatchObject({
                     to: '/blog/jira-search-engine/',
                 });
-                expect(wrapper.find('[data-testid="archive-post-title"]').at(1).find(Link).props()).toMatchObject({
+                expect(wrapper.find('[data-testid="archive-post"]').at(1).find(Link).props()).toMatchObject({
                     to: '/blog/focusing-skipping-tests/',
                 });
-                expect(wrapper.find('[data-testid="archive-post-title"]').at(2).find(Link).props()).toMatchObject({
+                expect(wrapper.find('[data-testid="archive-post"]').at(2).find(Link).props()).toMatchObject({
                     to: '/blog/focusable-elements-macos/',
                 });
-            });
-
-            it('renders the right spoiler', () => {
-                const wrapper = shallow(<Archive posts={NODES_MOCK} />);
-
-                expect(wrapper.find('[data-testid="archive-post-spoiler"]').at(0).text()).toBe(
-                    'Instructions on how to configure Chrome to allow searching for Jira tickets from the URL bar.',
-                );
-                expect(wrapper.find('[data-testid="archive-post-spoiler"]').at(1).text()).toBe(
-                    'Some notes on how to tell your testing framework which tests to run.',
-                );
-                expect(wrapper.find('[data-testid="archive-post-spoiler"]').at(2).text()).toBe(
-                    'Instructions on how to manually enable tabbing through all focusable elements on a page if you are using MacOS.',
-                );
             });
         });
     });

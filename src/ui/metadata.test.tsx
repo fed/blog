@@ -22,7 +22,7 @@ describe('Metadata', () => {
             expect(wrapper.find('[data-testid="metadata-publication-date"]').exists()).toBe(false);
             expect(wrapper.find(Lozenge).exists()).toBe(true);
             expect(wrapper.find(Lozenge).prop('type')).toBe('primary');
-            expect(wrapper.find(Lozenge).prop('children')).toBe('Functional Reactive Programming');
+            expect(wrapper.find(Lozenge).prop('children')).toBe('Functional reactive programming');
         });
     });
 
@@ -46,7 +46,7 @@ describe('Metadata', () => {
             expect(wrapper.find('[data-testid="metadata-publication-date"]').text()).toBe('January 1, 2021');
             expect(wrapper.find(Lozenge).exists()).toBe(true);
             expect(wrapper.find(Lozenge).prop('type')).toBe('primary');
-            expect(wrapper.find(Lozenge).prop('children')).toBe('Functional Reactive Programming');
+            expect(wrapper.find(Lozenge).prop('children')).toBe('Functional reactive programming');
         });
     });
 
