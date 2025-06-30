@@ -8,11 +8,12 @@ import { srOnlyStyle } from '../styles/common.css';
 
 interface Props {
     date?: string;
+    datetime?: string;
     categoryId?: CategoryId;
     dateOnly?: boolean;
 }
 
-export const Metadata: React.FunctionComponent<Props> = ({ date, categoryId, dateOnly = false }) => {
+export const Metadata: React.FunctionComponent<Props> = ({ date, datetime, categoryId, dateOnly = false }) => {
     if (!date && !categoryId) {
         return null;
     }
@@ -26,9 +27,9 @@ export const Metadata: React.FunctionComponent<Props> = ({ date, categoryId, dat
             </span>
             <div className={containerStyle} aria-hidden="true">
                 {date ? (
-                    <span className={publicationDateStyle} data-testid="metadata-publication-date">
+                    <time dateTime={datetime} className={publicationDateStyle} data-testid="metadata-publication-date">
                         {date}
-                    </span>
+                    </time>
                 ) : null}
                 {!dateOnly && category?.title ? <Lozenge appearance={dateOnly ? 'default' : 'primary'}>{category.title}</Lozenge> : null}
             </div>

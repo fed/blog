@@ -14,13 +14,13 @@ interface Props {
     inlineHeading?: boolean;
 }
 
-export const Article: React.FunctionComponent<Props> = ({ title, date, categoryId, children, inlineHeading = false }) => (
+export const Article: React.FunctionComponent<Props> = ({ title, date, datetime, categoryId, children, inlineHeading = false }) => (
     <article>
         <header className={inlineHeading ? undefined : headerStyle}>
             <h1 className={titleStyle}>
                 <Twemoji svg text={title} />
             </h1>
-            <Metadata date={date} categoryId={categoryId} />
+            <Metadata date={date} categoryId={categoryId} datetime={datetime} />
         </header>
         {/* eslint-disable-next-line react/no-danger */}
         <div className={markdownStyle} dangerouslySetInnerHTML={{ __html: children }} data-testid="article-body" />

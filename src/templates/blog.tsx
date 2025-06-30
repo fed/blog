@@ -22,6 +22,7 @@ const BlogTemplate: React.FunctionComponent<Props> = ({ data }) => {
                 <Article
                     title={frontmatter.title}
                     date={frontmatter.date}
+                    datetime={frontmatter.datetime}
                     categoryId={frontmatter.category as CategoryId}
                     inlineHeading={Boolean(frontmatter.inlineHeading)}
                 >
@@ -45,6 +46,7 @@ export const query = graphql`
                 metaTitle
                 spoiler
                 date(formatString: "MMMM DD, YYYY")
+                datetime: date
                 category
                 inlineHeading
             }
