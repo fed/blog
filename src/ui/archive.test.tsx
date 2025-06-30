@@ -12,7 +12,8 @@ const NODES_MOCK = [
         title: 'Jira search engine in your browser',
         slug: '/blog/jira-search-engine/',
         spoiler: 'Instructions on how to configure Chrome to allow searching for Jira tickets from the URL bar.',
-        date: 'April 21, 2020',
+        date: 'Apr 21, 2020',
+        datetime: '2020-04-21T00:00:00.000Z',
         categoryId: CategoryId.TOOLS,
     },
     {
@@ -20,7 +21,8 @@ const NODES_MOCK = [
         title: 'Focusing and skipping tests',
         slug: '/blog/focusing-skipping-tests/',
         spoiler: 'Some notes on how to tell your testing framework which tests to run.',
-        date: 'January 23, 2020',
+        date: 'Jan 23, 2020',
+        datetime: '2020-01-23T00:00:00.000Z',
         categoryId: CategoryId.TESTING,
     },
     {
@@ -28,7 +30,8 @@ const NODES_MOCK = [
         title: 'Fixing keyboard navigation for MacOS browsers',
         slug: '/blog/focusable-elements-macos/',
         spoiler: 'Instructions on how to manually enable tabbing through all focusable elements on a page if you are using MacOS.',
-        date: 'October 19, 2019',
+        date: 'Oct 19, 2019',
+        datetime: '2019-01-09T00:00:00.000Z',
         categoryId: CategoryId.ACCESSIBILITY,
     },
 ];
@@ -58,9 +61,9 @@ describe('Archive', () => {
                 const wrapper = shallow(<Archive posts={NODES_MOCK} />);
 
                 expect(wrapper.find('[data-testid="archive-post-date"]')).toHaveLength(3);
-                expect(wrapper.find('[data-testid="archive-post-date"]').at(0).text()).toBe('(April 21, 2020)');
-                expect(wrapper.find('[data-testid="archive-post-date"]').at(1).text()).toBe('(January 23, 2020)');
-                expect(wrapper.find('[data-testid="archive-post-date"]').at(2).text()).toBe('(October 19, 2019)');
+                expect(wrapper.find('[data-testid="archive-post-date"]').at(0).text()).toBe('Apr 21, 2020');
+                expect(wrapper.find('[data-testid="archive-post-date"]').at(1).text()).toBe('Jan 23, 2020');
+                expect(wrapper.find('[data-testid="archive-post-date"]').at(2).text()).toBe('Oct 19, 2019');
             });
 
             it('renders the right title including emojis', () => {

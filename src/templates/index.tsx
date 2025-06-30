@@ -22,6 +22,7 @@ const IndexTemplate: React.FunctionComponent<Props> = ({ data }) => {
             slug: post.node.fields.slug,
             spoiler: post.node.frontmatter.spoiler,
             date: post.node.frontmatter.date,
+            datetime: post.node.frontmatter.datetime,
             categoryId: post.node.frontmatter.category as CategoryId,
         }));
 
@@ -48,7 +49,8 @@ export const query = graphql`
                         slug
                     }
                     frontmatter {
-                        date(formatString: "MMMM DD, YYYY")
+                        date(formatString: "MMM DD, YYYY")
+                        datetime: date
                         title
                         spoiler
                         category

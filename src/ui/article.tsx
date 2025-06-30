@@ -8,6 +8,7 @@ import { CategoryId } from './types';
 interface Props {
     title: string;
     date?: string;
+    datetime?: string;
     categoryId?: CategoryId;
     children: TrustedHTML;
     inlineHeading?: boolean;

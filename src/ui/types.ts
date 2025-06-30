@@ -18,6 +18,7 @@ export interface Post {
     title: string;
     spoiler: string;
     date: string;
+    datetime: string;
     categoryId: CategoryId;
     slug: string;
 }
