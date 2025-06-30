@@ -21,7 +21,12 @@ export const categories = [
     {
         id: CategoryId.JAVASCRIPT,
         title: 'JavaScript',
-        description: '',
+        description: 'Modern JavaScript features, patterns, and best practices.',
+    },
+    {
+        id: CategoryId.CSS,
+        title: 'CSS',
+        description: 'Styling techniques, layout methods, and CSS architecture.',
     },
     {
         id: CategoryId.REACT,
@@ -31,32 +36,37 @@ export const categories = [
     {
         id: CategoryId.ELM,
         title: 'Elm',
-        description: '',
+        description: 'Functional programming for the web with Elm.',
     },
     {
         id: CategoryId.TESTING,
         title: 'Automated testing',
-        description: 'Some notes on writing automated unit, integration and end-to-end tests.',
+        description: 'Some notes on writing automated unit, integration, end-to-end, visual regression and contract tests.',
     },
     {
         id: CategoryId.ACCESSIBILITY,
         title: 'Accessibility',
-        description: '',
+        description: 'Building inclusive web experiences for all users.',
     },
     {
         id: CategoryId.DOM,
-        title: 'DOM & web APIs',
-        description: '',
+        title: 'DOM & Web APIs',
+        description: 'Working with the DOM, browser APIs, and web platform features.',
     },
     {
         id: CategoryId.SWE,
         title: 'Software engineering',
-        description: '',
+        description: 'Software design principles, architecture, and engineering practices.',
+    },
+    {
+        id: CategoryId.MODELLING,
+        title: 'Knowledge modelling',
+        description: 'Representing and structuring knowledge and domain concepts.',
     },
     {
         id: CategoryId.TOOLS,
         title: 'Tools',
-        description: '',
+        description: 'Development tools, workflows, and productivity tips.',
     },
     {
         id: CategoryId.GENERAL,
