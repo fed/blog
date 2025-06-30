@@ -4,7 +4,6 @@ import { Twemoji } from 'react-emoji-render';
 
 import { articleStyle, dateStyle, articleList, titleStyle } from './archive.css';
 import { Post } from './types';
-import { baseLinkStyle } from '../styles/common.css';
 import { baseLinkStyle, baseParagraphStyle } from '../styles/common.css';
 
 interface Props {
@@ -36,8 +35,8 @@ export const Archive: React.FunctionComponent<Props> = ({ posts }) => {
                 Blog posts
             </h1>
             <p className={baseParagraphStyle}>
-                Fresh content sorted by date, so you'll always see what's new at the top. You can also subscribe to the RSS feed for
-                automatic updates.
+                Fresh content sorted by date, so you&apos;ll always see what&apos;s new at the top. You can also subscribe to the RSS feed
+                for automatic updates.
             </p>
             {content}
         </>
