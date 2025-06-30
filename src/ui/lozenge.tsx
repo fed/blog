@@ -2,13 +2,13 @@ import React from 'react';
 
 import { lozenge } from './lozenge.css';
 
-type LozengeType = 'default' | 'primary' | 'success' | 'error' | 'warning' | 'info';
+type LozengeAppearance = 'default' | 'primary' | 'success' | 'error' | 'warning' | 'info';
 
 interface Props {
     children: React.ReactNode;
-    type?: LozengeType;
+    appearance?: LozengeAppearance;
 }
 
-export const Lozenge: React.FunctionComponent<Props> = ({ children, type = 'default' }) => (
-    <span className={lozenge[type]}>{children}</span>
+export const Lozenge: React.FunctionComponent<Props> = ({ children, appearance = 'default' }) => (
+    <span className={lozenge[appearance]}>{children}</span>
 );

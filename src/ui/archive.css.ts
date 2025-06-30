@@ -3,9 +3,10 @@ import { style } from '@vanilla-extract/css';
 import { baseHeadingStyle } from '../styles/common.css';
 import { gridSize, fontSizes, colors, fontFamilies, fontWeights } from '../styles/constants';
 
-export const headingStyle = style([
+export const titleStyle = style([
     baseHeadingStyle,
     {
+        fontSize: fontSizes.xxl,
         margin: `0 0 ${2.5 * gridSize}px 0`,
     },
 ]);

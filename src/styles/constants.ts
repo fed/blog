@@ -31,6 +31,7 @@ export const fontSizes = {
     md: '22px',
     lg: '26px',
     xl: '32px',
+    xxl: '40px',
 };
 
 export const fontWeights = {

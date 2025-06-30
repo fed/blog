@@ -19,7 +19,7 @@ export const headerStyle = style({
 export const titleStyle = style([
     baseHeadingStyle,
     {
-        fontSize: '2.5rem',
+        fontSize: fontSizes.xxl,
         margin: `0 0 ${2.5 * gridSize}px 0`,
     },
 ]);

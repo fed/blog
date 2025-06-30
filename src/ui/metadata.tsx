@@ -30,7 +30,7 @@ export const Metadata: React.FunctionComponent<Props> = ({ date, categoryId, dat
                         {date}
                     </span>
                 ) : null}
-                {!dateOnly && category?.title ? <Lozenge type={dateOnly ? 'default' : 'primary'}>{category.title}</Lozenge> : null}
+                {!dateOnly && category?.title ? <Lozenge appearance={dateOnly ? 'default' : 'primary'}>{category.title}</Lozenge> : null}
             </div>
         </>
     );
