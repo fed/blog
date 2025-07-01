@@ -2,7 +2,7 @@
 title: DOM & BOM revisited
 date: 2017-08-06
 spoiler: Reviewing DOM manipulation and talking to the browser with JavaScript.
-category: dom
+category: web-platform
 ---
 
 Let's go back to the basics and briefly review two important JavaScript concepts: the DOM and the BOM.
@@ -25,47 +25,47 @@ Note how in the example above we've got different node types: most of them are l
 or `Text` instead. The DOM defines different types of nodes which implement different interfaces. Here's a list of the most common node
 types:
 
--   `Document` which is the root node of all XML (HTML) documents.
--   `DocumentType` which represents the document type definition (DTD) used on the page (`doctype` tag)
--   `Element` which represents a tag
--   `Attr` which is a key-value pair representing an attribute for a tag.
--   `Text` which represents the content of a node.
--   `Comment` which represents XML/HTML comments.
+- `Document` which is the root node of all XML (HTML) documents.
+- `DocumentType` which represents the document type definition (DTD) used on the page (`doctype` tag)
+- `Element` which represents a tag
+- `Attr` which is a key-value pair representing an attribute for a tag.
+- `Text` which represents the content of a node.
+- `Comment` which represents XML/HTML comments.
 
 ### The `Node` interface
 
 A `Node` object implements and exposes the following properties and methods. You can find a thorough list
 [on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Node).
 
--   `nodeName`
--   `nodeValue`
--   `nodeType`
--   `ownerDocument`
--   `firstChild`
--   `lastChild`
--   `childNodes`
--   `previousSibling`
--   `nextSibling`
--   `hasChildNodes()`
--   `attributes`
--   `parentNode`
--   `parentElement`
--   `appendChild(node)`
--   `removeChild(node)`
--   `replaceChild(newNode, previousNode)`
--   `insertBefore(newNode, previousNode)`
+- `nodeName`
+- `nodeValue`
+- `nodeType`
+- `ownerDocument`
+- `firstChild`
+- `lastChild`
+- `childNodes`
+- `previousSibling`
+- `nextSibling`
+- `hasChildNodes()`
+- `attributes`
+- `parentNode`
+- `parentElement`
+- `appendChild(node)`
+- `removeChild(node)`
+- `replaceChild(newNode, previousNode)`
+- `insertBefore(newNode, previousNode)`
 
 ### Accessing nodes
 
 The easiest way to get hold of nodes is by referencing them directly using one of the following methods:
 
--   `document.querySelector(selector): Element` where selector is something in the lines of `#some-id`, `.some-classname`, or `tag`. If
-    there are multiple elements matching the selector, you'll only get the first one returned.
--   `document.querySelectorAll(selector): NodeList`
--   `document.getElementById(id: string): Element`
--   `document.getElementsByClassName(classname: string): HTMLCollection`
--   `document.getElementsByTagName(tag: string): HTMLCollection`
--   `document.getElementsByName(name: string): NodeList`
+- `document.querySelector(selector): Element` where selector is something in the lines of `#some-id`, `.some-classname`, or `tag`. If there
+  are multiple elements matching the selector, you'll only get the first one returned.
+- `document.querySelectorAll(selector): NodeList`
+- `document.getElementById(id: string): Element`
+- `document.getElementsByClassName(classname: string): HTMLCollection`
+- `document.getElementsByTagName(tag: string): HTMLCollection`
+- `document.getElementsByName(name: string): NodeList`
 
 We can also use most of these methods (except `getElementById` and `getElementByName`) on any node of type `Element` which acts as the root
 element for our query:
@@ -137,10 +137,10 @@ element.attributes.class.nodeType; // returns 2 = ATTRIBUTE_NODE
 
 We can get, set and remove attributes by using these methods:
 
--   `element.getAttribute('class')`
--   `element.setAttribute('class', 'new-classname')`
--   `element.setAttributeNode(attributeNode)`
--   `element.removeAttribute('class')`
+- `element.getAttribute('class')`
+- `element.setAttribute('class', 'new-classname')`
+- `element.setAttributeNode(attributeNode)`
+- `element.removeAttribute('class')`
 
 The DOM HTML specification allows **accessing and modifying all attributes directly** by assigning new values:
 
@@ -189,10 +189,10 @@ getComputedStyle(image).width; // returns the actual image width
 
 There are different factory methods attached to the document object we can use to create nodes of different types. Most common ones are:
 
--   `document.createElement(tag: string)`: returns a node of type [`Element`](https://developer.mozilla.org/en-US/docs/Web/API/Element)
--   `document.createAttribute(name: string)`: returns a node of type [`Attr`](https://developer.mozilla.org/en-US/docs/Web/API/Attr)
--   `document.createTextNode(text: string)`: returns a node of type [`Text`](https://developer.mozilla.org/en-US/docs/Web/API/Text)
--   `document.createComment(comment: string)`: returns a node of type [`Comment`](https://developer.mozilla.org/en-US/docs/Web/API/Comment)
+- `document.createElement(tag: string)`: returns a node of type [`Element`](https://developer.mozilla.org/en-US/docs/Web/API/Element)
+- `document.createAttribute(name: string)`: returns a node of type [`Attr`](https://developer.mozilla.org/en-US/docs/Web/API/Attr)
+- `document.createTextNode(text: string)`: returns a node of type [`Text`](https://developer.mozilla.org/en-US/docs/Web/API/Text)
+- `document.createComment(comment: string)`: returns a node of type [`Comment`](https://developer.mozilla.org/en-US/docs/Web/API/Comment)
 
 Some examples:
 
@@ -239,18 +239,18 @@ replacedNode === oldElement; // true
 
 There are a bunch of ways for setting a relationship between two nodes:
 
--   `element.append`
--   `element.appendChild`
--   `element.insertBefore`
--   `element.insertAdjacentElement`
+- `element.append`
+- `element.appendChild`
+- `element.insertBefore`
+- `element.insertAdjacentElement`
 
 ### Events
 
 Each HTML element has its own list of supported **events types**. We **listen for events** on an element, and whenever the event is
 triggered we handle it through a function called **event handler**.
 
--   One element can listen and respond to multiple event types.
--   One event type can be handled by multiple elements.
+- One element can listen and respond to multiple event types.
+- One event type can be handled by multiple elements.
 
 You can bind event handlers to elements via the `addEventListener` method. First argument is the event name, second one is the event
 handler:
@@ -280,10 +280,10 @@ on**.
 
 Here's a list with some of the most widely used event types:
 
--   Mouse events: `click`, `dblclick`, `mousedown`, `mouseout`, `mouseover`, `mouseup`, `mousemove`.
--   Keyboard events: `keydown`, `keypress`, `keyup`.
--   HTML events: `load`, `unload`, `abort`, `error`, `resize`, `change`, `submit`, `reset`, `scroll`, `focus`, `blur`.
--   DOM events: `DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`.
+- Mouse events: `click`, `dblclick`, `mousedown`, `mouseout`, `mouseover`, `mouseup`, `mousemove`.
+- Keyboard events: `keydown`, `keypress`, `keyup`.
+- HTML events: `load`, `unload`, `abort`, `error`, `resize`, `change`, `submit`, `reset`, `scroll`, `focus`, `blur`.
+- DOM events: `DOMSubtreeModified`, `DOMNodeInserted`, `DOMNodeRemoved`.
 
 For a more extensive list of event types check out [this link](https://developer.mozilla.org/en-US/docs/Web/Events).
 
@@ -308,7 +308,7 @@ of the window object**.
 
 The `window` global object provides access to:
 
--   properties which provide info on the browser's window:
+- properties which provide info on the browser's window:
 
 ```js
 // outer dimensions
@@ -320,7 +320,7 @@ const innerHeight = window.innerHeight;
 const innerWidth = window.innerWidth;
 ```
 
--   methods for setting timers and to repeatedly call a function:
+- methods for setting timers and to repeatedly call a function:
 
 ```js
 const timeout = setTimeout(callback, delay); // delay in ms
@@ -344,17 +344,17 @@ document.location === window.location; // returns true
 This objects allows for reading and manipulating the URL on the browser's address bar. Here's a list of all of the major properties and
 methods it exposes (a more extensive list can be found [here](https://developer.mozilla.org/en-US/docs/Web/API/Location)):
 
--   `location.hash`
--   `location.host`
--   `location.hostname`
--   `location.href` returns the full URL of the current page. We can also write to this property, causing a redirect to the new value.
--   `location.pathname` returns whatever comes after the hostname.
--   `location.port` returns the port number but only if it's set on the URL.
--   `location.protocol` returns the protocol used to access the page.
--   `location.search` returns whatever comes after the `?` in the URL.
--   `location.assign(url)` navigates to the url passed in as a param.
--   `location.replace(url)` is similar to assign, but the replaced site gets removed from the session history.
--   `location.reload()` which has the same effect as clicking the reload button on our browser.
+- `location.hash`
+- `location.host`
+- `location.hostname`
+- `location.href` returns the full URL of the current page. We can also write to this property, causing a redirect to the new value.
+- `location.pathname` returns whatever comes after the hostname.
+- `location.port` returns the port number but only if it's set on the URL.
+- `location.protocol` returns the protocol used to access the page.
+- `location.search` returns whatever comes after the `?` in the URL.
+- `location.assign(url)` navigates to the url passed in as a param.
+- `location.replace(url)` is similar to assign, but the replaced site gets removed from the session history.
+- `location.reload()` which has the same effect as clicking the reload button on our browser.
 
 More info on the `Location` interface on [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Location).
 
@@ -363,10 +363,10 @@ More info on the `Location` interface on [MDN](https://developer.mozilla.org/en-
 `window.history` allows to manipulate the browser **session history**, that is the pages visited in the tab or frame that the current page
 is loaded in.
 
--   `history.length` returns an integer representing the number of elements in the session history, including the currently loaded page.
--   `history.go(integer)` redirects to the page in the session history identified by its **relative** location to the current page.
--   `history.back(integer)` redirects to the previous page in the session history, same as clicking the browser's Back button.
--   `history.forward(integer)` redirects to the next page in the session history, same as clicking the browser's Forward button.
+- `history.length` returns an integer representing the number of elements in the session history, including the currently loaded page.
+- `history.go(integer)` redirects to the page in the session history identified by its **relative** location to the current page.
+- `history.back(integer)` redirects to the previous page in the session history, same as clicking the browser's Back button.
+- `history.forward(integer)` redirects to the next page in the session history, same as clicking the browser's Forward button.
 
 More info on the `History` interface [here](https://developer.mozilla.org/en-US/docs/Web/API/History).
 
@@ -374,20 +374,20 @@ More info on the `History` interface [here](https://developer.mozilla.org/en-US/
 
 `window.navigator` provides info on the state and identity of the **user agent** or UA (that is, the browser and OS the user is running).
 
--   `navigator.userAgent` returns the user agent for the current browser.
--   `navigator.language` returns a string representing the preferred language of the user, usually the language of the browser UI.
--   `navigator.languages` returns an array of the languages known to the user, sorted by preference: `["en-GB", "en-US", "en"]`
--   `navigator.getBattery()` returns a promise which is resolved into a `BatteryManager` object providing not only information about the
-    system's battery but also some events you can handle to monitor the battery status.
--   `navigator.plugins` returns a list of the plugins installed in the browser.
--   `navigator.onLine` returns a boolean indicating whether the browser is working online.
--   `navigator.geolocation` returns a `Geolocation` object allowing accessing the location of the device.
+- `navigator.userAgent` returns the user agent for the current browser.
+- `navigator.language` returns a string representing the preferred language of the user, usually the language of the browser UI.
+- `navigator.languages` returns an array of the languages known to the user, sorted by preference: `["en-GB", "en-US", "en"]`
+- `navigator.getBattery()` returns a promise which is resolved into a `BatteryManager` object providing not only information about the
+  system's battery but also some events you can handle to monitor the battery status.
+- `navigator.plugins` returns a list of the plugins installed in the browser.
+- `navigator.onLine` returns a boolean indicating whether the browser is working online.
+- `navigator.geolocation` returns a `Geolocation` object allowing accessing the location of the device.
 
 There are also some other properties available we can't always rely on:
 
--   `navigator.appName` should return the browser's name.
--   `navigator.appVersion` should return the browser's version number.
--   `navigator.plaftorm` should return the browser's platform name.
+- `navigator.appName` should return the browser's name.
+- `navigator.appVersion` should return the browser's version number.
+- `navigator.plaftorm` should return the browser's platform name.
 
 That wraps it up for this DOM and BOM high-level overview. Please refer to the MDN site for further and more detailed content. Thanks for
 reading!

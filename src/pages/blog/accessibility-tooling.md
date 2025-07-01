@@ -3,7 +3,6 @@ title: Accessibility tools and resources
 date: 2021-07-25
 spoiler: Links to a handful of tools you might find useful when working on and testing web accessibility.
 category: accessibility
-draft: true
 ---
 
 Here are some links to a handful of tools you might find useful when working on and testing web accessibility.

@@ -1,9 +1,7 @@
 ---
-title: Frontend devtools
+title: Web frontend devtools
 date: 2021-11-28
-spoiler:
 category: tools
-draft: true
 ---
 
 A collection of frontend web development tools and resources.

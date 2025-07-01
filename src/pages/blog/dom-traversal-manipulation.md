@@ -2,7 +2,7 @@
 title: DOM traversal and manipulation
 date: 2018-05-08
 spoiler: A cheatsheet for working with the DOM in Vanilla JS.
-category: dom
+category: web-platform
 ---
 
 This blog contains a summary of the main and most common methods to do DOM traversal and manipulation with
