@@ -26,13 +26,17 @@ export const titleStyle = style([
 
 export const metadataStyle = style({
     margin: `0 0 ${0.625 * gridSize}px`,
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: `${3 * gridSize}px`,
 });
 
 export const publicationDateStyle = style({
     color: colors.grayMedium,
     fontFamily: fontFamilies.sansSerif,
     fontSize: fontSizes.sm,
-    marginRight: `${3 * gridSize}px`,
     textTransform: 'uppercase',
 });
 
