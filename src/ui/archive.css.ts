@@ -44,7 +44,7 @@ export const dateStyle = style({
 export const emptyStateStyle = style([
     baseParagraphStyleImpl,
     {
-        color: colors.pink,
+        color: colors.red,
         fontWeight: fontWeights.semibold,
     },
 ]);

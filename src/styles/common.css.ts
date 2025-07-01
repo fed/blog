@@ -26,7 +26,7 @@ export const baseParagraphStyleImpl = {
 export const baseParagraphStyle = style(baseParagraphStyleImpl);
 
 export const baseFocusStyleImpl = {
-    outline: `${borderRadius.default} solid ${colors.pink}`,
+    outline: `${borderRadius.default} solid ${colors.red}`,
     outlineOffset: '2px',
     borderRadius: '1px',
     borderBottomStyle: 'none' as const,

@@ -17,7 +17,7 @@ const skipLinkMargin = gridSize;
 
 export const skipLinkContainerStyle = style({
     alignItems: 'center',
-    backgroundColor: colors.pink,
+    backgroundColor: colors.red,
     display: 'inline-flex',
     borderRadius: borderRadius.default,
     height: `${skipLinkHeight}px`,
