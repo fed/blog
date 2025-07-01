@@ -7,7 +7,7 @@ import { colors, fontFamilies, fontSizes, fontWeights, lineHeights, borderRadius
 // you need to pass in an object with CSS properties and not a vanilla-extract classname.
 
 export const baseHeadingStyleImpl = {
-    color: colors.grayDark,
+    color: colors.black,
     fontFamily: fontFamilies.sansSerif,
     lineHeight: lineHeights.md,
     fontWeight: fontWeights.bold,
@@ -16,7 +16,7 @@ export const baseHeadingStyleImpl = {
 export const baseHeadingStyle = style(baseHeadingStyleImpl);
 
 export const baseParagraphStyleImpl = {
-    color: colors.grayDark,
+    color: colors.black,
     fontFamily: fontFamilies.sansSerif,
     fontSize: fontSizes.md,
     fontWeight: fontWeights.light,

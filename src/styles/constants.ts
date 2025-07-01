@@ -1,17 +1,15 @@
 import { ATKINSON_HYPERLEGIBLE } from './global.css';
 
 export const colors = {
-    grayDark: '#1f2937',
+    black: '#1f2937',
+    grayDark: '#344563',
     grayMedium: '#526b8d',
     grayLight: '#e1e1e1',
     grayExtraLight: '#fafafa',
-    white: '#ffffff',
+    white: '#fff',
+    yellow: '#f9ca5e',
     red: '#ed615a',
     blue: '#0572e6',
-    green: '#3d854d',
-    yellow: '#f9ca5e',
-    pink: '#d14',
-    navy: '#344563',
 };
 
 export const gridSize = 8;

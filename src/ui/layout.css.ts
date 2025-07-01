@@ -91,7 +91,7 @@ const underlinedLinkStyleImpl = {
 export const baseNavigationLinkStyle = style([
     baseFocusStyle,
     {
-        color: colors.navy,
+        color: colors.grayDark,
         textDecoration: 'none',
         selectors: {
             '&::after': {

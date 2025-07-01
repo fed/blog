@@ -110,7 +110,7 @@ globalStyle(`${markdownStyle} blockquote`, {
 });
 globalStyle(`${markdownStyle} blockquote p`, {
     margin: 0,
-    color: colors.grayDark,
+    color: colors.black,
 });
 
 // Images
@@ -157,7 +157,7 @@ globalStyle(`${markdownStyle} code:not([class="grvsc-code"])`, {
     margin: 0,
     padding: `${0.375 * gridSize}px ${0.75 * gridSize}px`,
     whiteSpace: 'nowrap',
-    color: colors.pink,
+    color: '#d14',
     fontWeight: fontWeights.normal,
 });
 globalStyle(`${markdownStyle} a code:not([class="grvsc-code"])`, {
