@@ -1,4 +1,4 @@
-import { shallow, mount } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 import React from 'react';
 
 import { Layout } from './layout';
@@ -6,78 +6,90 @@ import { Layout } from './layout';
 describe('Layout', () => {
     describe('Skip link', () => {
         it('renders the skip link', () => {
-            const wrapper = shallow(
+            render(
                 <Layout>
                     <p data-testid="test-content">Rawr</p>
                 </Layout>,
             );
 
-            expect(wrapper.find('[data-testid="layout-skip-link-container"]').exists()).toBe(true);
-            expect(wrapper.find('[data-testid="layout-skip-link"]').exists()).toBe(true);
+            expect(screen.getByTestId('layout-skip-link-container')).toBeInTheDocument();
+            expect(screen.getByTestId('layout-skip-link')).toBeInTheDocument();
         });
 
         it('assigns the right id to the main content so that the skip link works', () => {
-            const wrapper = shallow(
+            render(
                 <Layout>
-                    <p data-testid="test-content">Rawr</p>
+                    <p>Rawr</p>
                 </Layout>,
             );
 
-            expect(wrapper.find('[data-testid="layout-skip-link"]').prop('href')).toBe('#main');
-            expect(wrapper.find('[data-testid="layout-content"]').prop('id')).toBe('main');
+            expect(screen.getByTestId('layout-skip-link')).toHaveAttribute('href', '#main');
+            expect(screen.getByTestId('layout-content')).toHaveAttribute('id', 'main');
         });
     });
 
     describe('Navigation', () => {
         it('renders an avatar and the site name linking to the homepage', () => {
-            const logoWrapper = mount(
+            render(
                 <Layout>
-                    <p data-testid="test-content">Rawr</p>
-                </Layout>,
-            )
-                .find('[data-testid="navigation-logo"]')
-                .hostNodes();
-
-            expect(logoWrapper.prop('href')).toBe('/');
-            expect(logoWrapper.find('[data-testid="navigation-logo-title"]').text()).toBe('F. Knüssel: Frontend Developer');
-            expect(logoWrapper.find('[data-testid="navigation-logo-image"]').props()).toMatchObject({ src: 'test-file-stub', alt: '' });
-        });
-
-        it('renders the right navigation items', () => {
-            const wrapper = shallow(
-                <Layout>
-                    <p data-testid="test-content">Rawr</p>
+                    <p>Rawr</p>
                 </Layout>,
             );
 
-            expect(wrapper.find('[data-testid="layout-navigation-link"]')).toHaveLength(7);
-            expect(wrapper.find('[data-testid="layout-navigation-link"]').at(0).props()).toMatchObject({ to: '/about', children: 'About' });
-            expect(wrapper.find('[data-testid="layout-navigation-link"]').at(1).props()).toMatchObject({ to: '/', children: 'Blog' });
-            expect(wrapper.find('[data-testid="layout-navigation-link"]').at(2).props()).toMatchObject({ to: '/uses', children: 'Uses' });
-            expect(wrapper.find('[data-testid="layout-navigation-link"]').at(3).props()).toMatchObject({ to: '/now', children: 'Now' });
-            expect(wrapper.find('[data-testid="layout-navigation-link"]').at(4).props()).toMatchObject({
-                to: '/colophon',
-                children: 'Colophon',
-            });
-            expect(wrapper.find('[data-testid="layout-navigation-link"]').at(5).props()).toMatchObject({
-                href: 'https://github.com/fed',
-                children: 'GitHub',
-            });
-            expect(wrapper.find('[data-testid="layout-navigation-link"]').at(6).props()).toMatchObject({
-                children: 'RSS',
-                href: '/rss.xml',
-            });
+            const logoLink = screen.getByTestId('navigation-logo');
+
+            expect(logoLink).toHaveAttribute('href', '/');
+            expect(screen.getByTestId('navigation-logo-title')).toHaveTextContent('F. Knüssel: Frontend Developer');
+
+            const logoImage = screen.getByTestId('navigation-logo-image');
+
+            expect(logoImage).toHaveAttribute('src', 'test-file-stub');
+            expect(logoImage).toHaveAttribute('alt', '');
+        });
+
+        it('renders the right navigation items', () => {
+            render(
+                <Layout>
+                    <p>Rawr</p>
+                </Layout>,
+            );
+
+            const navigationLinks = screen.getAllByTestId('layout-navigation-link');
+
+            expect(navigationLinks).toHaveLength(7);
+
+            expect(navigationLinks[0]).toHaveAttribute('href', '/about');
+            expect(navigationLinks[0]).toHaveTextContent('About');
+
+            expect(navigationLinks[1]).toHaveAttribute('href', '/');
+            expect(navigationLinks[1]).toHaveTextContent('Blog');
+
+            expect(navigationLinks[2]).toHaveAttribute('href', '/uses');
+            expect(navigationLinks[2]).toHaveTextContent('Uses');
+
+            expect(navigationLinks[3]).toHaveAttribute('href', '/now');
+            expect(navigationLinks[3]).toHaveTextContent('Now');
+
+            expect(navigationLinks[4]).toHaveAttribute('href', '/colophon');
+            expect(navigationLinks[4]).toHaveTextContent('Colophon');
+
+            expect(navigationLinks[5]).toHaveAttribute('href', 'https://github.com/fed');
+            expect(navigationLinks[5]).toHaveTextContent('GitHub');
+
+            expect(navigationLinks[6]).toHaveAttribute('href', '/rss.xml');
+            expect(navigationLinks[6]).toHaveTextContent('RSS');
         });
     });
 
     it('renders any content it gets passed in', () => {
-        const contentWrapper = shallow(
+        render(
             <Layout>
                 <p data-testid="test-content">Rawr</p>
             </Layout>,
-        ).find('[data-testid="layout-content"]');
+        );
 
-        expect(contentWrapper.find('[data-testid="test-content"]').exists()).toBe(true);
-        expect(contentWrapper.text()).toBe('Rawr');
+        const content = screen.getByTestId('layout-content');
+        expect(screen.getByTestId('test-content')).toBeInTheDocument();
+        expect(content).toHaveTextContent('Rawr');
     });
 });

@@ -1,4 +1,4 @@
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 import { useStaticQuery } from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
@@ -7,7 +7,7 @@ import { SEO } from './seo';
 
 describe('SEO', () => {
     beforeAll(() => {
-        useStaticQuery.mockReturnValue({
+        (useStaticQuery as jest.Mock).mockReturnValue({
             site: {
                 siteMetadata: {
                     title: 'Gatsby Site Title',
@@ -28,76 +28,82 @@ describe('SEO', () => {
 
     describe('when no props get passed in', () => {
         it('renders the Helmet component with the default values', () => {
-            const wrapper = shallow(<SEO />);
+            render(<SEO />);
 
-            expect(wrapper.find(Helmet).props()).toEqual({
-                htmlAttributes: { lang: 'en' },
-                title: 'Gatsby Site Title',
-                meta: [
-                    { name: 'description', content: 'This is a test site description' },
-                    { property: 'og:url', content: 'fedknu.com' },
-                    { property: 'og:title', content: 'Gatsby Site Title' },
-                    { name: 'og:description', content: 'This is a test site description' },
-                    { name: 'twitter:card', content: 'summary' },
-                    { name: 'twitter:creator', content: 'fedknu' },
-                    { name: 'twitter:title', content: 'Gatsby Site Title' },
-                    { name: 'twitter:description', content: 'This is a test site description' },
-                ],
-                defer: true,
-                encodeSpecialCharacters: true,
-            });
+            const helmet = Helmet.peek();
+
+            expect(helmet.htmlAttributes).toEqual({ lang: 'en' });
+            expect(helmet.title).toBe('Gatsby Site Title');
+            expect(helmet.metaTags).toEqual([
+                { name: 'description', content: 'This is a test site description' },
+                { property: 'og:url', content: 'fedknu.com' },
+                { property: 'og:title', content: 'Gatsby Site Title' },
+                { name: 'og:description', content: 'This is a test site description' },
+                { name: 'twitter:card', content: 'summary' },
+                { name: 'twitter:creator', content: 'fedknu' },
+                { name: 'twitter:title', content: 'Gatsby Site Title' },
+                { name: 'twitter:description', content: 'This is a test site description' },
+            ]);
         });
     });
 
     describe('when a custom title gets passed in', () => {
         it('favours the custom title over the one coming from the GraphQL query', () => {
-            const helmetWrapper = shallow(<SEO title="Custom title" />).find(Helmet);
-            const metaTags = helmetWrapper.prop('meta');
+            render(<SEO title="Custom title" />);
 
-            expect(helmetWrapper.prop('title')).toBe('Custom title');
-            expect(helmetWrapper.prop('titleTemplate')).toBe('%s - Gatsby Site Title');
-            expect(metaTags.find((m) => m.property === 'og:title')).toEqual({ property: 'og:title', content: 'Custom title' });
-            expect(metaTags.find((m) => m.name === 'twitter:title')).toEqual({ name: 'twitter:title', content: 'Custom title' });
+            const helmet = Helmet.peek();
+
+            expect(helmet.title).toBe('Custom title - Gatsby Site Title');
+
+            const ogTitle = helmet.metaTags.find((m) => m.property === 'og:title');
+            const twitterTitle = helmet.metaTags.find((m) => m.name === 'twitter:title');
+
+            expect(ogTitle).toEqual({ property: 'og:title', content: 'Custom title' });
+            expect(twitterTitle).toEqual({ name: 'twitter:title', content: 'Custom title' });
         });
     });
 
     describe('when a custom description gets passed in', () => {
         it('favours the custom description over the one coming from the GraphQL query', () => {
-            const metaTags = shallow(<SEO description="Custom description" />)
-                .find(Helmet)
-                .prop('meta');
+            render(<SEO description="Custom description" />);
 
-            expect(metaTags.find((m) => m.name === 'description')).toEqual({ name: 'description', content: 'Custom description' });
-            expect(metaTags.find((m) => m.name === 'og:description')).toEqual({ name: 'og:description', content: 'Custom description' });
-            expect(metaTags.find((m) => m.name === 'twitter:description')).toEqual({
-                name: 'twitter:description',
-                content: 'Custom description',
-            });
+            const helmet = Helmet.peek();
+            const { metaTags } = helmet;
+            const description = metaTags.find((m) => m.name === 'description');
+            const ogDescription = metaTags.find((m) => m.name === 'og:description');
+            const twitterDescription = metaTags.find((m) => m.name === 'twitter:description');
+
+            expect(description).toEqual({ name: 'description', content: 'Custom description' });
+            expect(ogDescription).toEqual({ name: 'og:description', content: 'Custom description' });
+            expect(twitterDescription).toEqual({ name: 'twitter:description', content: 'Custom description' });
         });
     });
 
     describe('when visiting a route other than the homepage', () => {
         it('renders the right URL', () => {
-            const metaTags = shallow(<SEO slug="/about" />)
-                .find(Helmet)
-                .prop('meta');
+            render(<SEO slug="/about" />);
 
-            expect(metaTags.find((m) => m.property === 'og:url')).toEqual({ property: 'og:url', content: 'fedknu.com/about' });
+            const helmet = Helmet.peek();
+            const ogUrl = helmet.metaTags.find((m) => m.property === 'og:url');
+
+            expect(ogUrl).toEqual({ property: 'og:url', content: 'fedknu.com/about' });
         });
     });
 
     describe('when an image URL gets passed in', () => {
         it('renders two extra meta tags', () => {
-            const metaTags = shallow(<SEO imageUrl="http://github.com/fed.png" />)
-                .find(Helmet)
-                .prop('meta');
+            render(<SEO imageUrl="http://github.com/fed.png" />);
+
+            const helmet = Helmet.peek();
+            const { metaTags } = helmet;
 
             expect(metaTags).toHaveLength(10);
-            expect(metaTags.find((m) => m.property === 'og:image')).toEqual({ property: 'og:image', content: 'http://github.com/fed.png' });
-            expect(metaTags.find((m) => m.name === 'twitter:image')).toEqual({
-                name: 'twitter:image',
-                content: 'http://github.com/fed.png',
-            });
+
+            const ogImage = metaTags.find((m) => m.property === 'og:image');
+            const twitterImage = metaTags.find((m) => m.name === 'twitter:image');
+
+            expect(ogImage).toEqual({ property: 'og:image', content: 'http://github.com/fed.png' });
+            expect(twitterImage).toEqual({ name: 'twitter:image', content: 'http://github.com/fed.png' });
         });
     });
 });

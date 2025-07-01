@@ -1,10 +1,33 @@
-import { shallow } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 import React from 'react';
 
 import IndexTemplate from './index';
-import { Archive } from '../ui/archive';
-import { Layout } from '../ui/layout';
-import { SEO } from '../ui/seo';
+
+// Mock the child components to make testing easier and more focused
+jest.mock('../ui/archive', () => ({
+    Archive: ({ posts }) => (
+        <div data-testid="archive" data-posts={JSON.stringify(posts)}>
+            Archive component with {posts.length} posts
+        </div>
+    ),
+}));
+
+jest.mock('../ui/layout', () => ({
+    Layout: ({ children }) => (
+        <div data-testid="layout">
+            Layout component
+            {children}
+        </div>
+    ),
+}));
+
+jest.mock('../ui/seo', () => ({
+    SEO: (props) => (
+        <div data-testid="seo" data-props={JSON.stringify(props)}>
+            SEO component
+        </div>
+    ),
+}));
 
 const MARKDOWN_REMARK_MOCK_DATA = {
     allMarkdownRemark: {
@@ -60,30 +83,38 @@ const PARSED_POSTS = [
 
 describe('IndexTemplate', () => {
     it('renders the SEO component with the default values', () => {
-        const wrapper = shallow(<IndexTemplate data={MARKDOWN_REMARK_MOCK_DATA} />);
+        render(<IndexTemplate data={MARKDOWN_REMARK_MOCK_DATA} />);
 
-        expect(wrapper.find(SEO).exists()).toBe(true);
-        expect(wrapper.find(SEO).props()).toEqual({});
+        const seoComponent = screen.getByTestId('seo');
+        const seoProps = JSON.parse(seoComponent.getAttribute('data-props'));
+
+        expect(seoComponent).toBeInTheDocument();
+        expect(seoProps).toEqual({});
     });
 
     it('renders the Layout component', () => {
-        const wrapper = shallow(<IndexTemplate data={MARKDOWN_REMARK_MOCK_DATA} />);
+        render(<IndexTemplate data={MARKDOWN_REMARK_MOCK_DATA} />);
 
-        expect(wrapper.find(Layout).exists()).toBe(true);
+        expect(screen.getByTestId('layout')).toBeInTheDocument();
     });
 
     it('renders the Archive component as the main layout content', () => {
-        const wrapper = shallow(<IndexTemplate data={MARKDOWN_REMARK_MOCK_DATA} />);
+        render(<IndexTemplate data={MARKDOWN_REMARK_MOCK_DATA} />);
 
-        expect(wrapper.find(Layout).find(Archive).exists()).toBe(true);
+        const layout = screen.getByTestId('layout');
+        const archive = screen.getByTestId('archive');
+
+        expect(archive).toBeInTheDocument();
+        expect(layout).toContainElement(archive);
     });
 
     it('renders both local and external posts sorted by date DESC', () => {
-        const wrapper = shallow(<IndexTemplate data={MARKDOWN_REMARK_MOCK_DATA} />);
+        render(<IndexTemplate data={MARKDOWN_REMARK_MOCK_DATA} />);
 
-        expect(wrapper.find(Archive).props()).toEqual({
-            posts: PARSED_POSTS,
-        });
+        const archiveComponent = screen.getByTestId('archive');
+        const posts = JSON.parse(archiveComponent.getAttribute('data-posts'));
+
+        expect(posts).toEqual(PARSED_POSTS);
     });
 
     it("doesn't render drafts", () => {
@@ -104,15 +135,14 @@ describe('IndexTemplate', () => {
             },
         });
 
-        const wrapper = shallow(<IndexTemplate data={data} />);
+        render(<IndexTemplate data={data} />);
 
-        expect(
-            wrapper
-                .find(Archive)
-                .prop('posts')
-                .some((post) => post.id === 'ac6f9718-4956-589e-9148-24aa85cd600b'),
-        ).toBe(false);
-        expect(wrapper.find(Archive).props()).toEqual({ posts: PARSED_POSTS });
+        const archiveComponent = screen.getByTestId('archive');
+        const posts = JSON.parse(archiveComponent.getAttribute('data-posts'));
+        const hasDraftPost = posts.some((post) => post.id === 'ac6f9718-4956-589e-9148-24aa85cd600b');
+
+        expect(hasDraftPost).toBe(false);
+        expect(posts).toEqual(PARSED_POSTS);
     });
 
     it("doesn't render pages", () => {
@@ -132,14 +162,13 @@ describe('IndexTemplate', () => {
             },
         });
 
-        const wrapper = shallow(<IndexTemplate data={data} />);
+        render(<IndexTemplate data={data} />);
 
-        expect(
-            wrapper
-                .find(Archive)
-                .prop('posts')
-                .some((post) => post.id === 'ecf2176d-ebca-5a53-9ee6-d890f8740433'),
-        ).toBe(false);
-        expect(wrapper.find(Archive).props()).toEqual({ posts: PARSED_POSTS });
+        const archiveComponent = screen.getByTestId('archive');
+        const posts = JSON.parse(archiveComponent.getAttribute('data-posts'));
+        const hasPage = posts.some((post) => post.id === 'ecf2176d-ebca-5a53-9ee6-d890f8740433');
+
+        expect(hasPage).toBe(false);
+        expect(posts).toEqual(PARSED_POSTS);
     });
 });

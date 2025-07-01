@@ -1,10 +1,23 @@
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 import React from 'react';
 
 import BlogTemplate from './blog';
 import { Article } from '../ui/article';
 import { Layout } from '../ui/layout';
 import { SEO } from '../ui/seo';
+
+// Mock the components to make testing easier
+jest.mock('../ui/seo', () => ({
+    SEO: jest.fn(() => <div data-testid="seo" />),
+}));
+
+jest.mock('../ui/layout', () => ({
+    Layout: jest.fn(({ children }) => <div data-testid="layout">{children}</div>),
+}));
+
+jest.mock('../ui/article', () => ({
+    Article: jest.fn(() => <div data-testid="article" />),
+}));
 
 const MARKDOWN_REMARK_MOCK_DATA = {
     markdownRemark: {
@@ -22,34 +35,43 @@ const MARKDOWN_REMARK_MOCK_DATA = {
 };
 
 describe('BlogTemplate', () => {
-    it('renders the SEO component with the right props', () => {
-        const wrapper = shallow(<BlogTemplate data={MARKDOWN_REMARK_MOCK_DATA} />);
+    beforeEach(() => {
+        jest.clearAllMocks();
+    });
 
-        expect(wrapper.find(SEO).exists()).toBe(true);
-        expect(wrapper.find(SEO).props()).toEqual({
-            title: 'Testing asynchronous code',
-            description: 'A brief intro to the different ways to set up your asynchronous tests and the reason behind it.',
-            slug: '/blog/async-testing/',
-        });
+    it('renders the SEO component with the right props', () => {
+        render(<BlogTemplate data={MARKDOWN_REMARK_MOCK_DATA} />);
+
+        expect(SEO).toHaveBeenCalledWith(
+            {
+                title: 'Testing asynchronous code',
+                description: 'A brief intro to the different ways to set up your asynchronous tests and the reason behind it.',
+                slug: '/blog/async-testing/',
+            },
+            {},
+        );
     });
 
     it('renders the Layout component', () => {
-        const wrapper = shallow(<BlogTemplate data={MARKDOWN_REMARK_MOCK_DATA} />);
+        const { getByTestId } = render(<BlogTemplate data={MARKDOWN_REMARK_MOCK_DATA} />);
 
-        expect(wrapper.find(Layout).exists()).toBe(true);
+        expect(getByTestId('layout')).toBeInTheDocument();
+        expect(Layout).toHaveBeenCalled();
     });
 
     it('renders the Article component as the main layout content with the right props', () => {
-        const wrapper = shallow(<BlogTemplate data={MARKDOWN_REMARK_MOCK_DATA} />);
+        render(<BlogTemplate data={MARKDOWN_REMARK_MOCK_DATA} />);
 
-        expect(wrapper.find(Layout).find(Article).exists()).toBe(true);
-        expect(wrapper.find(Article).props()).toEqual({
-            categoryId: 'testing',
-            children: '<p>This is some test content</p>',
-            date: 'January 09, 2019',
-            datetime: '2019-01-09T00:00:00.000Z',
-            title: 'Testing asynchronous code',
-            isBlogPost: true,
-        });
+        expect(Article).toHaveBeenCalledWith(
+            {
+                categoryId: 'testing',
+                children: '<p>This is some test content</p>',
+                date: 'January 09, 2019',
+                datetime: '2019-01-09T00:00:00.000Z',
+                title: 'Testing asynchronous code',
+                isBlogPost: true,
+            },
+            {},
+        );
     });
 });
