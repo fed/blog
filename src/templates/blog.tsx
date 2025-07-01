@@ -5,7 +5,6 @@ import type { Query } from '../../graphql-types';
 import { CategoryId } from '../model/categories';
 import { Article } from '../ui/article';
 import { Layout } from '../ui/layout';
-import { Page } from '../ui/page';
 import { SEO } from '../ui/seo';
 
 interface Props {
@@ -21,18 +20,15 @@ const BlogTemplate: React.FunctionComponent<Props> = ({ data }) => {
         <>
             <SEO title={frontmatter.metaTitle || frontmatter.title} description={frontmatter.spoiler} slug={fields.slug} />
             <Layout>
-                {isBlogPost ? (
-                    <Article
-                        title={frontmatter.title}
-                        date={frontmatter.date}
-                        datetime={frontmatter.datetime}
-                        categoryId={frontmatter.category as CategoryId}
-                    >
-                        {html}
-                    </Article>
-                ) : (
-                    <Page title={frontmatter.title}>{html}</Page>
-                )}
+                <Article
+                    title={frontmatter.title}
+                    date={frontmatter.date}
+                    datetime={frontmatter.datetime}
+                    categoryId={frontmatter.category as CategoryId}
+                    isBlogPost={isBlogPost}
+                >
+                    {html}
+                </Article>
             </Layout>
         </>
     );

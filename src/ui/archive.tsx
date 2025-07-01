@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 import { articleStyle, dateStyle, articleList, contentStyle, emptyStateStyle } from './archive.css';
-import { Page } from './page';
+import { Article } from './article';
 import { CategoryId } from '../model/categories';
 import { baseLinkStyle } from '../styles/common.css';
 
@@ -22,10 +22,12 @@ interface Props {
 
 export const Archive: React.FunctionComponent<Props> = ({ posts }) => (
     <>
-        <Page title="Blog posts">
-            Fresh content sorted by date, so you&apos;ll always see what&apos;s new at the top. You can also subscribe to the RSS feed for
-            automatic updates.
-        </Page>
+        <Article title="Blog posts">
+            <p>
+                Fresh content sorted by date, so you&apos;ll always see what&apos;s new at the top. You can also subscribe to the RSS feed
+                for automatic updates.
+            </p>
+        </Article>
         <div className={contentStyle}>
             {posts.length > 0 ? (
                 <ul className={articleList}>

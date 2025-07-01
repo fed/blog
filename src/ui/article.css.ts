@@ -11,7 +11,7 @@ import {
 } from '../styles/common.css';
 import { gridSize, colors, fontFamilies, fontSizes, borderRadius, lineHeights, fontWeights } from '../styles/constants';
 
-export const headerStyle = style({
+export const blogPostHeaderStyle = style({
     textAlign: 'center',
     margin: `${3 * gridSize}px 0 ${7.5 * gridSize}px`,
 });

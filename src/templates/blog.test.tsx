@@ -14,6 +14,7 @@ const MARKDOWN_REMARK_MOCK_DATA = {
             title: 'Testing asynchronous code',
             spoiler: 'A brief intro to the different ways to set up your asynchronous tests and the reason behind it.',
             date: 'January 09, 2019',
+            datetime: '2019-01-09T00:00:00.000Z',
             category: 'testing',
         },
         fields: { slug: '/blog/async-testing/' },
@@ -46,7 +47,9 @@ describe('BlogTemplate', () => {
             categoryId: 'testing',
             children: '<p>This is some test content</p>',
             date: 'January 09, 2019',
+            datetime: '2019-01-09T00:00:00.000Z',
             title: 'Testing asynchronous code',
+            isBlogPost: true,
         });
     });
 });

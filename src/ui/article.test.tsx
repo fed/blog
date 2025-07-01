@@ -7,12 +7,12 @@ import { CategoryId } from '../model/categories';
 
 describe('Article', () => {
     const wrapper = shallow(
-        <Article title="Test title" categoryId={CategoryId.FRP} date="June 1, 2020" datetime="2020-06-01T00:00:00.000Z">
-            <p>Rawr</p>
+        <Article title="Test title" categoryId={CategoryId.FRP} date="June 1, 2020" datetime="2020-06-01T00:00:00.000Z" isBlogPost>
+            {'<p>Rawr</p>'}
         </Article>,
     );
 
-    it('renders the metadata component with the right props', () => {
+    it('renders the right metadata', () => {
         const publicationDate = wrapper.find('[data-testid="metadata-publication-date"]');
         const category = wrapper.find('[data-testid="metadata-category"]');
 
@@ -35,8 +35,8 @@ describe('Article', () => {
     });
 
     it('renders the body of the blog post as HTML', () => {
-        expect(wrapper.find('[data-testid="article-body"]').prop('dangerouslySetInnerHTML')).toEqual({
-            __html: <p>Rawr</p>,
+        expect(wrapper.find('[data-testid="article-body-markdown"]').prop('dangerouslySetInnerHTML')).toEqual({
+            __html: '<p>Rawr</p>',
         });
     });
 });
