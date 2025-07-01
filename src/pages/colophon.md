@@ -1,6 +1,5 @@
 ---
 title: Colophon
-inlineHeading: true
 ---
 
 This site was built with [TypeScript](https://typescriptlang.org), [Gatsby](https://gatsbyjs.com), [React](https://react.dev),

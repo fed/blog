@@ -6,14 +6,11 @@ export const colors = {
     grayLight: '#e1e1e1',
     grayExtraLight: '#fafafa',
     white: '#ffffff',
-    red: '#d43900',
+    red: '#ed615a',
     blue: '#0572e6',
     green: '#3d854d',
     yellow: '#f9ca5e',
     pink: '#d14',
-    purple: '#7659b6',
-    teal: '#00b8d9',
-    brown: '#4a3712',
     navy: '#344563',
 };
 
@@ -24,14 +21,13 @@ export const fontFamilies = {
     monospace: '"SFMono-Medium", "SF Mono", "Segoe UI Mono", "Roboto Mono", "Ubuntu Mono", Menlo, Consolas, Courier, monospace',
 };
 
+// 16px base font size
 export const fontSizes = {
-    xxs: '13px',
-    xs: '14px',
-    sm: '18px',
-    md: '22px',
-    lg: '26px',
-    xl: '32px',
-    xxl: '40px',
+    xs: '0.875rem', // 14px
+    sm: '1.125rem', // 18px
+    md: '1.375rem', // 22px
+    lg: '1.875rem', // 30px
+    xl: '2.5rem', // 40px
 };
 
 export const fontWeights = {
@@ -48,11 +44,8 @@ export const lineHeights = {
 };
 
 export const containerDimensions = {
-    xs: '480px',
     sm: '768px',
-    md: '875px',
     lg: '1024px',
-    xl: '1290px',
 };
 
 export const borderRadius = {

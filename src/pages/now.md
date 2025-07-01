@@ -1,6 +1,5 @@
 ---
 title: Now
-inlineHeading: true
 ---
 
 This page contains a brief overview of what I'm currently focusing on and working towards, both at work and in my personal time, as inspired

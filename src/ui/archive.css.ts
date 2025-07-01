@@ -1,22 +1,11 @@
 import { style } from '@vanilla-extract/css';
 
-import { baseHeadingStyle, baseParagraphStyle } from '../styles/common.css';
+import { baseHeadingStyle, baseParagraphStyleImpl } from '../styles/common.css';
 import { gridSize, fontSizes, colors, fontFamilies, fontWeights, containerDimensions } from '../styles/constants';
 
-export const titleStyle = style([
-    baseHeadingStyle,
-    {
-        fontSize: fontSizes.xxl,
-        margin: `0 0 ${2.5 * gridSize}px`,
-    },
-]);
-
-export const blurbStyle = style([
-    baseParagraphStyle,
-    {
-        margin: `0 0 ${4 * gridSize}px`,
-    },
-]);
+export const contentStyle = style({
+    margin: `${4 * gridSize}px 0 0`,
+});
 
 export const articleList = style({
     listStyleType: 'none',
@@ -51,3 +40,11 @@ export const dateStyle = style({
         },
     },
 });
+
+export const emptyStateStyle = style([
+    baseParagraphStyleImpl,
+    {
+        color: colors.pink,
+        fontWeight: fontWeights.semibold,
+    },
+]);

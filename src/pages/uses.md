@@ -1,6 +1,5 @@
 ---
 title: Uses
-inlineHeading: true
 ---
 
 I love talking about the tools I use every day to get work done and be productive, and I'm really interested in other people's workflows and

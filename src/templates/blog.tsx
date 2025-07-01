@@ -2,10 +2,11 @@ import { graphql } from 'gatsby';
 import React from 'react';
 
 import type { Query } from '../../graphql-types';
+import { CategoryId } from '../model/categories';
 import { Article } from '../ui/article';
 import { Layout } from '../ui/layout';
+import { Page } from '../ui/page';
 import { SEO } from '../ui/seo';
-import { CategoryId } from '../ui/types';
 
 interface Props {
     data: Query;
@@ -14,20 +15,24 @@ interface Props {
 // The Blog template is used by both blog posts and static pages since we share the same UI.
 const BlogTemplate: React.FunctionComponent<Props> = ({ data }) => {
     const { frontmatter, fields, html } = data.markdownRemark;
+    const isBlogPost = fields.slug.startsWith('/blog/');
 
     return (
         <>
             <SEO title={frontmatter.metaTitle || frontmatter.title} description={frontmatter.spoiler} slug={fields.slug} />
             <Layout>
-                <Article
-                    title={frontmatter.title}
-                    date={frontmatter.date}
-                    datetime={frontmatter.datetime}
-                    categoryId={frontmatter.category as CategoryId}
-                    inlineHeading={Boolean(frontmatter.inlineHeading)}
-                >
-                    {html}
-                </Article>
+                {isBlogPost ? (
+                    <Article
+                        title={frontmatter.title}
+                        date={frontmatter.date}
+                        datetime={frontmatter.datetime}
+                        categoryId={frontmatter.category as CategoryId}
+                    >
+                        {html}
+                    </Article>
+                ) : (
+                    <Page title={frontmatter.title}>{html}</Page>
+                )}
             </Layout>
         </>
     );
@@ -48,7 +53,6 @@ export const query = graphql`
                 date(formatString: "MMMM DD, YYYY")
                 datetime: date
                 category
-                inlineHeading
             }
             fields {
                 slug

@@ -1,10 +1,9 @@
 import { shallow } from 'enzyme';
 import { Link } from 'gatsby';
 import React from 'react';
-import { Twemoji } from 'react-emoji-render';
 
 import { Archive } from './archive';
-import { CategoryId } from './types';
+import { CategoryId } from '../model/categories';
 
 const NODES_MOCK = [
     {
@@ -41,7 +40,6 @@ describe('Archive', () => {
         it('renders a message saying there are no blogs published', () => {
             const wrapper = shallow(<Archive posts={[]} />);
 
-            expect(wrapper.find('[data-testid="archive-title"]').exists()).toBe(true);
             expect(wrapper.find('[data-testid="archive-empty"]').exists()).toBe(true);
             expect(wrapper.find('[data-testid="archive-post"]')).toHaveLength(0);
         });
@@ -51,7 +49,6 @@ describe('Archive', () => {
         it('renders the right number of children', () => {
             const wrapper = shallow(<Archive posts={NODES_MOCK} />);
 
-            expect(wrapper.find('[data-testid="archive-title"]').exists()).toBe(true);
             expect(wrapper.find('[data-testid="archive-empty"]').exists()).toBe(false);
             expect(wrapper.find('[data-testid="archive-post"]')).toHaveLength(3);
         });
@@ -66,21 +63,16 @@ describe('Archive', () => {
                 expect(wrapper.find('[data-testid="archive-post-date"]').at(2).text()).toBe('Oct 19, 2019');
             });
 
-            it('renders the right title including emojis', () => {
+            it('renders the right title', () => {
                 const wrapper = shallow(<Archive posts={NODES_MOCK} />);
 
-                expect(wrapper.find('[data-testid="archive-post"]').at(0).find(Twemoji).props()).toEqual({
-                    svg: true,
-                    text: 'Jira search engine in your browser',
-                });
-                expect(wrapper.find('[data-testid="archive-post"]').at(1).find(Twemoji).props()).toEqual({
-                    svg: true,
-                    text: 'Focusing and skipping tests',
-                });
-                expect(wrapper.find('[data-testid="archive-post"]').at(2).find(Twemoji).props()).toEqual({
-                    svg: true,
-                    text: 'Fixing keyboard navigation for MacOS browsers',
-                });
+                expect(wrapper.find('[data-testid="archive-post"]').at(0).find(Link).prop('children')).toBe(
+                    'Jira search engine in your browser',
+                );
+                expect(wrapper.find('[data-testid="archive-post"]').at(1).find(Link).prop('children')).toBe('Focusing and skipping tests');
+                expect(wrapper.find('[data-testid="archive-post"]').at(2).find(Link).prop('children')).toBe(
+                    'Fixing keyboard navigation for MacOS browsers',
+                );
             });
 
             it('renders a link pointing to the right URL', () => {

@@ -424,7 +424,6 @@ export type MarkdownRemarkFrontmatter = {
   spoiler?: Maybe<Scalars['String']>;
   category?: Maybe<Scalars['String']>;
   draft?: Maybe<Scalars['Boolean']>;
-  inlineHeading?: Maybe<Scalars['Boolean']>;
   metaTitle?: Maybe<Scalars['String']>;
 };
 
@@ -1233,7 +1232,6 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   spoiler?: InputMaybe<StringQueryOperatorInput>;
   category?: InputMaybe<StringQueryOperatorInput>;
   draft?: InputMaybe<BooleanQueryOperatorInput>;
-  inlineHeading?: InputMaybe<BooleanQueryOperatorInput>;
   metaTitle?: InputMaybe<StringQueryOperatorInput>;
 };
 
@@ -1601,7 +1599,6 @@ export type MarkdownRemarkFrontmatterFieldSelector = {
   spoiler?: InputMaybe<FieldSelectorEnum>;
   category?: InputMaybe<FieldSelectorEnum>;
   draft?: InputMaybe<FieldSelectorEnum>;
-  inlineHeading?: InputMaybe<FieldSelectorEnum>;
   metaTitle?: InputMaybe<FieldSelectorEnum>;
 };
 
@@ -1924,7 +1921,6 @@ export type MarkdownRemarkFrontmatterSortInput = {
   spoiler?: InputMaybe<SortOrderEnum>;
   category?: InputMaybe<SortOrderEnum>;
   draft?: InputMaybe<SortOrderEnum>;
-  inlineHeading?: InputMaybe<SortOrderEnum>;
   metaTitle?: InputMaybe<SortOrderEnum>;
 };
 
@@ -3459,7 +3455,7 @@ export type Unnamed_1_QueryVariables = Exact<{
 }>;
 
 
-export type Unnamed_1_Query = { markdownRemark?: { id: string, html?: string | null | undefined, frontmatter?: { title?: string | null | undefined, metaTitle?: string | null | undefined, spoiler?: string | null | undefined, date?: any | null | undefined, category?: string | null | undefined, inlineHeading?: boolean | null | undefined, datetime?: any | null | undefined } | null | undefined, fields?: { slug?: string | null | undefined } | null | undefined } | null | undefined };
+export type Unnamed_1_Query = { markdownRemark?: { id: string, html?: string | null | undefined, frontmatter?: { title?: string | null | undefined, metaTitle?: string | null | undefined, spoiler?: string | null | undefined, date?: any | null | undefined, category?: string | null | undefined, datetime?: any | null | undefined } | null | undefined, fields?: { slug?: string | null | undefined } | null | undefined } | null | undefined };
 
 export type AllBlogPostsQueryVariables = Exact<{ [key: string]: never; }>;
 

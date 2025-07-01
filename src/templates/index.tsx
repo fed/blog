@@ -3,10 +3,10 @@ import sortBy from 'lodash/sortBy';
 import React from 'react';
 
 import type { Query } from '../../graphql-types';
+import { CategoryId } from '../model/categories';
 import { Archive } from '../ui/archive';
 import { Layout } from '../ui/layout';
 import { SEO } from '../ui/seo';
-import { CategoryId } from '../ui/types';
 
 interface Props {
     data: Query;

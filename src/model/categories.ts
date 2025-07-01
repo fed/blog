@@ -1,5 +1,3 @@
-import { CategoryId } from '../ui/types';
-
 /*
  * When writing a new post, the `category` field in the header has to match one of the following IDs.
  * This is how we link blog posts to their parent category, e.g.
@@ -12,7 +10,28 @@ import { CategoryId } from '../ui/types';
  * ---
  */
 
-export const categories = [
+export enum CategoryId {
+    ACCESSIBILITY = 'accessibility',
+    PLATFORM = 'web-platform',
+    FRP = 'frp',
+    REACT = 'react',
+    ELM = 'elm',
+    JAVASCRIPT = 'javascript',
+    CSS = 'css',
+    TESTING = 'testing',
+    SWE = 'software-engineering',
+    MODELLING = 'knowledge-modelling',
+    TOOLS = 'tools',
+    GENERAL = 'general',
+}
+
+interface Category {
+    id: CategoryId;
+    title: string;
+    description: string;
+}
+
+export const categories: Category[] = [
     {
         id: CategoryId.FRP,
         title: 'Functional reactive programming',
@@ -49,7 +68,7 @@ export const categories = [
         description: 'Building inclusive web experiences for all users.',
     },
     {
-        id: CategoryId.DOM,
+        id: CategoryId.PLATFORM,
         title: 'DOM & Web APIs',
         description: 'Working with the DOM, browser APIs, and web platform features.',
     },

@@ -9,7 +9,7 @@ import {
     baseFocusHoverStyleImpl,
     baseHeadingStyle,
 } from '../styles/common.css';
-import { colors, fontFamilies, fontSizes, lineHeights, fontWeights, gridSize, borderRadius } from '../styles/constants';
+import { gridSize, colors, fontFamilies, fontSizes, borderRadius, lineHeights, fontWeights } from '../styles/constants';
 
 export const headerStyle = style({
     textAlign: 'center',
@@ -19,10 +19,35 @@ export const headerStyle = style({
 export const titleStyle = style([
     baseHeadingStyle,
     {
-        fontSize: fontSizes.xxl,
+        fontSize: fontSizes.xl,
         margin: `0 0 ${2.5 * gridSize}px 0`,
     },
 ]);
+
+export const metadataStyle = style({
+    margin: `0 0 ${0.625 * gridSize}px`,
+});
+
+export const publicationDateStyle = style({
+    color: colors.grayMedium,
+    fontFamily: fontFamilies.sansSerif,
+    fontSize: fontSizes.xs,
+    marginRight: `${1.5 * gridSize}px`,
+    textTransform: 'uppercase',
+});
+
+export const categoryStyle = style({
+    borderRadius: borderRadius.default,
+    backgroundColor: colors.blue,
+    color: colors.white,
+    display: 'inline-block',
+    fontFamily: fontFamilies.sansSerif,
+    fontSize: fontSizes.xs,
+    lineHeight: lineHeights.sm,
+    padding: `${0.5 * gridSize}px ${0.75 * gridSize}px ${0.375 * gridSize}px`,
+    textTransform: 'uppercase',
+    whiteSpace: 'nowrap',
+});
 
 export const markdownStyle = style({});
 
@@ -61,7 +86,7 @@ globalStyle(
     },
 );
 globalStyle(`${markdownStyle} h1`, {
-    fontSize: fontSizes.xl,
+    display: 'none', // There shouldn't be any other headings level 1 in an article
 });
 globalStyle(`${markdownStyle} h2`, {
     fontSize: fontSizes.lg,

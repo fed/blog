@@ -3,24 +3,25 @@ import React from 'react';
 import { Twemoji } from 'react-emoji-render';
 
 import { Article } from './article';
-import { Metadata } from './metadata';
-import { CategoryId } from './types';
+import { CategoryId } from '../model/categories';
 
 describe('Article', () => {
     const wrapper = shallow(
-        <Article title="Test title" categoryId={CategoryId.FRP} date="June 1, 2020">
+        <Article title="Test title" categoryId={CategoryId.FRP} date="June 1, 2020" datetime="2020-06-01T00:00:00.000Z">
             <p>Rawr</p>
         </Article>,
     );
 
     it('renders the metadata component with the right props', () => {
-        const metadata = wrapper.find(Metadata);
+        const publicationDate = wrapper.find('[data-testid="metadata-publication-date"]');
+        const category = wrapper.find('[data-testid="metadata-category"]');
 
-        expect(metadata.exists()).toBe(true);
-        expect(metadata.props()).toEqual({
-            date: 'June 1, 2020',
-            categoryId: 'frp',
-        });
+        expect(publicationDate.exists()).toBe(true);
+        expect(publicationDate.prop('dateTime')).toBe('2020-06-01T00:00:00.000Z');
+        expect(publicationDate.text()).toBe('June 1, 2020');
+
+        expect(category.exists()).toBe(true);
+        expect(category.text()).toBe('Category: Functional reactive programming');
     });
 
     it('renders the title component using Twemoji with the right props', () => {

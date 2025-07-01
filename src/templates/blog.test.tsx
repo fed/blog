@@ -47,7 +47,6 @@ describe('BlogTemplate', () => {
             children: '<p>This is some test content</p>',
             date: 'January 09, 2019',
             title: 'Testing asynchronous code',
-            inlineHeading: false,
         });
     });
 });
