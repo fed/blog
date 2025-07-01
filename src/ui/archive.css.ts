@@ -21,7 +21,16 @@ export const articleStyle = style([
         margin: 0,
         selectors: {
             '&:not(:last-child)': {
-                marginBottom: `${3 * gridSize}px`,
+                marginBottom: `${4.5 * gridSize}px`,
+            },
+        },
+        '@media': {
+            [`screen and (min-width: ${containerDimensions.sm})`]: {
+                selectors: {
+                    '&:not(:last-child)': {
+                        marginBottom: `${3 * gridSize}px`,
+                    },
+                },
             },
         },
     },
