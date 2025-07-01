@@ -31,8 +31,8 @@ export const metadataStyle = style({
 export const publicationDateStyle = style({
     color: colors.grayMedium,
     fontFamily: fontFamilies.sansSerif,
-    fontSize: fontSizes.xs,
-    marginRight: `${1.5 * gridSize}px`,
+    fontSize: fontSizes.sm,
+    marginRight: `${3 * gridSize}px`,
     textTransform: 'uppercase',
 });
 
@@ -42,9 +42,9 @@ export const categoryStyle = style({
     color: colors.white,
     display: 'inline-block',
     fontFamily: fontFamilies.sansSerif,
-    fontSize: fontSizes.xs,
+    fontSize: fontSizes.sm,
     lineHeight: lineHeights.sm,
-    padding: `${0.5 * gridSize}px ${0.75 * gridSize}px ${0.375 * gridSize}px`,
+    padding: `${0.5 * gridSize}px ${0.875 * gridSize}px ${0.375 * gridSize}px`,
     textTransform: 'uppercase',
     whiteSpace: 'nowrap',
 });
