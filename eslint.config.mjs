@@ -4,16 +4,17 @@ import { fileURLToPath } from 'node:url';
 import { fixupConfigRules, fixupPluginRules } from '@eslint/compat';
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
-import typescriptEslint from '@typescript-eslint/eslint-plugin'; // eslint-disable-line import/no-unresolved
-import tsParser from '@typescript-eslint/parser'; // eslint-disable-line import/no-unresolved
-import { defineConfig, globalIgnores } from 'eslint/config'; // eslint-disable-line import/no-unresolved
+import typescriptEslint from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+import { defineConfig, globalIgnores } from 'eslint/config';
 import _import from 'eslint-plugin-import';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 import prettier from 'eslint-plugin-prettier';
 import react from 'eslint-plugin-react';
 import globals from 'globals';
 
-const __filename = fileURLToPath(import.meta.url); // eslint-disable-line no-underscore-dangle
-const __dirname = path.dirname(__filename); // eslint-disable-line no-underscore-dangle
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const compat = new FlatCompat({
     baseDirectory: __dirname,
     recommendedConfig: js.configs.recommended,
@@ -25,12 +26,12 @@ export default defineConfig([
     {
         extends: fixupConfigRules(
             compat.extends(
-                'airbnb',
                 'prettier',
                 'eslint:recommended',
                 'plugin:@typescript-eslint/eslint-recommended',
                 'plugin:@typescript-eslint/recommended',
                 'plugin:react/recommended',
+                'plugin:jsx-a11y/recommended',
                 'plugin:import/typescript',
             ),
         ),
@@ -38,6 +39,7 @@ export default defineConfig([
             '@typescript-eslint': fixupPluginRules(typescriptEslint),
             react: fixupPluginRules(react),
             import: fixupPluginRules(_import),
+            'jsx-a11y': fixupPluginRules(jsxA11y),
             prettier,
         },
         languageOptions: {

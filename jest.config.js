@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     transform: {
         // The order here is important, make sure vanilla-extract's Babel transformer gets called before babel-jest.
         '\\.css\\.ts$': '@vanilla-extract/jest-transform',

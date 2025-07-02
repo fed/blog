@@ -47,12 +47,7 @@ export const Article: React.FunctionComponent<Props> = ({ title, date, datetime,
             </header>
 
             {typeof children === 'string' ? (
-                <div
-                    className={markdownStyle}
-                    // eslint-disable-next-line react/no-danger
-                    dangerouslySetInnerHTML={{ __html: children }}
-                    data-testid="article-body-markdown"
-                />
+                <div className={markdownStyle} dangerouslySetInnerHTML={{ __html: children }} data-testid="article-body-markdown" />
             ) : (
                 <div className={markdownStyle} data-testid="article-body-node">
                     {children as React.ReactNode}
