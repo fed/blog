@@ -38,7 +38,7 @@ const BlogTemplate: React.FunctionComponent<Props> = ({ data }) => {
 // as Gatsby looks for an exported graphql string from the file rather than a specific variable.
 // Note that you can only have one page query per file.
 export const query = graphql`
-    query ($slug: String!) {
+    query BlogPostBySlug($slug: String!) {
         markdownRemark(fields: { slug: { eq: $slug } }) {
             id
             html
