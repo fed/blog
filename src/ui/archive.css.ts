@@ -57,3 +57,29 @@ export const emptyStateStyle = style([
         fontWeight: fontWeights.semibold,
     },
 ]);
+
+export const categoriesListStyle = style({
+    listStyleType: 'none',
+    paddingLeft: 0,
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '8px',
+    fontFamily: fontFamilies.monospace,
+    fontSize: '16px',
+    margin: `${3.125 * gridSize}px 0 ${5.625 * gridSize}px`,
+});
+
+export const categoriesListItemStyle = style({
+    display: 'inline-block',
+    border: `1px solid ${colors.grayLight}`,
+    borderRadius: '5px',
+    padding: '4px 8px',
+    backgroundColor: colors.grayExtraLight,
+    color: colors.grayDark,
+});
+
+export const categoriesListItemSelectedStyle = style({
+    border: '1px solid #333',
+    backgroundColor: colors.blue,
+    color: colors.white,
+});

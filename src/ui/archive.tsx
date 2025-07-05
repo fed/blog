@@ -1,9 +1,17 @@
 import { Link } from 'gatsby';
 import React from 'react';
 
-import { articleStyle, dateStyle, articleList, contentStyle, emptyStateStyle } from './archive.css';
+import {
+    articleStyle,
+    dateStyle,
+    articleList,
+    contentStyle,
+    emptyStateStyle,
+    categoriesListStyle,
+    categoriesListItemStyle,
+} from './archive.css';
 import { Article } from './article';
-import { CategoryId } from '../model/categories';
+import { CategoryId, categories } from '../model/categories';
 import { baseLinkStyle } from '../styles/common.css';
 
 interface Post {
@@ -24,11 +32,18 @@ export const Archive: React.FunctionComponent<Props> = ({ posts }) => (
     <>
         <Article title="Blog posts">
             <p>
-                Fresh content sorted by date, so you&apos;ll always see what&apos;s new at the top. You can also subscribe to the RSS feed
-                for automatic updates.
+                Fresh content sorted by date, so you&apos;ll always see what&apos;s new at the top. Browse by categories/tags to explore
+                topics you care about. You can also subscribe to the RSS feed for automatic updates.
             </p>
         </Article>
         <div className={contentStyle}>
+            <ul className={categoriesListStyle}>
+                {categories.map((category) => (
+                    <li key={category.id} className={categoriesListItemStyle}>
+                        #{category.id}
+                    </li>
+                ))}
+            </ul>
             {posts.length > 0 ? (
                 <ul className={articleList}>
                     {posts.map((post) => (
