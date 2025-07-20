@@ -1,0 +1,12 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	color: var(--token-color-black);
+	font-family: var(--token-font-family-sans-serif);
+	font-size: 16px;
+	margin: 0;
+}

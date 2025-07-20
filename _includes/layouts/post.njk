@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+---
+
+{# Only include the syntax highlighter CSS on blog posts, included with the CSS per-page bundle #}
+<style>
+	{% include "node_modules/prismjs/themes/prism-okaidia.css" %}
+</style>
+<style>
+	{% include "styles/blog-post.css" %}
+</style>
+
+<article>
+	<header class="blog-post__header">
+		<h1 class="common-main-title">{{ title | safe }}</h1>
+		<div class="blog-post__metadata">
+			<time datetime="{{ date | htmlDateString | safe }}" class="blog-post__metadata__date">
+				{{ date | readableDate | safe }}
+			</time>
+			<span class="blog-post__metadata__tags">
+				{{ tags | readableTags | safe }}
+			</span>
+		</div>
+	</header>
+
+	<div class="common-main-content">
+		{{ content | safe }}
+	</div>
+</article>

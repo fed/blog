@@ -1,0 +1,25 @@
+---
+title: Blog posts
+eleventyNavigation:
+  key: Blog
+  order: 2
+---
+
+<style>
+	{% include "styles/archive.css" %}
+</style>
+
+<p>Fresh content sorted by date, so you'll always see what's new at the top. {# Browse by categories/tags to explore topics you care about. #} You can also subscribe to the Atom feed for automatic updates.</p>
+
+<ul reversed class="archive__list">
+	{%- for post in collections.posts | reverse %}
+		<li class="archive__list-item">
+			<time class="archive__list-item__date" datetime="{{ post.date | htmlDateString }}">
+				{{ post.date | readableDate("dd LLL yyyy") }}
+			</time>
+			<a href="{{ post.url }}" class="archive__list-item__link">
+				{{ post.data.title }}
+			</a>
+		</li>
+	{%- endfor %}
+</ul>

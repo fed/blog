@@ -1,0 +1,59 @@
+:root {
+	/* font families */
+	--token-font-family-sans-serif:
+		-apple-system, system-ui, "Segoe UI", Roboto, Noto, Oxygen-Sans, Ubuntu, Cantrell, "Helvetica Neue", sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--token-font-family-monospace:
+		ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, "Cascadia Mono", Consolas, "Liberation Mono",
+		"Courier New", monospace;
+
+	/* colour palette */
+	--token-color-black: #172b4d;
+	--token-color-gray-dark: #344563;
+	--token-color-gray-medium: #526b8d;
+	--token-color-gray-light: #e1e1e1;
+	--token-color-gray-extra-light: #f7f7f7;
+	--token-color-white: #fff;
+	--token-color-yellow: #f9ca5e;
+	--token-color-red: #ed615a;
+	--token-color-blue: #0572e6;
+
+	/* spacing (8px base grid size) */
+	--token-spacing-xxs: 0.25rem; /* 4px */
+	--token-spacing-xs: 0.5rem; /* 8px */
+	--token-spacing-sm: 1rem; /* 16px */
+	--token-spacing-md: 1.5rem; /* 24px */
+	--token-spacing-lg: 2rem; /* 32px */
+	--token-spacing-xl: 3rem; /* 48px */
+	--token-spacing-xxl: 4rem; /* 64px */
+
+	/* font sizes (16px base font size) */
+	--token-font-size-xs: 0.875rem; /* 14px */
+	--token-font-size-sm: 1.125rem; /* 18px */
+	--token-font-size-md: 1.375rem; /* 22px */
+	--token-font-size-lg: 1.875rem; /* 30px */
+	--token-font-size-xl: 2.5rem; /* 40px */
+
+	/* font weights */
+	--token-font-weight-light: 300;
+	--token-font-weight-normal: 400;
+	--token-font-weight-bold: 600;
+
+	/* line heights */
+	--token-line-height-sm: 1;
+	--token-line-height-md: 1.4;
+	--token-line-height-lg: 1.75;
+
+	/*
+	 * viewport breakpoints
+	 *
+	 * Unfortunately CSS custom properties are not available in media queries.
+     * So these are not being used right now as breakpoints,
+	 * but all uses of the hardcoded value are annotated with the right token name.
+	 */
+	--token-breakpoint-sm: 768px;
+	--token-breakpoint-lg: 1024px;
+
+	/* border radius */
+	--token-border-radius-default: 3px;
+}

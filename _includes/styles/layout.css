@@ -1,0 +1,153 @@
+/*
+ * Skip link
+ */
+
+.layout-skip-link {
+	--skip-link-height: var(--token-spacing-xl);
+	--skip-link-margin: var(--token-spacing-xs);
+
+	align-items: center;
+	background-color: var(--token-color-red);
+	border-radius: var(--token-border-radius-default);
+	color: var(--token-color-white);
+	display: inline-flex;
+	font-size: var(--token-font-size-sm);
+	font-weight: var(--token-font-weight-light);
+	height: var(--skip-link-height);
+	left: 0;
+	margin: var(--skip-link-margin);
+	outline-offset: var(--token-spacing-xxs);
+	padding: 0 var(--token-spacing-sm);
+	position: fixed;
+	top: 0;
+	transform: translateY(calc(-1 * (var(--skip-link-height) + var(--skip-link-margin))));
+	z-index: 10;
+}
+
+.layout-skip-link:focus-visible {
+	transform: translateY(0);
+}
+
+/*
+ * Header
+ */
+
+.layout-header {
+	background-color: var(--token-color-gray-extra-light);
+	border-bottom: 1px solid var(--token-color-gray-light);
+}
+
+.layout-header::before {
+	height: 3px;
+	background-color: var(--token-color-yellow);
+	content: "";
+	display: block;
+	width: 100%;
+}
+
+/*
+ * Site name
+ */
+
+.layout-header__site-name__link {
+	display: flex;
+	align-items: center;
+	margin-right: var(--token-spacing-xl);
+	text-decoration: none;
+}
+
+.layout-header__site-name__emoji {
+	height: 32px;
+	margin-right: var(--token-spacing-sm);
+	width: 32px;
+}
+
+.layout-header__site-name__container {
+	white-space: nowrap;
+}
+
+.layout-header__site-name__title {
+	color: var(--token-color-gray-dark);
+	font-weight: var(--token-font-weight-bold);
+	font-size: var(--token-font-size-sm);
+}
+
+.layout-header__site-name__tagline {
+	font-weight: var(--token-font-weight-light);
+	color: var(--token-color-gray-medium);
+	font-size: var(--token-font-size-xs);
+	margin-top: var(--token-spacing-xxs);
+}
+
+/*
+ * Navigation menu
+ */
+
+.layout-header__navigation {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	font-size: var(--token-font-size-sm);
+	line-height: var(--token-line-height-sm);
+	padding: var(--token-spacing-sm) var(--token-spacing-md);
+	/* Enable scrolling to provide access to all navigation menu items on mobile */
+	overflow-x: scroll;
+}
+
+/* This breakpoint corresponds with var(--token-breakpoint-sm) */
+@media screen and (min-width: 768px) {
+	.layout-header__navigation {
+		margin: 0 auto;
+		max-width: var(--token-breakpoint-lg);
+		/* Hide the scrollbar on Windows desktop */
+		overflow-x: hidden;
+	}
+}
+
+.layout-header__navigation__list {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin: 0;
+	padding-left: 0;
+}
+
+.layout-header__navigation__list-item {
+	display: inline-block;
+	list-style-type: none;
+	/*
+	 * Make sure all items including the last one have a right
+	 * margin to ensure the navbar is scrollable on mobile.
+	 */
+	margin-right: var(--token-spacing-lg);
+}
+
+/* Use together with .common-focus-ring */
+.layout-header__navigation__link {
+	color: var(--token-color-gray-dark);
+	text-decoration: none;
+}
+
+.layout-header__navigation__link::after {
+	content: "";
+	display: block;
+	height: 2px;
+	background: currentColor;
+	transition: width 0.3s;
+	width: 0;
+}
+
+.layout-header__navigation__link--active::after,
+.layout-header__navigation__link:hover::after {
+	width: 100%;
+}
+
+/*
+ * Content
+ */
+
+.layout-content {
+	margin: 0 auto;
+	max-width: var(--token-breakpoint-lg);
+	padding: var(--token-spacing-lg) var(--token-spacing-md) var(--token-spacing-xl);
+}

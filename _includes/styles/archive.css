@@ -1,0 +1,36 @@
+.archive__list {
+	list-style-type: none;
+	margin: 0;
+	padding-left: 0;
+	margin: var(--token-spacing-lg) 0 0;
+}
+
+.archive__list-item {
+	/* baseHeadingStyle, */
+	font-size: var(--token-font-size-md);
+	font-weight: var(--token-font-weight-normal);
+	margin: 0;
+}
+
+.archive__list-item:not(:last-child) {
+	margin-bottom: var(--token-font-size-xl);
+}
+
+.archive__list-item__date {
+	color: var(--token-color-gray-medium);
+	display: block;
+	font-size: var(--token-font-size-sm);
+	text-transform: uppercase;
+}
+
+/* This breakpoint corresponds with var(--token-breakpoint-sm) */
+@media screen and (min-width: 768px) {
+	.archive__list-item:not(:last-child) {
+		margin-bottom: var(--token-spacing-md);
+	}
+
+	.archive__list-item__date {
+		display: inline-block;
+		width: 135px;
+	}
+}
