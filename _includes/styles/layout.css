@@ -7,7 +7,7 @@
 	--skip-link-margin: var(--token-spacing-xs);
 
 	align-items: center;
-	background-color: var(--token-color-red);
+	background-color: var(--token-color-blue);
 	border-radius: var(--token-border-radius-default);
 	color: var(--token-color-white);
 	display: inline-flex;
