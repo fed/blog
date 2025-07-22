@@ -3,6 +3,7 @@ import navigationPlugin from "@11ty/eleventy-navigation";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import syntaxHighlightPlugin from "@11ty/eleventy-plugin-syntaxhighlight";
+import htmlmin from "html-minifier-terser";
 import filtersPlugin from "./_config/filters.js";
 import metadata from "./_data/metadata.js";
 
@@ -13,6 +14,20 @@ export default function (eleventyConfig) {
 	// Minify and inline CSS
 	eleventyConfig.addFilter("cssmin", function (code) {
 		return new CleanCSS({}).minify(code).styles;
+	});
+
+	// Minify HTML output
+	eleventyConfig.addTransform("htmlmin", function (content) {
+		if ((this.page.outputPath || "").endsWith(".html")) {
+			return htmlmin.minify(content, {
+				useShortDoctype: true,
+				removeComments: true,
+				collapseWhitespace: true
+			});
+		}
+
+		// If not an HTML output, return content as-is
+		return content;
 	});
 
 	// Use `draft: true` to mark any template as a draft.
