@@ -6,14 +6,13 @@
 }
 
 .archive__list-item {
-	/* baseHeadingStyle, */
 	font-size: var(--token-font-size-md);
 	font-weight: var(--token-font-weight-normal);
 	margin: 0;
 }
 
 .archive__list-item:not(:last-child) {
-	margin-bottom: var(--token-font-size-xl);
+	margin-bottom: var(--token-spacing-xl);
 }
 
 .archive__list-item__date {
