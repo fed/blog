@@ -20,6 +20,13 @@ eleventyNavigation:
 			<a href="{{ post.url }}" class="archive__list-item__link">
 				{{ post.data.title }}
 			</a>
+			{% if post.data.draft %}
+				{#
+					Not adding a class as this is for local dev only and
+					there's no point in serving a new class definition to users in prod.
+				#}
+				<span style="color:var(--token-color-red);font-weight:var(--token-font-weight-bold)">(draft)</span>
+			{% endif %}
 		</li>
 	{%- endfor %}
 </ul>
