@@ -41,8 +41,8 @@
 
 	/* line heights */
 	--token-line-height-sm: 1;
-	--token-line-height-md: 1.4;
-	--token-line-height-lg: 1.75;
+	--token-line-height-md: 1.5;
+	--token-line-height-lg: 2;
 
 	/*
 	 * viewport breakpoints
