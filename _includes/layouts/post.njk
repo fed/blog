@@ -2,12 +2,14 @@
 layout: layouts/base.njk
 ---
 
-{# Only include the syntax highlighter CSS on blog posts, included with the CSS per-page bundle #}
+{# Only include the syntax highlighter CSS on blog posts, included with the CSS per-page bundle. #}
+{# Capture the CSS content as a Nunjucks variable and feed it through to the cssmin filter to minify it. #}
+{% set css %}
+{% include "node_modules/prismjs/themes/prism-okaidia.css" %}
+{% include "styles/blog-post.css" %}
+{% endset %}
 <style>
-	{% include "node_modules/prismjs/themes/prism-okaidia.css" %}
-</style>
-<style>
-	{% include "styles/blog-post.css" %}
+	{{css | cssmin | safe}}
 </style>
 
 <article>
