@@ -5,8 +5,12 @@ eleventyNavigation:
   order: 2
 ---
 
+{# Capture the CSS content as a Nunjucks variable and feed it through to the cssmin filter to minify it #}
+{% set css %}
+{% include "styles/archive.css" %}
+{% endset %}
 <style>
-	{% include "styles/archive.css" %}
+	{{css | cssmin | safe}}
 </style>
 
 <p>Fresh content sorted by date, so you'll always see what's new at the top. {# Browse by categories/tags to explore topics you care about. #} You can also subscribe to the Atom feed for automatic updates.</p>
