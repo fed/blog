@@ -142,6 +142,11 @@
 	width: 100%;
 }
 
+/* Hide bottom outline when focus ring is visible */
+.layout-header__navigation__link:focus::after {
+	display: none;
+}
+
 /*
  * Content
  */
