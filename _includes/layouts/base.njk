@@ -9,13 +9,14 @@
 		<title>
 			{% if title %}{{ title }} - {% endif %}{{ metadata.title }}
 		</title>
+
 		{# Capture the CSS content as a Nunjucks variable and feed it through to the cssmin filter to minify it #}
 		{% set css %}
-		{% include "../../node_modules/@csstools/normalize.css/normalize.css" %}
-		{% include "../styles/tokens.css" %}
-		{% include "../styles/global.css" %}
-		{% include "../styles/common.css" %}
-		{% include "../styles/layout.css" %}
+		{% include "node_modules/@csstools/normalize.css/normalize.css" %}
+		{% include "styles/tokens.css" %}
+		{% include "styles/global.css" %}
+		{% include "styles/common.css" %}
+		{% include "styles/layout.css" %}
 		{% endset %}
 		<style>
 			{{css | cssmin | safe}}
