@@ -39,7 +39,7 @@ change over time.
   blocklist. If I want to access social media or read the news, I can do so on my iPad. Messaging applications such as Signal and WhatsApp
   are not blocked on any devices as I still want to be able to reach out to people throughout the day.
 
-- [Magnet](https://magnet.crowdcafe.com) for window management, I like being able to use keyboard shortcuts to move windows around.
+- [Magnet](https://magnet.crowdcafe.com) for window management, I like being able to use keyboard shortcuts to move windows around. I got a licence ages ago but otherwise I'd probably use [Rectangle](https://rectangleapp.com/) (which is free and open source) instead.
 
 - [Raycast](https://raycast.com/) is MacOS' Swiss army knife and a great replacement for Spotlight. I use it for heaps of different things
   including searching for files, listing different timezones, managing clipboard history, text expansion/snippets, unit conversion, emoji
@@ -52,16 +52,6 @@ change over time.
 - [Xnip](https://xnipapp.com) is a screenshot tool for Mac that supports annotations, blurring sensitive information and scrolling
   screenshots. It's fast and works quite well. I tried a number of different alternatives but I always find myself coming back to it. The
   only feature I think it's missing is text recognition/OCR.
-
-- [Loom](https://loom.com) to record videos or demos. I particularly like how easy it is to edit videos including trimming bits that I don't
-  want to include and stitching clips together. I also think it makes it really easy to share videos and have other people interact with
-  them via timestamped comments. It's a great tool to replace meetings that are not really necessary, and also great for asynchronous
-  collaboration across timezones.
-
-- [PDF Combo](https://apps.apple.com/au/app/pdfcombo/id1030461463) is quite handy for combining PDF files, and
-  [Lightweight PDF](https://apps.apple.com/au/app/lightweight-pdf/id1450640351) is useful if you ever need to compress a PDF file. I
-  typically use these if I need to submit any government forms/documents when there's a file upload size limit. I typically don't keep these
-  installed all the time as I rarely use them.
 
 ### Writing
 
@@ -103,13 +93,11 @@ change over time.
 
 ### Reading and information organisation
 
-- [NetNewsWire](https://netnewswire.com) is my preferred RSS reader. It works both on MacOS and iOS and syncs over iCloud.
-
-- [Goodreads](https://goodreads.com) helps me track books I've already read or those I want to read. The UI is a bit dated and cluttered,
-  but it gets the job done.
+- [Goodreads](https://goodreads.com) helps me track books I've already read or those I want to read. I like the fact that I can sync Goodreads with my Kindle, too. The UI is a bit dated and cluttered,
+  but it gets the job done. 
 
 - [Instapaper](https://instapaper.com) is my "read later" service, and I use it all the time to keep track of the articles/pages/blog posts
-  I want to get to at some point. Its UI is quite simple and minimal, and it works well for what I need it for.
+  I want to get to at some point. Its UI is quite simple and minimal, and it works well for what I need it for. What I like the most about Instapaper is its integration with Kindle, which allows me to send articles directly to my Kindle, making offline reading incredibly easy.
 
 - [Anki](https://apps.ankiweb.net) for creating and reviewing flashcards. I mainly use this tool for documenting vocabulary and grammar when
   learning a new language.
@@ -123,6 +111,11 @@ change over time.
 - [Spotify](https://spotify.com) for streaming and organising my music library, although I also enjoy [brain.fm](https://brain.fm)
   especially when I want to do some focus work.
 
+- [PDF Combo](https://apps.apple.com/au/app/pdfcombo/id1030461463) is quite handy for combining PDF files, and
+  [Lightweight PDF](https://apps.apple.com/au/app/lightweight-pdf/id1450640351) is useful if you ever need to compress a PDF file. I
+  typically use these if I need to submit any government forms/documents when there's a file upload size limit. I typically don't keep these
+  installed all the time as I rarely use them.
+  
 ## Hardware and furniture
 
 - [Dell S2721QS (27 inch 4K UHD Monitor)](https://dell.com/en-au/shop/dell-27-4k-uhd-monitor-s2721qs/apd/210-axfo/monitors-monitor-accessories)
@@ -146,12 +139,8 @@ I try to stay away from my laptop after working hours and during weekends.
 I always keep a small notepad close for journalling, doodling and brain dumping either when I'm on the go or throughout the day when I'm at
 home.
 
-I've got an old Kindle I use to read my ebooks, which is particularly convenient when travelling, although lately I've been making use of my
+I've got an old [Kindle Paperwhite](https://www.amazon.com/kindle/shop/kindle-paperwhite) (7th generation but still going strong) I use to read my ebooks, which is particularly convenient when travelling, although lately I've been making use of my
 local library which is a great way to enjoy physical books without the extra clutter.
-
-When I'm travelling I usually take my iPad with me. Depending on how much space I've got, I also take my
-[Logitech K380 bluetooth keyboard](https://logitech.com/en-au/shop/p/k380-multi-device.920-011145) as it's much easier to write with than
-the on-screen keyboard.
 
 ∎
 
