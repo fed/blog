@@ -18,12 +18,11 @@ change over time.
 
 ### Productivity tools
 
-- [Todoist](https://todoist.com) helps me organise my personal life and side projects. Here's where I capture all of my tasks — if it's not
-  in Todoist, it's not happening. I really like the fact I can quickly add tasks to my Inbox through a keyboard shortcut without needing to
-  leave what I'm doing and context switch to open the Todoist app, and how I can sort these Inbox tasks out later (I do this daily). Using
-  natural language to schedule tasks is also very handy. But potentially the most useful feature to me is scheduling tasks, i.e. linking a
-  task from your list with a time slot in your calendar. I organise my tasks into different categories/projects including "Life admin",
-  "Recurring", "Long term goals", "Learning", "Shopping", "Wish list" and then individual categories for each one of my projects.
+- [Reminders](https://www.icloud.com/reminders) helps me organise my personal life and side projects. Here's where I capture all of my tasks — if it's not
+  here, it's not happening. I really like the fact I can quickly add tasks to my Inbox through a custom keyboard shortcut without needing to
+  leave what I'm doing and context switch to open the Reminders app, and how I can sort these Inbox tasks out later (I do this daily). Potentially the most useful feature to me is scheduling tasks, i.e. linking a
+  task from your list with a time slot in my calendar. I organise my tasks into different categories/projects including "Life admin",
+  "Recurring", "Long term goals", "Learning", "Shopping", "Wish list" and then individual categories for each one of the projects I'm currently working on.
 
 - [Google Calendar](https://calendar.google.com) is essential for managing my time and planning my week, tracking appointments and events,
   staying on top of birthdays and coordinate plans with others. The ability to receive notifications and seamlessly sync across all my
@@ -47,7 +46,7 @@ change over time.
   the longest time.
 
 - [Dato](https://sindresorhus.com/dato) is extremely helpful for staying on top of timezones. Its time travel feature is brilliant and helps
-  me with figuring out reasonable times for events across timezones.
+  me with figuring out reasonable times for events across timezones. This is especially useful when you have colleagues, friends and family around the world.
 
 - [Xnip](https://xnipapp.com) is a screenshot tool for Mac that supports annotations, blurring sensitive information and scrolling
   screenshots. It's fast and works quite well. I tried a number of different alternatives but I always find myself coming back to it. The
@@ -59,7 +58,7 @@ change over time.
   number of great features, and most of my writing happens here. Definitely an all-time favourite.
 
 - [Sublime Text](https://sublimetext.com) remains, after many years, one of my favourite code/text editors. I still use it mostly for notes,
-  I've got a single `todo.md` file (automatically backed up to iCloud Drive) I use as a brain dump / mental clutter storage where I keep
+  I've got a single `todo.md` file (automatically backed up to iCloud Drive) I use as a brain dump/mental clutter storage where I keep
   random thoughts that pop up half-way through a task, also for things like taking notes during a meeting/course. Sometimes I also use it to
   edit very large files (it's very powerful at finding and replacing), to parse and beautify files, etc.
 
@@ -113,7 +112,7 @@ change over time.
 
 - [PDF Combo](https://apps.apple.com/au/app/pdfcombo/id1030461463) is quite handy for combining PDF files, and
   [Lightweight PDF](https://apps.apple.com/au/app/lightweight-pdf/id1450640351) is useful if you ever need to compress a PDF file. I
-  typically use these if I need to submit any government forms/documents when there's a file upload size limit. I typically don't keep these
+  typically use these if I need to submit any school/government forms/documents when there's a file upload size limit. I typically don't keep these
   installed all the time as I rarely use them.
   
 ## Hardware and furniture
@@ -132,11 +131,13 @@ change over time.
   flexibility to stand helps with focus and reduces fatigue, especially during long stretches of work. The sturdy build and spacious surface
   also mean I have plenty of room for my setup without feeling cramped.
 
+- [Sony WH-XB900N](https://store.sony.com.au/archived-headphones-bluetooth/WHXB900NL.html) is my current set of noise cancelling headphones. Had them for a few years now and they are still great. Battery lasts a couple days at a time, they are very comfortable to wear and the noise cancellation is really good.
+
 ## Away from work
 
 I try to stay away from my laptop after working hours and during weekends.
 
-I always keep a small notepad close for journalling, doodling and brain dumping either when I'm on the go or throughout the day when I'm at
+I always keep a notepad close for journalling, doodling and brain dumping either when I'm on the go or throughout the day when I'm at
 home.
 
 I've got an old [Kindle Paperwhite](https://www.amazon.com/kindle/shop/kindle-paperwhite) (7th generation but still going strong) I use to read my ebooks, which is particularly convenient when travelling, although lately I've been making use of my
