@@ -93,7 +93,7 @@ change over time.
 ### Reading and information organisation
 
 - [Goodreads](https://goodreads.com) helps me track books I've already read or those I want to read. I like the fact that I can sync Goodreads with my Kindle, too. The UI is a bit dated and cluttered,
-  but it gets the job done. 
+  but it gets the job done.
 
 - [Instapaper](https://instapaper.com) is my "read later" service, and I use it all the time to keep track of the articles/pages/blog posts
   I want to get to at some point. Its UI is quite simple and minimal, and it works well for what I need it for. What I like the most about Instapaper is its integration with Kindle, which allows me to send articles directly to my Kindle, making offline reading incredibly easy.
@@ -114,7 +114,7 @@ change over time.
   [Lightweight PDF](https://apps.apple.com/au/app/lightweight-pdf/id1450640351) is useful if you ever need to compress a PDF file. I
   typically use these if I need to submit any school/government forms/documents when there's a file upload size limit. I typically don't keep these
   installed all the time as I rarely use them.
-  
+
 ## Hardware and furniture
 
 - [Dell S2721QS (27 inch 4K UHD Monitor)](https://dell.com/en-au/shop/dell-27-4k-uhd-monitor-s2721qs/apd/210-axfo/monitors-monitor-accessories)
