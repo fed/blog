@@ -38,7 +38,7 @@ change over time.
   blocklist. If I want to access social media or read the news, I can do so on my iPad. Messaging applications such as Signal and WhatsApp
   are not blocked on any devices as I still want to be able to reach out to people throughout the day.
 
-- [Magnet](https://magnet.crowdcafe.com) for window management, I like being able to use keyboard shortcuts to move windows around. I got a licence ages ago but otherwise I'd probably use [Rectangle](https://rectangleapp.com/) (which is free and open source) instead.
+- [Magnet](https://magnet.crowdcafe.com) for window management, I like being able to use keyboard shortcuts to move windows around. I got a licence ages ago but otherwise I'd probably use [Rectangle](https://rectangleapp.com/) instead, as it's free and open source.
 
 - [Raycast](https://raycast.com/) is MacOS' Swiss army knife and a great replacement for Spotlight. I use it for heaps of different things
   including searching for files, listing different timezones, managing clipboard history, text expansion/snippets, unit conversion, emoji
@@ -49,8 +49,9 @@ change over time.
   me with figuring out reasonable times for events across timezones. This is especially useful when you have colleagues, friends and family around the world.
 
 - [Xnip](https://xnipapp.com) is a screenshot tool for Mac that supports annotations, blurring sensitive information and scrolling
-  screenshots. It's fast and works quite well. I tried a number of different alternatives but I always find myself coming back to it. The
-  only feature I think it's missing is text recognition/OCR.
+  screenshots. It's fast and works quite well. I tried a number of different alternatives but I always find myself coming back to it.
+  The only feature I think it's missing is text recognition/OCR. That said, lately I've slowly been switching to macOS's built in screenshot tool,
+  with the default set to open in Preview for annotations. Preview also has the edge on OCR, with Live Text letting you select and copy text directly from any screenshot.
 
 ### Writing
 
@@ -95,17 +96,15 @@ change over time.
 - [Goodreads](https://goodreads.com) helps me track books I've already read or those I want to read. I like the fact that I can sync Goodreads with my Kindle, too. The UI is a bit dated and cluttered,
   but it gets the job done.
 
-- [Instapaper](https://instapaper.com) is my "read later" service, and I use it all the time to keep track of the articles/pages/blog posts
-  I want to get to at some point. Its UI is quite simple and minimal, and it works well for what I need it for. What I like the most about Instapaper is its integration with Kindle, which allows me to send articles directly to my Kindle, making offline reading incredibly easy.
-
 - [Anki](https://apps.ankiweb.net) for creating and reviewing flashcards. I mainly use this tool for documenting vocabulary and grammar when
   learning a new language.
 
+- [Instapaper](https://instapaper.com) is my "read later" service, and I use it all the time to keep track of the articles/pages/blog posts
+  I want to get to at some point. The UI is quite simple and minimal, and it works well for what I need it for. What I like the most about Instapaper is its integration with Kindle, which allows me to send articles directly to my Kindle, making offline reading incredibly easy.
+
 ### Miscellaneous
 
-- [DuckDuckGo](https://duckduckgo.com/app) is my browser of choice for all my devices. I'm a huge fan and started using it quite early on.
-  There are still a few features I wish were available and some bugs I'd like fixed, but it's come such a long way since I first used it and
-  I'm already happy to use it every day as my main browser.
+- [Brave](https://brave.com) is my browser of choice on desktop, primarily for the better developer tools while still ticking all the boxes around privacy. On mobile I use [Safari](https://www.apple.com/au/safari) since Apple seems to restrict certain system integrations (like adding calendar events) to first party apps only.
 
 - [Spotify](https://spotify.com) for streaming and organising my music library, although I also enjoy [brain.fm](https://brain.fm)
   especially when I want to do some focus work.
@@ -133,6 +132,10 @@ change over time.
 
 - [Sony WH-XB900N](https://store.sony.com.au/archived-headphones-bluetooth/WHXB900NL.html) is my current set of noise cancelling headphones. Had them for a few years now and they are still great. Battery lasts a couple days at a time, they are very comfortable to wear and the noise cancellation is really good.
 
+- [Nexstand K2](https://nexstand.eu/products/nexstand-k2-laptop-stand-1) is the laptop stand I carry with me when travelling or working from a cafè/library. It's lightweight and compact, but it can be a little wobbly.
+
+- I've got an old-ish Magic Keyboard and Magic Mouse. Both feel great to use, and are clean and simple.
+
 ## Away from work
 
 I try to stay away from my laptop after working hours and during weekends.
@@ -140,9 +143,10 @@ I try to stay away from my laptop after working hours and during weekends.
 I always keep a notepad close for journalling, doodling and brain dumping either when I'm on the go or throughout the day when I'm at
 home.
 
-I've got an old [Kindle Paperwhite](https://www.amazon.com/kindle/shop/kindle-paperwhite) (7th generation but still going strong) I use to read my ebooks, which is particularly convenient when travelling, although lately I've been making use of my
-local library which is a great way to enjoy physical books without the extra clutter.
+I've got an old [Kindle Paperwhite](https://www.amazon.com/kindle/shop/kindle-paperwhite) (7th generation but still going strong) I use to read my ebooks, which is particularly handy when travelling/onebagging. I really like that I can push websites and other content straight from my iPhone into my Kindle through the Kindle app (which is honestly slowly replacing Instapaper for me).
+
+In the past few years I've also been making use of my local library, which is a great way to enjoy physical books without the extra clutter.
 
 ∎
 
-**Last updated:** April 2025
+**Last updated:** March 2026
