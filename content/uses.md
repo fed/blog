@@ -38,7 +38,7 @@ change over time.
   blocklist. If I want to access social media or read the news, I can do so on my iPad. Messaging applications such as Signal and WhatsApp
   are not blocked on any devices as I still want to be able to reach out to people throughout the day.
 
-- [Magnet](https://magnet.crowdcafe.com) for window management, I like being able to use keyboard shortcuts to move windows around. I got a licence ages ago but otherwise I'd probably use [Rectangle](https://rectangleapp.com/) instead, as it's free and open source.
+- [Magnet](https://magnet.crowdcafe.com) for window management, I like being able to use keyboard shortcuts to move windows around. I got a licence ages ago but otherwise I'd probably use [Rectangle](https://rectangleapp.com/) instead, as it's free and open source, and pretty much the same at least for my use case.
 
 - [Raycast](https://raycast.com/) is MacOS' Swiss army knife and a great replacement for Spotlight. I use it for heaps of different things
   including searching for files, listing different timezones, managing clipboard history, text expansion/snippets, unit conversion, emoji
@@ -60,7 +60,7 @@ change over time.
 
 - [Sublime Text](https://sublimetext.com) remains, after many years, one of my favourite code/text editors. I still use it mostly for notes,
   I've got a single `todo.md` file (automatically backed up to iCloud Drive) I use as a brain dump/mental clutter storage where I keep
-  random thoughts that pop up half-way through a task, also for things like taking notes during a meeting/course. Sometimes I also use it to
+  random thoughts that pop up halfway through a task, also for things like taking notes during a meeting/course. Sometimes I also use it to
   edit very large files (it's very powerful at finding and replacing), to parse and beautify files, etc.
 
 ### Coding
@@ -81,7 +81,7 @@ change over time.
 - [Sublime Merge](https://sublimemerge.com) is quite handy for things like visually parse diffs, navigating a project's history, or scanning
   a list of changes to a particular file over time. For anything else I use Git in my terminal.
 
-- [Charles Proxy](https://charlesproxy.com) is very useful to view all of the HTTP(S) traffic between my computer and the Internet,
+- [Charles Proxy](https://charlesproxy.com) is very useful to view all of the HTTP(S) traffic between my computer and the internet,
   including requests, responses and HTTP headers (which contain cookies and caching information). It's also extremely useful if you need to
   mock API endpoints to test features locally if your backend is not ready.
 
@@ -132,9 +132,9 @@ change over time.
 
 - [Sony WH-XB900N](https://store.sony.com.au/archived-headphones-bluetooth/WHXB900NL.html) is my current set of noise cancelling headphones. Had them for a few years now and they are still great. Battery lasts a couple days at a time, they are very comfortable to wear and the noise cancellation is really good.
 
-- [Nexstand K2](https://nexstand.eu/products/nexstand-k2-laptop-stand-1) is the laptop stand I carry with me when travelling or working from a cafè/library. It's lightweight and compact, but it can be a little wobbly.
+- [Nexstand K2](https://nexstand.eu/products/nexstand-k2-laptop-stand-1) is the laptop stand I carry with me when travelling or working from a café/library. It's lightweight and compact, but it can be a little wobbly.
 
-- I've got an old-ish Magic Keyboard and Magic Mouse. Both feel great to use, and are clean and simple.
+- I've got an Apple Magic Keyboard and Magic Mouse. I like that they are both clean and simple. The keyboard feels great to type on, and the mouse is a genuinely good mouse with support for gestures but with a horrible charging user experience.
 
 ## Away from work
 
