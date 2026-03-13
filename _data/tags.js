@@ -41,6 +41,11 @@ export default [
 		description: "Working with the DOM, browser APIs, and web platform features."
 	},
 	{
+		id: "maths",
+		title: "Maths",
+		description: "Exploring mathematics from an engineer's perspective, with a focus on rigorous, proof-based thinking."
+	},
+	{
 		id: "software-engineering",
 		title: "Software engineering",
 		description: "Software design principles, architecture, and engineering practices."
