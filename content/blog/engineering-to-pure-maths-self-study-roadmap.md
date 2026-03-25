@@ -40,5 +40,6 @@ The approach of this course is geometric and intuitive, which makes it excellent
 ## Recommended books
 
 - **Spivak, Calculus:** this is a rigorous calculus book used in a number of university pure maths courses. Same as with 18.100A, this book is ideal to ramp up on proof writing because the content is already familiar, so you can focus entirely on absorbing the proof style rather than trying to make sense of the new concepts.
+- **Abbott, Understanding Analysis:** covers similar ground to Spivak, but Abbott spends time motivating definitions before formalising them. A good companion for MIT 18.100A, and a bit of a gentler entry point if Spivak's density feels like too much too soon.
 - **Dummit & Foote, Abstract Algebra:** this is a good starting point for abstract algebra for someone still building proof fluency, and is a good companion for 18.701.
 - **Axler, Linear Algebra Done Right:** in engineering you learn linear algebra around determinants: calculate the determinant, find the eigenvalues, done. Axler throws that out and rebuilds the whole subject from a proof first perspective: it covers the same material but sort of forces you to actually understand why it works rather than just how to calcualte it. A good book to use alongside 18.06.
