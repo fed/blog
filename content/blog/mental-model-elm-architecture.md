@@ -4,13 +4,13 @@ date: 2025-07-22
 tags: elm
 ---
 
-If you, like me, are coming to Elm from Reactland, the Elm Architecture will feel familiar in some ways and weirdly strict in others. Figured I'd jot down some notes on what the main concepts are, how they compare to React, and how I think about the this.
+If you, like me, are coming to Elm from Reactland, the Elm Architecture will feel familiar in some ways and weirdly strict in others. Figured I'd jot down some notes on what the main concepts are, how they compare to React, and how I think about this.
 
 ## The main concepts
 
 The Elm Architecture is a cycle with three main moving parts: a Model, a View, and an Update function. Model holds your app data. View takes that data and renders it as HTML. Update handles anything that happens and produces a new Model. That's it.
 
-When something happens in your app, it sends a message to Update, which returns a new Model, which causes View to re-render. it's a one way loop, every time, no exceptions.
+When something happens in your app, it sends a message to Update, which returns a new Model, which causes View to re-render. It's a one way loop, every time, no exceptions.
 
 ### Messages
 
@@ -27,7 +27,7 @@ type Msg
 
 That Msg type can only ever be one of those three things.
 
-*Side note:* A union type is a type that can be one of several predefined variants. So instead of a string that could be anything, you explicitly list every possible value upfront. In this example the `Msg` type can only ever be one of the following three things:
+*Side note:* A union type is a type that can be one of several predefined variants. So instead of a string that could be anything, you explicitly list every possible value upfront.
 
 ### Model
 
@@ -75,7 +75,7 @@ Elm is actually very close to [Flux](https://facebookarchive.github.io/flux) con
 
 The difference is that Flux has more moving parts. You've got actions, a dispatcher, multiple stores, and your React views all as separate concepts. Elm consolidates most of that into fewer concepts. Messages are like Flux actions, but your Update function combines the dispatcher and store logic into one place, and there's only ever one Model rather than multiple stores.
 
-The other big difference is strictness. Flux runs in JavaScript, so immutability and pure functions are encouraged but never enforced. Elm is a proper functional language, so immutability isn't a convention you should try and follow, rather something baked in to the language itself. Your Update function and View function are both pure function, and the compiler guarantees it.
+The other big difference is strictness. Flux runs in JavaScript, so immutability and pure functions are encouraged but never enforced. Elm is a proper functional language, so immutability isn't a convention you should try and follow, rather something baked in to the language itself. Your Update function and View function are both pure functions, and the compiler guarantees it.
 
 As an aside, Redux kind of sits between the two. It ditched the Flux dispatcher and consolidated stores into a single one, which makes it much closer to the Elm Architecture in practice. The main thing it can't replicate is the compiler guarantees.
 
