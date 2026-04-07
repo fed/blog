@@ -18,12 +18,11 @@ change over time.
 
 ### Productivity tools
 
-- [Todoist](https://todoist.com) helps me organise my personal life and side projects. Here's where I capture all of my tasks — if it's not
-  in Todoist, it's not happening. I really like the fact I can quickly add tasks to my Inbox through a keyboard shortcut without needing to
-  leave what I'm doing and context switch to open the Todoist app, and how I can sort these Inbox tasks out later (I do this daily). Using
-  natural language to schedule tasks is also very handy. But potentially the most useful feature to me is scheduling tasks, i.e. linking a
-  task from your list with a time slot in your calendar. I organise my tasks into different categories/projects including "Life admin",
-  "Recurring", "Long term goals", "Learning", "Shopping", "Wish list" and then individual categories for each one of my projects.
+- [Reminders](https://www.icloud.com/reminders) helps me organise my personal life and side projects. Here's where I capture all of my tasks — if it's not
+  here, it's not happening. I really like the fact I can quickly add tasks to my Inbox through a custom keyboard shortcut without needing to
+  leave what I'm doing and context switch to open the Reminders app, and how I can sort these Inbox tasks out later (I do this daily). Potentially the most useful feature to me is scheduling tasks, i.e. linking a
+  task from your list with a time slot in my calendar. I organise my tasks into different categories/projects including "Life admin",
+  "Recurring", "Long term goals", "Learning", "Shopping", "Wish list" and then individual categories for each one of the projects I'm currently working on.
 
 - [Google Calendar](https://calendar.google.com) is essential for managing my time and planning my week, tracking appointments and events,
   staying on top of birthdays and coordinate plans with others. The ability to receive notifications and seamlessly sync across all my
@@ -39,7 +38,7 @@ change over time.
   blocklist. If I want to access social media or read the news, I can do so on my iPad. Messaging applications such as Signal and WhatsApp
   are not blocked on any devices as I still want to be able to reach out to people throughout the day.
 
-- [Magnet](https://magnet.crowdcafe.com) for window management, I like being able to use keyboard shortcuts to move windows around.
+- [Magnet](https://magnet.crowdcafe.com) for window management, I like being able to use keyboard shortcuts to move windows around. I got a licence ages ago but otherwise I'd probably use [Rectangle](https://rectangleapp.com/) instead, as it's free and open source, and pretty much the same at least for my use case.
 
 - [Raycast](https://raycast.com/) is MacOS' Swiss army knife and a great replacement for Spotlight. I use it for heaps of different things
   including searching for files, listing different timezones, managing clipboard history, text expansion/snippets, unit conversion, emoji
@@ -47,21 +46,12 @@ change over time.
   the longest time.
 
 - [Dato](https://sindresorhus.com/dato) is extremely helpful for staying on top of timezones. Its time travel feature is brilliant and helps
-  me with figuring out reasonable times for events across timezones.
+  me with figuring out reasonable times for events across timezones. This is especially useful when you have colleagues, friends and family around the world.
 
 - [Xnip](https://xnipapp.com) is a screenshot tool for Mac that supports annotations, blurring sensitive information and scrolling
-  screenshots. It's fast and works quite well. I tried a number of different alternatives but I always find myself coming back to it. The
-  only feature I think it's missing is text recognition/OCR.
-
-- [Loom](https://loom.com) to record videos or demos. I particularly like how easy it is to edit videos including trimming bits that I don't
-  want to include and stitching clips together. I also think it makes it really easy to share videos and have other people interact with
-  them via timestamped comments. It's a great tool to replace meetings that are not really necessary, and also great for asynchronous
-  collaboration across timezones.
-
-- [PDF Combo](https://apps.apple.com/au/app/pdfcombo/id1030461463) is quite handy for combining PDF files, and
-  [Lightweight PDF](https://apps.apple.com/au/app/lightweight-pdf/id1450640351) is useful if you ever need to compress a PDF file. I
-  typically use these if I need to submit any government forms/documents when there's a file upload size limit. I typically don't keep these
-  installed all the time as I rarely use them.
+  screenshots. It's fast and works quite well. I tried a number of different alternatives but I always find myself coming back to it.
+  The only feature I think it's missing is text recognition/OCR. That said, lately I've slowly been switching to macOS's built in screenshot tool,
+  with the default set to open in Preview for annotations. Preview also has the edge on OCR, with Live Text letting you select and copy text directly from any screenshot.
 
 ### Writing
 
@@ -69,8 +59,8 @@ change over time.
   number of great features, and most of my writing happens here. Definitely an all-time favourite.
 
 - [Sublime Text](https://sublimetext.com) remains, after many years, one of my favourite code/text editors. I still use it mostly for notes,
-  I've got a single `todo.md` file (automatically backed up to iCloud Drive) I use as a brain dump / mental clutter storage where I keep
-  random thoughts that pop up half-way through a task, also for things like taking notes during a meeting/course. Sometimes I also use it to
+  I've got a single `todo.md` file (automatically backed up to iCloud Drive) I use as a brain dump/mental clutter storage where I keep
+  random thoughts that pop up halfway through a task, also for things like taking notes during a meeting/course. Sometimes I also use it to
   edit very large files (it's very powerful at finding and replacing), to parse and beautify files, etc.
 
 ### Coding
@@ -91,7 +81,7 @@ change over time.
 - [Sublime Merge](https://sublimemerge.com) is quite handy for things like visually parse diffs, navigating a project's history, or scanning
   a list of changes to a particular file over time. For anything else I use Git in my terminal.
 
-- [Charles Proxy](https://charlesproxy.com) is very useful to view all of the HTTP(S) traffic between my computer and the Internet,
+- [Charles Proxy](https://charlesproxy.com) is very useful to view all of the HTTP(S) traffic between my computer and the internet,
   including requests, responses and HTTP headers (which contain cookies and caching information). It's also extremely useful if you need to
   mock API endpoints to test features locally if your backend is not ready.
 
@@ -103,25 +93,26 @@ change over time.
 
 ### Reading and information organisation
 
-- [NetNewsWire](https://netnewswire.com) is my preferred RSS reader. It works both on MacOS and iOS and syncs over iCloud.
-
-- [Goodreads](https://goodreads.com) helps me track books I've already read or those I want to read. The UI is a bit dated and cluttered,
+- [Goodreads](https://goodreads.com) helps me track books I've already read or those I want to read. I like the fact that I can sync Goodreads with my Kindle, too. The UI is a bit dated and cluttered,
   but it gets the job done.
-
-- [Instapaper](https://instapaper.com) is my "read later" service, and I use it all the time to keep track of the articles/pages/blog posts
-  I want to get to at some point. Its UI is quite simple and minimal, and it works well for what I need it for.
 
 - [Anki](https://apps.ankiweb.net) for creating and reviewing flashcards. I mainly use this tool for documenting vocabulary and grammar when
   learning a new language.
 
+- [Instapaper](https://instapaper.com) is my "read later" service, and I use it all the time to keep track of the articles/pages/blog posts
+  I want to get to at some point. The UI is quite simple and minimal, and it works well for what I need it for. What I like the most about Instapaper is its integration with Kindle, which allows me to send articles directly to my Kindle, making offline reading incredibly easy.
+
 ### Miscellaneous
 
-- [DuckDuckGo](https://duckduckgo.com/app) is my browser of choice for all my devices. I'm a huge fan and started using it quite early on.
-  There are still a few features I wish were available and some bugs I'd like fixed, but it's come such a long way since I first used it and
-  I'm already happy to use it every day as my main browser.
+- [Brave](https://brave.com) is my browser of choice on desktop, primarily for the better developer tools while still ticking all the boxes around privacy. On mobile I use [Safari](https://www.apple.com/au/safari) since Apple seems to restrict certain system integrations (like adding calendar events) to first party apps only.
 
 - [Spotify](https://spotify.com) for streaming and organising my music library, although I also enjoy [brain.fm](https://brain.fm)
   especially when I want to do some focus work.
+
+- [PDF Combo](https://apps.apple.com/au/app/pdfcombo/id1030461463) is quite handy for combining PDF files, and
+  [Lightweight PDF](https://apps.apple.com/au/app/lightweight-pdf/id1450640351) is useful if you ever need to compress a PDF file. I
+  typically use these if I need to submit any school/government forms/documents when there's a file upload size limit. I typically don't keep these
+  installed all the time as I rarely use them.
 
 ## Hardware and furniture
 
@@ -139,20 +130,23 @@ change over time.
   flexibility to stand helps with focus and reduces fatigue, especially during long stretches of work. The sturdy build and spacious surface
   also mean I have plenty of room for my setup without feeling cramped.
 
+- [Sony WH-XB900N](https://store.sony.com.au/archived-headphones-bluetooth/WHXB900NL.html) is my current set of noise cancelling headphones. Had them for a few years now and they are still great. Battery lasts a couple days at a time, they are very comfortable to wear and the noise cancellation is really good.
+
+- [Nexstand K2](https://nexstand.eu/products/nexstand-k2-laptop-stand-1) is the laptop stand I carry with me when travelling or working from a café/library. It's lightweight and compact, but it can be a little wobbly.
+
+- I've got an Apple Magic Keyboard and Magic Mouse. I like that they are both clean and simple. The keyboard feels great to type on, and the mouse is a genuinely good mouse with support for gestures but with a horrible charging user experience.
+
 ## Away from work
 
 I try to stay away from my laptop after working hours and during weekends.
 
-I always keep a small notepad close for journalling, doodling and brain dumping either when I'm on the go or throughout the day when I'm at
+I always keep a notepad close for journalling, doodling and brain dumping either when I'm on the go or throughout the day when I'm at
 home.
 
-I've got an old Kindle I use to read my ebooks, which is particularly convenient when travelling, although lately I've been making use of my
-local library which is a great way to enjoy physical books without the extra clutter.
+I've got an old [Kindle Paperwhite](https://www.amazon.com/kindle/shop/kindle-paperwhite) (7th generation but still going strong) I use to read my ebooks, which is particularly handy when travelling/onebagging. I really like that I can push websites and other content straight from my iPhone into my Kindle through the Kindle app (which is honestly slowly replacing Instapaper for me).
 
-When I'm travelling I usually take my iPad with me. Depending on how much space I've got, I also take my
-[Logitech K380 bluetooth keyboard](https://logitech.com/en-au/shop/p/k380-multi-device.920-011145) as it's much easier to write with than
-the on-screen keyboard.
+In the past few years I've also been making use of my local library, which is a great way to enjoy physical books without the extra clutter.
 
 ∎
 
-**Last updated:** April 2025
+**Last updated:** March 2026
