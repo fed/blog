@@ -1,8 +1,7 @@
 ---
 title: Event delegation, bubbling and targets
 date: 2018-03-31
-description:
-tags: dom
+tags: web-platform
 draft: true
 ---
 
