@@ -10,22 +10,13 @@ export default function (eleventyConfig) {
 	eleventyConfig.addFilter("htmlDateString", (dateObj) => {
 		// dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
 		// return dateObj.toISOString();
-		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toISO();
+		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toISODate();
 	});
 
 	eleventyConfig.addFilter("readableTags", (tags) =>
-		tags.reduce((accumulator, tagId) => {
-			if (tagId === "posts") {
-				return accumulator;
-			}
-
-			const tag = TAGS.find((tag) => tag.id === tagId);
-
-			if (!tag || !tag.title) {
-				return accumulator;
-			}
-
-			return tag.title;
-		}, [])
+		tags
+			.filter((id) => id !== "posts")
+			.map((id) => TAGS.find((tag) => tag.id === id)?.title)
+			.filter(Boolean)
 	);
 }
