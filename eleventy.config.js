@@ -39,9 +39,8 @@ export default function (eleventyConfig) {
 		}
 	});
 
-	// Watch CSS files and assets
-	eleventyConfig.addWatchTarget("**/*.css");
-	eleventyConfig.addWatchTarget("assets");
+	// Watch CSS files
+	eleventyConfig.addWatchTarget("_includes/**/*.css");
 
 	// RSS feed plugin
 	eleventyConfig.addPlugin(feedPlugin, {
