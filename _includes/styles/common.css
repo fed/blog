@@ -120,7 +120,7 @@
 	margin: 0;
 	padding: var(--token-spacing-xxs) var(--token-spacing-xs);
 	white-space: nowrap;
-	color: #d14;
+	color: var(--token-color-crimson);
 	font-weight: var(--token-font-weight-normal);
 }
 
