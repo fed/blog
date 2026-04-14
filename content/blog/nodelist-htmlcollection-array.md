@@ -1,8 +1,8 @@
 ---
 title: On NodeLists, HTMLCollections and Arrays
 date: 2020-03-09
-description: Treating
-tags: browsers
+description: Understanding the differences between NodeLists, HTMLCollections, and Arrays, and how to convert between them.
+tags: web-platform
 draft: true
 ---
 

@@ -1,8 +1,7 @@
 ---
 title: Bacon.js examples
 date: 2016-08-07
-description:
-tags: baconjs
+tags: frp
 draft: true
 ---
 

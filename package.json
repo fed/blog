@@ -4,8 +4,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve --quiet --port=6789"
+    "build": "eleventy",
+    "start": "eleventy --serve --quiet --port=6789"
   },
   "keywords": [],
   "author": "",

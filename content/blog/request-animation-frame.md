@@ -1,6 +1,6 @@
 ---
 title: Understanding requestAnimationFrame
 date: 2020-04-11
-tags: browsers
+tags: web-platform
 draft: true
 ---

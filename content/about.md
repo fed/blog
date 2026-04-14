@@ -25,7 +25,7 @@ This site was built with [Eleventy](https://www.11ty.dev) and a number of [other
 
 I chose to rely on minimal tooling and web platform fundamentals over heavy libraries/frameworks, keeping things simple and performant. Markup is written in HTML, or generated with [Nunjucks](https://mozilla.github.io/nunjucks/) where templating is needed. Styling is done with vanilla CSS, and any client-side interactivity is written in vanilla JavaScript. All content is written using [Markdown](https://www.markdownguide.org/).
 
-The source code for this site is open source and available on [GitHub](htps://github.com/fed/blog) and hosted on
+The source code for this site is open source and available on [GitHub](https://github.com/fed/blog) and hosted on
 [Cloudflare Pages](https://cloudflare.com).
 
 This website produces less than 0.05 g of CO₂ per per visit, according to
