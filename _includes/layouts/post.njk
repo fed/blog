@@ -20,7 +20,7 @@ layout: layouts/base.njk
 				{{ date | readableDate | safe }}
 			</time>
 			<span class="blog-post__metadata__tags">
-				{{ tags | readableTags | safe }}
+				{{ tags | readableTags | join(", ") | safe }}
 			</span>
 		</div>
 	</header>
