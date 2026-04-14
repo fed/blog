@@ -2,7 +2,7 @@
 title: Functional Reactive Programming with Bacon.js
 date: 2017-09-07
 description: A bunch of random ideas aimed at explaining, at a really high level, what functional reactive programming is.
-tags: baconjs
+tags: frp
 draft: true
 ---
 
