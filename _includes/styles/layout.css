@@ -91,7 +91,7 @@
 	line-height: var(--token-line-height-sm);
 	padding: var(--token-spacing-sm) var(--token-spacing-md);
 	/* Enable scrolling to provide access to all navigation menu items on mobile */
-	overflow-x: scroll;
+	overflow-x: auto;
 }
 
 /* This breakpoint corresponds with var(--token-breakpoint-sm) */
