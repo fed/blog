@@ -2,6 +2,23 @@
 layout: layouts/base.njk
 ---
 
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "BlogPosting",
+	"headline": {{ title | dump }},
+	"datePublished": "{{ date | htmlDateString }}",
+	"dateModified": "{{ date | htmlDateString }}",
+	"description": {{ (description or "") | dump }},
+	"url": "{{ metadata.url }}{{ page.url }}",
+	"author": {
+		"@type": "Person",
+		"name": {{ metadata.author.name | dump }},
+		"url": {{ metadata.author.url | dump }}
+	}
+}
+</script>
+
 {# Only include the syntax highlighter CSS on blog posts, included with the CSS per-page bundle. #}
 {# Capture the CSS content as a Nunjucks variable and feed it through to the cssmin filter to minify it. #}
 {% set css %}
