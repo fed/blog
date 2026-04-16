@@ -3,3 +3,5 @@ Disallow:
 
 User-agent: GPTBot
 Disallow: /
+
+Sitemap: https://fedknu.com/sitemap.xml
