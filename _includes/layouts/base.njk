@@ -6,6 +6,15 @@
 		<meta name="description" content="{{ description or metadata.description }}">
 		<meta name="generator" content="{{ eleventy.generator }}">
 		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+		<link rel="alternate" type="application/atom+xml" href="/feed.xml" title="{{ metadata.title }}">
+		<link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
+		<meta property="og:title" content="{{ title or metadata.title }}">
+		<meta property="og:description" content="{{ description or metadata.description }}">
+		<meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+		<meta property="og:type" content="{{ 'article' if 'posts' in (tags or []) else 'website' }}">
+		<meta name="twitter:card" content="summary">
+
 		<title>
 			{% if title %}{{ title }} - {% endif %}{{ metadata.title }}
 		</title>
