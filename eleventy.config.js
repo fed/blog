@@ -50,7 +50,13 @@ export default function (eleventyConfig) {
 			name: "posts", // iterate over `collections.posts`
 			limit: 0 // no limit
 		},
-		metadata
+		metadata: {
+			language: metadata.language,
+			title: metadata.title,
+			subtitle: metadata.description,
+			base: metadata.url,
+			author: metadata.author
+		}
 	});
 
 	// Image plugin
