@@ -53,12 +53,6 @@
 	border-bottom-style: none;
 }
 
-.common-link:visited,
-.common-main-content a:visited {
-	border-bottom-color: var(--token-color-gray-medium);
-	color: var(--token-color-gray-medium);
-}
-
 /* Headings */
 .common-main-content h1 {
 	/* There shouldn't be any other headings level 1 in an article/page */
