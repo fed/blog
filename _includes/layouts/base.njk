@@ -55,8 +55,8 @@
 							<a href="{{entry.url}}"
 							   class="layout-header__navigation__link common-focus-ring {{ 'layout-header__navigation__link--active' if entry.url == page.url }}"
 							   {% if entry.url == page.url %}aria-current="page"{% endif %}
-							   {% if 'http' in entry.url %}target="_blank" rel="noopener noreferrer"{% endif %}>
-								{{ entry.key }}{% if 'http' in entry.url %}<span class="visually-hidden"> (external link)</span>{% endif %}
+							   {% if entry.url.startsWith('http') %}target="_blank" rel="noopener noreferrer"{% endif %}>
+								{{ entry.key }}{% if entry.url.startsWith('http') %}<span class="visually-hidden"> (external link)</span>{% endif %}
 							</a>
 						</li>
 					{%- endfor %}
