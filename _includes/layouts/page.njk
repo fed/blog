@@ -2,12 +2,10 @@
 layout: layouts/base.njk
 ---
 
-<article>
-	<h1 class="common-main-title">
-		{{ (heading or title) | safe }}
-	</h1>
+<h1 class="common-main-title">
+	{{ heading or title }}
+</h1>
 
-	<div class="common-main-content">
-		{{ content | safe }}
-	</div>
-</article>
+<div class="common-main-content">
+	{{ content | safe }}
+</div>
