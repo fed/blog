@@ -14,11 +14,9 @@ eleventyNavigation:
 	{{css | cssmin | safe}}
 </style>
 
-<h1 class="common-main-title">{{ title }}</h1>
+<h1>{{ title }}</h1>
 
-<div class="common-main-content">
-	<p>Fresh content sorted by date, so you'll always see what's new at the top. {# Browse by categories/tags to explore topics you care about. #} You can also subscribe to the Atom feed for automatic updates.</p>
-</div>
+<p>Fresh content sorted by date, so you'll always see what's new at the top. {# Browse by categories/tags to explore topics you care about. #} You can also subscribe to the Atom feed for automatic updates.</p>
 
 <ul reversed class="archive__list">
 	{%- for post in collections.posts | reverse %}
