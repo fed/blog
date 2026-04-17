@@ -119,7 +119,7 @@
 	font-size: var(--token-font-size-sm);
 	margin: 0;
 	padding: var(--token-spacing-xxs) var(--token-spacing-xs);
-	white-space: nowrap;
+	overflow-wrap: break-word;
 	color: var(--token-color-crimson);
 	font-weight: var(--token-font-weight-normal);
 }
