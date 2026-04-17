@@ -138,11 +138,7 @@
 	width: 0;
 }
 
-.layout-header__navigation__link--active::after {
-	background: var(--token-color-blue);
-	width: 100%;
-}
-
+.layout-header__navigation__link--active::after,
 .layout-header__navigation__link:hover::after {
 	width: 100%;
 }
