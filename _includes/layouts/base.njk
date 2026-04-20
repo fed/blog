@@ -38,12 +38,12 @@
       	</a>
 
 		<header class="layout-header">
-			<nav class="layout-header__navigation">
+			<nav class="layout-header__navigation" aria-label="Site">
 				<a href="/" class="layout-header__site-name__link common-focus-ring">
 					<img class="layout-header__site-name__emoji" src="/assets/engineer.svg" alt="" eleventy:ignore/>
 					<span class="layout-header__site-name__container">
 						<div class="layout-header__site-name__title">
-              				F. Knüssel<span class="visually-hidden">: </span>
+							F. Knüssel<span class="visually-hidden">: </span>
 						</div>
 						<div class="layout-header__site-name__tagline">Frontend Developer</div>
 					</span>
@@ -52,8 +52,11 @@
 				<ul class="layout-header__navigation__list">
 					{%- for entry in collections.all | eleventyNavigation %}
 						<li class="layout-header__navigation__list-item">
-							<a href="{{entry.url}}" class="layout-header__navigation__link common-focus-ring {{ 'layout-header__navigation__link--active' if entry.url == page.url }}">
-								{{ entry.key }}
+							<a href="{{entry.url}}"
+							   class="layout-header__navigation__link common-focus-ring {{ 'layout-header__navigation__link--active' if entry.url == page.url }}"
+							   {% if entry.url == page.url %}aria-current="page"{% endif %}
+							   {% if entry.url.startsWith('http') %}target="_blank" rel="noopener noreferrer"{% endif %}>
+								{{ entry.key }}{% if entry.url.startsWith('http') %}<span class="visually-hidden"> (external link)</span>{% endif %}
 							</a>
 						</li>
 					{%- endfor %}

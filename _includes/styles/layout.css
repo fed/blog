@@ -125,6 +125,7 @@
 /* Use together with .common-focus-ring */
 .layout-header__navigation__link {
 	color: var(--token-color-gray-dark);
+	padding-block: var(--token-spacing-xs);
 	text-decoration: none;
 }
 
@@ -145,6 +146,12 @@
 /* Hide bottom outline when focus ring is visible */
 .layout-header__navigation__link:focus::after {
 	display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.layout-header__navigation__link::after {
+		transition: none;
+	}
 }
 
 /*

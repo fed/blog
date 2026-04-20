@@ -31,13 +31,13 @@ layout: layouts/base.njk
 
 <article>
 	<header class="blog-post__header">
-		<h1 class="common-main-title">{{ title | safe }}</h1>
+		<h1 class="common-main-title">{{ title }}</h1>
 		<div class="blog-post__metadata">
-			<time datetime="{{ date | htmlDateString | safe }}" class="blog-post__metadata__date">
-				{{ date | readableDate | safe }}
+			<time datetime="{{ date | htmlDateString }}" class="blog-post__metadata__date">
+				{{ date | readableDate }}
 			</time>
 			<span class="blog-post__metadata__tags">
-				{{ tags | readableTags | join(", ") | safe }}
+				{{ tags | readableTags | join(", ") }}
 			</span>
 		</div>
 	</header>
