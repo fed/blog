@@ -83,6 +83,36 @@
  * Navigation menu
  */
 
+.layout-header__theme-toggle {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: var(--token-spacing-xs);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: var(--token-border-radius-default);
+	color: var(--color-text);
+	transition: background-color 0.2s ease;
+}
+
+.layout-header__theme-toggle:hover {
+	background-color: var(--color-bg);
+}
+
+.layout-header__theme-toggle span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.layout-header__theme-toggle svg {
+	width: 20px;
+	height: 20px;
+	display: block;
+	transition: fill 0.2s ease;
+}
+
 .layout-header__navigation {
 	align-items: center;
 	display: flex;
