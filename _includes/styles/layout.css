@@ -7,9 +7,9 @@
 	--skip-link-margin: var(--token-spacing-xs);
 
 	align-items: center;
-	background-color: var(--token-color-blue);
+	background-color: var(--color-accent);
 	border-radius: var(--token-border-radius-default);
-	color: var(--token-color-white);
+	color: var(--color-accent-text);
 	display: inline-flex;
 	font-size: var(--token-font-size-sm);
 	font-weight: var(--token-font-weight-light);
@@ -33,13 +33,13 @@
  */
 
 .layout-header {
-	background-color: var(--token-color-gray-extra-light);
-	border-bottom: 1px solid var(--token-color-gray-light);
+	background-color: var(--color-bg-alt);
+	border-bottom: 1px solid var(--color-border);
 }
 
 .layout-header::before {
 	height: 3px;
-	background-color: var(--token-color-yellow);
+	background-color: var(--color-accent);
 	content: "";
 	display: block;
 	width: 100%;
@@ -67,14 +67,14 @@
 }
 
 .layout-header__site-name__title {
-	color: var(--token-color-gray-dark);
+	color: var(--color-text);
 	font-weight: var(--token-font-weight-bold);
 	font-size: var(--token-font-size-sm);
 }
 
 .layout-header__site-name__tagline {
 	font-weight: var(--token-font-weight-light);
-	color: var(--token-color-gray-medium);
+	color: var(--color-text-muted);
 	font-size: var(--token-font-size-xs);
 	margin-top: var(--token-spacing-xxs);
 }
@@ -124,7 +124,7 @@
 
 /* Use together with .common-focus-ring */
 .layout-header__navigation__link {
-	color: var(--token-color-gray-dark);
+	color: var(--color-text);
 	padding-block: var(--token-spacing-xs);
 	text-decoration: none;
 }
