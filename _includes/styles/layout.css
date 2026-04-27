@@ -39,7 +39,7 @@
 
 .layout-header::before {
 	height: 3px;
-	background-color: var(--color-accent);
+	background-color: var(--color-accent-alt);
 	content: "";
 	display: block;
 	width: 100%;

@@ -54,6 +54,10 @@
 }
 
 /* Headings */
+h1, h2, h3, h4, h5, h6 {
+	color: var(--color-heading);
+}
+
 .common-main-content h1 {
 	/* There shouldn't be any other headings level 1 in an article/page */
 	display: none;
@@ -114,7 +118,7 @@
 
 /* Inline code */
 .common-main-content code:not(:where(pre code)) {
-	background-color: var(--color-bg-alt);
+	background-color: var(--color-code-bg);
 	border-radius: var(--token-border-radius-default);
 	font-size: var(--token-font-size-sm);
 	margin: 0;

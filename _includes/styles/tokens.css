@@ -9,29 +9,33 @@
 
 	/* colour palette */
 	--token-color-black: #172b4d;
-	--token-color-black-soft: #1e1e1e;
+	--token-color-black-muted: #18171f;
 	--token-color-gray-dark: #344563;
 	--token-color-gray-medium: #526b8d;
 	--token-color-gray-light: #e1e1e1;
 	--token-color-gray-extra-light: #f7f7f7;
 	--token-color-white: #fff;
-	--token-color-white-soft: #f0f0f0;
+	--token-color-white-muted: #dcd7ba;
 	--token-color-yellow: #f9ca5e;
+	--token-color-orange: #ffa066;
 	--token-color-red: #ed615a;
 	--token-color-crimson: #dd1144;
 	--token-color-blue: #0572e6;
 
 	/* semantic colors */
 	color-scheme: light dark;
-	--color-bg: light-dark(var(--token-color-white), var(--token-color-black-soft));
-	--color-bg-alt: light-dark(var(--token-color-gray-extra-light), var(--token-color-black));
-	--color-text: light-dark(var(--token-color-black), var(--token-color-white-soft));
+	--color-bg: light-dark(var(--token-color-white), var(--token-color-black-muted));
+	--color-bg-alt: light-dark(var(--token-color-gray-extra-light), #23222d); /* #121118 */
+	--color-text: light-dark(var(--token-color-black), var(--token-color-white-muted));
 	--color-text-muted: light-dark(var(--token-color-gray-dark), var(--token-color-gray-light));
-	--color-border: light-dark(var(--token-color-gray-medium), var(--token-color-gray-dark));
-	--color-accent: light-dark(var(--token-color-blue), var(--token-color-yellow));
+	--color-heading: light-dark(var(--token-color-black), var(--token-color-white));
+	--color-border: light-dark(var(--token-color-gray-light), var(--token-color-gray-dark));
+	--color-accent: light-dark(var(--token-color-blue), var(--token-color-orange));
+	--color-accent-alt: light-dark(var(--token-color-yellow), var(--token-color-orange));
 	--color-accent-text: light-dark(var(--token-color-white), var(--token-color-black));
-	--color-focus: light-dark(var(--token-color-red), var(--token-color-crimson));
-	--color-code: light-dark(var(--token-color-crimson), var(--token-color-red));
+	--color-focus: light-dark(var(--token-color-red), var(--token-color-orange));
+	--color-code: light-dark(var(--token-color-crimson), var(--token-color-white));
+	--color-code-bg: light-dark(var(--token-color-gray-extra-light), #2d4f67);
 
 	/* spacing (8px base grid size) */
 	--token-spacing-xxs: 0.25rem; /* 4px */
