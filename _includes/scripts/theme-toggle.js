@@ -3,14 +3,22 @@
 	const darkIcon = document.getElementById('theme-toggle-dark-icon');
 	const lightIcon = document.getElementById('theme-toggle-light-icon');
 
+	if (!toggle || !darkIcon || !lightIcon) {
+		return;
+	}
+
 	function updateIcons(theme) {
-		if (theme === 'dark') {
+		const isDark = theme === 'dark';
+		if (isDark) {
 			darkIcon.style.display = 'none';
 			lightIcon.style.display = 'flex';
 		} else {
 			darkIcon.style.display = 'flex';
 			lightIcon.style.display = 'none';
 		}
+		
+		toggle.setAttribute('aria-pressed', isDark);
+		toggle.setAttribute('aria-label', `Switch to ${isDark ? 'light' : 'dark'} mode`);
 	}
 
 	// Initialise icons based on current color scheme
@@ -26,7 +34,9 @@
 		const newTheme = isDark ? 'light' : 'dark';
 		
 		document.documentElement.style.setProperty('color-scheme', newTheme);
-		localStorage.setItem('theme', newTheme);
+		try {
+			localStorage.setItem('theme', newTheme);
+		} catch (e) {}
 		updateIcons(newTheme);
 	});
 })();
