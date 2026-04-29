@@ -14,13 +14,13 @@
 }
 
 .blog-post__metadata__date {
-	color: var(--token-color-gray-medium);
+	color: var(--color-text-muted);
 }
 
 .blog-post__metadata__tags {
 	border-radius: var(--token-border-radius-default);
-	background-color: var(--token-color-blue);
-	color: var(--token-color-white);
+	background-color: var(--color-accent);
+	color: var(--color-accent-text);
 	display: inline-block;
 	font-size: var(--token-font-size-xs);
 	line-height: var(--token-line-height-sm);

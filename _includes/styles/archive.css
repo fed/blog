@@ -15,7 +15,7 @@
 }
 
 .archive__list-item__date {
-	color: var(--token-color-gray-medium);
+	color: var(--color-text-muted);
 	display: block;
 	font-size: var(--token-font-size-sm);
 	text-transform: uppercase;
