@@ -21,11 +21,13 @@
 	--token-color-red: #ed615a;
 	--token-color-crimson: #dd1144;
 	--token-color-blue: #0572e6;
+	--token-color-graphite: #2c2c2e;
+	--token-color-charcoal: #23222d;
 
 	/* semantic colors */
 	color-scheme: light dark;
 	--color-bg: light-dark(var(--token-color-white), var(--token-color-black-muted));
-	--color-bg-alt: light-dark(var(--token-color-gray-extra-light), #23222d); /* #121118 */
+	--color-bg-alt: light-dark(var(--token-color-gray-extra-light), var(--token-color-charcoal));
 	--color-text: light-dark(var(--token-color-black), var(--token-color-white-muted));
 	--color-text-muted: light-dark(var(--token-color-gray-dark), var(--token-color-gray-light));
 	--color-heading: light-dark(var(--token-color-black), var(--token-color-white));
@@ -35,7 +37,7 @@
 	--color-accent-text: light-dark(var(--token-color-white), var(--token-color-black));
 	--color-focus: light-dark(var(--token-color-red), var(--token-color-orange));
 	--color-code: light-dark(var(--token-color-crimson), var(--token-color-white));
-	--color-code-bg: light-dark(var(--token-color-gray-extra-light), #2d4f67);
+	--color-code-bg: light-dark(var(--token-color-gray-extra-light), var(--token-color-graphite));
 
 	/* spacing (8px base grid size) */
 	--token-spacing-xxs: 0.25rem; /* 4px */
