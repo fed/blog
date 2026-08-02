@@ -9,6 +9,10 @@ eleventyNavigation:
 I'm a software engineer with a keen interest in frontend web development, and I help teams ship clean and maintainable code that's
 accessible, performant, reliable, and easy to reason about.
 
+I also study maths on the side, working towards a master's by coursework in pure mathematics. It's an interest I'm returning to after years away from it.
+
+## About this blog
+
 This blog has a bit of a focus on web accessibility, Elm, React, functional (reactive) programming, web components, and browser APIs.
 
 I typically post half-baked ideas, thoughts, code snippets and resources that I find interesting and useful. Instead of documenting my
