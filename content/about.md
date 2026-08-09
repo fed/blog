@@ -32,7 +32,7 @@ I chose to rely on minimal tooling and web platform fundamentals over heavy libr
 The source code for this site is open source and available on [GitHub](https://github.com/fed/blog) and hosted on
 [Cloudflare Pages](https://cloudflare.com).
 
-This website produces less than 0.05 g of CO₂ per per visit, according to
+This website produces less than 0.05 g of CO₂ per visit, according to
 [Website Carbon Calculator](https://websitecarbon.com/website/fedknu-com) and [Digital Beacon](https://digitalbeacon.co/report/fedknu-com),
 achieving a carbon footprint rating of A+.
 
