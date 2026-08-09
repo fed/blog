@@ -18,13 +18,12 @@ change over time.
 
 ### Productivity tools
 
-- [Reminders](https://www.icloud.com/reminders) helps me organise my personal life and side projects. Here's where I capture all of my tasks — if it's not
+- [Apple Reminders](https://www.icloud.com/reminders) helps me organise my personal life and side projects. Here's where I capture all of my tasks — if it's not
   here, it's not happening. I really like the fact I can quickly add tasks to my Inbox through a custom keyboard shortcut without needing to
-  leave what I'm doing and context switch to open the Reminders app, and how I can sort these Inbox tasks out later (I do this daily). Potentially the most useful feature to me is scheduling tasks, i.e. linking a
-  task from your list with a time slot in my calendar. I organise my tasks into different categories/projects including "Life admin",
+  leave what I'm doing and context switch to open the Reminders app, and how I can sort these Inbox tasks out later (I do this daily). Potentially the most useful feature to me is scheduling tasks, i.e. linking a task from your list with a time slot in my calendar. I organise my tasks into different categories/projects including "Life admin",
   "Recurring", "Long term goals", "Learning", "Shopping", "Wish list" and then individual categories for each one of the projects I'm currently working on.
 
-- [Google Calendar](https://calendar.google.com) is essential for managing my time and planning my week, tracking appointments and events,
+- [Apple Calendar](https://calendar.google.com) is essential for managing my time and planning my week, tracking appointments and events,
   staying on top of birthdays and coordinate plans with others. The ability to receive notifications and seamlessly sync across all my
   devices helps me make sure I never miss anything important.
 
@@ -67,16 +66,11 @@ change over time.
 
 - [Visual Studio Code](https://code.visualstudio.com) is my main code editor. I've got all settings sync'd via GitHub which is quite handy.
 
-- [iTerm2](https://iterm2.com) and [pure](https://github.com/sindresorhus/pure) are my preferred tools for all my terminal needs. Before
-  installing this last one you need to make sure
-  [zsh is installed and updated](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH#zsh) (it should be shipped with MacOS). I
-  also have [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) installed for Fish shell-like syntax
-  highlighting, and currently use the [Snazzy colour preset](https://github.com/sindresorhus/iterm2-snazzy).
+- [Ghostty](https://ghostty.org) and [pure](https://github.com/sindresorhus/pure) are my preferred tools for all my terminal needs. Before installing this last one you need to make sure [zsh is installed and updated](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH#zsh) (it should be shipped with MacOS). I also have [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) installed for Fish shell-like syntax highlighting, and currently use the [Snazzy colour preset](https://github.com/sindresorhus/iterm2-snazzy).
 
 - [Homebrew](https://brew.sh) for package management, which also installs MacOS' Command Line Tools and [Git](http://git-scm.com).
 
-- [nvm](https://github.com/creationix/nvm) is a must for installing and handling different Node versions locally. I install this using
-  `curl` as `brew` is currently unsupported.
+- [Mise](https://mise.jdx.dev) is a must for installing and handling different Node, pnpm, and Python versions locally across projects. Before Mise I used [nvm](https://github.com/creationix/nvm) and manually ran `venv`, but now I've got everything consolidated in a single tool that automatically switches versions per project based on my config files.
 
 - [Sublime Merge](https://sublimemerge.com) is quite handy for things like visually parse diffs, navigating a project's history, or scanning
   a list of changes to a particular file over time. For anything else I use Git in my terminal.
@@ -89,7 +83,7 @@ change over time.
 
 - [Bitwarden](https://bitwarden.com) is my preferred password manager. It works well across devices and have never had any problems with it.
 
-- [Duo](https://duo.com) is my 2FA client, and it runs only on my phone.
+- [Microsoft Authenticator](https://support.microsoft.com/en-us/authenticator/about-microsoft-authenticator) is my 2FA client, and it runs only on my phone. I used to use [Duo](https://duo.com) and still like it, but given both work and uni require using Microsoft Authenticator, I consolidated all of my accounts there for simplicity.
 
 ### Reading and information organisation
 
@@ -134,7 +128,7 @@ change over time.
 
 - [Nexstand K2](https://nexstand.eu/products/nexstand-k2-laptop-stand-1) is the laptop stand I carry with me when travelling or working from a café/library. It's lightweight and compact, but it can be a little wobbly.
 
-- I've got an Apple Magic Keyboard and Magic Mouse. I like that they are both clean and simple. The keyboard feels great to type on, and the mouse is a genuinely good mouse with support for gestures but with a horrible charging user experience.
+- I've got an [Apple Magic Keyboard](https://www.apple.com/au/shop/product/mxcj3za/a/magic-keyboard-with-numeric-keypad-us-english) and [Magic Mouse](https://www.apple.com/au/shop/product/mxk53za/a/magic-mouse-usb%E2%80%91c-white-multi-touch-surface). I like that they are both clean and simple. The keyboard feels great to type on, and the mouse is a genuinely good mouse with support for gestures but with a horrible charging user experience.
 
 ## Away from work
 
@@ -147,6 +141,8 @@ I've got an old [Kindle Paperwhite](https://www.amazon.com/kindle/shop/kindle-pa
 
 In the past few years I've also been making use of my local library, which is a great way to enjoy physical books without the extra clutter.
 
+When I'm travelling I usually take my [iPad 11-inch (A16)](https://www.apple.com/au/ipad-11/) and [Logitech Crayon](https://www.logitech.com/en-au/shop/p/crayon-ipad-digital-pencil) with me. Depending on how much space I've got, I also take my [Logitech K380 bluetooth keyboard](https://logitech.com/en-au/shop/p/k380-multi-device.920-011145) as it's much easier to write with than the on-screen keyboard.
+
 ∎
 
-**Last updated:** March 2026
+**Last updated:** August 2026
