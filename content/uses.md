@@ -64,7 +64,7 @@ change over time.
 
 ### Coding
 
-- [Visual Studio Code](https://code.visualstudio.com) is my main code editor. I've got all settings sync'd via GitHub which is quite handy.
+- [Visual Studio Code](https://code.visualstudio.com) is my main code editor. I've got all settings and extensions sync'd via GitHub which is quite handy.
 
 - [Ghostty](https://ghostty.org) and [pure](https://github.com/sindresorhus/pure) are my preferred tools for all my terminal needs. Before installing this last one you need to make sure [zsh is installed and updated](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH#zsh) (it should be shipped with MacOS). I also have [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) installed for Fish shell-like syntax highlighting, and currently use the [Snazzy colour preset](https://github.com/sindresorhus/iterm2-snazzy).
 
