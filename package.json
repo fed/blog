@@ -1,28 +1,29 @@
 {
-  "name": "blog-11ty",
-  "version": "1.0.0",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "build": "eleventy",
-    "start": "eleventy --serve --quiet --port=6789"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@11ty/eleventy": "^3.1.5",
-    "@11ty/eleventy-img": "^6.0.4",
-    "@11ty/eleventy-navigation": "^1.0.5",
-    "@11ty/eleventy-plugin-rss": "^3.0.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
-    "@csstools/normalize.css": "^12.1.1",
-    "clean-css": "^5.3.3",
-    "html-minifier-terser": "^7.2.0",
-    "luxon": "^3.7.2",
-    "prettier": "^3.8.3",
-    "prettier-plugin-jinja-template": "^2.1.0",
-    "prismjs": "^1.30.0"
-  }
+	"name": "blog-11ty",
+	"version": "1.0.0",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"build": "eleventy",
+		"start": "eleventy --serve --quiet --port=6789",
+		"format": "prettier . --write"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"@11ty/eleventy": "^3.1.5",
+		"@11ty/eleventy-img": "^6.0.4",
+		"@11ty/eleventy-navigation": "^1.0.5",
+		"@11ty/eleventy-plugin-rss": "^3.0.0",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+		"@csstools/normalize.css": "^12.1.1",
+		"clean-css": "^5.3.3",
+		"html-minifier-terser": "^7.2.0",
+		"luxon": "^3.7.2",
+		"prettier": "^3.8.3",
+		"prettier-plugin-jinja-template": "^2.1.0",
+		"prismjs": "^1.30.0"
+	}
 }

@@ -23,13 +23,13 @@ The goal here is to get comfortable with both the syntax and the "everything is 
 - Read the [Official Elm Guide](https://guide.elm-lang.org) cover to cover, it's short, well written, and designed for people who already know how to code
 - Install the toolchain and play around with the REPL
 - Key concepts to absorb:
-  - Anonymous functions, currying, and partial application
-  - The pipe operator (`|>`), which is something we'll be using constantly
-  - Type aliases vs custom types (union types/ADTs)
-  - Why there are no runtime exceptions
-  - How `Maybe` and `Result` replace `null`/`undefined` and `try`/`catch`
+    - Anonymous functions, currying, and partial application
+    - The pipe operator (`|>`), which is something we'll be using constantly
+    - Type aliases vs custom types (union types/ADTs)
+    - Why there are no runtime exceptions
+    - How `Maybe` and `Result` replace `null`/`undefined` and `try`/`catch`
 
-*TypeScript familiarity tip:* Custom types go further than TypeScript discriminated unions, but the mental model is rather similar, and I found it to be a good idea to lean on that familiarity.
+_TypeScript familiarity tip:_ Custom types go further than TypeScript discriminated unions, but the mental model is rather similar, and I found it to be a good idea to lean on that familiarity.
 
 Finally, we can also supplement all of this with [Exercism's Elm track](https://exercism.org/tracks/elm), which is a set of small logic puzzles that force functional thinking without any DOM noise.
 
@@ -43,9 +43,9 @@ The goal here is to understand TEA deeply and become fluent in pattern matching.
 - Explore `Cmd` and `Sub` conceptually
 - Look into phantom types
 
-*Framing correction coming from Reactland:* Elm does not have components, and I found it quite hard to resist the urge to think in that model. TEA's `View` function composes smaller `View` functions, not components with local lifecycles.
+_Framing correction coming from Reactland:_ Elm does not have components, and I found it quite hard to resist the urge to think in that model. TEA's `View` function composes smaller `View` functions, not components with local lifecycles.
 
-*TypeScript familiarity tip:* We already think in types, the key leap is that Elm's types are total, which means no `any`, no casting, no escape. The trickiest part would be to work with that, not against it.
+_TypeScript familiarity tip:_ We already think in types, the key leap is that Elm's types are total, which means no `any`, no casting, no escape. The trickiest part would be to work with that, not against it.
 
 ## 3) Side effects and the outside world
 
@@ -59,7 +59,7 @@ The goal here is to handle real world I/O in the same way we constantly interact
 Some resources useful at this stage:
 
 - [elmprogramming.com](https://www.elmprogramming.com) has an excellent dedicated section on JSON decoders specifically
-- The book *Elm in Action* by Richard Feldman
+- The book _Elm in Action_ by Richard Feldman
 
 Found this part to take the longest to wrap my head around. JSON decoding alone takes a long time to genuinely internalise. Feeling slow here is normal, not a signal you're doing it wrong or missing something.
 

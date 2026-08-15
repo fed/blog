@@ -14,7 +14,7 @@ The requirements for this change were pretty straightforward: stick to the user'
 Modern browsers ship a CSS function called [`light-dark()`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/light-dark) that returns one of two values depending on the `color-scheme` of the HTML element. If I declare semantic tokens once like `--color-bg: light-dark(white, black);` and then set `color-scheme` on the root, the whole page repaints in the right colour scheme automatically. The only thing the toggle needs to do is flip `color-scheme` between `light` and `dark` on the page's `<html>`, and CSS will do the switch/repainting for me:
 
 ```html
-<html lang="en" style="color-scheme: dark;">
+<html lang="en" style="color-scheme: dark;"></html>
 ```
 
 ## 1) Create a new layer of semantic tokens
@@ -25,26 +25,26 @@ So I went ahead and added a few new primitives for the dark palette (`--token-co
 
 ```css
 :root {
-  /* primitive tokens */
-  --token-color-black: #172b4d;
-  --token-color-white: #fff;
-  --token-color-blue: #0572e6;
-  --token-color-orange: #ffa066;
-  --token-color-graphite: #2c2c2e;
-  --token-color-charcoal: #23222d;
-  /* ... etc. etc. */
+	/* primitive tokens */
+	--token-color-black: #172b4d;
+	--token-color-white: #fff;
+	--token-color-blue: #0572e6;
+	--token-color-orange: #ffa066;
+	--token-color-graphite: #2c2c2e;
+	--token-color-charcoal: #23222d;
+	/* ... etc. etc. */
 
-  /* semantic tokens */
-  color-scheme: light dark;
+	/* semantic tokens */
+	color-scheme: light dark;
 
-  --color-bg: light-dark(var(--token-color-white), var(--token-color-black-muted));
-  --color-text: light-dark(var(--token-color-black), var(--token-color-white-muted));
-  --color-heading: light-dark(var(--token-color-black), var(--token-color-white));
-  --color-border: light-dark(var(--token-color-gray-light), var(--token-color-gray-dark));
-  --color-accent: light-dark(var(--token-color-blue), var(--token-color-orange));
-  --color-focus: light-dark(var(--token-color-red), var(--token-color-orange));
-  --color-code: light-dark(var(--token-color-crimson), var(--token-color-white));
-  /* ... etc. etc. */
+	--color-bg: light-dark(var(--token-color-white), var(--token-color-black-muted));
+	--color-text: light-dark(var(--token-color-black), var(--token-color-white-muted));
+	--color-heading: light-dark(var(--token-color-black), var(--token-color-white));
+	--color-border: light-dark(var(--token-color-gray-light), var(--token-color-gray-dark));
+	--color-accent: light-dark(var(--token-color-blue), var(--token-color-orange));
+	--color-focus: light-dark(var(--token-color-red), var(--token-color-orange));
+	--color-code: light-dark(var(--token-color-crimson), var(--token-color-white));
+	/* ... etc. etc. */
 }
 ```
 
@@ -60,18 +60,34 @@ A few representative swaps:
 
 ```css
 /* before */
-body { color: var(--token-color-black); }
-.common-link { color: var(--token-color-blue); }
+body {
+	color: var(--token-color-black);
+}
+.common-link {
+	color: var(--token-color-blue);
+}
 
 /* after */
-body { background-color: var(--color-bg); color: var(--color-text); }
-.common-link { color: var(--color-accent); }
+body {
+	background-color: var(--color-bg);
+	color: var(--color-text);
+}
+.common-link {
+	color: var(--color-accent);
+}
 ```
 
 I also added an explicit rule I didn't have before, because in the old single theme version, headings inherited `--token-color-black` from the body and looked fine. But now in dark mode, I wanted slightly more contrast than the body text, so headings get their own token.
 
 ```css
-h1, h2, h3, h4, h5, h6 { color: var(--color-heading); }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--color-heading);
+}
 ```
 
 Primitives that are genuinely mode invariant (e.g. spacing, font sizes, border radius) stayed exactly as they were. Don't refactor what doesn't need refactoring.
@@ -83,17 +99,17 @@ If you wait for the DOM to be ready before applying the saved theme, the user se
 The fix is a tiny blocking/synchronous script inlined in the `<head>` that runs before the browser paints anything.
 
 ```js
-(function() {
-  let savedTheme = null;
+(function () {
+	let savedTheme = null;
 
-  try {
-    savedTheme = localStorage.getItem('theme');
-  } catch (e) {}
+	try {
+		savedTheme = localStorage.getItem("theme");
+	} catch (e) {}
 
-  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  const theme = savedTheme || systemTheme;
+	const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+	const theme = savedTheme || systemTheme;
 
-  document.documentElement.style.setProperty('color-scheme', theme);
+	document.documentElement.style.setProperty("color-scheme", theme);
 })();
 ```
 
@@ -136,43 +152,42 @@ The toggling logic lives at the end of the body, as this script should not be bl
 
 ```js
 (function () {
-  const toggle = document.getElementById('theme-toggle');
-  const darkIcon = document.getElementById('theme-toggle-dark-icon');
-  const lightIcon = document.getElementById('theme-toggle-light-icon');
+	const toggle = document.getElementById("theme-toggle");
+	const darkIcon = document.getElementById("theme-toggle-dark-icon");
+	const lightIcon = document.getElementById("theme-toggle-light-icon");
 
-  function updateIcons(theme) {
-    const isDark = theme === 'dark';
-    if (isDark) {
-      darkIcon.style.display = 'none';
-      lightIcon.style.display = 'flex';
-    } else {
-      darkIcon.style.display = 'flex';
-      lightIcon.style.display = 'none';
-    }
+	function updateIcons(theme) {
+		const isDark = theme === "dark";
+		if (isDark) {
+			darkIcon.style.display = "none";
+			lightIcon.style.display = "flex";
+		} else {
+			darkIcon.style.display = "flex";
+			lightIcon.style.display = "none";
+		}
 
-    toggle.setAttribute('aria-pressed', isDark);
-    toggle.setAttribute('aria-label', `Switch to ${isDark ? 'light' : 'dark'} mode`);
-  }
+		toggle.setAttribute("aria-pressed", isDark);
+		toggle.setAttribute("aria-label", `Switch to ${isDark ? "light" : "dark"} mode`);
+	}
 
-  const currentTheme =
-    getComputedStyle(document.documentElement).getPropertyValue('color-scheme').trim()
-    || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+	const currentTheme =
+		getComputedStyle(document.documentElement).getPropertyValue("color-scheme").trim() ||
+		(window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
-  const appliedTheme =
-    document.documentElement.style.getPropertyValue('color-scheme') || currentTheme;
+	const appliedTheme = document.documentElement.style.getPropertyValue("color-scheme") || currentTheme;
 
-  updateIcons(appliedTheme);
+	updateIcons(appliedTheme);
 
-  toggle.addEventListener('click', () => {
-    const isDark = document.documentElement.style.getPropertyValue('color-scheme') === 'dark';
-    const newTheme = isDark ? 'light' : 'dark';
+	toggle.addEventListener("click", () => {
+		const isDark = document.documentElement.style.getPropertyValue("color-scheme") === "dark";
+		const newTheme = isDark ? "light" : "dark";
 
-    document.documentElement.style.setProperty('color-scheme', newTheme);
-    try {
-      localStorage.setItem('theme', newTheme);
-    } catch (e) {}
-    updateIcons(newTheme);
-  });
+		document.documentElement.style.setProperty("color-scheme", newTheme);
+		try {
+			localStorage.setItem("theme", newTheme);
+		} catch (e) {}
+		updateIcons(newTheme);
+	});
 })();
 ```
 
@@ -192,13 +207,13 @@ Probably the most popular pattern is `<html data-theme="dark">` paired with `[da
 
 ```css
 .my-component {
-  background-color: white;
-  color: black;
+	background-color: white;
+	color: black;
 }
 
 [data-theme="dark"] .my-component {
-  background-color: #1a1a1a;
-  color: #e0e0e0;
+	background-color: #1a1a1a;
+	color: #e0e0e0;
 }
 ```
 

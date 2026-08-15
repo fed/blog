@@ -77,15 +77,14 @@ A workspace is a folder containing a `package.json` file. Each workspace can dec
 ```json
 /* ./packages/button/package.json */
 {
-  "main": "./index.tsx",
-  "types": "./index.tsx"
+	"main": "./index.tsx",
+	"types": "./index.tsx"
 }
 ```
 
 `main` defines the entry point for this package, while `types` indicates where the TypeScript types are located.
 
 Apps consume these packages as dependencies, for example:
-
 
 ```js
 import { Button } from "@my-app/ui/button";
@@ -95,13 +94,13 @@ Note that the `@my-app/ui` package name is defined in the `package.json` file fo
 
 ```json
 {
-  "name": "@my-app/ui",
-  "version": "0.0.0",
-  "private": true,
-  "exports": {
-    "./*": "./src/*.tsx"
-  },
-  // ...
+	"name": "@my-app/ui",
+	"version": "0.0.0",
+	"private": true,
+	"exports": {
+		"./*": "./src/*.tsx"
+	}
+	// ...
 }
 ```
 
@@ -111,12 +110,12 @@ This is how the package/library is listed as a dependency in the consuming appli
 
 ```json
 {
-  "dependencies": {
-    "@my-app/tokens": "workspace:*",
-    "@my-app/button": "workspace:*",
-    "@my-app/link": "workspace:*",
-    "@my-app/toggle": "workspace:*"
-  }
+	"dependencies": {
+		"@my-app/tokens": "workspace:*",
+		"@my-app/button": "workspace:*",
+		"@my-app/link": "workspace:*",
+		"@my-app/toggle": "workspace:*"
+	}
 }
 ```
 
@@ -172,7 +171,7 @@ yarn workspace @my-app/link run storybook
 
 Alternatively it's also possible to cd into the workspace itself and run pnpm run dev.
 
-If you are using Yarn, to scope your command use workspace  instead of the `--filter` flag:
+If you are using Yarn, to scope your command use workspace instead of the `--filter` flag:
 
 ```sh
 # pnpm

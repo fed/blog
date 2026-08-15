@@ -11,19 +11,17 @@ But the bundle size reduction is just the visible benefit. The real value lies i
 
 Here are some notes from the migration.
 
-
 ## The core swap
 
 Axios wraps a lot of convenience around HTTP requests. Dropping it for native `fetch` means you take on that responsibility yourself. The main changes:
 
 - `params` is no longer a config option. You build the query string manually via `URL` and `searchParams`.
 - The response body isn't automagically parsed anymore. Call `.json()` explicitly.
-- `fetch` only rejects on *network failures*, not on HTTP error status codes. You must check `response.ok` yourself.
+- `fetch` only rejects on _network failures_, not on HTTP error status codes. You must check `response.ok` yourself.
 - POST request bodies need manual `JSON.stringify()` and an explicit `Content-Type` header.
 - There's no built-in `timeout` property. Use `AbortController` instead.
 - There's no built-in interceptor mechanism. You write a wrapper function.
 - `AxiosRequestConfig` maps to `RequestInit` in TypeScript.
-
 
 ## Stringify POST request body
 
@@ -31,35 +29,31 @@ Axios automatically serialises objects to JSON and sets the `Content-Type` heade
 
 ```ts
 fetch("https://api.example.com/users", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({ name: "Jane Doe" }),
+	method: "POST",
+	headers: {
+		"Content-Type": "application/json"
+	},
+	body: JSON.stringify({ name: "Jane Doe" })
 });
 ```
 
 One thing to watch: don't unconditionally set `Content-Type` to `application/json`. If the body is `FormData` or a `Blob`, let the browser set the header itself, otherwise the request will break.
-
 
 ## Building search params with `URL`
 
 Axios accepts a `params` object and appends it to the URL for you. With `fetch`, you build the query string yourself. Using the `URL` constructor with `searchParams` is the safest approach. It correctly handles existing query strings, URL fragments, encoding, and avoids brittle string concatenation.
 
 ```ts
-const base =
-  typeof window !== "undefined"
-    ? window.location.origin
-    : "http://localhost";
+const base = typeof window !== "undefined" ? window.location.origin : "http://localhost";
 
 const u = new URL(url, base);
 
 for (const [key, value] of Object.entries(params ?? {})) {
-  if (Array.isArray(value)) {
-    for (const v of value) u.searchParams.append(key, String(v));
-  } else if (value != null) {
-    u.searchParams.append(key, String(value));
-  }
+	if (Array.isArray(value)) {
+		for (const v of value) u.searchParams.append(key, String(v));
+	} else if (value != null) {
+		u.searchParams.append(key, String(value));
+	}
 }
 
 const requestUrl = u.toString();
@@ -80,7 +74,6 @@ Only if `url` might be relative.
 
 **Rule of thumb:** guaranteed absolute URL → omit the base. URL might be relative → provide one (prefer `origin` in browsers).
 
-
 ## Handling errors
 
 `fetch` only rejects on network failures. A 404 or 500 response resolves normally, so you need to check `response.ok` (true for status codes 200–299) and throw manually.
@@ -91,11 +84,11 @@ This is the biggest behavioural difference from Axios. Axios throws for any non-
 
 ```ts
 if (!response.ok) {
-  throw new Error(await response.text());
+	throw new Error(await response.text());
 }
 ```
 
-`response.text()` returns the body as a string, even if empty. It's unlikely to fail, but it *can* throw if the body stream is corrupted or already consumed.
+`response.text()` returns the body as a string, even if empty. It's unlikely to fail, but it _can_ throw if the body stream is corrupted or already consumed.
 
 ### With a fallback message
 
@@ -103,11 +96,7 @@ Adding a fallback costs a line of verbosity but helps debugging if `response.tex
 
 ```ts
 if (!response.ok) {
-  throw new Error(
-    await response.text().catch(
-      () => `Request failed with status code ${response.status}`
-    )
-  );
+	throw new Error(await response.text().catch(() => `Request failed with status code ${response.status}`));
 }
 ```
 
@@ -117,27 +106,20 @@ For production code, you might also want to guard against 204/205 (no content) a
 
 ```ts
 const handle = async (response: Response) => {
-  if (!response.ok) {
-    const details = await response.text().catch(() => "");
-    throw new Error(
-      `HTTP ${response.status} ${response.statusText}${
-        details ? ` — ${details}` : ""
-      }`
-    );
-  }
+	if (!response.ok) {
+		const details = await response.text().catch(() => "");
+		throw new Error(`HTTP ${response.status} ${response.statusText}${details ? ` — ${details}` : ""}`);
+	}
 
-  if (response.status === 204 || response.status === 205) return null;
+	if (response.status === 204 || response.status === 205) return null;
 
-  const isJson = response.headers
-    .get("content-type")
-    ?.includes("application/json");
+	const isJson = response.headers.get("content-type")?.includes("application/json");
 
-  if (!isJson) throw new Error("Expected JSON response");
+	if (!isJson) throw new Error("Expected JSON response");
 
-  return response.json();
+	return response.json();
 };
 ```
-
 
 ## Request cancellation and timeouts
 
@@ -148,16 +130,15 @@ const controller = new AbortController();
 const timeoutId = setTimeout(() => controller.abort(), 5000);
 
 fetch("/data", { signal: controller.signal })
-  .catch((error) => {
-    if (error.name === "AbortError") {
-      console.log("Request timed out!");
-    }
-  })
-  .finally(() => clearTimeout(timeoutId));
+	.catch((error) => {
+		if (error.name === "AbortError") {
+			console.log("Request timed out!");
+		}
+	})
+	.finally(() => clearTimeout(timeoutId));
 ```
 
 The `finally` block is important: without it, the timeout keeps ticking even after a successful response, which can cause issues if you're reusing the controller or if the abort fires after the response has already been consumed.
-
 
 ## Interceptors
 
@@ -165,13 +146,11 @@ Axios has first-class support for interceptors, which let you run code or modify
 
 `fetch` has no built-in concept of interceptors. You implement your own wrapper or factory function. This is arguably the main source of added complexity in the migration, but it also means the logic is explicit rather than hidden behind a global config.
 
-
 ## Wrapping everything in try/catch
 
 Your `fetch` call can throw in several places: network failures, JSON parse errors, and the manual `throw` above. A try/catch around the whole thing prevents unhandled promise rejections and gives you a single place to log or surface errors.
 
 TODO: Expand on using a shared error handler across the monorepo
-
 
 ## A reusable fetch wrapper
 
@@ -180,64 +159,61 @@ Putting it all together into a single utility that achieves rough feature parity
 ```ts
 const TOKEN_KEY = "rawr";
 
-function fetchClient(
-  url: string,
-  { method, timeout, body, baseUrl, ...customConfig }: FetchClientOptions = {}
-) {
-  const token = window.localStorage.getItem(TOKEN_KEY);
-  const headers: Record<string, string> = {
-    "content-type": "application/json",
-    ...customConfig.headers,
-  };
-  const resolvedBase = baseUrl || process.env.BASE_API_URL;
-  let controller: AbortController | undefined;
-  let timeoutId: ReturnType<typeof setTimeout> | undefined;
+function fetchClient(url: string, { method, timeout, body, baseUrl, ...customConfig }: FetchClientOptions = {}) {
+	const token = window.localStorage.getItem(TOKEN_KEY);
+	const headers: Record<string, string> = {
+		"content-type": "application/json",
+		...customConfig.headers
+	};
+	const resolvedBase = baseUrl || process.env.BASE_API_URL;
+	let controller: AbortController | undefined;
+	let timeoutId: ReturnType<typeof setTimeout> | undefined;
 
-  if (token) {
-    headers.Authorization = `Bearer ${token}`;
-  }
+	if (token) {
+		headers.Authorization = `Bearer ${token}`;
+	}
 
-  const config: RequestInit = {
-    method: method || "GET",
-    ...customConfig,
-    headers,
-  };
+	const config: RequestInit = {
+		method: method || "GET",
+		...customConfig,
+		headers
+	};
 
-  if (body) {
-    config.body = JSON.stringify(body);
-  }
+	if (body) {
+		config.body = JSON.stringify(body);
+	}
 
-  if (timeout) {
-    controller = new AbortController();
-    timeoutId = setTimeout(() => controller!.abort(), timeout);
-    config.signal = controller.signal;
-  }
+	if (timeout) {
+		controller = new AbortController();
+		timeoutId = setTimeout(() => controller!.abort(), timeout);
+		config.signal = controller.signal;
+	}
 
-  return window
-    .fetch(`${resolvedBase}/${url}`, config)
-    .then(async (response) => {
-      if (response.status === 401) {
-        // Handle auth expiry (clear token, redirect, etc.)
-        return;
-      }
+	return window
+		.fetch(`${resolvedBase}/${url}`, config)
+		.then(async (response) => {
+			if (response.status === 401) {
+				// Handle auth expiry (clear token, redirect, etc.)
+				return;
+			}
 
-      if (response.ok) {
-        return await response.json();
-      }
+			if (response.ok) {
+				return await response.json();
+			}
 
-      const errorMessage = await response.text();
-      const error = new Error(errorMessage) as Error & {
-        status: number;
-        body: string;
-      };
-      error.status = response.status;
-      error.body = errorMessage;
+			const errorMessage = await response.text();
+			const error = new Error(errorMessage) as Error & {
+				status: number;
+				body: string;
+			};
+			error.status = response.status;
+			error.body = errorMessage;
 
-      return Promise.reject(error);
-    })
-    .finally(() => {
-      if (timeoutId) clearTimeout(timeoutId);
-    });
+			return Promise.reject(error);
+		})
+		.finally(() => {
+			if (timeoutId) clearTimeout(timeoutId);
+		});
 }
 ```
 
@@ -245,22 +221,19 @@ Not included in this version: retries with backoff (not built into Axios either)
 
 TODO: Discuss the `Content-Type` caveat. This unconditionally sets `application/json`, which breaks if the body is `FormData` or a `Blob`.
 
-
 ## A migration example
 
 A typical Axios call in the codebase looked like this:
 
 ```ts
 try {
-  const authConfig = { headers: { Authorization: `Bearer ${token}` } };
-  const { license: drmAuthCode } = (
-    await axios.get(`${endpoint}/${id}`, authConfig)
-  ).data;
+	const authConfig = { headers: { Authorization: `Bearer ${token}` } };
+	const { license: drmAuthCode } = (await axios.get(`${endpoint}/${id}`, authConfig)).data;
 
-  return drmAuthCode;
+	return drmAuthCode;
 } catch (e: any) {
-  console.error(e);
-  throw e;
+	console.error(e);
+	throw e;
 }
 ```
 
@@ -268,26 +241,25 @@ The key thing to watch in the migration is the response shape. Axios returns an 
 
 ```ts
 try {
-  const response = await fetch(`${endpoint}/${id}`, {
-    headers: { Authorization: `Bearer ${token}` },
-  });
+	const response = await fetch(`${endpoint}/${id}`, {
+		headers: { Authorization: `Bearer ${token}` }
+	});
 
-  if (!response.ok) {
-    const errorMessage = await response.text();
-    return Promise.reject(new Error(errorMessage));
-  }
+	if (!response.ok) {
+		const errorMessage = await response.text();
+		return Promise.reject(new Error(errorMessage));
+	}
 
-  const { license: drmAuthCode } = await response.json();
+	const { license: drmAuthCode } = await response.json();
 
-  return drmAuthCode;
+	return drmAuthCode;
 } catch (e: any) {
-  console.error(e);
-  throw e;
+	console.error(e);
+	throw e;
 }
 ```
 
 Most migration effort was in handling the response, not the request. The arguments to `fetch` are largely the same as what you'd pass to Axios; it's the return value and error semantics that change.
-
 
 ## Real world example: reCAPTCHA verification
 
@@ -295,14 +267,14 @@ Before (Axios):
 
 ```ts
 const data = await axios
-  .post("https://www.google.com/recaptcha/api/siteverify", null, {
-    params: {
-      secret: process.env.RECAPTCHA_SECRET_KEY,
-      response: token,
-    },
-  })
-  .then((response) => response.data)
-  .catch((error) => error);
+	.post("https://www.google.com/recaptcha/api/siteverify", null, {
+		params: {
+			secret: process.env.RECAPTCHA_SECRET_KEY,
+			response: token
+		}
+	})
+	.then((response) => response.data)
+	.catch((error) => error);
 ```
 
 After (Fetch):
@@ -318,15 +290,15 @@ url.searchParams.append("response", token);
 let data;
 
 try {
-  const response = await fetch(url.toString(), { method: "POST" });
+	const response = await fetch(url.toString(), { method: "POST" });
 
-  if (!response.ok) {
-    throw new Error(await response.text());
-  }
+	if (!response.ok) {
+		throw new Error(await response.text());
+	}
 
-  data = await response.json();
+	data = await response.json();
 } catch (error) {
-  data = error;
+	data = error;
 }
 
 return res.json(data);
@@ -334,13 +306,11 @@ return res.json(data);
 
 TODO: Commentary on the tradeoffs, more verbose, but no dependency and more explicit control flow
 
-
 ## Polyfilling
 
 `fetch` is native in modern browsers and available globally in Node.js from v18+. If you need to support older Node versions, consider a polyfill like [undici](https://github.com/nodejs/undici) or [unfetch](https://github.com/developit/unfetch) for a minimal browser polyfill.
 
 Axios works in both the browser and Node.js without polyfills, so this is one area where the migration does add a consideration, albeit a shrinking one as older Node versions fall out of support.
-
 
 ## Gotchas and edge cases
 

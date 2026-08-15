@@ -19,20 +19,20 @@ Open the command palette (`Cmd+Shift+P`), run `Package Control: Install Package`
 
 **LSP and language support:**
 
--   [LSP](https://packagecontrol.io/packages/LSP): the base LSP client
--   [LSP-typescript](https://packagecontrol.io/packages/LSP-typescript): TypeScript/JS via tsserver
--   [LSP-biome](https://packagecontrol.io/packages/LSP-biome): Biome linting, formatting, and code actions
--   [LSP-css](https://packagecontrol.io/packages/LSP-css): CSS language server
--   [LSP-copilot](https://packagecontrol.io/packages/LSP-copilot): GitHub Copilot support
+- [LSP](https://packagecontrol.io/packages/LSP): the base LSP client
+- [LSP-typescript](https://packagecontrol.io/packages/LSP-typescript): TypeScript/JS via tsserver
+- [LSP-biome](https://packagecontrol.io/packages/LSP-biome): Biome linting, formatting, and code actions
+- [LSP-css](https://packagecontrol.io/packages/LSP-css): CSS language server
+- [LSP-copilot](https://packagecontrol.io/packages/LSP-copilot): GitHub Copilot support
 
 **Developer experience:**
 
--   [SideBarEnhancements](https://packagecontrol.io/packages/SideBarEnhancements): adds missing file operations to the sidebar
--   [A File Icon](https://packagecontrol.io/packages/A%20File%20Icon): file type icons
--   [BracketHighlighter](https://packagecontrol.io/packages/BracketHighlighter): bracket pair matching
--   [AutoFileName](https://packagecontrol.io/packages/AutoFileName): path autocomplete in import strings
--   [Pretty JSON](https://packagecontrol.io/packages/Pretty%20JSON): to parse and format JSON files
--   [MDX](https://packagecontrol.io/packages/MDX): MDX syntax definitions
+- [SideBarEnhancements](https://packagecontrol.io/packages/SideBarEnhancements): adds missing file operations to the sidebar
+- [A File Icon](https://packagecontrol.io/packages/A%20File%20Icon): file type icons
+- [BracketHighlighter](https://packagecontrol.io/packages/BracketHighlighter): bracket pair matching
+- [AutoFileName](https://packagecontrol.io/packages/AutoFileName): path autocomplete in import strings
+- [Pretty JSON](https://packagecontrol.io/packages/Pretty%20JSON): to parse and format JSON files
+- [MDX](https://packagecontrol.io/packages/MDX): MDX syntax definitions
 
 > We use Biome for linting and code formatting, but [if your codebase uses ESLint and Prettier instead of Biome, check out this other post](/blog/sublimetext-prettier-eslint).
 
@@ -47,7 +47,7 @@ To get TypeScript to work you'll need to point `LSP-typescript` at your monorepo
 ```json
 // Settings in here override those in "LSP-typescript/LSP-typescript.sublime-settings"
 {
-    "typescript-tsdk": "/Users/fed/workspace/repository-name/node_modules/typescript/lib"
+	"typescript-tsdk": "/Users/fed/workspace/repository-name/node_modules/typescript/lib"
 }
 ```
 
@@ -57,13 +57,13 @@ Something handy to add is support for "jump to definition" using `Option+click`.
 
 ```json
 [
-    {
-        "button": "button1", // left mouse button
-        "count": 1, // single click
-        "modifiers": ["option"],
-        "press_command": "drag_select",
-        "command": "lsp_symbol_definition"
-    }
+	{
+		"button": "button1", // left mouse button
+		"count": 1, // single click
+		"modifiers": ["option"],
+		"press_command": "drag_select",
+		"command": "lsp_symbol_definition"
+	}
 ]
 ```
 
@@ -74,22 +74,22 @@ Go to `Settings > Package Settings > LSP > Settings`. This is where the global L
 ```json
 // Settings in here override those in "LSP/LSP.sublime-settings"
 {
-    "lsp_format_on_save": true,
-    "clients": {
-        "LSP-biome": {
-            "enabled": true,
-            "initializationOptions": {
-                "requireConfiguration": true
-            }
-        },
-        "LSP-typescript": {
-            "enabled": true,
-            "settings": {
-                "typescript.format.enable": false,
-                "javascript.format.enable": false
-            }
-        }
-    }
+	"lsp_format_on_save": true,
+	"clients": {
+		"LSP-biome": {
+			"enabled": true,
+			"initializationOptions": {
+				"requireConfiguration": true
+			}
+		},
+		"LSP-typescript": {
+			"enabled": true,
+			"settings": {
+				"typescript.format.enable": false,
+				"javascript.format.enable": false
+			}
+		}
+	}
 }
 ```
 
@@ -103,13 +103,13 @@ Here's the content of my `.sublime-project` file:
 
 ```json
 {
-    "folders": [
-        {
-            "path": ".",
-            "folder_exclude_patterns": ["node_modules", ".turbo", "dist", ".cache"],
-            "file_exclude_patterns": ["*.lock"]
-        }
-    ]
+	"folders": [
+		{
+			"path": ".",
+			"folder_exclude_patterns": ["node_modules", ".turbo", "dist", ".cache"],
+			"file_exclude_patterns": ["*.lock"]
+		}
+	]
 }
 ```
 
@@ -169,33 +169,33 @@ Besides your editor preferences in `Settings > Settings`, we'll need to add thes
 
 ```json
 {
-    // ... the rest of your user settings ...
-    "index_files": false,
-    "show_definitions": false
+	// ... the rest of your user settings ...
+	"index_files": false,
+	"show_definitions": false
 }
 ```
 
--   `index_files: false` disables Sublime's built-in code indexing, which is redundant when LSP is running and just wastes CPU.
--   `show_definitions: false` prevents Sublime's native hover popup from conflicting with LSP hovers.
+- `index_files: false` disables Sublime's built-in code indexing, which is redundant when LSP is running and just wastes CPU.
+- `show_definitions: false` prevents Sublime's native hover popup from conflicting with LSP hovers.
 
 This is what my entire `Preferences.sublime-settings` file looks like:
 
 ```json
 {
-    "font_size": 20,
-    "index_files": false,
-    "line_padding_top": 4,
-    "line_padding_bottom": 4,
-    "word_wrap": true,
-    "highlight_line": true,
-    "block_caret": true,
-    "caret_style": "smooth",
-    "scroll_past_end": 0.5,
-    "show_definitions": false,
-    "mini_diff": true,
-    "highlight_modified_tabs": true,
-    "indent_guide_options": ["draw_normal", "draw_active"],
-    "rulers": [100, 120]
+	"font_size": 20,
+	"index_files": false,
+	"line_padding_top": 4,
+	"line_padding_bottom": 4,
+	"word_wrap": true,
+	"highlight_line": true,
+	"block_caret": true,
+	"caret_style": "smooth",
+	"scroll_past_end": 0.5,
+	"show_definitions": false,
+	"mini_diff": true,
+	"highlight_modified_tabs": true,
+	"indent_guide_options": ["draw_normal", "draw_active"],
+	"rulers": [100, 120]
 }
 ```
 
@@ -208,9 +208,9 @@ I wrote this [lsp-copilot-chat-context plugin](https://github.com/fed/lsp-copilo
 ```json
 // Settings in here override those in "LSP-copilot/LSP-copilot.sublime-settings"
 {
-    "settings": {
-        "auto_ask_completions": false
-    }
+	"settings": {
+		"auto_ask_completions": false
+	}
 }
 ```
 

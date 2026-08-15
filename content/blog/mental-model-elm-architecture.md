@@ -27,7 +27,7 @@ type Msg
 
 That Msg type can only ever be one of those three things.
 
-*Side note:* A union type is a type that can be one of several predefined variants. So instead of a string that could be anything, you explicitly list every possible value upfront.
+_Side note:_ A union type is a type that can be one of several predefined variants. So instead of a string that could be anything, you explicitly list every possible value upfront.
 
 ### Model
 

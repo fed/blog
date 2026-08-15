@@ -43,7 +43,8 @@ export default [
 	{
 		id: "maths",
 		title: "Maths",
-		description: "Exploring mathematics from an engineer's perspective, with a focus on rigorous, proof-based thinking."
+		description:
+			"Exploring mathematics from an engineer's perspective, with a focus on rigorous, proof-based thinking."
 	},
 	{
 		id: "software-engineering",
