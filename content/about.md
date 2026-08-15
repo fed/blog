@@ -9,7 +9,7 @@ eleventyNavigation:
 I'm a software engineer with a keen interest in frontend web development, and I help teams ship clean and maintainable code that's
 accessible, performant, reliable, and easy to reason about.
 
-I also study maths on the side, working towards a master's by coursework in pure mathematics. It's an interest I'm returning to after years away from it.
+I also study maths on the side, currently working towards a master's by coursework in pure mathematics.
 
 ## About this blog
 

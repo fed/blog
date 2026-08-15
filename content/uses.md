@@ -20,17 +20,17 @@ change over time.
 
 - [Apple Reminders](https://www.icloud.com/reminders) helps me organise my personal life and side projects. Here's where I capture all of my tasks — if it's not
   here, it's not happening. I really like the fact I can quickly add tasks to my Inbox through a custom keyboard shortcut without needing to
-  leave what I'm doing and context switch to open the Reminders app, and how I can sort these Inbox tasks out later (I do this daily). Potentially the most useful feature to me is scheduling tasks, i.e. linking a task from your list with a time slot in my calendar. I organise my tasks into different categories/projects including "Life admin",
+  leave what I'm doing and context switch to open the Reminders app, and how I can sort these Inbox tasks out later (I do this daily). Potentially the most useful feature to me is scheduling tasks, i.e. linking a task from my list with a time slot in my calendar. I organise my tasks into different categories/projects including "Life admin",
   "Recurring", "Long term goals", "Learning", "Shopping", "Wish list" and then individual categories for each one of the projects I'm currently working on.
 
-- [Apple Calendar](https://calendar.google.com) is essential for managing my time and planning my week, tracking appointments and events,
-  staying on top of birthdays and coordinate plans with others. The ability to receive notifications and seamlessly sync across all my
+- [Apple Calendar](https://www.icloud.com/calendar) is essential for managing my time and planning my week, tracking appointments and events,
+  staying on top of birthdays and coordinating plans with others. The ability to receive notifications and seamlessly sync across all my
   devices helps me make sure I never miss anything important.
 
 - [Apple Notes](https://icloud.com/notes) is great for documenting more long term knowledge. Things like recipes, personal goals, or just a
   general brain dump when I'm on the move. I like that it supports using an Apple Pencil to draft notes which is nice when I want to take
   handwritten notes on my iPad. I also think it's great that you can share and collaborate on notes with other iCloud users without asking
-  them to sign up to a new service or install any other apps. I looked into many other notes app and, for the time being, Notes does
+  them to sign up to a new service or install any other apps. I looked into many other notes apps and, for the time being, Notes does
   everything I need and more. I also like sticking to the defaults and keeping it simple.
 
 - [Freedom](https://freedom.to) helps me stay focused. I've got a recurring session on both my laptop and phone that runs on a permanent
@@ -39,7 +39,7 @@ change over time.
 
 - [Magnet](https://magnet.crowdcafe.com) for window management, I like being able to use keyboard shortcuts to move windows around. I got a licence ages ago but otherwise I'd probably use [Rectangle](https://rectangleapp.com/) instead, as it's free and open source, and pretty much the same at least for my use case.
 
-- [Raycast](https://raycast.com/) is MacOS' Swiss army knife and a great replacement for Spotlight. I use it for heaps of different things
+- [Raycast](https://raycast.com/) is macOS' swiss army knife and a great replacement for Spotlight. I use it for heaps of different things
   including searching for files, listing different timezones, managing clipboard history, text expansion/snippets, unit conversion, emoji
   search and a bunch of other automated tasks. I recently switched to Raycast after having been an [Alfred](https://alfredapp.com) user for
   the longest time.
@@ -66,13 +66,13 @@ change over time.
 
 - [Visual Studio Code](https://code.visualstudio.com) is my main code editor. I've got all settings and extensions sync'd via GitHub which is quite handy.
 
-- [Ghostty](https://ghostty.org) and [pure](https://github.com/sindresorhus/pure) are my preferred tools for all my terminal needs. Before installing this last one you need to make sure [zsh is installed and updated](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH#zsh) (it should be shipped with MacOS). I also have [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) installed for Fish shell-like syntax highlighting, and currently use the [Snazzy colour preset](https://github.com/sindresorhus/iterm2-snazzy).
+- [Ghostty](https://ghostty.org) and [pure](https://github.com/sindresorhus/pure) are my preferred tools for all my terminal needs. Before installing this last one you need to make sure [zsh is installed and updated](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH#zsh) (it should be shipped with macOS). I also have [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) installed for Fish shell-like syntax highlighting, and currently use the [Snazzy colour preset](https://github.com/sindresorhus/iterm2-snazzy).
 
-- [Homebrew](https://brew.sh) for package management, which also installs MacOS' Command Line Tools and [Git](http://git-scm.com).
+- [Homebrew](https://brew.sh) for package management, which also installs macOS' Command Line Tools and [Git](https://git-scm.com).
 
 - [Mise](https://mise.jdx.dev) is a must for installing and handling different Node, pnpm, and Python versions locally across projects. Before Mise I used [nvm](https://github.com/creationix/nvm) and manually ran `venv`, but now I've got everything consolidated in a single tool that automatically switches versions per project based on my config files.
 
-- [Sublime Merge](https://sublimemerge.com) is quite handy for things like visually parse diffs, navigating a project's history, or scanning
+- [Sublime Merge](https://sublimemerge.com) is quite handy for things like visually parsing diffs, navigating a project's history, or scanning
   a list of changes to a particular file over time. For anything else I use Git in my terminal.
 
 - [Charles Proxy](https://charlesproxy.com) is very useful to view all of the HTTP(S) traffic between my computer and the internet,
@@ -137,11 +137,11 @@ I try to stay away from my laptop after working hours and during weekends.
 I always keep a notepad close for journalling, doodling and brain dumping either when I'm on the go or throughout the day when I'm at
 home.
 
-I've got an old [Kindle Paperwhite](https://www.amazon.com/kindle/shop/kindle-paperwhite) (7th generation but still going strong) I use to read my ebooks, which is particularly handy when travelling/onebagging. I really like that I can push websites and other content straight from my iPhone into my Kindle through the Kindle app (which is honestly slowly replacing Instapaper for me).
+When I'm travelling I usually take my [iPad 11-inch (A16)](https://www.apple.com/au/ipad-11/) and [Logitech Crayon](https://www.logitech.com/en-au/shop/p/crayon-ipad-digital-pencil) with me. Depending on how much space I've got, I also take my [Logitech K380 Bluetooth keyboard](https://logitech.com/en-au/shop/p/k380-multi-device.920-011145) as it's much easier to write with than the on-screen keyboard.
+
+I've got an old [Kindle Paperwhite](https://www.amazon.com/kindle/shop/kindle-paperwhite) (7th generation but still going strong) I use to read my ebooks, which is particularly handy when travelling/onebagging. I really like that I can push websites and other content straight from my iPhone into my Kindle through the Kindle app (which is slowly replacing Instapaper for me). I wish I could borrow ebooks from my local library through my Kindle but unfortunately this is currently unsupported, so I do this from my iPad instead.
 
 In the past few years I've also been making use of my local library, which is a great way to enjoy physical books without the extra clutter.
-
-When I'm travelling I usually take my [iPad 11-inch (A16)](https://www.apple.com/au/ipad-11/) and [Logitech Crayon](https://www.logitech.com/en-au/shop/p/crayon-ipad-digital-pencil) with me. Depending on how much space I've got, I also take my [Logitech K380 bluetooth keyboard](https://logitech.com/en-au/shop/p/k380-multi-device.920-011145) as it's much easier to write with than the on-screen keyboard.
 
 ∎
 

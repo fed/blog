@@ -8,7 +8,7 @@ This "defaults" list is inspired by [Robb Knight](https://rknight.me)'s collecti
 
 These unassuming and reliable everyday tools are deeply integrated into my habits/routine, and handle life's background tasks allowing me to focus on what actually matters. My approach is to stick with default apps until they can't do what I need, only switching when the built-in option genuinely can't handle my use case.
 
-- **Mail Client:** [Mail.app](https://apps.apple.com/au/app/mail/id1108187098)
+- **Mail Client**: [Mail.app](https://apps.apple.com/au/app/mail/id1108187098)
 - **Mail Server**: [iCloud Mail](https://icloud.com/mail) with custom domain
 - **Notes**: [Apple Notes](https://icloud.com/notes)
 - **To-Do**: [Reminders](https://icloud.com/reminders)
@@ -22,9 +22,9 @@ These unassuming and reliable everyday tools are deeply integrated into my habit
 - **Chat**: [Messages](https://apps.apple.com/us/app/messages/id1146560473), [WhatsApp](https://whatsapp.com)
 - **Bookmarks**: Browser's built-in tool
 - **Read It Later**: [Instapaper](https://instapaper.com)
-- **Word Processing**: [iA Writer](https://ia.net/writer), [Google Docs](https://docs.google.com)
+- **Word Processing**: [Google Docs](https://docs.google.com) though I prefer to write markdown via [iA Writer](https://ia.net/writer)
 - **Spreadsheets**: [Google Sheets](https://sheets.google.com)
-- **Presentations**: [LaTeX Beamer](https://latex-beamer.com) for maths, [Remark](https://remarkjs.com) for code/general purpose
+- **Presentations**: [LaTeX Beamer](https://github.com/josephwright/beamer) for maths, [Remark](https://remarkjs.com) for anything else
 - **Shopping Lists**: pen and paper, [Reminders](https://icloud.com/reminders)
 - **Meal Planning**: n/a
 - **Budgeting and Personal Finance**: custom spreadsheet
@@ -33,7 +33,7 @@ These unassuming and reliable everyday tools are deeply integrated into my habit
 - **Podcasts**: [Apple Podcasts](https://apple.com/au/apple-podcasts)
 - **Password Management**: [Bitwarden](https://bitwarden.com)
 
-Here's some extra categories I also wanted to include:
+Here are some extra categories I also wanted to include:
 
 - **Weather**: [BOM](https://beta.bom.gov.au/apps), [Apple Weather](https://apps.apple.com/au/app/weather/id1069513131)
 - **Reading**: Physical copies from local library, [Kindle](https://read.amazon.com.au)
@@ -44,8 +44,9 @@ Here's some extra categories I also wanted to include:
 - **Launcher**: [Raycast](https://raycast.com)
 - **Clipboard manager**: [Raycast](https://raycast.com)
 - **Screenshots**: Mac's built-in tool
-- **Social**: [Mastodon](https://mas.to/@fed), [BlueSky](https://bsky.app/profile/fedknu.com), [Reddit](https://www.reddit.com)
 - **Search engine**: [DuckDuckGo](https://duckduckgo.com)
 - **LaTeX editor**: [Overleaf](https://overleaf.com)
 
 _Edit October 2025:_ replaced Spotify with Apple Music, and stopped using [Signal](https://signal.org), [Xnip](https://xnipapp.com) and [Simplenote](https://simplenote.com). Still using the [DuckDuckGo](https://duckduckgo.com/mac) browser on my laptop but had to go back to Safari on my phone as some core functionality is still unsupported, e.g. adding events to my calendar from the browser or persistent website blocking via [Freedom](https://freedom.to).
+
+_Edit August 2026:_ back to Spotify after trying Apple Music for quite some time, switched to Apple Calendar and iCloud Mail, added LaTeX tools.
