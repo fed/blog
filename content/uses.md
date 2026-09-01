@@ -47,11 +47,6 @@ change over time.
 - [Dato](https://sindresorhus.com/dato) is extremely helpful for staying on top of timezones. Its time travel feature is brilliant and helps
   me with figuring out reasonable times for events across timezones. This is especially useful when you have colleagues, friends and family around the world.
 
-- [Xnip](https://xnipapp.com) is a screenshot tool for Mac that supports annotations, blurring sensitive information and scrolling
-  screenshots. It's fast and works quite well. I tried a number of different alternatives but I always find myself coming back to it.
-  The only feature I think it's missing is text recognition/OCR. That said, lately I've slowly been switching to macOS's built in screenshot tool,
-  with the default set to open in Preview for annotations. Preview also has the edge on OCR, with Live Text letting you select and copy text directly from any screenshot.
-
 ### Writing
 
 - [iA Writer](https://ia.net/writer) is my go-to application for writing in markdown format. It has the best UI/UX in my opinion and a
@@ -79,6 +74,12 @@ change over time.
   including requests, responses and HTTP headers (which contain cookies and caching information). It's also extremely useful if you need to
   mock API endpoints to test features locally if your backend is not ready.
 
+### Mathematics
+
+- [Overleaf](https://overleaf.com) for any maths/academic writing. It's handy as I don't need to install a LaTeX distribution or manage any packages locally.
+
+- [Octave-online](https://octave-online.net) is a free web client for GNU Octave, which is an open source numerical computation environment that has the same syntax as (and is therefore compatible with) MATLAB. I use it for things like multiplying matrices, solving systems of linear equations, and plotting functions right in the browser without having to worry about installing anything locally.
+
 ### Security
 
 - [Bitwarden](https://bitwarden.com) is my preferred password manager. It works well across devices and have never had any problems with it.
@@ -98,15 +99,12 @@ change over time.
 
 ### Miscellaneous
 
-- [Brave](https://brave.com) is my browser of choice on desktop, primarily for the better developer tools while still ticking all the boxes around privacy. On mobile I use [Safari](https://www.apple.com/au/safari) since Apple seems to restrict certain system integrations (like adding calendar events) to first party apps only.
+- [Firefox](https://firefox.com) is my browser of choice on desktop, primarily for the better developer tools while still ticking all the boxes around privacy. On mobile I use [Safari](https://www.apple.com/au/safari) since Apple seems to restrict certain system integrations (like adding calendar events) to first party apps only. In terms of browser extensions I use Firefox with [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin) and Safari with [uBlock Origin Lite](https://apps.apple.com/au/app/ublock-origin-lite/id6745342698).
 
 - [Spotify](https://spotify.com) for streaming and organising my music library, although I also enjoy [brain.fm](https://brain.fm)
   especially when I want to do some focus work.
 
-- [PDF Combo](https://apps.apple.com/au/app/pdfcombo/id1030461463) is quite handy for combining PDF files, and
-  [Lightweight PDF](https://apps.apple.com/au/app/lightweight-pdf/id1450640351) is useful if you ever need to compress a PDF file. I
-  typically use these if I need to submit any school/government forms/documents when there's a file upload size limit. I typically don't keep these
-  installed all the time as I rarely use them.
+- [Goodnotes](https://apps.apple.com/au/app/goodnotes-ai-notes-docs-pdf/id1444383602) for reading and annotating PDFs (books, lecture notes, slides, etc). Bought v5 as a one time purchase ages ago and haven't upgraded to v6 as I don't think I really need any of the latest features.
 
 ## Hardware and furniture
 
@@ -137,7 +135,7 @@ I try to stay away from my laptop after working hours and during weekends.
 I always keep a notepad close for journalling, doodling and brain dumping either when I'm on the go or throughout the day when I'm at
 home.
 
-When I'm travelling I usually take my [iPad 11-inch (A16)](https://www.apple.com/au/ipad-11/) and [Logitech Crayon](https://www.logitech.com/en-au/shop/p/crayon-ipad-digital-pencil) with me. Depending on how much space I've got, I also take my [Logitech K380 Bluetooth keyboard](https://logitech.com/en-au/shop/p/k380-multi-device.920-011145) as it's much easier to write with than the on-screen keyboard.
+When I'm travelling I usually take my [iPad 11-inch (A16)](https://www.apple.com/au/ipad-11) and [Logitech Crayon](https://www.logitech.com/en-au/shop/p/crayon-ipad-digital-pencil) with me. Depending on how much space I've got, I also take my [Logitech K380 Bluetooth keyboard](https://logitech.com/en-au/shop/p/k380-multi-device.920-011145) as it's much easier to write with than the on-screen keyboard.
 
 I've got an old [Kindle Paperwhite](https://www.amazon.com/kindle/shop/kindle-paperwhite) (7th generation but still going strong) I use to read my ebooks, which is particularly handy when travelling/onebagging. I really like that I can push websites and other content straight from my iPhone into my Kindle through the Kindle app (which is slowly replacing Instapaper for me). I wish I could borrow ebooks from my local library through my Kindle but unfortunately this is currently unsupported, so I do this from my iPad instead.
 
