@@ -1,0 +1,105 @@
+---
+import { SITE, NAV } from "../consts.js";
+import ThemeToggle from "../components/ThemeToggle.astro";
+
+import "@csstools/normalize.css/normalize.css";
+import "../styles/tokens.css";
+import "../styles/global.css";
+import "../styles/common.css";
+import "../styles/layout.css";
+
+const { title, description, ogType = "website" } = Astro.props;
+
+const pageTitle = title ? `${title} - ${SITE.title}` : SITE.title;
+const pageDescription = description || SITE.description;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang={SITE.language}>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={pageDescription} />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+
+		<link rel="alternate" type="application/rss+xml" href="/feed.xml" title={SITE.title} />
+		<link rel="canonical" href={canonical} />
+		<meta property="og:title" content={title || SITE.title} />
+		<meta property="og:description" content={pageDescription} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:type" content={ogType} />
+		<meta name="twitter:card" content="summary" />
+
+		<title>{pageTitle}</title>
+
+		{/* Inline and render-blocking on purpose: sets the theme before first paint. */}
+		<script is:inline>
+			(function () {
+				let savedTheme = null;
+				try {
+					savedTheme = localStorage.getItem("theme");
+				} catch (e) {}
+
+				const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+				const theme = savedTheme || systemTheme;
+
+				document.documentElement.style.setProperty("color-scheme", theme);
+			})();
+		</script>
+	</head>
+	<body>
+		<a href="#main" class="layout-skip-link">Skip to main content</a>
+
+		<header class="layout-header">
+			<nav class="layout-header__navigation" aria-label="Site">
+				<a href="/" class="layout-header__site-name__link common-focus-ring">
+					<img class="layout-header__site-name__emoji" src="/assets/engineer.svg" alt="" />
+					<span class="layout-header__site-name__container">
+						<div class="layout-header__site-name__title">
+							F. Knüssel<span class="visually-hidden">: </span>
+						</div>
+						<div class="layout-header__site-name__tagline">Frontend Developer</div>
+					</span>
+				</a>
+
+				<ul class="layout-header__navigation__list">
+					{
+						NAV.map((entry) => {
+							const isExternal = entry.url.startsWith("http");
+							const isActive = entry.url === currentPath;
+
+							return (
+								<li class="layout-header__navigation__list-item">
+									<a
+										href={entry.url}
+										class:list={[
+											"layout-header__navigation__link",
+											"common-focus-ring",
+											{ "layout-header__navigation__link--active": isActive }
+										]}
+										aria-current={isActive ? "page" : undefined}
+										target={isExternal ? "_blank" : undefined}
+										rel={isExternal ? "noopener noreferrer" : undefined}
+									>
+										{entry.key}
+										{isExternal && <span class="visually-hidden"> (external link)</span>}
+									</a>
+								</li>
+							);
+						})
+					}
+					<li class="layout-header__navigation__list-item">
+						<ThemeToggle />
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main class="layout-content" id="main">
+			<slot />
+		</main>
+	</body>
+</html>

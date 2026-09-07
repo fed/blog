@@ -1,0 +1,15 @@
+---
+import Base from "./Base.astro";
+
+// Used as the `layout` for the standalone Markdown pages in `src/pages`,
+// so the frontmatter arrives under `Astro.props.frontmatter`.
+const { title, heading, description } = Astro.props.frontmatter;
+---
+
+<Base title={title} description={description}>
+	<h1 class="common-main-title">{heading || title}</h1>
+
+	<div class="common-main-content">
+		<slot />
+	</div>
+</Base>

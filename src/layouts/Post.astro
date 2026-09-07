@@ -1,0 +1,46 @@
+---
+import Base from "./Base.astro";
+import { SITE, tagTitle, readableDate, htmlDateString } from "../consts.js";
+
+import "../styles/blog-post.css";
+
+const { post } = Astro.props;
+const { title, description, date, tags } = post.data;
+
+const url = new URL(`/blog/${post.id}/`, SITE.url).href;
+
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "BlogPosting",
+	headline: title,
+	datePublished: htmlDateString(date),
+	dateModified: htmlDateString(date),
+	description: description ?? "",
+	url,
+	author: {
+		"@type": "Person",
+		name: SITE.author.name,
+		url: SITE.author.url
+	}
+};
+---
+
+<Base title={title} description={description} ogType="article">
+	<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+
+	<article>
+		<header class="blog-post__header">
+			<h1 class="common-main-title">{title}</h1>
+			<div class="blog-post__metadata">
+				<time datetime={htmlDateString(date)} class="blog-post__metadata__date">
+					{readableDate(date)}
+				</time>
+				<span class="blog-post__metadata__tags">{tagTitle(tags)}</span>
+			</div>
+		</header>
+
+		<div class="common-main-content">
+			<slot />
+		</div>
+	</article>
+</Base>

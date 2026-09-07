@@ -1,0 +1,41 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import { readableDate, htmlDateString } from "../consts.js";
+
+import "../styles/archive.css";
+
+// Drafts are visible while developing and excluded from production builds.
+const posts = await getCollection("blog", ({ data }) => import.meta.env.DEV || !data.draft);
+posts.sort((a, b) => b.data.date - a.data.date);
+---
+
+<Base title="Blog posts">
+	<h1 class="common-main-title">Blog posts</h1>
+
+	<div class="common-main-content">
+		<p>
+			Fresh content sorted by date, so you'll always see what's new at the top. You can also subscribe to the RSS
+			feed for automatic updates.
+		</p>
+
+		<ul class="archive__list">
+			{
+				posts.map((post) => (
+					<li class="archive__list-item">
+						<time class="archive__list-item__date" datetime={htmlDateString(post.data.date)}>
+							{readableDate(post.data.date, { day: "2-digit", month: "short", year: "numeric" })}
+						</time>
+						<a href={`/blog/${post.id}/`}>{post.data.title}</a>
+						{post.data.draft && (
+							<span style="color:var(--token-color-red);font-weight:var(--token-font-weight-bold)">
+								{" "}
+								(draft)
+							</span>
+						)}
+					</li>
+				))
+			}
+		</ul>
+	</div>
+</Base>

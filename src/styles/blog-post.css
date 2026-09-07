@@ -1,0 +1,60 @@
+.blog-post__header {
+	text-align: center;
+	margin: var(--token-spacing-md) 0 var(--token-spacing-xxl);
+}
+
+.blog-post__metadata {
+	margin: 0 0 var(--token-spacing-xxs);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: var(--token-spacing-md);
+	text-transform: uppercase;
+}
+
+.blog-post__metadata__date {
+	color: var(--color-text-muted);
+}
+
+.blog-post__metadata__tags {
+	border-radius: var(--token-border-radius-default);
+	background-color: var(--color-accent);
+	color: var(--color-accent-text);
+	display: inline-block;
+	font-size: var(--token-font-size-xs);
+	line-height: var(--token-line-height-sm);
+	padding: var(--token-spacing-xxs) var(--token-spacing-xs);
+	white-space: nowrap;
+}
+
+/*
+ * Code blocks. Shiki emits both themes as custom properties on every token
+ * (see `defaultColor: false` in astro.config.mjs), so the colours are resolved
+ * here with light-dark(), the same way the rest of the palette works.
+ */
+.common-main-content .astro-code,
+.common-main-content .astro-code span {
+	color: light-dark(var(--shiki-light), var(--shiki-dark));
+}
+
+.common-main-content .astro-code {
+	/*
+	 * github-light's own background is pure white, which disappears against the page,
+	 * so light mode uses the same surface as inline code and blockquotes instead.
+	 * Dark mode keeps github-dark's background, which already reads as distinct.
+	 */
+	background-color: light-dark(var(--token-color-gray-extra-light), var(--shiki-dark-bg));
+}
+
+.common-main-content pre {
+	padding: var(--token-spacing-sm);
+	border-radius: var(--token-border-radius-default);
+	overflow-x: auto;
+	font-size: var(--token-font-size-xs);
+	line-height: var(--token-line-height-md);
+}
+
+.common-main-content pre code {
+	font-family: var(--token-font-family-monospace);
+}
