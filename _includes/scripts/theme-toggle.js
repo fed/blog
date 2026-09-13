@@ -17,8 +17,7 @@
 			lightIcon.style.display = "none";
 		}
 
-		toggle.setAttribute("aria-pressed", isDark);
-		toggle.setAttribute("aria-label", `Switch to ${isDark ? "light" : "dark"} mode`);
+		toggle.setAttribute("aria-checked", isDark);
 	}
 
 	// Initialise icons based on current color scheme
