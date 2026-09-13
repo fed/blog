@@ -45,28 +45,42 @@
 			<nav class="layout-header__navigation" aria-label="Site">
 				<a href="/" class="layout-header__site-name__mark common-focus-ring">fk</a>
 
-				<ul class="layout-header__navigation__list">
-					{%- for entry in collections.all | eleventyNavigation %}
-						<li class="layout-header__navigation__list-item">
-							<a href="{{entry.url}}"
-							   class="layout-header__navigation__link common-focus-ring {{ 'layout-header__navigation__link--active' if entry.url == page.url }}"
-							   {% if entry.url == page.url %}aria-current="page"{% endif %}
-							   {% if entry.url.startsWith('http') %}target="_blank" rel="noopener noreferrer"{% endif %}>
-								{{ entry.key }}{% if entry.url.startsWith('http') %}<span class="visually-hidden"> (external link)</span>{% endif %}
-							</a>
-						</li>
-					{%- endfor %}
-					<li class="layout-header__navigation__list-item">
-						<button id="theme-toggle" class="layout-header__theme-toggle common-focus-ring" role="switch" aria-label="Dark mode" aria-checked="false">
-							<span id="theme-toggle-dark-icon" style="display: none;" aria-hidden="true">
-								{% include "assets/dark-theme.svg" %}
-							</span>
-							<span id="theme-toggle-light-icon" style="display: none;" aria-hidden="true">
-								{% include "assets/light-theme.svg" %}
-							</span>
-						</button>
-					</li>
-				</ul>
+				<details class="layout-header__menu" open>
+					<summary class="layout-header__menu-toggle common-focus-ring" aria-label="Menu">
+						<span class="layout-header__menu-toggle-icon layout-header__menu-toggle-icon--closed" aria-hidden="true">
+							{% include "assets/hamburger-menu.svg" %}
+						</span>
+						<span class="layout-header__menu-toggle-icon layout-header__menu-toggle-icon--open" aria-hidden="true">
+							{% include "assets/close-menu.svg" %}
+						</span>
+					</summary>
+
+					<ul class="layout-header__navigation__list">
+						{%- for entry in collections.all | eleventyNavigation %}
+							<li class="layout-header__navigation__list-item">
+								<a href="{{entry.url}}"
+								   class="layout-header__navigation__link common-focus-ring {{ 'layout-header__navigation__link--active' if entry.url == page.url }}"
+								   {% if entry.url == page.url %}aria-current="page"{% endif %}
+								   {% if entry.url.startsWith('http') %}target="_blank" rel="noopener noreferrer"{% endif %}>
+									{{ entry.key }}{% if entry.url.startsWith('http') %}<span class="visually-hidden"> (external link)</span>{% endif %}
+								</a>
+							</li>
+						{%- endfor %}
+					</ul>
+				</details>
+
+				<button id="theme-toggle" class="layout-header__theme-toggle common-focus-ring" role="switch" aria-label="Dark mode" aria-checked="false">
+					<span id="theme-toggle-dark-icon" style="display: none;" aria-hidden="true">
+						{% include "assets/dark-theme.svg" %}
+					</span>
+					<span id="theme-toggle-light-icon" style="display: none;" aria-hidden="true">
+						{% include "assets/light-theme.svg" %}
+					</span>
+				</button>
+
+				<script>
+					{% include "scripts/nav-menu.js" %}
+				</script>
 			</nav>
 		</header>
 

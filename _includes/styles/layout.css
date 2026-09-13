@@ -37,6 +37,8 @@
 }
 
 .layout-header__site-name__mark {
+	position: relative;
+	z-index: 2;
 	background-color: var(--color-accent);
 	color: var(--color-text-inverse);
 	display: inline-flex;
@@ -54,6 +56,8 @@
  * Navigation menu
  */
 .layout-header__theme-toggle {
+	position: relative;
+	z-index: 2;
 	background: none;
 	border: none;
 	cursor: pointer;
@@ -87,11 +91,10 @@
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
+	gap: var(--token-spacing-xs);
 	font-size: var(--token-font-size-sm);
 	line-height: var(--token-line-height-sm);
 	padding: var(--token-spacing-sm) var(--token-spacing-md);
-	/* Enable scrolling to provide access to all navigation menu items on mobile */
-	overflow-x: auto;
 }
 
 /* This breakpoint corresponds with var(--token-breakpoint-sm) */
@@ -99,27 +102,117 @@
 	.layout-header__navigation {
 		margin: 0 auto;
 		max-width: var(--token-breakpoint-lg);
-		/* Hide the scrollbar on Windows desktop */
-		overflow-x: hidden;
+		gap: var(--token-spacing-lg);
 	}
 }
 
-.layout-header__navigation__list {
+.layout-header__menu {
+	position: relative;
+	margin-left: auto;
+}
+
+.layout-header__menu-toggle {
+	position: relative;
+	z-index: 2;
+	background: none;
+	border: none;
+	cursor: pointer;
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: center;
+	list-style: none;
+	padding: var(--token-spacing-xs);
+	border-radius: var(--token-border-radius-default);
+	color: var(--color-text);
+}
+
+.layout-header__menu-toggle::-webkit-details-marker {
+	display: none;
+}
+
+.layout-header__menu-toggle svg {
+	display: block;
+}
+
+.layout-header__menu-toggle-icon--open {
+	display: none;
+}
+
+.layout-header__menu[open] .layout-header__menu-toggle-icon--closed {
+	display: none;
+}
+
+.layout-header__menu[open] .layout-header__menu-toggle-icon--open {
+	display: block;
+}
+
+.layout-header__menu[open] .layout-header__navigation__list {
+	display: flex;
+}
+
+.layout-header__navigation__list {
+	display: none;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: var(--token-spacing-lg);
+	position: fixed;
+	inset: 0;
+	z-index: 1;
+	overflow-y: auto;
 	margin: 0;
-	padding-left: 0;
+	padding: calc(var(--token-spacing-xxl) * 2) var(--token-spacing-lg) var(--token-spacing-lg);
+	background-color: var(--color-bg);
+}
+
+/* Below var(--token-breakpoint-sm) the open menu covers the screen, so we lock background scrolling */
+@media screen and (max-width: 767px) {
+	body:has(.layout-header__menu[open]) {
+		overflow: hidden;
+	}
 }
 
 .layout-header__navigation__list-item {
-	display: inline-block;
 	list-style-type: none;
-	/*
-	 * Make sure all items including the last one have a right
-	 * margin to ensure the navbar is scrollable on mobile.
-	 */
-	margin-right: var(--token-spacing-lg);
+}
+
+.layout-header__menu .layout-header__navigation__link {
+	display: block;
+	padding-block: var(--token-spacing-xs);
+	font-size: var(--token-font-size-lg);
+}
+
+/* This breakpoint corresponds with var(--token-breakpoint-sm) */
+@media screen and (min-width: 768px) {
+	.layout-header__menu-toggle {
+		display: none;
+	}
+
+	.layout-header__navigation__list {
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-end;
+		gap: 0;
+		position: static;
+		inset: auto;
+		overflow-y: visible;
+		padding: 0;
+		background: none;
+	}
+
+	.layout-header__navigation__list-item {
+		margin-right: var(--token-spacing-lg);
+	}
+
+	.layout-header__navigation__list-item:last-child {
+		margin-right: 0;
+	}
+
+	.layout-header__menu .layout-header__navigation__link {
+		display: inline;
+		font-size: inherit;
+		padding: 4px 0;
+	}
 }
 
 /* Use together with .common-focus-ring */
