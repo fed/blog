@@ -6,7 +6,7 @@ tags: general
 
 This "defaults" list is inspired by [Robb Knight](https://rknight.me)'s collection of [app defaults posts](https://defaults.rknight.me), where a huge number of bloggers share their default apps and services. I like how these lists make it easy to find and explore other personal blogs and setups, similarly to what happens with "now" or "uses" pages.
 
-These unassuming and reliable everyday tools are deeply integrated into my habits/routine, and handle life's background tasks allowing me to focus on what actually matters. My approach is to stick with default apps until they can't do what I need, only switching when the built-in option genuinely can't handle my use case.
+These are a bunch of unassuming but reliable everyday tools that are deeply integrated into my habits/routine. I try as much as I can to stick with default apps until they can't do what I need, only switching when the built-in option genuinely can't handle my use case.
 
 - **Mail Client**: [Mail.app](https://apps.apple.com/au/app/mail/id1108187098)
 - **Mail Server**: [iCloud Mail](https://icloud.com/mail) with custom domain

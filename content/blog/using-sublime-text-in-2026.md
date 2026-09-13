@@ -34,11 +34,11 @@ Open the command palette (`Cmd+Shift+P`), run `Package Control: Install Package`
 - [Pretty JSON](https://packagecontrol.io/packages/Pretty%20JSON): to parse and format JSON files
 - [MDX](https://packagecontrol.io/packages/MDX): MDX syntax definitions
 
-> We use Biome for linting and code formatting, but [if your codebase uses ESLint and Prettier instead of Biome, check out this other post](/blog/sublimetext-prettier-eslint).
-
 **Tip:** you can use the `Package Control: Advanced Install Packages` option to install multiple packages in one go.
 
-**Note:** I don't use any Git packages in Sublime Text because I use [Sublime Merge](https://www.sublimemerge.com) for things like visually scanning diffs more easily, resolving merge conflicts, and checking the history of a file. For most other things I use Git directly in my terminal ([iTerm](https://iterm2.com)). If you'd like to use both Git and the terminal from within Sublime Text, look into the [Terminus](https://packagecontrol.io/packages/Terminus) and [GitSavvy](https://packagecontrol.io/packages/GitSavvy) packages.
+**Note I:** We use Biome for linting and code formatting, but [if your codebase uses ESLint and Prettier instead of Biome, check out this other post](/blog/sublimetext-prettier-eslint).
+
+**Note II:** I don't use any Git packages in Sublime Text because I use [Sublime Merge](https://www.sublimemerge.com) for things like visually scanning diffs more easily, resolving merge conflicts, and checking the history of a file. For most other things I use Git directly in my terminal ([iTerm](https://iterm2.com)). If you'd like to use both Git and the terminal from within Sublime Text, look into the [Terminus](https://packagecontrol.io/packages/Terminus) and [GitSavvy](https://packagecontrol.io/packages/GitSavvy) packages.
 
 ## 3) TypeScript support
 

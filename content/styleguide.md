@@ -181,7 +181,7 @@ A paragraph after the rule.
 | State | Population | Capital   |
 | ----- | ---------- | --------- |
 | NSW   | 8.641 M    | Sydney    |
-| VIC   | 7121 M     | Melbourne |
+| VIC   | 7.121 M    | Melbourne |
 | TAS   | 0.579 M    | Hobart    |
 | ACT   | 0.487 M    | Canberra  |
 | SA    | 1.910 M    | Adelaide  |

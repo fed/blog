@@ -1,6 +1,6 @@
 ---
 title: About
-heading: Hello! 👋
+heading: Hello!
 eleventyNavigation:
     key: About
     order: 1
@@ -32,10 +32,10 @@ I chose to rely on minimal tooling and web platform fundamentals over heavy libr
 The source code for this site is open source and available on [GitHub](https://github.com/fed/blog) and hosted on
 [Cloudflare Pages](https://cloudflare.com).
 
+You can also check out the [styleguide](/styleguide) which is a reference of all the design tokens and markdown content elements used across the site.
+
 This website produces less than 0.05 g of CO₂ per visit, according to
 [Website Carbon Calculator](https://websitecarbon.com/website/fedknu-com) and [Digital Beacon](https://digitalbeacon.co/report/fedknu-com),
 achieving a carbon footprint rating of A+.
 
 All of the content in this blog is original content written by me, none of it is AI generated.
-
-<img src="https://files.fedknu.com/not-by-ai-badge-inverse.svg" alt="Badge reading: written by human, not by AI" eleventy:ignore />

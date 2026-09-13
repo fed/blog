@@ -18,7 +18,7 @@ You can use any editor you prefer, it doesn't need to be vim.
 
 And then add the following to the end of the file (or anywhere, really):
 
-```
+```txt
 # Blocked sites
 0.0.0.0 reddit.com
 0.0.0.0 www.reddit.com

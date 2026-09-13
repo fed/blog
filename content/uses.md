@@ -14,9 +14,7 @@ preferred tools and how I do things.
 I'm constantly improving and upgrading my setup, especially when it comes to software tools and productivity workflows, so expect this to
 change over time.
 
-## Software and services
-
-### Productivity tools
+## Productivity tools
 
 - [Apple Reminders](https://www.icloud.com/reminders) helps me organise my personal life and side projects. Here's where I capture all of my tasks — if it's not
   here, it's not happening. I really like the fact I can quickly add tasks to my Inbox through a custom keyboard shortcut without needing to
@@ -47,7 +45,7 @@ change over time.
 - [Dato](https://sindresorhus.com/dato) is extremely helpful for staying on top of timezones. Its time travel feature is brilliant and helps
   me with figuring out reasonable times for events across timezones. This is especially useful when you have colleagues, friends and family around the world.
 
-### Writing
+## Writing
 
 - [iA Writer](https://ia.net/writer) is my go-to application for writing in markdown format. It has the best UI/UX in my opinion and a
   number of great features, and most of my writing happens here. Definitely an all-time favourite.
@@ -57,7 +55,7 @@ change over time.
   random thoughts that pop up halfway through a task, also for things like taking notes during a meeting/course. Sometimes I also use it to
   edit very large files (it's very powerful at finding and replacing), to parse and beautify files, etc.
 
-### Coding
+## Coding
 
 - [Visual Studio Code](https://code.visualstudio.com) is my main code editor. I've got all settings and extensions sync'd via GitHub which is quite handy.
 
@@ -74,19 +72,19 @@ change over time.
   including requests, responses and HTTP headers (which contain cookies and caching information). It's also extremely useful if you need to
   mock API endpoints to test features locally if your backend is not ready.
 
-### Mathematics
+## Mathematics
 
 - [Overleaf](https://overleaf.com) for any maths/academic writing. It's handy as I don't need to install a LaTeX distribution or manage any packages locally.
 
 - [Octave-online](https://octave-online.net) is a free web client for GNU Octave, which is an open source numerical computation environment that has the same syntax as (and is therefore compatible with) MATLAB. I use it for things like multiplying matrices, solving systems of linear equations, and plotting functions right in the browser without having to worry about installing anything locally.
 
-### Security
+## Security
 
 - [Bitwarden](https://bitwarden.com) is my preferred password manager. It works well across devices and have never had any problems with it.
 
 - [Microsoft Authenticator](https://support.microsoft.com/en-us/authenticator/about-microsoft-authenticator) is my 2FA client, and it runs only on my phone. I used to use [Duo](https://duo.com) and still like it, but given both work and uni require using Microsoft Authenticator, I consolidated all of my accounts there for simplicity.
 
-### Reading and information organisation
+## Reading and information organisation
 
 - [Goodreads](https://goodreads.com) helps me track books I've already read or those I want to read. I like the fact that I can sync Goodreads with my Kindle, too. The UI is a bit dated and cluttered,
   but it gets the job done.
@@ -97,7 +95,7 @@ change over time.
 - [Instapaper](https://instapaper.com) is my "read later" service, and I use it all the time to keep track of the articles/pages/blog posts
   I want to get to at some point. The UI is quite simple and minimal, and it works well for what I need it for. What I like the most about Instapaper is its integration with Kindle, which allows me to send articles directly to my Kindle, making offline reading incredibly easy.
 
-### Miscellaneous
+## Miscellaneous
 
 - [Firefox](https://firefox.com) is my browser of choice on desktop, primarily for the better developer tools while still ticking all the boxes around privacy. On mobile I use [Safari](https://www.apple.com/au/safari) since Apple seems to restrict certain system integrations (like adding calendar events) to first party apps only. In terms of browser extensions I use Firefox with [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin) and Safari with [uBlock Origin Lite](https://apps.apple.com/au/app/ublock-origin-lite/id6745342698).
 
