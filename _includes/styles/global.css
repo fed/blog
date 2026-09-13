@@ -7,7 +7,7 @@
 body {
 	background-color: var(--color-bg);
 	color: var(--color-text);
-	font-family: var(--token-font-family-sans-serif);
+	font-family: var(--token-font-family-serif);
 	font-size: 16px;
 	margin: 0;
 }

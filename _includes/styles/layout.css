@@ -1,7 +1,6 @@
 /*
  * Skip link
  */
-
 .layout-skip-link {
 	--skip-link-height: var(--token-spacing-xl);
 	--skip-link-margin: var(--token-spacing-xs);
@@ -11,6 +10,7 @@
 	border-radius: var(--token-border-radius-default);
 	color: var(--color-accent-text);
 	display: inline-flex;
+	font-family: var(--token-font-family-sans-serif);
 	font-size: var(--token-font-size-sm);
 	font-weight: var(--token-font-weight-light);
 	height: var(--skip-link-height);
@@ -31,58 +31,28 @@
 /*
  * Header
  */
-
 .layout-header {
-	background-color: var(--color-bg-alt);
-	border-bottom: 1px solid var(--color-border);
+	/* background-color: #f0eee6; */
+	margin: var(--token-spacing-md) 0;
 }
 
-.layout-header::before {
-	height: 3px;
-	background-color: var(--color-accent-alt);
-	content: "";
-	display: block;
-	width: 100%;
-}
-
-/*
- * Site name
- */
-
-.layout-header__site-name__link {
-	display: flex;
+.layout-header__site-name__mark {
+	background-color: var(--color-accent);
+	color: var(--color-text-inverse);
+	display: inline-flex;
 	align-items: center;
+	justify-content: center;
+	font-family: var(--token-font-family-monospace);
+	font-size: var(--token-font-size-sm);
+	height: 36px;
 	margin-right: var(--token-spacing-xl);
 	text-decoration: none;
-}
-
-.layout-header__site-name__emoji {
-	height: 32px;
-	margin-right: var(--token-spacing-sm);
-	width: 32px;
-}
-
-.layout-header__site-name__container {
-	white-space: nowrap;
-}
-
-.layout-header__site-name__title {
-	color: var(--color-text);
-	font-weight: var(--token-font-weight-bold);
-	font-size: var(--token-font-size-sm);
-}
-
-.layout-header__site-name__tagline {
-	font-weight: var(--token-font-weight-light);
-	color: var(--color-text-muted);
-	font-size: var(--token-font-size-xs);
-	margin-top: var(--token-spacing-xxs);
+	min-width: 54px;
 }
 
 /*
  * Navigation menu
  */
-
 .layout-header__theme-toggle {
 	background: none;
 	border: none;
@@ -155,17 +125,15 @@
 /* Use together with .common-focus-ring */
 .layout-header__navigation__link {
 	color: var(--color-text);
-	padding-block: var(--token-spacing-xs);
+	font-family: var(--token-font-family-sans-serif);
+	padding-block: 4px;
 	text-decoration: none;
 }
 
-.layout-header__navigation__link::after {
-	content: "";
-	display: block;
-	height: 2px;
-	background: currentColor;
-	transition: width 0.3s;
-	width: 0;
+.layout-header__navigation__link--active {
+	text-decoration: underline;
+	text-underline-offset: 6px;
+	text-decoration-thickness: 2px;
 }
 
 .layout-header__navigation__link--active::after,
@@ -174,7 +142,7 @@
 }
 
 /* Hide bottom outline when focus ring is visible */
-.layout-header__navigation__link:focus::after {
+.layout-header__navigation__link:focus-visible::after {
 	display: none;
 }
 
@@ -187,7 +155,6 @@
 /*
  * Content
  */
-
 .layout-content {
 	margin: 0 auto;
 	max-width: var(--token-breakpoint-lg);

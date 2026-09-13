@@ -22,7 +22,7 @@ layout: layouts/base.njk
 {# Only include the syntax highlighter CSS on blog posts, included with the CSS per-page bundle. #}
 {# Capture the CSS content as a Nunjucks variable and feed it through to the cssmin filter to minify it. #}
 {% set css %}
-{% include "node_modules/prismjs/themes/prism-okaidia.css" %}
+{% include "styles/prism-gloom.css" %}
 {% include "styles/blog-post.css" %}
 {% endset %}
 <style>
@@ -33,10 +33,12 @@ layout: layouts/base.njk
 	<header class="blog-post__header">
 		<h1 class="common-main-title">{{ title }}</h1>
 		<div class="blog-post__metadata">
-			<time datetime="{{ date | htmlDateString }}" class="blog-post__metadata__date">
-				{{ date | readableDate }}
+			Published on
+			<time datetime="{{ date | htmlDateString }}">
+				{{ date | readableDate("d LLLL yyyy") }}
 			</time>
-			<span class="blog-post__metadata__tags">
+			in
+			<span>
 				{{ tags | readableTags | join(", ") }}
 			</span>
 		</div>

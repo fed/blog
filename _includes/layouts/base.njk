@@ -43,15 +43,7 @@
 
 		<header class="layout-header">
 			<nav class="layout-header__navigation" aria-label="Site">
-				<a href="/" class="layout-header__site-name__link common-focus-ring">
-					<img class="layout-header__site-name__emoji" src="/assets/engineer.svg" alt="" eleventy:ignore/>
-					<span class="layout-header__site-name__container">
-						<div class="layout-header__site-name__title">
-							F. Knüssel<span class="visually-hidden">: </span>
-						</div>
-						<div class="layout-header__site-name__tagline">Frontend Developer</div>
-					</span>
-				</a>
+				<a href="/" class="layout-header__site-name__mark common-focus-ring">fk</a>
 
 				<ul class="layout-header__navigation__list">
 					{%- for entry in collections.all | eleventyNavigation %}
