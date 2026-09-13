@@ -71,10 +71,10 @@
 				</details>
 
 				<button id="theme-toggle" class="layout-header__theme-toggle common-focus-ring" role="switch" aria-label="Dark mode" aria-checked="false">
-					<span id="theme-toggle-dark-icon" style="display: none;" aria-hidden="true">
+					<span id="theme-toggle-dark-icon" aria-hidden="true">
 						{% include "assets/dark-theme.svg" %}
 					</span>
-					<span id="theme-toggle-light-icon" style="display: none;" aria-hidden="true">
+					<span id="theme-toggle-light-icon" aria-hidden="true">
 						{% include "assets/light-theme.svg" %}
 					</span>
 				</button>
@@ -89,8 +89,6 @@
 			{{ content | safe }}
 		</main>
 
-		<script>
-			{% include "scripts/theme-toggle.js" %}
-		</script>
+		<script src="/assets/js/theme-toggle.js" defer></script>
 	</body>
 </html>

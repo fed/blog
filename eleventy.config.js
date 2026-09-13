@@ -11,6 +11,9 @@ export default function (eleventyConfig) {
 	// Copy the entire assets folder
 	eleventyConfig.addPassthroughCopy("assets");
 
+	// The toggle script is deferred rather than inlined, so it needs to be served as a static file
+	eleventyConfig.addPassthroughCopy({ "_includes/scripts/theme-toggle.js": "assets/js/theme-toggle.js" });
+
 	// Minify and inline CSS
 	eleventyConfig.addFilter("cssmin", function (code) {
 		return new CleanCSS({}).minify(code).styles;

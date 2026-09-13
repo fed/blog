@@ -8,4 +8,5 @@
 	const theme = savedTheme || systemTheme;
 
 	document.documentElement.style.setProperty("color-scheme", theme);
+	document.documentElement.setAttribute("data-theme", theme);
 })();
