@@ -126,6 +126,13 @@ h6 {
 	margin: 0;
 }
 
+/* Horizontal rule */
+.common-main-content hr {
+	border: none;
+	border-top: 1px solid color-mix(in srgb, var(--color-border) 65%, var(--color-text-muted) 35%);
+	margin: var(--token-spacing-xl) 0;
+}
+
 /* Inline code */
 .common-main-content code:not(:where(pre code)) {
 	background-color: var(--color-code-bg);

@@ -168,6 +168,14 @@ An ordered list:
 
 > An observable is a collection whose values arrive over time, or in other words, an asynchronous collection.
 
+### Horizontal rule
+
+A paragraph before the rule.
+
+---
+
+A paragraph after the rule.
+
 ### Tables
 
 | State | Population | Capital   |
