@@ -13,8 +13,8 @@
 	"license": "ISC",
 	"description": "",
 	"dependencies": {
-		"@11ty/eleventy": "^3.1.5",
-		"@11ty/eleventy-img": "^6.0.4",
+		"@11ty/eleventy": "^3.1.6",
+		"@11ty/eleventy-img": "^7.0.0",
 		"@11ty/eleventy-navigation": "^1.0.5",
 		"@11ty/eleventy-plugin-rss": "^3.0.0",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
@@ -22,8 +22,8 @@
 		"clean-css": "^5.3.3",
 		"html-minifier-terser": "^7.2.0",
 		"luxon": "^3.7.2",
-		"prettier": "^3.8.3",
-		"prettier-plugin-jinja-template": "^2.1.0",
+		"prettier": "^3.9.6",
+		"prettier-plugin-jinja-template": "^2.2.0",
 		"prismjs": "^1.30.0"
 	}
 }
