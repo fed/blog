@@ -1,0 +1,110 @@
+.styleguide-swatch-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+	gap: var(--token-spacing-sm);
+	margin: var(--token-spacing-md) 0 var(--token-spacing-xl);
+}
+
+.styleguide-swatch {
+	border: 1px solid var(--color-border);
+	border-radius: var(--token-border-radius-default);
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.styleguide-swatch__color {
+	flex-shrink: 0;
+	height: 64px;
+}
+
+.styleguide-swatch__label {
+	background-color: var(--color-bg-alt);
+	color: var(--color-text);
+	flex-grow: 1;
+	font-family: var(--token-font-family-monospace);
+	font-size: var(--token-font-size-xs);
+	padding: var(--token-spacing-xs);
+}
+
+.styleguide-font-sample {
+	border: 1px solid var(--color-border);
+	border-radius: var(--token-border-radius-default);
+	margin: var(--token-spacing-sm) 0;
+	padding: var(--token-spacing-md);
+}
+
+.styleguide-font-sample__text {
+	color: var(--color-text);
+	margin: 0;
+}
+
+.styleguide-font-sample__meta {
+	color: var(--color-text-muted);
+	font-family: var(--token-font-family-monospace);
+	font-size: var(--token-font-size-xs);
+	margin: var(--token-spacing-xs) 0 0;
+}
+
+.styleguide-row {
+	align-items: baseline;
+	border-bottom: 1px solid var(--color-border);
+	display: flex;
+	gap: var(--token-spacing-md);
+	padding: var(--token-spacing-sm) 0;
+}
+
+.styleguide-row__label {
+	color: var(--color-text-muted);
+	flex-shrink: 0;
+	font-family: var(--token-font-family-monospace);
+	font-size: var(--token-font-size-xs);
+	width: 12rem;
+}
+
+.styleguide-row__sample {
+	color: var(--color-text);
+	margin: 0;
+}
+
+.styleguide-spacing-row {
+	align-items: center;
+	display: flex;
+	gap: var(--token-spacing-md);
+	padding: var(--token-spacing-xs) 0;
+}
+
+.styleguide-spacing-row__bar {
+	background-color: var(--color-accent);
+	height: var(--token-spacing-sm);
+}
+
+.styleguide-radius-demo {
+	background-color: var(--color-accent);
+	border-radius: var(--token-border-radius-default);
+	height: 4rem;
+	width: 4rem;
+}
+
+pre[class*="language-"] ins.highlight-line,
+pre[class*="language-"] del.highlight-line,
+pre[class*="language-"] mark.highlight-line,
+pre[class*="language-"] span.highlight-line {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+	margin: 0 -1em;
+	padding: 0 1em;
+}
+
+pre[class*="language-"] .highlight-line-active {
+	background-color: rgba(255, 255, 255, 0.08);
+}
+
+pre[class*="language-"] .highlight-line-add {
+	background-color: rgba(45, 224, 167, 0.15);
+}
+
+pre[class*="language-"] .highlight-line-remove {
+	background-color: rgba(255, 111, 159, 0.15);
+}

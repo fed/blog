@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+---
+
+{% set css %}
+{% include "styles/prism-gloom.css" %}
+{% include "styles/styleguide.css" %}
+{% endset %}
+<style>
+	{{css | cssmin | safe}}
+</style>
+
+<h1 class="common-main-title">
+	{{ heading or title }}
+</h1>
+
+<div class="common-main-content">
+	{{ content | safe }}
+</div>
