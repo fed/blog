@@ -61,7 +61,7 @@
 	--color-text-muted: light-dark(var(--token-color-gray-dark), var(--token-color-gray-light));
 	--color-heading: light-dark(var(--token-color-black), var(--token-color-white));
 	--color-border: light-dark(var(--token-color-gray-light), var(--token-color-gray-dark));
-	--color-accent: light-dark(var(--token-color-blue), var(--token-color-orange));
+	--color-accent: light-dark(var(--token-color-forest), var(--token-color-orange));
 	--color-accent-alt: light-dark(var(--token-color-yellow), var(--token-color-orange));
 	--color-accent-text: light-dark(var(--token-color-white), var(--token-color-black));
 	--color-text-inverse: light-dark(var(--token-color-white), var(--token-color-black));
