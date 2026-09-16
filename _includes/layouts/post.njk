@@ -19,10 +19,11 @@ layout: layouts/base.njk
 }
 </script>
 
-{# Only include the syntax highlighter CSS on blog posts, included with the CSS per-page bundle. #}
+{# Only include the syntax highlighter and KaTeX CSS on blog posts, included with the CSS per-page bundle. #}
 {# Capture the CSS content as a Nunjucks variable and feed it through to the cssmin filter to minify it. #}
 {% set css %}
 {% include "styles/prism-github.css" %}
+{% include "styles/katex.css" %}
 {% include "styles/blog-post.css" %}
 {% endset %}
 <style>

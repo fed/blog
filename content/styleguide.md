@@ -189,6 +189,16 @@ A paragraph after the rule.
 | NT    | 0.267 M    | Darwin    |
 | QLD   | 5.712 M    | Brisbane  |
 
+### Maths
+
+Inline LaTeX like $E = mc^2$ sits within a sentence.
+
+A block equation:
+
+$$
+\int_0^\infty e^{-x^2} \, dx = \frac{\sqrt{\pi}}{2}
+$$
+
 ### Code
 
 Inline code like `const x = 1` sits within a sentence.
