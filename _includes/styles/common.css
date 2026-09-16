@@ -83,6 +83,20 @@ h6 {
 	margin: var(--token-spacing-xl) 0 0;
 }
 
+/* Heading anchors, added by markdown-it-anchor */
+.common-main-content :is(h1, h2, h3, h4, h5, h6) .header-anchor {
+	margin-left: var(--token-spacing-xs);
+	color: color-mix(in srgb, var(--color-text-muted) 60%, var(--color-bg) 40%);
+	font-family: var(--token-font-family-monospace);
+	font-size: 1.5rem;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.common-main-content .header-anchor:hover {
+	color: var(--color-accent);
+}
+
 /* Images */
 .common-main-content picture {
 	display: block;

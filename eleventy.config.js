@@ -1,4 +1,5 @@
 import markdownIt from "markdown-it";
+import markdownItAnchor from "markdown-it-anchor";
 import markdownItKatexPkg from "@vscode/markdown-it-katex";
 import katex from "katex";
 import CleanCSS from "clean-css";
@@ -23,11 +24,18 @@ export default function (eleventyConfig) {
 	// KaTeX web fonts, referenced by _includes/styles/katex.css
 	eleventyConfig.addPassthroughCopy({ "node_modules/katex/dist/fonts": "assets/fonts/katex" });
 
-	// Render LaTeX ($inline$ and $$block$$) to static HTML/CSS at build time.
-	// The `katex` option pins the plugin to our own katex package (0.18.x) rather than the older 0.16.x
-	// it bundles itself, since _includes/styles/katex.css is copied from our version and the two use
-	// different CSS class names (0.18 prefixes them with `katex-`, 0.16 doesn't).
-	eleventyConfig.setLibrary("md", markdownIt({ html: true }).use(markdownItKatex, { katex }));
+	const md = markdownIt({ html: true })
+		// Render LaTeX ($inline$ and $$block$$) to static HTML/CSS at build time.
+		// The `katex` option pins the plugin to our own katex package (0.18.x) rather than the older 0.16.x
+		// it bundles itself, since _includes/styles/katex.css is copied from our version and the two use
+		// different CSS class names (0.18 prefixes them with `katex-`, 0.16 doesn't).
+		.use(markdownItKatex, { katex })
+		// Add a clickable "#" anchor link after every heading, pointing at its own id
+		.use(markdownItAnchor, {
+			level: [1, 2, 3, 4, 5, 6],
+			permalink: markdownItAnchor.permalink.linkInsideHeader()
+		});
+	eleventyConfig.setLibrary("md", md);
 
 	// Minify and inline CSS
 	eleventyConfig.addFilter("cssmin", function (code) {
