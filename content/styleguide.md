@@ -80,15 +80,15 @@ Base palette of primitive colour tokens:
 	<p class="styleguide-row__sample" style="font-size: var(--token-font-size-sm);">The quick brown fox</p>
 </div>
 <div class="styleguide-row">
-	<div class="styleguide-row__label">--token-font-size-md (22px)</div>
+	<div class="styleguide-row__label">--token-font-size-md (18px to 22px)</div>
 	<p class="styleguide-row__sample" style="font-size: var(--token-font-size-md);">The quick brown fox</p>
 </div>
 <div class="styleguide-row">
-	<div class="styleguide-row__label">--token-font-size-lg (30px)</div>
+	<div class="styleguide-row__label">--token-font-size-lg (24px to 30px)</div>
 	<p class="styleguide-row__sample" style="font-size: var(--token-font-size-lg);">The quick brown fox</p>
 </div>
 <div class="styleguide-row">
-	<div class="styleguide-row__label">--token-font-size-xl (62px)</div>
+	<div class="styleguide-row__label">--token-font-size-xl (36px to 62px)</div>
 	<p class="styleguide-row__sample" style="font-size: var(--token-font-size-xl);">The quick brown fox</p>
 </div>
 
