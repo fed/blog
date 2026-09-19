@@ -36,6 +36,43 @@
 	color: var(--color-accent-text);
 }
 
+/* Set from script while there's more to scroll to on that side. The mask is only applied then because it would clip the focus rings. */
+.archive__filters--fade-start {
+	--fade-start: 2.5rem;
+}
+
+.archive__filters--fade-end {
+	--fade-end: 2.5rem;
+}
+
+.archive__filters--fade-start,
+.archive__filters--fade-end {
+	mask-image: linear-gradient(
+		to right,
+		transparent,
+		#000 var(--fade-start, 0px),
+		#000 calc(100% - var(--fade-end, 0px)),
+		transparent
+	);
+}
+
+/* Single scrollable row on mobile. The padding and matching negative margin stop the focus ring from being clipped. */
+@media (max-width: 767px) {
+	.archive__filters {
+		flex-wrap: nowrap;
+		margin-inline: -0.3125rem;
+		overflow-x: auto;
+		padding: 0.3125rem;
+		scrollbar-width: none;
+	}
+
+	.archive__filter {
+		flex-shrink: 0;
+		padding: 0.625rem 0.875rem;
+		white-space: nowrap;
+	}
+}
+
 .archive__list {
 	display: flex;
 	flex-direction: column;

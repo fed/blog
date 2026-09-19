@@ -16,6 +16,21 @@
 	const initial = new URLSearchParams(location.search).get("tag") || "";
 	select(buttons.some((button) => button.dataset.tag === initial) ? initial : "");
 
+	// On mobile the row scrolls, so make sure the restored chip isn't off-screen
+	filters.querySelector('[aria-pressed="true"]').scrollIntoView({ block: "nearest", inline: "nearest" });
+
+	// Fade out an edge while there's more to scroll to on that side
+	function updateFade() {
+		const hasMoreAtStart = filters.scrollLeft > 1;
+		const hasMoreAtEnd = filters.scrollLeft + filters.clientWidth < filters.scrollWidth - 1;
+		filters.classList.toggle("archive__filters--fade-start", hasMoreAtStart);
+		filters.classList.toggle("archive__filters--fade-end", hasMoreAtEnd);
+	}
+
+	updateFade();
+	filters.addEventListener("scroll", updateFade, { passive: true });
+	window.addEventListener("resize", updateFade);
+
 	filters.addEventListener("click", (event) => {
 		const selected = event.target.closest(".archive__filter");
 
