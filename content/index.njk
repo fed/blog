@@ -15,9 +15,17 @@ eleventyNavigation:
 
 <p>Fresh content sorted by date, so you'll always see what's new at the top. {# Browse by categories/tags to explore topics you care about. #} You can also subscribe to the Atom feed for automatic updates.</p>
 
+{# Hidden until the script below runs, since the filters do nothing without JS #}
+<div class="archive__filters" role="group" aria-label="Filter by tag" hidden>
+	<button type="button" class="archive__filter" data-tag="" aria-pressed="true">All ({{ collections.posts | length }})</button>
+	{%- for tag in collections.posts | usedTags %}
+		<button type="button" class="archive__filter" data-tag="{{ tag.id }}" aria-pressed="false">{{ tag.title }} ({{ tag.count }})</button>
+	{%- endfor %}
+</div>
+
 <ul class="archive__list">
 	{%- for post in collections.posts | reverse %}
-		<li class="archive__list-item">
+		<li class="archive__list-item" data-tags="{{ post.data.tags | join(' ') }}">
 			<a href="{{ post.url }}">{{ post.data.title }}</a>
 			<span class="archive__list-item__date">(<time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("dd LLL yyyy") }}</time>)</span>
 			{% if post.data.draft %}
@@ -26,3 +34,7 @@ eleventyNavigation:
 		</li>
 	{%- endfor %}
 </ul>
+
+<script>
+	{% include "scripts/archive-filters.js" %}
+</script>

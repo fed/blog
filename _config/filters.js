@@ -19,4 +19,12 @@ export default function (eleventyConfig) {
 			.map((id) => TAGS.find((tag) => tag.id === id)?.title)
 			.filter(Boolean)
 	);
+
+	// Tags used by at least one of the given posts, in the order they're declared in _data/tags.js
+	eleventyConfig.addFilter("usedTags", (posts) =>
+		TAGS.map((tag) => ({
+			...tag,
+			count: posts.filter((post) => post.data.tags.includes(tag.id)).length
+		})).filter((tag) => tag.count > 0)
+	);
 }
