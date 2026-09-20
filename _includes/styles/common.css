@@ -126,18 +126,49 @@ h6 {
 	border: 1px solid var(--color-border);
 }
 
-/* Quotes */
-.common-main-content blockquote {
+/* Admonitions */
+.common-main-content .admonition {
+	--admonition-color: var(--color-text-muted);
 	border: 1px solid var(--color-border);
-	background-color: var(--token-color-white);
+	border-left: var(--token-spacing-xs) solid var(--admonition-color);
+	border-radius: var(--token-border-radius-default);
+	background-color: color-mix(in srgb, var(--admonition-color) 10%, transparent);
 	padding: var(--token-spacing-sm) var(--token-spacing-md);
-	margin: var(--token-spacing-xl) var(--token-spacing-xxl);
-	box-shadow: var(--token-spacing-xs) var(--token-spacing-xs) 0 1px var(--color-code-bg);
+	margin: var(--token-spacing-lg) 0;
 }
 
-.common-main-content blockquote p {
-	color: var(--color-text);
+.common-main-content .admonition-tip {
+	--admonition-color: var(--token-color-forest);
+}
+
+.common-main-content .admonition-info {
+	--admonition-color: var(--token-color-blue);
+}
+
+.common-main-content .admonition-warning {
+	--admonition-color: var(--token-color-orange);
+}
+
+.common-main-content .admonition-danger {
+	--admonition-color: var(--token-color-crimson);
+}
+
+.common-main-content .admonition-title {
+	font-family: var(--token-font-family-sans-serif);
+	font-size: var(--token-font-size-xs);
+	font-weight: var(--token-font-weight-bold);
+	line-height: var(--token-line-height-md);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
 	margin: 0;
+}
+
+.common-main-content .admonition-title + * {
+	margin-top: 0;
+}
+
+.common-main-content .admonition > :last-child {
+	margin-bottom: 0;
 }
 
 /* Horizontal rule */

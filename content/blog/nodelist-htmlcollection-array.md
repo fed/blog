@@ -15,9 +15,11 @@ native APIs.
 I mean, `document.querySelectorAll(selector);` and then you get a `NodeList`. But if you use `getElementsByClassName` you get an
 `HTMLCollection` and can't even iterate on it unless you convert it to an array by using `Array.from(el)` or `[...el]`.
 
-> NodeLists and Arrays are two different things because NodeLists are actually not a JavaScript API, but a browser API. Things like
-> querySelectorAll() and getElementsByTagName() aren’t JavaScript methods, they’re browser APIs that let you access DOM elements. You can
-> then manipulate them with JavaScript.
+:::note
+NodeLists and Arrays are two different things because NodeLists are actually not a JavaScript API, but a browser API. Things like
+querySelectorAll() and getElementsByTagName() aren’t JavaScript methods, they’re browser APIs that let you access DOM elements. You can
+then manipulate them with JavaScript.
+:::
 
 children is a property that lets you select direct descendants (elements that are immediately nested in another element). It returns a HTML
 Collection that updates when children elements are changed.

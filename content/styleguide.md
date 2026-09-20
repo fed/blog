@@ -164,9 +164,27 @@ An ordered list:
 2. Second
 3. Third
 
-### Blockquotes
+### Admonitions
 
-> An observable is a collection whose values arrive over time, or in other words, an asynchronous collection.
+:::note
+A note with the default title.
+:::
+
+:::tip[Custom title]
+A tip with a custom title and `inline code`.
+:::
+
+:::info
+An info block with a [link](https://example.com).
+:::
+
+:::warning
+A warning block.
+:::
+
+:::danger
+A danger block.
+:::
 
 ### Horizontal rule
 

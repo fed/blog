@@ -15,8 +15,10 @@ are always immutable. However, data structures like objects and arrays are not.
 
 By mutation I mean changing or affecting a source element. The goal is to **keep the original element unchanged** at all times.
 
-> A mutation is a side effect: the fewer things that change in a program, the less there is to keep track of, which results in a simpler
-> program.
+:::note
+A mutation is a side effect: the fewer things that change in a program, the less there is to keep track of, which results in a simpler
+program.
+:::
 
 I've marked techniques which involve a mutation to the source element with a ❌ whereas immutable methods are marked with a ✅.
 

@@ -36,7 +36,9 @@ There are four different types of bindings in JavaScript:
 
 ### Implicit Binding
 
-> TL;DR: look at the immediate left of the dot at call time.
+:::tip[TL;DR]
+Look at the immediate left of the dot at call time.
+:::
 
 Whenever you call a function that's attached to an object, look to the left of the dot, and that is what the `this` keyword is going to be.
 
@@ -80,8 +82,10 @@ bound to the `daughter` object. The object which is immediately to the left to t
 
 ### Explicit Binding
 
-> TL;DR: we explicitly tell a function what the context (= value of the `this` keyword) is by using one of these prototype methods: `call`,
-> `apply` or `bind`.
+:::tip[TL;DR]
+We explicitly tell a function what the context (= value of the `this` keyword) is by using one of these prototype methods: `call`,
+`apply` or `bind`.
+:::
 
 This is about explicitly setting the value of `this` to a function upon execution.
 
@@ -228,8 +232,10 @@ missingAllArgs(today, source);
 
 ### `new` Binding
 
-> TL;DR: whenever we've got a function invoked with the `new` operator, the `this` keyword here is bound to the new object being built by
-> the function constructor.
+:::tip[TL;DR]
+Whenever we've got a function invoked with the `new` operator, the `this` keyword here is bound to the new object being built by
+the function constructor.
+:::
 
 Let's say we've got this `Dog` function constructor which takes in a name, a breed and a colour. By the way, we have capitalised the first
 letter to express that this is function constructor, meaning it should be instantiated (i.e.: called with the `new` operator).
@@ -263,8 +269,10 @@ context as it already has its own.
 
 ### Window Binding
 
-> TL;DR: if none of the other rules apply, then the `this` keyword defaults to the `window` object. This holds true as long as you are not
-> in strict mode, otherwise `this` is `undefined`.
+:::tip[TL;DR]
+If none of the other rules apply, then the `this` keyword defaults to the `window` object. This holds true as long as you are not
+in strict mode, otherwise `this` is `undefined`.
+:::
 
 Let's go back to our `sayHi` function:
 

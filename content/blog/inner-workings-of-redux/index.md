@@ -22,9 +22,11 @@ your component hierarchy to have the spinner displayed when appropriate?
 Communicating React components is fairly straightforward when we've got a parent-child relationship, but can quickly get messy if we are
 trying to communicate components within different levels down the tree hierarchy.
 
-> For communication between two components that don't have a parent-child relationship, you can set up your own global event system.
-> Subscribe to events in `componentDidMount()`, unsubscribe in `componentWillUnmount()`, and call `setState()` when you receive an event.
-> The [Flux](https://facebook.github.io/flux/) pattern is one of the possible ways to arrange this. — React docs
+:::note
+For communication between two components that don't have a parent-child relationship, you can set up your own global event system.
+Subscribe to events in `componentDidMount()`, unsubscribe in `componentWillUnmount()`, and call `setState()` when you receive an event.
+The [Flux](https://facebook.github.io/flux/) pattern is one of the possible ways to arrange this. — React docs
+:::
 
 This is what Redux is for. Whenever Redux is involved, **container components** don't communicate directly between each other by passing in
 callbacks and props down the tree.
@@ -429,9 +431,11 @@ matter how deep they are** down the component tree.
 This way we don't need to pass the `store` as a prop to our children: `Provider` does this for us automagically… well, sort of. It actually
 makes use of React's `context` feature:
 
-> By adding childContextTypes and getChildContext to the context provider, React passes the information down automatically and **any
-> component** in the subtree can access it by defining contextTypes. If contextTypes is not defined, then context will be an empty object. —
-> [React docs](https://facebook.github.io/react/docs/context.html)
+:::note
+By adding childContextTypes and getChildContext to the context provider, React passes the information down automatically and any
+component in the subtree can access it by defining contextTypes. If contextTypes is not defined, then context will be an empty object. —
+[React docs](https://facebook.github.io/react/docs/context.html)
+:::
 
 This all means, instead of be passing down the store **explicitly via props**, we'll be passing it in **implicitly via context**.
 

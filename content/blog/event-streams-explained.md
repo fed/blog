@@ -23,7 +23,9 @@ notifies all of them when it has something to publish.
 In the context of <abbr title="Functional Reactive Programming">FRP</abbr>, data can be modelled as async collections of events that
 "arrive" or happen over time. An _observable_ (or _event stream_) can then be thought of as a pipeline events travel through.
 
-> An observable is a collection whose values arrive over time, or in other words, an asynchronous collection.
+:::note
+An observable is a collection whose values arrive over time, or in other words, an asynchronous collection.
+:::
 
 An Observable is just like an array, except the difference is with an array, all the data is stored in memory, whereas with an Observable,
 no data is stored in memory, and the items arrive asynchronously over time. An array has all the data ready, right there, just to pop out

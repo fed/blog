@@ -1,5 +1,6 @@
 import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
+import markdownItContainer from "markdown-it-container";
 import markdownItKatexPkg from "@vscode/markdown-it-katex";
 import katex from "katex";
 import CleanCSS from "clean-css";
@@ -35,6 +36,20 @@ export default function (eleventyConfig) {
 			level: [1, 2, 3, 4, 5, 6],
 			permalink: markdownItAnchor.permalink.linkInsideHeader()
 		});
+
+	for (const type of ["note", "tip", "info", "warning", "danger"]) {
+		const openingPattern = new RegExp(`^${type}(?:\\[(.*)\\])?$`);
+		md.use(markdownItContainer, type, {
+			validate: (params) => openingPattern.test(params.trim()),
+			render: (tokens, idx) => {
+				if (tokens[idx].nesting !== 1) return "</div>\n";
+				const [, customTitle] = tokens[idx].info.trim().match(openingPattern);
+				const title = md.utils.escapeHtml(customTitle ?? type[0].toUpperCase() + type.slice(1));
+				return `<div class="admonition admonition-${type}">\n<p class="admonition-title">${title}</p>\n`;
+			}
+		});
+	}
+
 	eleventyConfig.setLibrary("md", md);
 
 	// Minify and inline CSS
