@@ -151,7 +151,7 @@ h6 {
 .common-main-content code:not(:where(pre code)) {
 	background-color: var(--color-code-bg);
 	border-radius: var(--token-border-radius-default);
-	font-size: 1rem;
+	font-size: 0.85em;
 	margin: 0;
 	padding: var(--token-spacing-xxs) var(--token-spacing-xs);
 	font-weight: var(--token-font-weight-normal);
