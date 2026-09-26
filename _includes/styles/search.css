@@ -2,14 +2,26 @@ pagefind-modal {
 	--pf-text: var(--color-text);
 	--pf-text-secondary: var(--color-text-muted);
 	--pf-text-muted: var(--color-text-muted);
-	--pf-background: var(--color-bg);
+	--pf-background: light-dark(var(--token-color-ivory), var(--token-color-charcoal));
 	--pf-border: var(--color-border);
 	--pf-border-focus: var(--color-accent);
-	--pf-hover: var(--color-bg-alt);
-	--pf-skeleton: var(--color-bg-alt);
+	--pf-hover: light-dark(var(--token-color-gray-extra-light), var(--token-color-graphite));
+	--pf-mark: var(--color-heading);
+	--pf-skeleton: light-dark(var(--token-color-gray-extra-light), var(--token-color-graphite));
 	--pf-skeleton-shine: var(--color-border);
 	--pf-outline-focus: var(--color-focus);
 	--pf-font: var(--token-font-family-sans-serif);
+	--pf-modal-backdrop: light-dark(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.7));
+	--pf-shadow-lg: 0 0 0 1px light-dark(transparent, var(--color-border)), 0 16px 48px rgb(0 0 0 / 0.2);
+}
+
+/*
+ * Pagefind resets its elements with `all: initial`, which sets color-scheme back to light and makes the light-dark() colours above
+ * always resolve to their light value. Inheriting it again lets the modal follow the site's theme.
+ */
+html pagefind-modal,
+html pagefind-modal * {
+	color-scheme: inherit;
 }
 
 /*
