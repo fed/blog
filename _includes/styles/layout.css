@@ -55,7 +55,8 @@
 /*
  * Navigation menu
  */
-.layout-header__theme-toggle {
+.layout-header__theme-toggle,
+.layout-header__search-toggle {
 	position: relative;
 	z-index: 2;
 	background: none;
@@ -70,11 +71,13 @@
 	transition: background-color 0.2s ease;
 }
 
-.layout-header__theme-toggle:hover {
+.layout-header__theme-toggle:hover,
+.layout-header__search-toggle:hover {
 	background-color: var(--color-bg);
 }
 
-.layout-header__theme-toggle span {
+.layout-header__theme-toggle span,
+.layout-header__search-toggle span {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -92,7 +95,8 @@
 	display: flex;
 }
 
-.layout-header__theme-toggle svg {
+.layout-header__theme-toggle svg,
+.layout-header__search-toggle svg {
 	width: 20px;
 	height: 20px;
 	display: block;

@@ -1,0 +1,25 @@
+pagefind-modal {
+	--pf-text: var(--color-text);
+	--pf-text-secondary: var(--color-text-muted);
+	--pf-text-muted: var(--color-text-muted);
+	--pf-background: var(--color-bg);
+	--pf-border: var(--color-border);
+	--pf-border-focus: var(--color-accent);
+	--pf-hover: var(--color-bg-alt);
+	--pf-skeleton: var(--color-bg-alt);
+	--pf-skeleton-shine: var(--color-border);
+	--pf-outline-focus: var(--color-focus);
+	--pf-font: var(--token-font-family-sans-serif);
+}
+
+/*
+ * Before a search, the results area is empty but its padding still leaves a blank strip, so hide it and the footer's top border.
+ * !important is needed because Pagefind's styles use a selector trick that gives them ID-level specificity.
+ */
+pagefind-modal-body:has(.pf-summary:empty):not(:has(.pf-result)) {
+	display: none !important;
+}
+
+pagefind-modal-body:has(.pf-summary:empty):not(:has(.pf-result)) + pagefind-modal-footer {
+	border-top: none !important;
+}

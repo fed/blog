@@ -1,3 +1,4 @@
+import path from "node:path";
 import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
 import markdownItContainer from "markdown-it-container";
@@ -9,6 +10,7 @@ import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import syntaxHighlightPlugin from "@11ty/eleventy-plugin-syntaxhighlight";
 import htmlmin from "html-minifier-terser";
+import * as pagefind from "pagefind";
 import filtersPlugin from "./_config/filters.js";
 import metadata from "./_data/metadata.js";
 
@@ -98,6 +100,14 @@ export default function (eleventyConfig) {
 			base: metadata.url,
 			author: metadata.author
 		}
+	});
+
+	// Build the Pagefind search index from the generated site, into _site/pagefind
+	eleventyConfig.on("eleventy.after", async ({ directories }) => {
+		const { index } = await pagefind.createIndex();
+		await index.addDirectory({ path: directories.output });
+		await index.writeFiles({ outputPath: path.join(directories.output, "pagefind") });
+		await pagefind.close();
 	});
 
 	// Image plugin

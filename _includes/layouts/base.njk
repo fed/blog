@@ -31,6 +31,7 @@
 		{% include "styles/global.css" %}
 		{% include "styles/common.css" %}
 		{% include "styles/layout.css" %}
+		{% include "styles/search.css" %}
 		{% endset %}
 		<style>
 			{{css | cssmin | safe}}
@@ -70,6 +71,12 @@
 					</ul>
 				</details>
 
+				<button id="search-toggle" class="layout-header__search-toggle common-focus-ring" type="button" aria-label="Search" aria-haspopup="dialog">
+					<span aria-hidden="true">
+						{% include "assets/search.svg" %}
+					</span>
+				</button>
+
 				<button id="theme-toggle" class="layout-header__theme-toggle common-focus-ring" role="switch" aria-label="Dark mode" aria-checked="false">
 					<span id="theme-toggle-dark-icon" aria-hidden="true">
 						{% include "assets/dark-theme.svg" %}
@@ -89,6 +96,11 @@
 			{{ content | safe }}
 		</main>
 
+		<pagefind-modal></pagefind-modal>
+
 		<script src="/assets/js/theme-toggle.js" defer></script>
+		<script>
+			{% include "scripts/search-toggle.js" %}
+		</script>
 	</body>
 </html>
