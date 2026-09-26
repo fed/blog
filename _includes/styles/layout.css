@@ -55,8 +55,15 @@
 /*
  * Navigation menu
  */
+.layout-header__actions {
+	display: flex;
+	align-items: center;
+	gap: var(--token-spacing-xxs);
+}
+
 .layout-header__theme-toggle,
-.layout-header__search-toggle {
+.layout-header__search-toggle,
+.layout-header__github-link {
 	position: relative;
 	z-index: 2;
 	background: none;
@@ -72,12 +79,14 @@
 }
 
 .layout-header__theme-toggle:hover,
-.layout-header__search-toggle:hover {
+.layout-header__search-toggle:hover,
+.layout-header__github-link:hover {
 	background-color: var(--color-bg);
 }
 
 .layout-header__theme-toggle span,
-.layout-header__search-toggle span {
+.layout-header__search-toggle span,
+.layout-header__github-link span {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -96,7 +105,8 @@
 }
 
 .layout-header__theme-toggle svg,
-.layout-header__search-toggle svg {
+.layout-header__search-toggle svg,
+.layout-header__github-link svg {
 	width: 20px;
 	height: 20px;
 	display: block;
@@ -125,6 +135,18 @@
 .layout-header__menu {
 	position: relative;
 	margin-left: auto;
+}
+
+/* This breakpoint corresponds with var(--token-breakpoint-sm) */
+@media screen and (max-width: 767px) {
+	.layout-header__menu {
+		order: 1;
+		margin-left: 0;
+	}
+
+	.layout-header__actions {
+		margin-left: auto;
+	}
 }
 
 .layout-header__menu-toggle {
