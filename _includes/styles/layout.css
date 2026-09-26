@@ -32,15 +32,14 @@
  * Header
  */
 .layout-header {
-	/* background-color: #f0eee6; */
 	margin: var(--token-spacing-md) 0;
 }
 
-.layout-header__site-name__mark {
+.layout-header__logo {
 	position: relative;
 	z-index: 2;
 	background-color: var(--color-accent);
-	color: var(--color-text-inverse);
+	color: var(--color-accent-text);
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -61,9 +60,7 @@
 	gap: var(--token-spacing-xxs);
 }
 
-.layout-header__theme-toggle,
-.layout-header__search-toggle,
-.layout-header__github-link {
+.layout-header__icon-button {
 	position: relative;
 	z-index: 2;
 	background: none;
@@ -75,85 +72,42 @@
 	justify-content: center;
 	border-radius: var(--token-border-radius-default);
 	color: var(--color-text);
-	transition: background-color 0.2s ease;
 }
 
-.layout-header__theme-toggle:hover,
-.layout-header__search-toggle:hover,
-.layout-header__github-link:hover {
-	background-color: var(--color-bg);
-}
-
-.layout-header__theme-toggle span,
-.layout-header__search-toggle span,
-.layout-header__github-link span {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-#theme-toggle-light-icon {
+.layout-header__theme-icon--light {
 	display: none;
 }
 
-:root[data-theme="dark"] #theme-toggle-dark-icon {
+:root[data-theme="dark"] .layout-header__theme-icon--dark {
 	display: none;
 }
 
-:root[data-theme="dark"] #theme-toggle-light-icon {
-	display: flex;
+:root[data-theme="dark"] .layout-header__theme-icon--light {
+	display: block;
 }
 
-.layout-header__theme-toggle svg,
-.layout-header__search-toggle svg,
-.layout-header__github-link svg {
+.layout-header__icon-button svg {
 	width: 20px;
 	height: 20px;
 	display: block;
-	transition: fill 0.2s ease;
 }
 
-.layout-header__navigation {
+.layout-header__nav {
 	align-items: center;
 	display: flex;
-	justify-content: space-between;
 	gap: var(--token-spacing-xs);
 	font-size: var(--token-font-size-sm);
 	line-height: var(--token-line-height-sm);
 	padding: var(--token-spacing-sm) var(--token-spacing-md);
 }
 
-/* This breakpoint corresponds with var(--token-breakpoint-sm) */
-@media screen and (min-width: 768px) {
-	.layout-header__navigation {
-		margin: 0 auto;
-		max-width: var(--token-breakpoint-lg);
-		gap: var(--token-spacing-lg);
-	}
-}
-
 .layout-header__menu {
-	position: relative;
 	margin-left: auto;
-}
-
-/* This breakpoint corresponds with var(--token-breakpoint-sm) */
-@media screen and (max-width: 767px) {
-	.layout-header__menu {
-		order: 1;
-		margin-left: 0;
-	}
-
-	.layout-header__actions {
-		margin-left: auto;
-	}
 }
 
 .layout-header__menu-toggle {
 	position: relative;
 	z-index: 2;
-	background: none;
-	border: none;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -184,15 +138,14 @@
 	display: block;
 }
 
-.layout-header__menu[open] .layout-header__navigation__list {
+.layout-header__menu[open] .layout-header__nav-list {
 	display: flex;
 }
 
-.layout-header__navigation__list {
+.layout-header__nav-list {
 	display: none;
 	flex-direction: column;
 	align-items: flex-start;
-	justify-content: flex-start;
 	gap: var(--token-spacing-lg);
 	position: fixed;
 	inset: 0;
@@ -203,18 +156,28 @@
 	background-color: var(--color-bg);
 }
 
-/* Below var(--token-breakpoint-sm) the open menu covers the screen, so we lock background scrolling */
+/* This breakpoint corresponds with var(--token-breakpoint-sm) */
 @media screen and (max-width: 767px) {
+	.layout-header__menu {
+		order: 1;
+		margin-left: 0;
+	}
+
+	.layout-header__actions {
+		margin-left: auto;
+	}
+
+	/* The open menu covers the screen, so we lock background scrolling */
 	body:has(.layout-header__menu[open]) {
 		overflow: hidden;
 	}
 }
 
-.layout-header__navigation__list-item {
+.layout-header__nav-item {
 	list-style-type: none;
 }
 
-.layout-header__menu .layout-header__navigation__link {
+.layout-header__menu .layout-header__nav-link {
 	display: block;
 	padding-block: var(--token-spacing-xs);
 	font-size: var(--token-font-size-lg);
@@ -222,31 +185,26 @@
 
 /* This breakpoint corresponds with var(--token-breakpoint-sm) */
 @media screen and (min-width: 768px) {
+	.layout-header__nav {
+		margin: 0 auto;
+		max-width: var(--token-breakpoint-lg);
+		gap: var(--token-spacing-lg);
+	}
+
 	.layout-header__menu-toggle {
 		display: none;
 	}
 
-	.layout-header__navigation__list {
+	.layout-header__nav-list {
 		flex-direction: row;
 		align-items: center;
-		justify-content: flex-end;
-		gap: 0;
 		position: static;
-		inset: auto;
 		overflow-y: visible;
 		padding: 0;
 		background: none;
 	}
 
-	.layout-header__navigation__list-item {
-		margin-right: var(--token-spacing-lg);
-	}
-
-	.layout-header__navigation__list-item:last-child {
-		margin-right: 0;
-	}
-
-	.layout-header__menu .layout-header__navigation__link {
+	.layout-header__menu .layout-header__nav-link {
 		display: inline;
 		font-size: inherit;
 		padding: 4px 0;
@@ -254,33 +212,16 @@
 }
 
 /* Use together with .common-focus-ring */
-.layout-header__navigation__link {
+.layout-header__nav-link {
 	color: var(--color-text);
 	font-family: var(--token-font-family-sans-serif);
-	padding-block: 4px;
 	text-decoration: none;
 }
 
-.layout-header__navigation__link--active {
+.layout-header__nav-link[aria-current="page"] {
 	text-decoration: underline;
 	text-underline-offset: 6px;
 	text-decoration-thickness: 2px;
-}
-
-.layout-header__navigation__link--active::after,
-.layout-header__navigation__link:hover::after {
-	width: 100%;
-}
-
-/* Hide bottom outline when focus ring is visible */
-.layout-header__navigation__link:focus-visible::after {
-	display: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-	.layout-header__navigation__link::after {
-		transition: none;
-	}
 }
 
 /*

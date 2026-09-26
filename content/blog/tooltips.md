@@ -21,6 +21,7 @@ Something else that i didn't mention about popovers is that they are dialogs, me
 And in terms of purpose, you could say that tooltips are more for discovery (you find a button in the video player toolbar, and ask yourself "what is this"... they help you quickly discover what the control is... that's why they are usually used with image buttons). Popovers on the other hand are more for whenever you want to learn more about something or get more additional details that do not fit on the screen. This is for cases where the user makes a conscious decision to seek more information/context.
 
 In terms of semantic roles
+
 - You should use `role="tooltip"` for the container. The trigger button points to it using `aria-describedby`. This tells the screen reader "this button has a description" which is then read out after the button label.
 - A popover usually uses `role="dialog"` or `role="menu"`. The trigger uses `aria-haspopup="dialog"` and `aria-expanded="true|false"`. This signals to the user that clicking the button will reveal a new layer of the interface.
 

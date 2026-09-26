@@ -35,14 +35,14 @@
 	--token-font-family-serif: "Source Serif 4", Georgia, serif;
 
 	/* colour palette */
-	--token-color-black: #172b4d;
-	--token-color-black-muted: #18171f;
+	--token-color-navy: #172b4d;
+	--token-color-ink: #18171f;
 	--token-color-gray-dark: #344563;
 	--token-color-gray-light: #e1e1e1;
 	--token-color-gray-extra-light: #f7f7f7;
 	--token-color-gray-warm: #f0eee6;
 	--token-color-white: #fff;
-	--token-color-white-muted: #dcd7ba;
+	--token-color-parchment: #dcd7ba;
 	--token-color-ivory: #faf7f1;
 	--token-color-yellow: #f9ca5e;
 	--token-color-orange: #ffa066;
@@ -55,21 +55,16 @@
 
 	/* semantic colors */
 	color-scheme: light dark;
-	--color-bg: light-dark(var(--token-color-ivory), var(--token-color-black-muted));
+	--color-bg: light-dark(var(--token-color-ivory), var(--token-color-ink));
 	--color-bg-alt: light-dark(var(--token-color-gray-extra-light), var(--token-color-charcoal));
-	--color-text: light-dark(var(--token-color-black), var(--token-color-white-muted));
+	--color-text: light-dark(var(--token-color-navy), var(--token-color-parchment));
 	--color-text-muted: light-dark(var(--token-color-gray-dark), var(--token-color-gray-light));
-	--color-heading: light-dark(var(--token-color-black), var(--token-color-white));
+	--color-heading: light-dark(var(--token-color-navy), var(--token-color-white));
 	--color-border: light-dark(var(--token-color-gray-light), var(--token-color-gray-dark));
 	--color-accent: light-dark(var(--token-color-forest), var(--token-color-orange));
-	--color-accent-alt: light-dark(var(--token-color-yellow), var(--token-color-orange));
-	--color-accent-text: light-dark(var(--token-color-white), var(--token-color-black));
-	--color-text-inverse: light-dark(var(--token-color-white), var(--token-color-black));
+	--color-accent-text: light-dark(var(--token-color-white), var(--token-color-navy));
 	--color-focus: var(--color-accent);
-	--color-code: light-dark(var(--token-color-crimson), var(--token-color-white));
 	--color-code-bg: light-dark(var(--token-color-gray-warm), var(--token-color-graphite));
-	--color-forest: light-dark(var(--token-color-forest), var(--token-color-forest-bright));
-	--color-forest-text: light-dark(var(--token-color-ivory), var(--token-color-black-muted));
 
 	/* spacing (8px base grid size) */
 	--token-spacing-xxs: 0.25rem; /* 4px */
@@ -90,7 +85,7 @@
 	/* font weights */
 	--token-font-weight-light: 300;
 	--token-font-weight-normal: 400;
-	--token-font-weight-bold: 600;
+	--token-font-weight-semibold: 600;
 
 	/* line heights */
 	--token-line-height-sm: 1.15;

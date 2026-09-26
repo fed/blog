@@ -1,5 +1,4 @@
 .blog-post__header {
-	text-align: left;
 	margin: var(--token-spacing-md) 0 var(--token-spacing-xxl);
 }
 

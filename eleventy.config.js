@@ -47,7 +47,7 @@ export default function (eleventyConfig) {
 				if (tokens[idx].nesting !== 1) return "</div>\n";
 				const [, customTitle] = tokens[idx].info.trim().match(openingPattern);
 				const title = md.utils.escapeHtml(customTitle ?? type[0].toUpperCase() + type.slice(1));
-				return `<div class="admonition admonition-${type}">\n<p class="admonition-title">${title}</p>\n`;
+				return `<div class="admonition admonition--${type}">\n<p class="admonition__title">${title}</p>\n`;
 			}
 		});
 	}

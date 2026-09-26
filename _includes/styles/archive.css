@@ -10,7 +10,11 @@
 }
 
 .archive__filter {
-	background: color-mix(in srgb, var(--color-bg), light-dark(var(--token-color-white), var(--token-color-charcoal)) 50%);
+	background: color-mix(
+		in srgb,
+		var(--color-bg),
+		light-dark(var(--token-color-white), var(--token-color-charcoal)) 50%
+	);
 	border: 1px solid var(--color-border);
 	border-radius: 6px;
 	color: var(--color-text);
@@ -25,11 +29,6 @@
 	border-color: var(--color-accent);
 }
 
-.archive__filter:focus-visible {
-	outline: 3px solid var(--color-focus);
-	outline-offset: 2px;
-}
-
 .archive__filter[aria-pressed="true"] {
 	background: var(--color-accent);
 	border-color: var(--color-accent);
@@ -38,11 +37,11 @@
 
 /* Set from script while there's more to scroll to on that side. The mask is only applied then because it would clip the focus rings. */
 .archive__filters--fade-start {
-	--fade-start: 2.5rem;
+	--archive-fade-start: 2.5rem;
 }
 
 .archive__filters--fade-end {
-	--fade-end: 2.5rem;
+	--archive-fade-end: 2.5rem;
 }
 
 .archive__filters--fade-start,
@@ -50,14 +49,15 @@
 	mask-image: linear-gradient(
 		to right,
 		transparent,
-		#000 var(--fade-start, 0px),
-		#000 calc(100% - var(--fade-end, 0px)),
+		#000 var(--archive-fade-start, 0px),
+		#000 calc(100% - var(--archive-fade-end, 0px)),
 		transparent
 	);
 }
 
+/* This breakpoint corresponds with var(--token-breakpoint-sm) */
 /* Single scrollable row on mobile. The padding and matching negative margin stop the focus ring from being clipped. */
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
 	.archive__filters {
 		flex-wrap: nowrap;
 		margin-inline: -0.3125rem;
@@ -86,12 +86,11 @@
 	align-items: baseline;
 	display: flex;
 	flex-wrap: wrap;
-	font-size: var(--token-font-size-md);
 	font-weight: var(--token-font-weight-normal);
 	gap: var(--token-spacing-xs);
 }
 
-.archive__list-item__date {
+.archive__date {
 	color: var(--color-text-muted);
 	font-family: var(--token-font-family-sans-serif);
 	font-size: var(--token-font-size-xs);

@@ -6,7 +6,6 @@
 code[class*="language-"],
 pre[class*="language-"] {
 	color: light-dark(#1f2328, #e6edf3);
-	background: none;
 	font-family: var(--token-font-family-monospace);
 	font-size: 1em;
 	text-align: left;
@@ -16,14 +15,7 @@ pre[class*="language-"] {
 	word-wrap: normal;
 	line-height: 1.5;
 
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
 	tab-size: 4;
-
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
 }
 
 /* Code blocks */
@@ -33,37 +25,19 @@ pre[class*="language-"] {
 	overflow: auto;
 	border: 1px solid var(--color-border);
 	border-radius: var(--token-border-radius-default);
-}
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
 	background: light-dark(var(--token-color-gray-warm), #161b22);
 }
 
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-	padding: 0.1em;
-	border-radius: 0.3em;
-	white-space: normal;
-}
-
 .token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
+.token.doctype {
 	color: light-dark(#6e7781, #8b949e);
 	font-style: italic;
 }
 
 .token.punctuation,
 .token.operator,
-.token.entity,
 .token.url {
 	color: light-dark(#1f2328, #e6edf3);
-}
-
-.token.namespace {
-	opacity: 0.7;
 }
 
 .token.tag,
@@ -71,8 +45,7 @@ pre[class*="language-"] {
 	color: light-dark(#116329, #7ee787);
 }
 
-.token.builtin,
-.token.symbol {
+.token.builtin {
 	color: light-dark(#953800, #ffa657);
 }
 
@@ -80,6 +53,7 @@ pre[class*="language-"] {
 .token.boolean,
 .token.number,
 .token.attr-name,
+.token.property,
 .token.variable {
 	color: light-dark(#0550ae, #79c0ff);
 }
@@ -91,14 +65,9 @@ pre[class*="language-"] {
 
 .token.attr-value,
 .token.string,
-.token.char,
 .token.inserted,
 .token.regex {
 	color: light-dark(#0a3069, #a5d6ff);
-}
-
-.token.property {
-	color: light-dark(#0550ae, #79c0ff);
 }
 
 .token.atrule,
@@ -116,14 +85,31 @@ pre[class*="language-"] {
 	font-weight: bold;
 }
 
-.token.bold {
-	font-weight: bold;
-}
-
-.token.italic {
-	font-style: italic;
-}
-
 .token.entity {
+	color: light-dark(#1f2328, #e6edf3);
 	cursor: help;
+}
+
+/* Line highlighting, e.g. ```js/1-3 */
+pre[class*="language-"] ins.highlight-line,
+pre[class*="language-"] del.highlight-line,
+pre[class*="language-"] mark.highlight-line,
+pre[class*="language-"] span.highlight-line {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+	margin: 0 -1em;
+	padding: 0 1em;
+}
+
+pre[class*="language-"] .highlight-line-active {
+	background-color: light-dark(rgb(0 0 0 / 0.05), rgb(255 255 255 / 0.08));
+}
+
+pre[class*="language-"] .highlight-line-add {
+	background-color: rgba(45, 224, 167, 0.15);
+}
+
+pre[class*="language-"] .highlight-line-remove {
+	background-color: rgba(255, 111, 159, 0.15);
 }

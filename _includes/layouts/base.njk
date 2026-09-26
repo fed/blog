@@ -44,8 +44,8 @@
       	</a>
 
 		<header class="layout-header">
-			<nav class="layout-header__navigation" aria-label="Site">
-				<a href="/" class="layout-header__site-name__mark common-focus-ring">fk</a>
+			<nav class="layout-header__nav" aria-label="Site">
+				<a href="/" class="layout-header__logo common-focus-ring">fk</a>
 
 				<details class="layout-header__menu" open>
 					<summary class="layout-header__menu-toggle common-focus-ring" aria-label="Menu">
@@ -57,11 +57,11 @@
 						</span>
 					</summary>
 
-					<ul class="layout-header__navigation__list">
+					<ul class="layout-header__nav-list">
 						{%- for entry in collections.all | eleventyNavigation %}
-							<li class="layout-header__navigation__list-item">
+							<li class="layout-header__nav-item">
 								<a href="{{entry.url}}"
-								   class="layout-header__navigation__link common-focus-ring {{ 'layout-header__navigation__link--active' if entry.url == page.url }}"
+								   class="layout-header__nav-link common-focus-ring"
 								   {% if entry.url == page.url %}aria-current="page"{% endif %}
 								   {% if entry.url.startsWith('http') %}target="_blank" rel="noopener noreferrer"{% endif %}>
 									{{ entry.key }}{% if entry.url.startsWith('http') %}<span class="visually-hidden"> (external link)</span>{% endif %}
@@ -72,23 +72,23 @@
 				</details>
 
 				<div class="layout-header__actions">
-					<a href="https://github.com/fed" class="layout-header__github-link common-focus-ring" aria-label="GitHub (external link)" target="_blank" rel="noopener noreferrer">
+					<a href="https://github.com/fed" class="layout-header__icon-button common-focus-ring" aria-label="GitHub (external link)" target="_blank" rel="noopener noreferrer">
 						<span aria-hidden="true">
 							{% include "assets/github.svg" %}
 						</span>
 					</a>
 
-					<button id="search-toggle" class="layout-header__search-toggle common-focus-ring" type="button" aria-label="Search" aria-haspopup="dialog">
+					<button id="search-toggle" class="layout-header__icon-button common-focus-ring" type="button" aria-label="Search" aria-haspopup="dialog">
 						<span aria-hidden="true">
 							{% include "assets/search.svg" %}
 						</span>
 					</button>
 
-					<button id="theme-toggle" class="layout-header__theme-toggle common-focus-ring" role="switch" aria-label="Dark mode" aria-checked="false">
-						<span id="theme-toggle-dark-icon" aria-hidden="true">
+					<button id="theme-toggle" class="layout-header__icon-button common-focus-ring" role="switch" aria-label="Dark mode" aria-checked="false">
+						<span class="layout-header__theme-icon layout-header__theme-icon--dark" aria-hidden="true">
 							{% include "assets/dark-theme.svg" %}
 						</span>
-						<span id="theme-toggle-light-icon" aria-hidden="true">
+						<span class="layout-header__theme-icon layout-header__theme-icon--light" aria-hidden="true">
 							{% include "assets/light-theme.svg" %}
 						</span>
 					</button>

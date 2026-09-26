@@ -1,12 +1,11 @@
 .common-main-title {
 	font-size: var(--token-font-size-xl);
-	font-weight: var(--token-font-weight-bold);
+	font-weight: var(--token-font-weight-semibold);
 	line-height: var(--token-line-height-sm);
 	margin: 0 0 var(--token-spacing-md);
 }
 
 /* Text content */
-.common-paragraph,
 .common-main-content p,
 .common-main-content ul,
 .common-main-content ol,
@@ -20,42 +19,31 @@
 /* Bold text content */
 .common-main-content b,
 .common-main-content strong {
-	font-weight: var(--token-font-weight-bold);
+	font-weight: var(--token-font-weight-semibold);
 }
 
 /* Links */
-.common-link,
 .common-main-content a {
 	color: var(--color-accent);
-	text-decoration: underline;
 	text-underline-offset: 4px;
 	text-decoration-thickness: 2px;
-	word-break: break-word;
+	overflow-wrap: anywhere;
 	transition: text-decoration-thickness 100ms ease-in-out;
 }
 
-.common-link:hover,
 .common-main-content a:hover {
 	text-decoration-thickness: 4px;
 }
 
 /* baseFocusStyle */
 .common-focus-ring:focus-visible,
-.common-link:focus-visible,
 .common-main-content a:focus-visible {
 	outline: 3px solid var(--color-focus);
 	outline-offset: 2px;
+}
+
+.common-main-content a:focus-visible {
 	border-radius: 1px;
-	border-bottom-style: none;
-}
-
-.common-link:focus-visible:hover,
-.common-main-content a:focus-visible:hover {
-	border-bottom-style: none;
-}
-
-.common-main-content a:focus-visible code {
-	border-bottom-style: none;
 }
 
 /* Headings */
@@ -89,7 +77,7 @@ h6 {
 	color: color-mix(in srgb, var(--color-text-muted) 60%, var(--color-bg) 40%);
 	font-family: var(--token-font-family-monospace);
 	font-size: 1.5rem;
-	font-weight: normal;
+	font-weight: var(--token-font-weight-normal);
 	text-decoration: none;
 }
 
@@ -113,7 +101,7 @@ h6 {
 
 .common-main-content th {
 	background-color: var(--color-code-bg);
-	font-weight: var(--token-font-weight-bold);
+	font-weight: var(--token-font-weight-semibold);
 }
 
 .common-main-content table {
@@ -137,33 +125,33 @@ h6 {
 	margin: var(--token-spacing-lg) 0;
 }
 
-.common-main-content .admonition-tip {
+.common-main-content .admonition--tip {
 	--admonition-color: var(--token-color-forest);
 }
 
-.common-main-content .admonition-info {
+.common-main-content .admonition--info {
 	--admonition-color: var(--token-color-blue);
 }
 
-.common-main-content .admonition-warning {
+.common-main-content .admonition--warning {
 	--admonition-color: var(--token-color-orange);
 }
 
-.common-main-content .admonition-danger {
+.common-main-content .admonition--danger {
 	--admonition-color: var(--token-color-crimson);
 }
 
-.common-main-content .admonition-title {
+.common-main-content .admonition__title {
 	font-family: var(--token-font-family-sans-serif);
 	font-size: var(--token-font-size-xs);
-	font-weight: var(--token-font-weight-bold);
+	font-weight: var(--token-font-weight-semibold);
 	line-height: var(--token-line-height-md);
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
 	margin: 0;
 }
 
-.common-main-content .admonition-title + * {
+.common-main-content .admonition__title + * {
 	margin-top: 0;
 }
 
@@ -183,7 +171,6 @@ h6 {
 	background-color: var(--color-code-bg);
 	border-radius: var(--token-border-radius-default);
 	font-size: 0.85em;
-	margin: 0;
 	padding: var(--token-spacing-xxs) var(--token-spacing-xs);
 	font-weight: var(--token-font-weight-normal);
 	white-space: nowrap;
@@ -191,8 +178,7 @@ h6 {
 
 /* Utilities */
 .visually-hidden {
-	border-width: 0;
-	clip: rect(0, 0, 0, 0);
+	clip-path: inset(50%);
 	height: 1px;
 	margin: -1px;
 	overflow: hidden;

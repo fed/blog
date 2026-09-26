@@ -37,27 +37,22 @@ Semantic colours resolved through `light-dark()` and dependent on the active the
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--color-heading);"></div><div class="styleguide-swatch__label">--color-heading</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--color-border);"></div><div class="styleguide-swatch__label">--color-border</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--color-accent);"></div><div class="styleguide-swatch__label">--color-accent</div></div>
-	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--color-accent-alt);"></div><div class="styleguide-swatch__label">--color-accent-alt</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--color-accent-text);"></div><div class="styleguide-swatch__label">--color-accent-text</div></div>
-	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--color-text-inverse);"></div><div class="styleguide-swatch__label">--color-text-inverse</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--color-focus);"></div><div class="styleguide-swatch__label">--color-focus</div></div>
-	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--color-code);"></div><div class="styleguide-swatch__label">--color-code</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--color-code-bg);"></div><div class="styleguide-swatch__label">--color-code-bg</div></div>
-	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--color-forest);"></div><div class="styleguide-swatch__label">--color-forest</div></div>
-	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--color-forest-text);"></div><div class="styleguide-swatch__label">--color-forest-text</div></div>
 </div>
 
 Base palette of primitive colour tokens:
 
 <div class="styleguide-swatch-grid">
-	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-black);"></div><div class="styleguide-swatch__label">--token-color-black</div></div>
-	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-black-muted);"></div><div class="styleguide-swatch__label">--token-color-black-muted</div></div>
+	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-navy);"></div><div class="styleguide-swatch__label">--token-color-navy</div></div>
+	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-ink);"></div><div class="styleguide-swatch__label">--token-color-ink</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-gray-dark);"></div><div class="styleguide-swatch__label">--token-color-gray-dark</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-gray-light);"></div><div class="styleguide-swatch__label">--token-color-gray-light</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-gray-extra-light);"></div><div class="styleguide-swatch__label">--token-color-gray-extra-light</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-gray-warm);"></div><div class="styleguide-swatch__label">--token-color-gray-warm</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-white);"></div><div class="styleguide-swatch__label">--token-color-white</div></div>
-	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-white-muted);"></div><div class="styleguide-swatch__label">--token-color-white-muted</div></div>
+	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-parchment);"></div><div class="styleguide-swatch__label">--token-color-parchment</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-ivory);"></div><div class="styleguide-swatch__label">--token-color-ivory</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-yellow);"></div><div class="styleguide-swatch__label">--token-color-yellow</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-orange);"></div><div class="styleguide-swatch__label">--token-color-orange</div></div>
@@ -66,7 +61,6 @@ Base palette of primitive colour tokens:
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-graphite);"></div><div class="styleguide-swatch__label">--token-color-graphite</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-charcoal);"></div><div class="styleguide-swatch__label">--token-color-charcoal</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-forest);"></div><div class="styleguide-swatch__label">--token-color-forest</div></div>
-	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-green);"></div><div class="styleguide-swatch__label">--token-color-green</div></div>
 </div>
 
 ### Font sizes
@@ -103,8 +97,8 @@ Base palette of primitive colour tokens:
 	<p class="styleguide-row__sample" style="font-weight: var(--token-font-weight-normal);">The quick brown fox jumps over the lazy dog.</p>
 </div>
 <div class="styleguide-row">
-	<div class="styleguide-row__label">--token-font-weight-bold (600)</div>
-	<p class="styleguide-row__sample" style="font-weight: var(--token-font-weight-bold);">The quick brown fox jumps over the lazy dog.</p>
+	<div class="styleguide-row__label">--token-font-weight-semibold (600)</div>
+	<p class="styleguide-row__sample" style="font-weight: var(--token-font-weight-semibold);">The quick brown fox jumps over the lazy dog.</p>
 </div>
 
 ### Line heights
