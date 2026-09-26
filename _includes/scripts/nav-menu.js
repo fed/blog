@@ -1,10 +1,5 @@
 (function () {
 	const menu = document.querySelector(".layout-header__menu");
-
-	if (!menu) {
-		return;
-	}
-
 	const mobileQuery = window.matchMedia("(max-width: 767px)");
 
 	function syncOpenState(matchesMobile) {

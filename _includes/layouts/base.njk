@@ -78,7 +78,7 @@
 						</span>
 					</a>
 
-					<button id="search-toggle" class="layout-header__icon-button common-focus-ring" type="button" aria-label="Search" aria-haspopup="dialog">
+					<button id="search-button" class="layout-header__icon-button common-focus-ring" type="button" aria-label="Search" aria-haspopup="dialog">
 						<span aria-hidden="true">
 							{% include "assets/search.svg" %}
 						</span>
@@ -106,9 +106,11 @@
 
 		<pagefind-modal></pagefind-modal>
 
-		<script src="/assets/js/theme-toggle.js" defer></script>
 		<script>
-			{% include "scripts/search-toggle.js" %}
+			{% include "scripts/theme-toggle.js" %}
+		</script>
+		<script>
+			{% include "scripts/search-button.js" %}
 		</script>
 	</body>
 </html>

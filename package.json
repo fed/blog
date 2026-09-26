@@ -2,7 +2,6 @@
 	"name": "blog-11ty",
 	"version": "1.0.0",
 	"type": "module",
-	"main": "index.js",
 	"scripts": {
 		"build": "eleventy",
 		"start": "eleventy --serve --quiet --port=6789",
@@ -23,12 +22,11 @@
 		"clean-css": "^5.3.3",
 		"html-minifier-terser": "^7.2.0",
 		"katex": "^0.18.7",
-		"luxon": "^3.7.2",
+		"markdown-it": "^14.3.2",
 		"markdown-it-anchor": "^10.0.0",
 		"markdown-it-container": "^4.0.0",
 		"pagefind": "^1.5.2",
 		"prettier": "^3.9.6",
-		"prettier-plugin-jinja-template": "^2.2.0",
-		"prismjs": "^1.30.0"
+		"prettier-plugin-jinja-template": "^2.2.0"
 	}
 }

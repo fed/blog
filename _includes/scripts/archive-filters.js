@@ -13,11 +13,14 @@
 	filters.hidden = false;
 
 	// Restore the selection from ?tag=..., falling back to "All" for unknown tags
-	const initial = new URLSearchParams(location.search).get("tag") || "";
-	select(buttons.some((button) => button.dataset.tag === initial) ? initial : "");
+	const requestedTag = new URLSearchParams(location.search).get("tag");
+	const initialButton = buttons.find((button) => button.dataset.tag === requestedTag) ?? buttons[0];
+	select(initialButton.dataset.tag);
 
-	// On mobile the row scrolls, so make sure the restored chip isn't off-screen
-	filters.querySelector('[aria-pressed="true"]').scrollIntoView({ block: "nearest", inline: "nearest" });
+	// On mobile the row scrolls, so centre a restored chip in it without scrolling the page itself
+	const chipBox = initialButton.getBoundingClientRect();
+	const rowBox = filters.getBoundingClientRect();
+	filters.scrollLeft += chipBox.left - rowBox.left - (rowBox.width - chipBox.width) / 2;
 
 	// Fade out an edge while there's more to scroll to on that side
 	function updateFade() {

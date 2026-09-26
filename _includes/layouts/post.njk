@@ -40,7 +40,7 @@ layout: layouts/base.njk
 		<div class="blog-post__metadata">
 			Published on
 			<time datetime="{{ date | htmlDateString }}">
-				{{ date | readableDate("d LLLL yyyy") }}
+				{{ date | readableDate({ day: "numeric", month: "long", year: "numeric" }) }}
 			</time>
 			in
 			<span>

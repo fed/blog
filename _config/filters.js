@@ -1,23 +1,18 @@
-import { DateTime } from "luxon";
 import TAGS from "../_data/tags.js";
 
 export default function (eleventyConfig) {
-	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
-		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
-		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
-	});
+	// Options for Intl.DateTimeFormat: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options
+	eleventyConfig.addFilter("readableDate", (dateObj, options) =>
+		new Intl.DateTimeFormat("en-GB", { timeZone: "UTC", ...options }).format(dateObj)
+	);
 
 	eleventyConfig.addFilter("htmlDateString", (dateObj) => {
 		// dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-		// return dateObj.toISOString();
-		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toISODate();
+		return dateObj.toISOString().slice(0, 10);
 	});
 
 	eleventyConfig.addFilter("readableTags", (tags) =>
-		tags
-			.filter((id) => id !== "posts")
-			.map((id) => TAGS.find((tag) => tag.id === id)?.title)
-			.filter(Boolean)
+		tags.map((id) => TAGS.find((tag) => tag.id === id)?.title).filter(Boolean)
 	);
 
 	// Tags used by at least one of the given posts, in the order they're declared in _data/tags.js

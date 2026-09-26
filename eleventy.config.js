@@ -21,9 +21,6 @@ export default function (eleventyConfig) {
 	// Copy the entire assets folder
 	eleventyConfig.addPassthroughCopy("assets");
 
-	// The toggle script is deferred rather than inlined, so it needs to be served as a static file
-	eleventyConfig.addPassthroughCopy({ "_includes/scripts/theme-toggle.js": "assets/js/theme-toggle.js" });
-
 	// KaTeX web fonts, referenced by _includes/styles/katex.css
 	eleventyConfig.addPassthroughCopy({ "node_modules/katex/dist/fonts": "assets/fonts/katex" });
 
@@ -56,7 +53,7 @@ export default function (eleventyConfig) {
 
 	// Minify and inline CSS
 	eleventyConfig.addFilter("cssmin", function (code) {
-		return new CleanCSS({}).minify(code).styles;
+		return new CleanCSS().minify(code).styles;
 	});
 
 	// Minify HTML output
@@ -82,16 +79,10 @@ export default function (eleventyConfig) {
 		}
 	});
 
-	// Watch CSS files
-	eleventyConfig.addWatchTarget("_includes/**/*.css");
-
 	// RSS feed plugin
 	eleventyConfig.addPlugin(feedPlugin, {
-		type: "atom",
-		outputPath: "/feed.xml",
 		collection: {
-			name: "posts", // iterate over `collections.posts`
-			limit: 0 // no limit
+			name: "posts" // iterate over `collections.posts`
 		},
 		metadata: {
 			language: metadata.language,
@@ -116,7 +107,7 @@ export default function (eleventyConfig) {
 	// Navigation plugin
 	eleventyConfig.addPlugin(navigationPlugin);
 
-	//  Syntax highlighting plugin
+	// Syntax highlighting plugin
 	eleventyConfig.addPlugin(syntaxHighlightPlugin);
 
 	// Filters plugin
