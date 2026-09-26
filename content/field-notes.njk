@@ -1,0 +1,46 @@
+---
+title: Field notes
+eleventyNavigation:
+  key: Field notes
+  order: 2.5
+---
+
+{# Capture the CSS content as a Nunjucks variable and feed it through to the cssmin filter to minify it #}
+{% set css %}
+{% include "styles/archive.css" %}
+{% include "styles/field-notes.css" %}
+{% endset %}
+<style>
+	{{css | cssmin | safe}}
+</style>
+
+<p>These short and unpolished TIL snippets are written mostly as a reference for future me so I can find them again later when I need them. They are inspired by the pocket notebooks I carry with me when I'm on the move to jot down any stray thoughts or when I'm learning something new.</p>
+
+{% set fieldNotes = collections.fieldNotes or [] %}
+
+{# Hidden until the script below runs, since the filters do nothing without JS #}
+<div class="archive__filters" role="group" aria-label="Filter by tag" hidden>
+	<button type="button" class="archive__filter" data-tag="" aria-pressed="true">All ({{ fieldNotes | length }})</button>
+	{%- for tag in fieldNotes | usedTags %}
+		<button type="button" class="archive__filter" data-tag="{{ tag.id }}" aria-pressed="false">{{ tag.title }} ({{ tag.count }})</button>
+	{%- endfor %}
+</div>
+
+<ul class="field-notes__grid">
+	{%- for note in fieldNotes | reverse %}
+		<li class="archive__list-item" data-tags="{{ note.data.tags | join(' ') }}">
+			<a href="{{ note.url }}" class="field-notes__card">
+				<span class="field-notes__card-title">
+					{{ note.data.title }}
+					{% if note.data.draft %}
+						<span aria-label="Draft">✍️</span>
+					{% endif %}
+				</span>
+			</a>
+		</li>
+	{%- endfor %}
+</ul>
+
+<script>
+	{% include "scripts/archive-filters.js" %}
+</script>
