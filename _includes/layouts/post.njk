@@ -19,11 +19,15 @@ layout: layouts/base.njk
 }
 </script>
 
-{# Only include the syntax highlighter and KaTeX CSS on blog posts, included with the CSS per-page bundle. #}
+{# Only include the syntax highlighter and KaTeX CSS on posts whose rendered content has code blocks or maths. #}
 {# Capture the CSS content as a Nunjucks variable and feed it through to the cssmin filter to minify it. #}
 {% set css %}
+{% if content.indexOf('class="language-') != -1 %}
 {% include "styles/prism-github.css" %}
+{% endif %}
+{% if content.indexOf('class="katex') != -1 %}
 {% include "styles/katex.css" %}
+{% endif %}
 {% include "styles/blog-post.css" %}
 {% endset %}
 <style>
