@@ -15,7 +15,7 @@ export default function (eleventyConfig) {
 
 	eleventyConfig.addFilter("readableTags", (tags) =>
 		tags
-			.filter((id) => id !== "posts")
+			.filter((id) => id !== "posts" && id !== "fieldNotes")
 			.map((id) => TAGS.find((tag) => tag.id === id)?.title)
 			.filter(Boolean)
 	);
