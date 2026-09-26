@@ -3,24 +3,21 @@ title: Blog posts
 eleventyNavigation:
   key: Blog
   order: 2
+excludeFromSearch: true
 ---
 
-{# Capture the CSS content as a Nunjucks variable and feed it through to the cssmin filter to minify it #}
-{% set css %}
+{% css %}
 {% include "styles/archive.css" %}
-{% endset %}
-<style>
-	{{css | cssmin | safe}}
-</style>
+{% endcss %}
 
 <p>Fresh content sorted by date, so you'll always see what's new at the top. Browse by categories/tags to explore topics you care about. You can also subscribe to the Atom feed for automatic updates.</p>
 
 <div class="archive">
 	{# Hidden until the script below runs, since the filters do nothing without JS #}
 	<div class="archive__filters" role="group" aria-label="Filter by tag" hidden>
-		<button type="button" class="archive__filter common-focus-ring" data-tag="" aria-pressed="true">All ({{ collections.posts | length }})</button>
+		<button type="button" class="archive__filter common-focus-ring" data-tag="">All ({{ collections.posts | length }})</button>
 		{%- for tag in collections.posts | usedTags %}
-			<button type="button" class="archive__filter common-focus-ring" data-tag="{{ tag.id }}" aria-pressed="false">{{ tag.title }} ({{ tag.count }})</button>
+			<button type="button" class="archive__filter common-focus-ring" data-tag="{{ tag.id }}">{{ tag.title }} ({{ tag.count }})</button>
 		{%- endfor %}
 	</div>
 
@@ -30,7 +27,7 @@ eleventyNavigation:
 				<a href="{{ post.url }}">{{ post.data.title }}</a>
 				<span class="archive__date">(<time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate({ day: "2-digit", month: "short", year: "numeric" }) }}</time>)</span>
 				{% if post.data.draft %}
-					<span aria-label="Draft">✍️</span>
+					<span role="img" aria-label="Draft">✍️</span>
 				{% endif %}
 			</li>
 		{%- endfor %}

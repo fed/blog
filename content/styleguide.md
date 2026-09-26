@@ -2,6 +2,7 @@
 title: Styleguide
 layout: layouts/styleguide.njk
 eleventyExcludeFromCollections: true
+excludeFromSearch: true
 ---
 
 A reference page for all the design tokens and markdown content elements used on this site.

@@ -24,17 +24,17 @@
 			{% include "scripts/theme-init.js" %}
 		</script>
 
-		{# Capture the CSS content as a Nunjucks variable and feed it through to the cssmin filter to minify it #}
-		{% set css %}
+		{# Site-wide CSS goes in the "base" bucket so it comes before the page CSS added by child layouts #}
+		{% css "base" %}
 		{% include "node_modules/@csstools/normalize.css/normalize.css" %}
 		{% include "styles/tokens.css" %}
 		{% include "styles/global.css" %}
 		{% include "styles/common.css" %}
 		{% include "styles/layout.css" %}
 		{% include "styles/search.css" %}
-		{% endset %}
+		{% endcss %}
 		<style>
-			{{css | cssmin | safe}}
+			{% getBundle "css", "base,default" %}
 		</style>
 	</head>
 	<body>
@@ -62,9 +62,8 @@
 							<li class="layout-header__nav-item">
 								<a href="{{entry.url}}"
 								   class="layout-header__nav-link common-focus-ring"
-								   {% if entry.url == page.url %}aria-current="page"{% endif %}
-								   {% if entry.url.startsWith('http') %}target="_blank" rel="noopener noreferrer"{% endif %}>
-									{{ entry.key }}{% if entry.url.startsWith('http') %}<span class="visually-hidden"> (external link)</span>{% endif %}
+								   {% if entry.url == page.url %}aria-current="page"{% endif %}>
+									{{ entry.key }}
 								</a>
 							</li>
 						{%- endfor %}
@@ -72,7 +71,7 @@
 				</details>
 
 				<div class="layout-header__actions">
-					<a href="https://github.com/fed" class="layout-header__icon-button common-focus-ring" aria-label="GitHub (external link)" target="_blank" rel="noopener noreferrer">
+					<a href="https://github.com/fed" class="layout-header__icon-button common-focus-ring" aria-label="GitHub (external link)" target="_blank" rel="noreferrer">
 						<span aria-hidden="true">
 							{% include "assets/github.svg" %}
 						</span>
@@ -100,7 +99,7 @@
 			</nav>
 		</header>
 
-		<main class="layout-content" id="main">
+		<main class="layout-content" id="main"{% if not excludeFromSearch %} data-pagefind-body{% endif %}>
 			{{ content | safe }}
 		</main>
 

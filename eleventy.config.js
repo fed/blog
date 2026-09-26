@@ -51,9 +51,9 @@ export default function (eleventyConfig) {
 
 	eleventyConfig.setLibrary("md", md);
 
-	// Minify and inline CSS
-	eleventyConfig.addFilter("cssmin", function (code) {
-		return new CleanCSS().minify(code).styles;
+	// Collect CSS from {% css %} blocks and minify it, for output via {% getBundle "css" %}
+	eleventyConfig.addBundle("css", {
+		transforms: [(code) => new CleanCSS().minify(code).styles]
 	});
 
 	// Minify HTML output
@@ -90,6 +90,12 @@ export default function (eleventyConfig) {
 			subtitle: metadata.description,
 			base: metadata.url,
 			author: metadata.author
+		},
+		templateData: {
+			eleventyNavigation: {
+				key: "Feed",
+				order: 6
+			}
 		}
 	});
 

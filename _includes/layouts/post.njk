@@ -6,22 +6,22 @@ layout: layouts/base.njk
 {
 	"@context": "https://schema.org",
 	"@type": "BlogPosting",
-	"headline": {{ title | dump }},
+	"headline": {{ title | dump | safe }},
 	"datePublished": "{{ date | htmlDateString }}",
-	"dateModified": "{{ date | htmlDateString }}",
-	"description": {{ (description or "") | dump }},
+	{%- if description %}
+	"description": {{ description | dump | safe }},
+	{%- endif %}
 	"url": "{{ metadata.url }}{{ page.url }}",
 	"author": {
 		"@type": "Person",
-		"name": {{ metadata.author.name | dump }},
-		"url": {{ metadata.author.url | dump }}
+		"name": {{ metadata.author.name | dump | safe }},
+		"url": {{ metadata.author.url | dump | safe }}
 	}
 }
 </script>
 
 {# Only include the syntax highlighter and KaTeX CSS on posts whose rendered content has code blocks or maths. #}
-{# Capture the CSS content as a Nunjucks variable and feed it through to the cssmin filter to minify it. #}
-{% set css %}
+{% css %}
 {% if content.indexOf('class="language-') != -1 %}
 {% include "styles/prism-github.css" %}
 {% endif %}
@@ -29,12 +29,9 @@ layout: layouts/base.njk
 {% include "styles/katex.css" %}
 {% endif %}
 {% include "styles/blog-post.css" %}
-{% endset %}
-<style>
-	{{css | cssmin | safe}}
-</style>
+{% endcss %}
 
-<article class="blog-post" data-pagefind-body>
+<article class="blog-post">
 	<header class="blog-post__header">
 		<h1 class="common-main-title">{{ title }}</h1>
 		<div class="blog-post__metadata">
@@ -43,9 +40,7 @@ layout: layouts/base.njk
 				{{ date | readableDate({ day: "numeric", month: "long", year: "numeric" }) }}
 			</time>
 			in
-			<span>
-				{{ tags | readableTags | join(", ") }}
-			</span>
+			{{ tags | readableTags | join(", ") }}
 		</div>
 	</header>
 
