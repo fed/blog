@@ -83,6 +83,7 @@
 	--token-font-size-xl: clamp(2.25rem, 1.25rem + 5vw, 3.875rem); /* 36px to 62px */
 
 	/* font weights */
+	--token-font-weight-extra-light: 200;
 	--token-font-weight-light: 300;
 	--token-font-weight-normal: 400;
 	--token-font-weight-semibold: 600;
@@ -91,6 +92,9 @@
 	--token-line-height-sm: 1.15;
 	--token-line-height-md: 1.5;
 	--token-line-height-lg: 2;
+
+	/* letter spacing */
+	--token-letter-spacing-caps: 0.05em;
 
 	/*
 	 * viewport breakpoints
@@ -104,4 +108,9 @@
 
 	/* border radius */
 	--token-border-radius-default: 3px;
+	--token-border-radius-lg: 6px;
+
+	/* focus ring */
+	--token-focus-ring-width: 3px;
+	--token-focus-ring-offset: 2px;
 }

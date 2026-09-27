@@ -25,10 +25,17 @@ excludeFromSearch: true
 		{%- for post in collections.posts | reverse %}
 			<li class="archive__list-item" data-tags="{{ post.data.tags | join(' ') }}">
 				<a href="{{ post.url }}">{{ post.data.title }}</a>
-				<span class="archive__date">(<time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate({ day: "2-digit", month: "short", year: "numeric" }) }}</time>)</span>
-				{% if post.data.draft %}
-					<span role="img" aria-label="Draft">✍️</span>
+				{% if post.data.format == "field-note" %}
+					<span class="archive__icon" role="img" aria-label="Field note">
+						{% include "assets/notepad.svg" %}
+					</span>
 				{% endif %}
+				{% if post.data.draft %}
+					<span class="archive__icon" role="img" aria-label="Draft">
+						{% include "assets/draft.svg" %}
+					</span>
+				{% endif %}
+				<span class="archive__date">(<time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate({ day: "2-digit", month: "short", year: "numeric" }) }}</time>)</span>
 			</li>
 		{%- endfor %}
 	</ul>

@@ -25,7 +25,7 @@ pre[class*="language-"] {
 	overflow: auto;
 	border: 1px solid var(--color-border);
 	border-radius: var(--token-border-radius-default);
-	background: light-dark(var(--token-color-gray-warm), #161b22);
+	background: var(--color-code-bg);
 }
 
 .token.comment,

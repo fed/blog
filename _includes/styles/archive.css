@@ -16,7 +16,7 @@
 		light-dark(var(--token-color-white), var(--token-color-charcoal)) 50%
 	);
 	border: 1px solid var(--color-border);
-	border-radius: 6px;
+	border-radius: var(--token-border-radius-lg);
 	color: var(--color-text);
 	cursor: pointer;
 	font-family: var(--token-font-family-monospace);
@@ -59,10 +59,12 @@
 /* Single scrollable row on mobile. The padding and matching negative margin stop the focus ring from being clipped. */
 @media screen and (max-width: 767px) {
 	.archive__filters {
+		--archive-focus-ring-room: calc(var(--token-focus-ring-width) + var(--token-focus-ring-offset));
+
 		flex-wrap: nowrap;
-		margin-inline: -0.3125rem;
+		margin-inline: calc(-1 * var(--archive-focus-ring-room));
 		overflow-x: auto;
-		padding: 0.3125rem;
+		padding: var(--archive-focus-ring-room);
 		scrollbar-width: none;
 	}
 
@@ -94,7 +96,19 @@
 	color: var(--color-text-muted);
 	font-family: var(--token-font-family-sans-serif);
 	font-size: var(--token-font-size-xs);
+	letter-spacing: var(--token-letter-spacing-caps);
 	text-transform: uppercase;
+}
+
+/* Icons have no text baseline, so they are centred on the row instead of sitting on the baseline like the title and date */
+.archive__icon {
+	align-self: center;
+}
+
+.archive__icon svg {
+	display: block;
+	width: 24px;
+	height: 24px;
 }
 
 /* display: flex above would otherwise override the hidden attribute */

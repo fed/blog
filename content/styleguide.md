@@ -62,6 +62,7 @@ Base palette of primitive colour tokens:
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-graphite);"></div><div class="styleguide-swatch__label">--token-color-graphite</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-charcoal);"></div><div class="styleguide-swatch__label">--token-color-charcoal</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-forest);"></div><div class="styleguide-swatch__label">--token-color-forest</div></div>
+	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-green);"></div><div class="styleguide-swatch__label">--token-color-green</div></div>
 </div>
 
 ### Font sizes
@@ -90,6 +91,10 @@ Base palette of primitive colour tokens:
 ### Font weights
 
 <div class="styleguide-row">
+	<div class="styleguide-row__label">--token-font-weight-extra-light (200)</div>
+	<p class="styleguide-row__sample" style="font-weight: var(--token-font-weight-extra-light);">The quick brown fox jumps over the lazy dog.</p>
+</div>
+<div class="styleguide-row">
 	<div class="styleguide-row__label">--token-font-weight-light (300)</div>
 	<p class="styleguide-row__sample" style="font-weight: var(--token-font-weight-light);">The quick brown fox jumps over the lazy dog.</p>
 </div>
@@ -117,6 +122,13 @@ Base palette of primitive colour tokens:
 	<p class="styleguide-row__sample" style="line-height: var(--token-line-height-lg); max-width: 32rem;">Observables represent a collection of events, or values, that arrive over time. Signals represent a single value that changes over time.</p>
 </div>
 
+### Letter spacing
+
+<div class="styleguide-row">
+	<div class="styleguide-row__label">--token-letter-spacing-caps (0.05em)</div>
+	<p class="styleguide-row__sample" style="letter-spacing: var(--token-letter-spacing-caps); text-transform: uppercase; font-family: var(--token-font-family-sans-serif); font-size: var(--token-font-size-xs);">The quick brown fox</p>
+</div>
+
 ### Spacing
 
 <div class="styleguide-spacing-row"><div class="styleguide-row__label">--token-spacing-xxs (4px)</div><div class="styleguide-spacing-row__bar" style="width: var(--token-spacing-xxs);"></div></div>
@@ -132,6 +144,16 @@ Base palette of primitive colour tokens:
 <div class="styleguide-radius-demo"></div>
 
 `--token-border-radius-default: 3px`
+
+<div class="styleguide-radius-demo" style="border-radius: var(--token-border-radius-lg);"></div>
+
+`--token-border-radius-lg: 6px`
+
+### Focus ring
+
+<div class="styleguide-radius-demo" style="outline: var(--token-focus-ring-width) solid var(--color-focus); outline-offset: var(--token-focus-ring-offset);"></div>
+
+`--token-focus-ring-width: 3px`, `--token-focus-ring-offset: 2px`
 
 ## Content elements
 

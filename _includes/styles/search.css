@@ -7,7 +7,7 @@ pagefind-modal {
 	--pf-border-focus: var(--color-accent);
 	--pf-hover: light-dark(var(--token-color-gray-extra-light), var(--token-color-graphite));
 	--pf-mark: var(--color-heading);
-	--pf-skeleton: light-dark(var(--token-color-gray-extra-light), var(--token-color-graphite));
+	--pf-skeleton: var(--pf-hover);
 	--pf-skeleton-shine: var(--color-border);
 	--pf-outline-focus: var(--color-focus);
 	--pf-font: var(--token-font-family-sans-serif);
