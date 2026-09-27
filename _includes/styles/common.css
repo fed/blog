@@ -1,6 +1,5 @@
 .common-main-title {
 	font-size: var(--token-font-size-xl);
-	font-weight: var(--token-font-weight-semibold);
 	line-height: var(--token-line-height-sm);
 	margin: 0 0 var(--token-spacing-md);
 }
@@ -12,7 +11,6 @@
 .common-main-content td,
 .common-main-content th {
 	font-size: var(--token-font-size-md);
-	font-weight: var(--token-font-weight-light);
 	line-height: var(--token-line-height-lg);
 }
 
@@ -54,6 +52,7 @@ h4,
 h5,
 h6 {
 	color: var(--color-heading);
+	font-weight: var(--token-font-weight-semibold);
 }
 
 .common-main-content h1 {

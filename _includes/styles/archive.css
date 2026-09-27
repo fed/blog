@@ -88,7 +88,6 @@
 	align-items: baseline;
 	display: flex;
 	flex-wrap: wrap;
-	font-weight: var(--token-font-weight-normal);
 	gap: var(--token-spacing-xs);
 }
 
