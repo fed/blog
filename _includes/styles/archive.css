@@ -13,7 +13,7 @@
 	background: color-mix(
 		in srgb,
 		var(--color-bg),
-		light-dark(var(--token-color-white), var(--token-color-charcoal)) 50%
+		light-dark(var(--token-color-white), var(--token-color-midnight-dark)) 50%
 	);
 	border: 1px solid var(--color-border);
 	border-radius: var(--token-border-radius-lg);

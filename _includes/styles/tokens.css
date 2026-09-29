@@ -30,35 +30,46 @@
 
 	/* colour palette */
 	--token-color-navy: #172b4d;
-	--token-color-ink: #18171f;
 	--token-color-gray-dark: #344563;
 	--token-color-gray-light: #e1e1e1;
 	--token-color-gray-extra-light: #f7f7f7;
 	--token-color-gray-warm: #f0eee6;
 	--token-color-white: #fff;
-	--token-color-parchment: #dcd7ba;
 	--token-color-ivory: #faf7f1;
 	--token-color-yellow: #f9ca5e;
 	--token-color-orange: #ffa066;
 	--token-color-crimson: #dd1144;
 	--token-color-blue: #0572e6;
-	--token-color-graphite: #2c2c2e;
-	--token-color-charcoal: #23222d;
+	--token-color-midnight: #292a44;
+	--token-color-midnight-dark: #212136;
+	--token-color-midnight-light: #333454;
+	--token-color-graphite: #161b22;
+	--token-color-dusk: #4f528a;
+	--token-color-lavender: #f1eff7;
+	--token-color-slate: #9da5b4;
+	--token-color-mint: #6dfdc4;
+	--token-color-jade: #2de0a7;
+	--token-color-periwinkle: #7aa5ff;
+	--token-color-apricot: #ffbc69;
+	--token-color-rose: #ed4781;
 	--token-color-forest: #2e6f40;
-	--token-color-green: #4ad481;
 
 	/* semantic colors */
 	color-scheme: light dark;
-	--color-bg: light-dark(var(--token-color-ivory), var(--token-color-ink));
-	--color-bg-alt: light-dark(var(--token-color-gray-extra-light), var(--token-color-charcoal));
-	--color-text: light-dark(var(--token-color-navy), var(--token-color-parchment));
-	--color-text-muted: light-dark(var(--token-color-gray-dark), var(--token-color-gray-light));
+	--color-bg: light-dark(var(--token-color-ivory), var(--token-color-midnight));
+	--color-bg-alt: light-dark(var(--token-color-gray-extra-light), var(--token-color-midnight-dark));
+	--color-text: light-dark(var(--token-color-navy), var(--token-color-lavender));
+	--color-text-muted: light-dark(var(--token-color-gray-dark), var(--token-color-slate));
 	--color-heading: light-dark(var(--token-color-navy), var(--token-color-white));
-	--color-border: light-dark(var(--token-color-gray-light), var(--token-color-gray-dark));
-	--color-accent: light-dark(var(--token-color-forest), var(--token-color-orange));
-	--color-accent-text: light-dark(var(--token-color-white), var(--token-color-navy));
+	--color-border: light-dark(var(--token-color-gray-light), var(--token-color-dusk));
+	--color-accent: light-dark(var(--token-color-forest), var(--token-color-mint));
+	--color-accent-text: light-dark(var(--token-color-white), var(--token-color-midnight));
 	--color-focus: var(--color-accent);
-	--color-code-bg: light-dark(var(--token-color-gray-warm), var(--token-color-graphite));
+	--color-selection: light-dark(Highlight, var(--token-color-dusk));
+	--color-code-bg: light-dark(
+		var(--token-color-gray-warm),
+		var(--token-color-graphite)
+	); /* dark value is GitHub dark's background, swap to --token-color-midnight-dark to match the Gloom surfaces */
 
 	/* spacing (8px base grid size) */
 	--token-spacing-xxs: 0.25rem; /* 4px */

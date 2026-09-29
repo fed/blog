@@ -19,6 +19,8 @@ I typically post half-baked ideas, thoughts, code snippets and resources that I 
 learnings somewhere else, I like publishing them on this blog. That's why you might come across some content that's not really polished or
 thorough.
 
+Content is split into blog posts and field notes. Blogs are the usual long and more polished write up of a particular topic. Field notes are short and unpolished TIL snippets, written mostly as a reference for future me so I can find them again later when I need them. They are inspired by the pocket notebooks I carry with me when I'm on the move to jot down any stray thoughts or when I'm learning something new.
+
 ## Get in touch
 
 Feel free to flick me an email at [fed@duck.com](mailto:fed@duck.com) if you'd like to chat.
@@ -28,6 +30,8 @@ Feel free to flick me an email at [fed@duck.com](mailto:fed@duck.com) if you'd l
 This site was built with [Eleventy](https://www.11ty.dev) and a number of [other packages](https://github.com/fed/blog/blob/master/package.json).
 
 I chose to rely on minimal tooling and web platform fundamentals over heavy libraries/frameworks, keeping things simple and performant. Markup is written in HTML, or generated with [Nunjucks](https://mozilla.github.io/nunjucks/) where templating is needed. Styling is done with vanilla CSS, and any client-side interactivity is written in vanilla JavaScript. All content is written using [Markdown](https://www.markdownguide.org/).
+
+The dark theme is based on the [Gloom colour scheme](https://github.com/hejrobin/gloom), while code blocks use the [GitHub colour scheme](https://github.com/primer/github-vscode-theme).
 
 The source code for this site is open source and available on [GitHub](https://github.com/fed/blog) and hosted on
 [Cloudflare Pages](https://cloudflare.com).

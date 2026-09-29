@@ -73,7 +73,7 @@ h6 {
 /* Heading anchors, added by markdown-it-anchor */
 .common-main-content :is(h1, h2, h3, h4, h5, h6) .header-anchor {
 	margin-left: var(--token-spacing-xs);
-	color: color-mix(in srgb, var(--color-text-muted) 60%, var(--color-bg) 40%);
+	color: var(--color-text-muted);
 	font-family: var(--token-font-family-sans-serif);
 	font-size: 0.85em;
 	font-weight: var(--token-font-weight-extra-light);
@@ -125,19 +125,19 @@ h6 {
 }
 
 .common-main-content .admonition--tip {
-	--admonition-color: var(--token-color-forest);
+	--admonition-color: light-dark(var(--token-color-forest), var(--token-color-jade));
 }
 
 .common-main-content .admonition--info {
-	--admonition-color: var(--token-color-blue);
+	--admonition-color: light-dark(var(--token-color-blue), var(--token-color-periwinkle));
 }
 
 .common-main-content .admonition--warning {
-	--admonition-color: var(--token-color-orange);
+	--admonition-color: light-dark(var(--token-color-orange), var(--token-color-apricot));
 }
 
 .common-main-content .admonition--danger {
-	--admonition-color: var(--token-color-crimson);
+	--admonition-color: light-dark(var(--token-color-crimson), var(--token-color-rose));
 }
 
 .common-main-content .admonition__title {

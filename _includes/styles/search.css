@@ -2,10 +2,10 @@ pagefind-modal {
 	--pf-text: var(--color-text);
 	--pf-text-secondary: var(--color-text-muted);
 	--pf-text-muted: var(--color-text-muted);
-	--pf-background: light-dark(var(--token-color-ivory), var(--token-color-charcoal));
+	--pf-background: light-dark(var(--token-color-ivory), var(--token-color-midnight-dark));
 	--pf-border: var(--color-border);
 	--pf-border-focus: var(--color-accent);
-	--pf-hover: light-dark(var(--token-color-gray-extra-light), var(--token-color-graphite));
+	--pf-hover: light-dark(var(--token-color-gray-extra-light), var(--token-color-midnight-light));
 	--pf-mark: var(--color-heading);
 	--pf-skeleton: var(--pf-hover);
 	--pf-skeleton-shine: var(--color-border);

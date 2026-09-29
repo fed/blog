@@ -39,6 +39,7 @@ Semantic colours resolved through `light-dark()` and dependent on the active the
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--color-border);"></div><div class="styleguide-swatch__label">--color-border</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--color-accent);"></div><div class="styleguide-swatch__label">--color-accent</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--color-accent-text);"></div><div class="styleguide-swatch__label">--color-accent-text</div></div>
+	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--color-selection);"></div><div class="styleguide-swatch__label">--color-selection</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--color-focus);"></div><div class="styleguide-swatch__label">--color-focus</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--color-code-bg);"></div><div class="styleguide-swatch__label">--color-code-bg</div></div>
 </div>
@@ -47,22 +48,29 @@ Base palette of primitive colour tokens:
 
 <div class="styleguide-swatch-grid">
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-navy);"></div><div class="styleguide-swatch__label">--token-color-navy</div></div>
-	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-ink);"></div><div class="styleguide-swatch__label">--token-color-ink</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-gray-dark);"></div><div class="styleguide-swatch__label">--token-color-gray-dark</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-gray-light);"></div><div class="styleguide-swatch__label">--token-color-gray-light</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-gray-extra-light);"></div><div class="styleguide-swatch__label">--token-color-gray-extra-light</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-gray-warm);"></div><div class="styleguide-swatch__label">--token-color-gray-warm</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-white);"></div><div class="styleguide-swatch__label">--token-color-white</div></div>
-	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-parchment);"></div><div class="styleguide-swatch__label">--token-color-parchment</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-ivory);"></div><div class="styleguide-swatch__label">--token-color-ivory</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-yellow);"></div><div class="styleguide-swatch__label">--token-color-yellow</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-orange);"></div><div class="styleguide-swatch__label">--token-color-orange</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-crimson);"></div><div class="styleguide-swatch__label">--token-color-crimson</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-blue);"></div><div class="styleguide-swatch__label">--token-color-blue</div></div>
+	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-midnight);"></div><div class="styleguide-swatch__label">--token-color-midnight</div></div>
+	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-midnight-dark);"></div><div class="styleguide-swatch__label">--token-color-midnight-dark</div></div>
+	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-midnight-light);"></div><div class="styleguide-swatch__label">--token-color-midnight-light</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-graphite);"></div><div class="styleguide-swatch__label">--token-color-graphite</div></div>
-	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-charcoal);"></div><div class="styleguide-swatch__label">--token-color-charcoal</div></div>
+	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-dusk);"></div><div class="styleguide-swatch__label">--token-color-dusk</div></div>
+	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-lavender);"></div><div class="styleguide-swatch__label">--token-color-lavender</div></div>
+	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-slate);"></div><div class="styleguide-swatch__label">--token-color-slate</div></div>
+	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-mint);"></div><div class="styleguide-swatch__label">--token-color-mint</div></div>
+	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-jade);"></div><div class="styleguide-swatch__label">--token-color-jade</div></div>
+	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-periwinkle);"></div><div class="styleguide-swatch__label">--token-color-periwinkle</div></div>
+	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-apricot);"></div><div class="styleguide-swatch__label">--token-color-apricot</div></div>
+	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-rose);"></div><div class="styleguide-swatch__label">--token-color-rose</div></div>
 	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-forest);"></div><div class="styleguide-swatch__label">--token-color-forest</div></div>
-	<div class="styleguide-swatch"><div class="styleguide-swatch__color" style="background-color: var(--token-color-green);"></div><div class="styleguide-swatch__label">--token-color-green</div></div>
 </div>
 
 ### Font sizes
