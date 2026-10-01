@@ -55,9 +55,8 @@
 	);
 }
 
-/* This breakpoint corresponds with var(--token-breakpoint-sm) */
 /* Single scrollable row on mobile. The padding and matching negative margin stop the focus ring from being clipped. */
-@media screen and (max-width: 767px) {
+@media screen and (--token-viewport-below-sm) {
 	.archive__filters {
 		--archive-focus-ring-room: calc(var(--token-focus-ring-width) + var(--token-focus-ring-offset));
 

@@ -156,8 +156,7 @@
 	background-color: var(--color-bg);
 }
 
-/* This breakpoint corresponds with var(--token-breakpoint-sm) */
-@media screen and (max-width: 767px) {
+@media screen and (--token-viewport-below-sm) {
 	.layout-header__menu {
 		order: 1;
 		margin-left: 0;
@@ -183,11 +182,10 @@
 	font-size: var(--token-font-size-lg);
 }
 
-/* This breakpoint corresponds with var(--token-breakpoint-sm) */
-@media screen and (min-width: 768px) {
+@media screen and (--token-viewport-sm-up) {
 	.layout-header__nav {
 		margin: 0 auto;
-		max-width: var(--token-breakpoint-lg);
+		max-width: var(--token-layout-max-width);
 		gap: var(--token-spacing-lg);
 	}
 
@@ -229,6 +227,6 @@
  */
 .layout-content {
 	margin: 0 auto;
-	max-width: var(--token-breakpoint-lg);
+	max-width: var(--token-layout-max-width);
 	padding: var(--token-spacing-lg) var(--token-spacing-md) var(--token-spacing-xl);
 }

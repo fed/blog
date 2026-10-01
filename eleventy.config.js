@@ -4,7 +4,8 @@ import markdownItAnchor from "markdown-it-anchor";
 import markdownItContainer from "markdown-it-container";
 import markdownItKatexPkg from "@vscode/markdown-it-katex";
 import katex from "katex";
-import CleanCSS from "clean-css";
+import browserslist from "browserslist";
+import { browserslistToTargets, transform as transformCss } from "lightningcss";
 import navigationPlugin from "@11ty/eleventy-navigation";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
@@ -17,6 +18,10 @@ import metadata from "./_data/metadata.js";
 
 // @vscode/markdown-it-katex is CommonJS, its default export lands under `.default` when imported from ESM
 const markdownItKatex = markdownItKatexPkg.default;
+
+const BROWSERS_WITH_LIGHT_DARK = browserslistToTargets(
+	browserslist("chrome >= 123, firefox >= 120, safari >= 17.5, ios_saf >= 17.5")
+);
 
 export default function (eleventyConfig) {
 	// Copy the entire assets folder
@@ -60,9 +65,18 @@ export default function (eleventyConfig) {
 
 	eleventyConfig.setLibrary("md", md);
 
-	// Collect CSS from {% css %} blocks and minify it, for output via {% getBundle "css" %}
+	// Collect CSS from {% css %} blocks, resolve @custom-media and minify it, for output via {% getBundle "css" %}
 	eleventyConfig.addBundle("css", {
-		transforms: [(code) => new CleanCSS().minify(code).styles]
+		transforms: [
+			(code) =>
+				transformCss({
+					filename: "bundle.css",
+					code: Buffer.from(code),
+					minify: true,
+					drafts: { customMedia: true },
+					targets: BROWSERS_WITH_LIGHT_DARK
+				}).code.toString()
+		]
 	});
 
 	// Minify HTML output
