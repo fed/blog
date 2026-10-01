@@ -124,7 +124,15 @@ export default function (eleventyConfig) {
 	});
 
 	// Image plugin
-	eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+		formats: ["avif", "auto"],
+		htmlOptions: {
+			imgAttributes: {
+				loading: "lazy",
+				decoding: "async"
+			}
+		}
+	});
 
 	// Navigation plugin
 	eleventyConfig.addPlugin(navigationPlugin);
