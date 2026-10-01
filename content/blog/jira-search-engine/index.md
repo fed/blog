@@ -9,7 +9,7 @@ Here's how you can add the ability to search and directly access Jira tickets fr
 
 Go to **Settings > Search Engines > Manage Search Engines** and add a new engine with the details below:
 
-![](chrome-search-engine-details.jpg)
+![Chrome's "Edit search engine" dialog with the search engine set to "Jira", the keyword set to "jira", and the URL set to "https://hello.atlassian.net/secure/QuickSearch.jspa?searchString=%s"](chrome-search-engine-details.jpg)
 
 Save the changes and in your omnibox, type in `jira` and press tab, then enter a ticket name and after hitting enter you should be
 redirected there.

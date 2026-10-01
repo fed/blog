@@ -6,7 +6,7 @@ tags: frp
 draft: true
 ---
 
-![](https://raw.githubusercontent.com/fed/blog/7a3102faee39c73b296c87ff7b0e0e20d2c791e7/src/pages/blog/observables-vs-signals/slide.jpeg)
+![Conference slide comparing observables and signals, summarising the points listed below](./slide.jpeg)
 
 https://twitter.com/BenLesh/status/1775207971410039230
 

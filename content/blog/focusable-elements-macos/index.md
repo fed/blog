@@ -16,7 +16,7 @@ By default, there's a global system setting to modify this behaviour that you ca
 Shortcuts_ and then clicking on the **All Controls** radio button, which is at the bottom of the screen in the _Full Keyboard Access_
 section.
 
-![](./keyboard-settings.jpg)
+![macOS Keyboard preferences on the Shortcuts tab, with Full Keyboard Access set to "All controls"](./keyboard-settings.jpg)
 
 Doing this should automatically fix Firefox, which is true to the system settings.
 
@@ -26,7 +26,7 @@ precedence.
 **Update:** The UI has changed a little bit in the last couple versions of MacOS. For MacOS Ventura, the option we need to enable is under
 _System Preferences > Keyboard_ and is now a toggle element called "Keyboard navigation".
 
-![](./keyboard-settings-macos-ventura.jpg)
+![macOS Ventura Keyboard settings with the "Keyboard navigation" toggle switched on](./keyboard-settings-macos-ventura.jpg)
 
 ## Fixing Safari
 
@@ -40,11 +40,11 @@ Note that this works for both [Safari](https://www.apple.com/safari/) and
 [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/) and needs to be done separately on both versions of the
 browser.
 
-![](./safari-preferences.jpg)
+![Safari's Advanced preferences with "Press Tab to highlight each item on a webpage" ticked](./safari-preferences.jpg)
 
 ## Chrome should work fine out of the box
 
 Chrome also has a setting for this under [chrome://settings/appearance](chrome://settings/appearance). This setting is enabled by default,
 though. So there's no need to configure anything to make Chrome work.
 
-![](./chrome-settings.jpg)
+![Chrome's Appearance settings with "Pressing Tab on a web page highlights links, as well as form fields" switched on](./chrome-settings.jpg)

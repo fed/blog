@@ -39,7 +39,7 @@ This is the rough flow proposed by Redux:
 4. The new **state** of the whole application goes into a **single store**.
 5. **Components** receive the new state as props and **re-render themselves _where needed_**.
 
-![](state-tree.png)
+![Two component trees. Without Redux, a change passes from component to component up and across the tree. With Redux, the component that initiates the change sends it to the store, which passes the new state straight to the components that use it](state-tree.png)
 
 ## State Tree
 
@@ -259,7 +259,7 @@ Some important things to note here:
    how to handle this action will return an updated model, while the rest will return their current state. This is why it's important for
    all reducers to return their current state as the default case. The image below illustrates this fact:
 
-![](reducers.png)
+![A dispatch with the current state and an action passes through a chain of reducers to produce the new state in the store](reducers.png)
 
 ## A built-in reducer composition solution
 

@@ -7,7 +7,7 @@ tags: web-platform
 
 Let's go back to the basics and briefly review two important JavaScript concepts: the DOM and the BOM.
 
-![](./hierarchy.png)
+![JavaScript made up of three parts: ECMAScript, the DOM, and the BOM](./hierarchy.png)
 
 ## DOM
 
@@ -17,7 +17,7 @@ what we are most likely interested in).
 Before being able to make use of these utilities and helpers, DOM transforms XML files into a **tree structure**, that is, a hierarchy of
 nodes. This tree **represents both the content of the document and the relationship between the nodes**.
 
-![](./dom.png)
+![DOM tree where Document contains the root html element, which contains head and body. The head element contains a title element with the text "My title". The body element contains an a element with an href attribute and the text "My link", and an h1 element with the text "My header"](./dom.png)
 
 ### Node types
 
@@ -293,7 +293,7 @@ The **Browser Object Model** (BOM) allows JavaScript to _talk_ to the browser ab
 
 There are no official standards for the BOM, albeit browser vendors have implemented almost the same features for interoperability.
 
-![](./bom.png)
+![The window object at the top, with document under the DOM, navigator, screen, location, frames, history, and XMLHttpRequest under the BOM, and Object, Array, and Function under JavaScript](./bom.png)
 
 ### The `window` object
 

@@ -122,7 +122,7 @@ Observable.from = (values) => {
 The observer will get notified of this last `still emitting` value, even though the observable has already told the observer it was done
 emitting values.
 
-![](console.png)
+![Console output: 0, 1, 2, 3, 4, "done", and then "still emitting"](console.png)
 
 Let's tweak our implementation so that it stops emitting once unsubscribed from. For starters, we'll create some sort of observer wrapper
 with some basic validation logic, which also keeps track of whether it has already unsubscribed from the observable (this would be the
