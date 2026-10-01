@@ -11,6 +11,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import syntaxHighlightPlugin from "@11ty/eleventy-plugin-syntaxhighlight";
 import htmlmin from "html-minifier-terser";
 import * as pagefind from "pagefind";
+import contentRulesPlugin from "./_config/content-rules.js";
 import filtersPlugin from "./_config/filters.js";
 import metadata from "./_data/metadata.js";
 
@@ -41,17 +42,8 @@ export default function (eleventyConfig) {
 				wrapper: ['<div class="heading-wrapper">', "</div>"],
 				renderAttrs: () => ({ "data-pagefind-ignore": "" })
 			})
-		});
-
-	md.core.ruler.push("no_h1", (state) => {
-		const h1 = state.tokens.find((token) => token.type === "heading_open" && token.tag === "h1");
-
-		if (h1) {
-			throw new Error(
-				`${state.env.page.inputPath}:${h1.map[0] + 1} has a level 1 heading, use ## instead since the layout renders the <h1> from the front matter title`
-			);
-		}
-	});
+		})
+		.use(contentRulesPlugin);
 
 	for (const type of ["note", "tip", "info", "warning", "danger"]) {
 		const openingPattern = new RegExp(`^${type}(?:\\[(.*)\\])?$`);
