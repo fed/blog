@@ -22,7 +22,7 @@ export default function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("assets");
 
 	// KaTeX web fonts, referenced by _includes/styles/katex.css
-	eleventyConfig.addPassthroughCopy({ "node_modules/katex/dist/fonts": "assets/fonts/katex" });
+	eleventyConfig.addPassthroughCopy({ "node_modules/katex/dist/fonts/*.woff2": "assets/fonts/katex" });
 
 	const md = markdownIt({ html: true })
 		// Render LaTeX ($inline$ and $$block$$) to static HTML/CSS at build time.
