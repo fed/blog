@@ -33,6 +33,7 @@ export default function (eleventyConfig) {
 		// Add a clickable "#" anchor link after every heading, pointing at its own id
 		.use(markdownItAnchor, {
 			level: [2, 3, 4, 5, 6],
+			slugify: eleventyConfig.getFilter("slugify"),
 			permalink: markdownItAnchor.permalink.linkAfterHeader({
 				style: "visually-hidden",
 				assistiveText: (title) => `Permalink to “${title}”`,
