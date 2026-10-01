@@ -11,7 +11,7 @@ draft: true
 There's no single formula for a great talk, but there is a secret ingredient that all the best ones have in common. TED Curator Chris
 Anderson shares this secret — along with four ways to make it work for you.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-FOCpMAww28" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-FOCpMAww28" title="Chris Anderson on the secret to great public speaking (YouTube video)" loading="lazy" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This is why ideas really matter: if communicated properly, they're capable of changing, forever, how someone thinks about the world, and
 shaping their actions both now and well into the future. Ideas are the most powerful force shaping human culture.

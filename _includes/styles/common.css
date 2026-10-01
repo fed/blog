@@ -91,6 +91,13 @@ h6 {
 	margin: var(--token-spacing-xxl) 0;
 }
 
+/* Embeds */
+.common-main-content iframe {
+	aspect-ratio: 16 / 9;
+	height: auto;
+	max-width: 100%;
+}
+
 /* Tables */
 .common-main-content td,
 .common-main-content th {
