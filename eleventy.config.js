@@ -33,7 +33,13 @@ export default function (eleventyConfig) {
 		// Add a clickable "#" anchor link after every heading, pointing at its own id
 		.use(markdownItAnchor, {
 			level: [2, 3, 4, 5, 6],
-			permalink: markdownItAnchor.permalink.linkInsideHeader()
+			permalink: markdownItAnchor.permalink.linkAfterHeader({
+				style: "visually-hidden",
+				assistiveText: (title) => `Permalink to “${title}”`,
+				visuallyHiddenClass: "common-visually-hidden",
+				wrapper: ['<div class="heading-wrapper">', "</div>"],
+				renderAttrs: () => ({ "data-pagefind-ignore": "" })
+			})
 		});
 
 	md.core.ruler.push("no_h1", (state) => {

@@ -55,18 +55,23 @@ h6 {
 	font-weight: var(--token-font-weight-semibold);
 }
 
-.common-main-content h2 {
+/* Heading wrappers and anchors, added by markdown-it-anchor */
+.common-main-content .heading-wrapper:has(> h2) {
 	font-size: var(--token-font-size-lg);
 	margin: var(--token-spacing-xl) 0 0;
 }
 
-.common-main-content h3 {
+.common-main-content .heading-wrapper:has(> h3) {
 	font-size: var(--token-font-size-md);
 	margin: var(--token-spacing-xl) 0 0;
 }
 
-/* Heading anchors, added by markdown-it-anchor */
-.common-main-content :is(h2, h3, h4, h5, h6) .header-anchor {
+.common-main-content .heading-wrapper > :is(h2, h3, h4, h5, h6) {
+	display: inline;
+	font-size: inherit;
+}
+
+.common-main-content .header-anchor {
 	margin-left: var(--token-spacing-xs);
 	color: var(--color-text-muted);
 	font-family: var(--token-font-family-sans-serif);
@@ -168,4 +173,14 @@ h6 {
 	padding: var(--token-spacing-xxs) var(--token-spacing-xs);
 	font-weight: var(--token-font-weight-normal);
 	white-space: nowrap;
+}
+
+/* Visually hidden text, still read by screen readers */
+.common-visually-hidden {
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
 }
