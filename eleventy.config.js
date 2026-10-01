@@ -32,9 +32,19 @@ export default function (eleventyConfig) {
 		.use(markdownItKatex, { katex })
 		// Add a clickable "#" anchor link after every heading, pointing at its own id
 		.use(markdownItAnchor, {
-			level: [1, 2, 3, 4, 5, 6],
+			level: [2, 3, 4, 5, 6],
 			permalink: markdownItAnchor.permalink.linkInsideHeader()
 		});
+
+	md.core.ruler.push("no_h1", (state) => {
+		const h1 = state.tokens.find((token) => token.type === "heading_open" && token.tag === "h1");
+
+		if (h1) {
+			throw new Error(
+				`${state.env.page.inputPath}:${h1.map[0] + 1} has a level 1 heading, use ## instead since the layout renders the <h1> from the front matter title`
+			);
+		}
+	});
 
 	for (const type of ["note", "tip", "info", "warning", "danger"]) {
 		const openingPattern = new RegExp(`^${type}(?:\\[(.*)\\])?$`);

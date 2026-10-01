@@ -696,13 +696,13 @@ xhr.onload = function () {
 xhr.send();
 ```
 
-# Alternative libraries
+## Alternative libraries
 
 - AJAX: [Axios](https://github.com/mzabriskie/axios), [Superagent](https://github.com/visionmedia/superagent)
 - Animations: [Animate.css](https://github.com/daneden/animate.css), [Move.js](https://github.com/visionmedia/move.js)
 - Working with arrays, numbers, objects, strings, etc.: [Lodash](https://lodash.com/)
 
-# Credits and further resources
+## Credits and further resources
 
 - http://youmightnotneedjquery.com/
 - https://css-tricks.com/now-ever-might-not-need-jquery/

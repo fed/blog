@@ -168,7 +168,7 @@ Base palette of primitive colour tokens:
 ### Headings
 
 Sections in a post use `##` for the top level and `###` for subsections, as seen above. There's no `#` in the body: the layout renders its
-own `<h1>` from the front matter `title`, and `.common-main-content h1` is hidden by CSS to prevent a second one.
+own `<h1>` from the front matter `title`, and the build fails if a Markdown file adds a second one.
 
 ### Paragraphs and inline text
 

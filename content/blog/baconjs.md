@@ -58,7 +58,7 @@ clickStream
 
 Now try rewriting that using callbacks...
 
-# Event streams are lazy
+## Event streams are lazy
 
 Event streams are a bit particular in that they are lazy: we need to subscribe to them or nothing happens.
 
@@ -75,7 +75,7 @@ countriesStream.onValue((countries) => {
 });
 ```
 
-# Event streams are cheap
+## Event streams are cheap
 
 Don't over nest streams, they are very cheap to instantiate! Break them down into multiple streams instead, this makes them way easier to
 test and debug.

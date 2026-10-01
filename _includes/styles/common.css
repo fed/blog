@@ -55,11 +55,6 @@ h6 {
 	font-weight: var(--token-font-weight-semibold);
 }
 
-.common-main-content h1 {
-	/* There shouldn't be any other headings level 1 in an article/page */
-	display: none;
-}
-
 .common-main-content h2 {
 	font-size: var(--token-font-size-lg);
 	margin: var(--token-spacing-xl) 0 0;
@@ -71,7 +66,7 @@ h6 {
 }
 
 /* Heading anchors, added by markdown-it-anchor */
-.common-main-content :is(h1, h2, h3, h4, h5, h6) .header-anchor {
+.common-main-content :is(h2, h3, h4, h5, h6) .header-anchor {
 	margin-left: var(--token-spacing-xs);
 	color: var(--color-text-muted);
 	font-family: var(--token-font-family-sans-serif);
