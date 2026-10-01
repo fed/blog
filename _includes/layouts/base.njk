@@ -24,6 +24,14 @@
 		<script>
 			{% include "scripts/theme-init.js" %}
 		</script>
+		<noscript>
+			<style>
+				#search-button,
+				#theme-toggle {
+					display: none;
+				}
+			</style>
+		</noscript>
 
 		{# Site-wide CSS goes in the "base" bucket so it comes before the page CSS added by child layouts #}
 		{% css "base" %}

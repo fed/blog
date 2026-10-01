@@ -35,7 +35,11 @@
 	}
 
 	function openSearch() {
-		loadPagefind().then(() => modal.open());
+		loadPagefind()
+			.then(() => modal.open())
+			.catch(() => {
+				location.href = `https://duckduckgo.com/?q=${encodeURIComponent(`site:${location.hostname} `)}`;
+			});
 	}
 
 	// Pagefind search UI lazy loading:
