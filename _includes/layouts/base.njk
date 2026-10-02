@@ -14,7 +14,12 @@
 		<meta property="og:description" content="{{ description or metadata.description }}">
 		<meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
 		<meta property="og:type" content="{{ 'article' if 'posts' in (tags or []) else 'website' }}">
-		<meta name="twitter:card" content="summary">
+		<meta property="og:image" content="{% ogImage "../_includes/og-image.og.njk", {
+			title: title or metadata.title,
+			domain: metadata.url | replace("https://", ""),
+			date: (date | readableDate({ day: "numeric", month: "long", year: "numeric" })) if 'posts' in (tags or []) else ""
+		} %}">
+		<meta name="twitter:card" content="summary_large_image">
 
 		<title>
 			{% if title %}{{ title }} - {% endif %}{{ metadata.title }}

@@ -1,3 +1,4 @@
+import fs from "node:fs";
 import path from "node:path";
 import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
@@ -9,6 +10,7 @@ import { browserslistToTargets, transform as transformCss } from "lightningcss";
 import navigationPlugin from "@11ty/eleventy-navigation";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import ogImagePlugin from "eleventy-plugin-og-image";
 import syntaxHighlightPlugin from "@11ty/eleventy-plugin-syntaxhighlight";
 import htmlmin from "html-minifier-terser";
 import * as pagefind from "pagefind";
@@ -139,6 +141,27 @@ export default function (eleventyConfig) {
 				decoding: "async"
 			}
 		}
+	});
+
+	// Social preview images, rendered from _includes/og-image.og.njk by the `ogImage` shortcode
+	eleventyConfig.addPlugin(ogImagePlugin, {
+		satoriOptions: {
+			fonts: [
+				{
+					name: "Source Serif 4",
+					data: fs.readFileSync("_includes/fonts/source-serif-4-semibold.woff"),
+					weight: 600,
+					style: "normal"
+				},
+				{
+					name: "iA Writer Mono",
+					data: fs.readFileSync("_includes/fonts/ia-writer-mono-regular.woff"),
+					weight: 400,
+					style: "normal"
+				}
+			]
+		},
+		shortcodeOutput: async (ogImage) => `${metadata.url}${await ogImage.outputUrl()}`
 	});
 
 	// Navigation plugin

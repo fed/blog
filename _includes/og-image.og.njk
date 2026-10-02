@@ -1,0 +1,50 @@
+<style>
+	.card {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 72px 80px;
+		background-color: #faf7f1;
+		border-top: 16px solid #2e6f40;
+		font-family: "Source Serif 4";
+	}
+
+	.logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		align-self: flex-start;
+		height: 72px;
+		min-width: 108px;
+		background-color: #2e6f40;
+		color: #fff;
+		font-family: "iA Writer Mono";
+		font-size: 36px;
+	}
+
+	.title {
+		color: #172b4d;
+		font-size: 68px;
+		font-weight: 600;
+		line-height: 1.15;
+	}
+
+	.footer {
+		display: flex;
+		justify-content: space-between;
+		color: #344563;
+		font-family: "iA Writer Mono";
+		font-size: 30px;
+	}
+</style>
+
+<div class="card">
+	<div class="logo">fk</div>
+	<div class="title">{{ title }}</div>
+	<div class="footer">
+		<div>{{ domain }}</div>
+		{% if date %}<div>{{ date }}</div>{% endif %}
+	</div>
+</div>
