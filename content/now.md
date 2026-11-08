@@ -12,12 +12,12 @@ Here's what I'm up to right now:
 
 - I'm still based in [New South Wales, Australia](https://google.com/maps/place/New+South+Wales).
 
-- I recently enrolled in a master's by coursework in pure mathematics. My first two units are _Linear Algebra_ and _Multivariable Calculus_.
+- I'm wrapping up my thesis for my Master of Software Engineering degree. My research explores the use of ontologies for knowledge modelling within a particular domain.
+
+- I've recently started a master's by coursework in pure mathematics. I've completed my first unit (_Linear Algebra_) and am now taking _Multivariable Calculus_ and _Number Theory_.
 
 - I'm working as a design system engineer, consolidating fragmented and outdated components into a new design system architected to scale across different products and use cases. I'm paying special attention to web accessibility and to finding the right API and abstraction for each component.
 
-- In my free time I'm currently learning [Elm](https://elm-lang.org/). I'm curious about Elm's take on frontend architecture, and want to better understand functional programming concepts and how they apply to frontend development.
-
 ∎
 
-**Last updated:** August 2026
+**Last updated:** November 2026
